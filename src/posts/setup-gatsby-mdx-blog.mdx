@@ -25,8 +25,6 @@ We need a _source_ plugin to source files from a folder, and then we need a _tra
 npm i gatsby-source-filesystem gatsby-transformer-remark
 ```
 
-
-
 ### MDX
 
 I always had this issue where i couldn't use CSS classes in Makrdown, and if i did add any HTML, any markdown wouldn't render inside that HTML block. MDX fixes that. I can write in the Markdown that i am familiar with, and add all the jazz with JSX as well.
@@ -39,43 +37,48 @@ npm i gatsby-plugin-mdx @mdx-js/mdx@latest @mdx-js/react@latest gatsby-plugin-pa
 
 By default, it'll pick any files inside the `src/pages` directory. If you want it to pick up from other directories and automatically build, you need the `gatsby-plugin-page-creator` plugin, and the directory should already be sourced with `gatsby-source-filesystem`. Here's a sample config where i am using `src/posts` as my directory for blog posts
 
-
 ```js
 plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts/`,
-        ignore: [`**/\.*`], // ignore files starting with a dot
-      },
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `posts`,
+      path: `${__dirname}/src/posts/`,
+      ignore: [`**/\.*`], // ignore files starting with a dot
     },
-    {
-      resolve: "gatsby-plugin-page-creator",
-      options: {
-        path: `${__dirname}/src/posts`,
-      },
+  },
+  {
+    resolve: "gatsby-plugin-page-creator",
+    options: {
+      path: `${__dirname}/src/posts`,
     },
-    `gatsby-plugin-mdx`,
+  },
+  `gatsby-plugin-mdx`,
 ]
 ```
-
 
 ### Troubleshooting
 
 #### React hooks error
 
-<div class="note">
-if you get a random error about React hooks, do this
+```
+  1. You might have mismatching versions of React and the renderer (such as React DOM)
+  2. You might be breaking the Rules of Hooks
+  3. You might have more than one copy of React in the same app
+  See https://fb.me/react-invalid-hook-call for tips about how to debug and fix this problem.
+```
+
+This was probably caused by Gatsby starter kit using outdated versions.. if you get this random error about React hooks, do this
 
 - delete `node_modules` and `package-lock.json`
 - npm install
+
+and then
 
 ```bash
 npm uninstall react react-dom gatsby
 npm install react react-dom gatsby
 ```
-</div>
 
 #### Build failed because path doesn't exist
 
@@ -90,8 +93,7 @@ This was fixed by commenting out the code sourcing `src/data` (also removed trai
 
 I had added it during configuration because i thought i might need it later.
 
-Links
----
+## Links
 
 - [Quick Start with Gatsby: Create, Develop, and Build Gatsby Sites From the Command Line](https://egghead.io/lessons/gatsby-quick-start-with-gatsby-create-develop-and-build-gatsby-sites-from-the-command-line)
 - [Quick Start](https://www.gatsbyjs.org/docs/quick-start/)
