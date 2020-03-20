@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Aamnah's Blog`,
+    description: `Life of Aamnah, in blog version`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -60,21 +60,12 @@ module.exports = {
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
-
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: "gatsby-plugin-page-creator",
       options: {
-        // CommonMark mode (default: true)
-        commonmark: true,
-        // Footnotes mode (default: true)
-        footnotes: true,
-        // Pedantic mode (default: true)
-        pedantic: true,
-        // GitHub Flavored Markdown mode (default: true)
-        gfm: true,
-        // Plugins configs
-        plugins: [],
+        path: `${__dirname}/src/posts`,
       },
     },
+    `gatsby-plugin-mdx`,
   ],
 }
