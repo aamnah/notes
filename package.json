@@ -8,6 +8,7 @@
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
     "gatsby": "^2.19.49",
+    "gatsby-cli": "^2.11.0",
     "gatsby-image": "^2.2.45",
     "gatsby-plugin-manifest": "^2.2.48",
     "gatsby-plugin-mdx": "^1.0.84",
