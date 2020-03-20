@@ -12,11 +12,16 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const PostsLayout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query PageQuery {
+    query PostQuery {
       site {
         siteMetadata {
+          title
+        }
+      }
+      mdx {
+        frontmatter {
           title
         }
       }
@@ -33,6 +38,7 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
+        <h1>{data.mdx.frontmatter.title}</h1>
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
@@ -44,8 +50,8 @@ const Layout = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
+PostsLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default PostsLayout

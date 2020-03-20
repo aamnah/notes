@@ -14,10 +14,23 @@ import "./layout.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query PageQuery {
+    query SiteTitleQuery {
       site {
         siteMetadata {
           title
+        }
+      }
+      allFile(filter: { sourceInstanceName: { eq: "posts" } }) {
+        nodes {
+          id
+          childMdx {
+            frontmatter {
+              title
+              path
+              description
+              date
+            }
+          }
         }
       }
     }
@@ -34,6 +47,13 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
+
+        <h1>Recent Posts</h1>
+        <ul>
+          {data.allFile.nodes.map(post => (
+            <li>{post.childMdx.frontmatter.title}</li>
+          ))}
+        </ul>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
