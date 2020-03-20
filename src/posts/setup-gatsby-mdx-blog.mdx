@@ -25,17 +25,6 @@ We need a _source_ plugin to source files from a folder, and then we need a _tra
 npm i gatsby-source-filesystem gatsby-transformer-remark
 ```
 
-<div class="note">
-if you get a random error about React hooks, do this
-
-- delete `node_modules` and `package-lock.json`
-- npm install
-
-```bash
-npm uninstall react react-dom gatsby
-npm install react react-dom gatsby
-```
-</div>
 
 
 ### MDX
@@ -72,6 +61,34 @@ plugins: [
 ```
 
 
+### Troubleshooting
+
+#### React hooks error
+
+<div class="note">
+if you get a random error about React hooks, do this
+
+- delete `node_modules` and `package-lock.json`
+- npm install
+
+```bash
+npm uninstall react react-dom gatsby
+npm install react react-dom gatsby
+```
+</div>
+
+#### Build failed because path doesn't exist
+
+```
+12:01:43 PM: The path passed to gatsby-source-filesystem does not exist on your file system:
+12:01:43 PM: /opt/build/repo/src/data
+12:01:43 PM: Please pick a path to an existing directory.
+12:01:43 PM: See docs here - https://www.gatsbyjs.org/packages/gatsby-source-filesystem/
+```
+
+This was fixed by commenting out the code sourcing `src/data` (also removed trailing slashes for good measure). To be clear, the directory existed, it just didn't have any files, i.e. empty directory.
+
+I had added it during configuration because i thought i might need it later.
 
 Links
 ---
