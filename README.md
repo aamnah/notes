@@ -8,8 +8,8 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 
 - [x] Deploy the blog at Netlify
 - [x] Get MDX posts working
-- [ ] Build a layout for posts
-- [ ] Build a layout for the Home page of the site
-- [ ] Add Recent posts tp the Home page
+- [ ] (in progress) Build a layout for posts
+- [ ] (in progress) Build a layout for the Home page of the site
+- [ ] (in progress) Add Recent posts tp the Home page
 - [ ] Add sitemap
 - [ ] Add RSS feed
