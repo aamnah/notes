@@ -13,3 +13,7 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 - [ ] (in progress) Add Recent posts tp the Home page
 - [ ] Add sitemap
 - [ ] Add RSS feed
+
+## Notes
+
+- consider moving this blog to aamnah.com/blog, for SEO reasons. aamnah.com would then become the home page of this gatsby site..
