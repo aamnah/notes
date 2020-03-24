@@ -46,6 +46,7 @@ Options
 | Model | Lighting | Hot swap | Layout | Price |
 | ----- | -------- | -------- | ------ | ----- |
 | GK64  | RGB      | Hot swap | 60%    | \$45  |
+| iGK61 | RGB      | Hot swap | \$60   |       |
 
 ## Key layout
 
@@ -63,7 +64,7 @@ will it last 10 years?
 
 ## Switches
 
-Check out the [Cherry MX website](https://www.cherrymx.de/en/) for a good overview of all switches. Most of the competitors use the same naming convention. You can easily figure out what a switch would be like in any brand if you know the main characteristics of a switch. Gaterons are the most popular MX copy and the plastic they use is supposed to be better.
+Check out the [Cherry MX website](https://www.cherrymx.de/en/) for a good overview of all switches. Most of the competitors use the same naming convention. You can easily figure out what a switch would be like in any brand if you know the main characteristics of a switch. Gaterons are the most popular MX copy and the plastic they use is apparently really good quality.
 
 Here are the two main things that matter
 
@@ -89,6 +90,8 @@ Options
 | [Cherry MX Brown](https://www.cherrymx.de/en/mx-original/mx-brown.html)                                | \$45  | Tactile   | 55g   | 2mm        | 4mm    |
 | [Cherry MX Low-Profile RGB Red](https://www.cherrymx.de/en/mx-low-profile/mx-low-profile-red.html)     | \$45  | Linear    | 45g   | 1.2mm      | 3.2mm  |
 | [Cherry MX Low-Profile RGB Speed](https://www.cherrymx.de/en/mx-low-profile/mx-low-profile-speed.html) | \$45  | Linear    | 45g   | 1mm        | 3.2mm  |
+
+When ordering, order extra switches. For every 10 that work, 1 may not.
 
 ### Gateron switches
 
@@ -118,7 +121,15 @@ These are the mounty things you find under keys like Space, Shift, Backspace etc
 ## Resources
 
 - **KBDfans** seems to be dropshipping from China, just buy from AliExpress instead.
+- [Daily Clack](https://dailyclack.com/)
 
 ## Links
 
 - [How to Clip, Lube, and Band-aid Mod Your Stabilizers](https://www.youtube.com/watch?v=cD5Zj-ZgMLA)
+- [Gateron Milky top vs Gateron SMD ( Clear top ) switches?](https://www.reddit.com/r/MechanicalKeyboards/comments/5r80f9/gateron_milky_top_vs_gateron_smd_clear_top/?utm_source=share&utm_medium=web2x)
+
+## Further research
+
+- Look into [Gateron Ink switches](https://novelkeys.xyz/products/gateron-ink-v2-switches) use a different type of (non-standard) plastic
+- Look into bottom out force, Gateron Yellows bottom out at around 170g. That's heavy!
+- Is the light in the switch or in the PCB?
