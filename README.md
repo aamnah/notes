@@ -13,6 +13,7 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 - [ ] (in progress) Add Recent posts tp the Home page
 - [ ] Add sitemap
 - [ ] Add RSS feed
+- [ ] Figure out post images
 
 ## Notes
 
