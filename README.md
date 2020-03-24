@@ -14,6 +14,7 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 - [ ] Add sitemap
 - [ ] Add RSS feed
 - [ ] Figure out post images
+- [ ] Fix post routes for MDX
 
 ## Notes
 
