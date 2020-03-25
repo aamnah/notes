@@ -64,6 +64,8 @@ will it last 10 years?
 
 ## Switches
 
+![CherryMX-Switch-Guide.svg](images/CherryMX-Switch-Guide.svg)
+
 Check out the [Cherry MX website](https://www.cherrymx.de/en/) for a good overview of all switches. Most of the competitors use the same naming convention. You can easily figure out what a switch would be like in any brand if you know the main characteristics of a switch. Gaterons are the most popular MX copy and the plastic they use is apparently really good quality.
 
 Here are the two main things that matter
@@ -74,9 +76,9 @@ Here are the two main things that matter
 
 Other things to consider
 
-- Low profile switches
-- Silent switches
-- Speed switches (linear switches with decreased pre-travel (1-1.2mm) and travel (3.2-3.4mm))
+- Low profile switches (decreased height of the switch, for low profile keyboards)
+- Silent switches (Cherry MX Silent Red and Silent Black - minimises bottom-out and top out noise)
+- Speed switches (Cherry MX Speed Silver - linear switches with decreased pre-travel (1-1.2mm) and travel (3.2-3.4mm))
 
 I like linear switches with about 50g actuation. That is a Cherry MX Red (or a Gateron Yellow).
 
@@ -106,15 +108,23 @@ If you use a plate, you are okay with using 3-pins. If you want extra stability,
 
 ![Gateron switch - 3pin vs. 5pin](images/gateron-switch-3pin-5pin.jpg)
 
-#### Leaf types?
+#### Leaf type?
+
+_Leaf_ means the pin.
+
+![Cherry_Brown_Part_Naming.png](images/Cherry_Brown_Part_Naming.png)
 
 #### SMD or not?
 
-You need an SMD switch if you're using SMD LEDs on the PCB
+You need an SMD switch if you're using SMD LEDs on the PCB. Clear housings help.
 
 ## Stabilizers
 
 These are the mounty things you find under keys like Space, Shift, Backspace etc. Longer keys need stabilizers..
+
+## Plate
+
+- [DZ60 CNC Aluminum - \$18](https://kbdfans.com/collections/plate/products/dz60-cnc-aluminum-plate)
 
 ## Misc.
 
@@ -127,9 +137,11 @@ These are the mounty things you find under keys like Space, Shift, Backspace etc
 
 - [How to Clip, Lube, and Band-aid Mod Your Stabilizers](https://www.youtube.com/watch?v=cD5Zj-ZgMLA)
 - [Gateron Milky top vs Gateron SMD ( Clear top ) switches?](https://www.reddit.com/r/MechanicalKeyboards/comments/5r80f9/gateron_milky_top_vs_gateron_smd_clear_top/?utm_source=share&utm_medium=web2x)
+- [My Gaming Peripheral Setup](https://www.youtube.com/watch?v=2vpA8av3F-U)
 
 ## Further research
 
 - Look into [Gateron Ink switches](https://novelkeys.xyz/products/gateron-ink-v2-switches) use a different type of (non-standard) plastic
 - Look into bottom out force, Gateron Yellows bottom out at around 170g. That's heavy!
 - Is the light in the switch or in the PCB?
+- Bottoming out. You can use plastic O-rings to reduce the noise from bottoming out
