@@ -5,23 +5,19 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import PropTypes from 'prop-types'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import Header from "./header"
-import "./layout.css"
+import Header from '../Header'
+import './layout.scss'
+import { Footer, Navigation } from '../common'
 
-const PostsLayout = ({ children }) => {
+const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query PostQuery {
+    query PageQuery {
       site {
         siteMetadata {
-          title
-        }
-      }
-      mdx {
-        frontmatter {
           title
         }
       }
@@ -38,20 +34,17 @@ const PostsLayout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
-        <h1>{data.mdx.frontmatter.title}</h1>
+        <Navigation />
+
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     </>
   )
 }
 
-PostsLayout.propTypes = {
+Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default PostsLayout
+export default Layout

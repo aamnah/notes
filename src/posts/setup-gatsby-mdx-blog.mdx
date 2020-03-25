@@ -48,7 +48,7 @@ plugins: [
     },
   },
   {
-    resolve: "gatsby-plugin-page-creator",
+    resolve: 'gatsby-plugin-page-creator',
     options: {
       path: `${__dirname}/src/posts`,
     },
@@ -56,6 +56,17 @@ plugins: [
   `gatsby-plugin-mdx`,
 ]
 ```
+
+### Sass
+
+```bash
+# install Sass plugins
+npm install --save node-sass gatsby-plugin-sass
+```
+
+add `gatsby-plugin-sass` to plugins array in `gatsby-config.js`
+
+Convert the `.css` files to `.scss` and you're good.
 
 ### Troubleshooting
 
@@ -98,6 +109,7 @@ I had added it during configuration because i thought i might need it later.
 - [Quick Start with Gatsby: Create, Develop, and Build Gatsby Sites From the Command Line](https://egghead.io/lessons/gatsby-quick-start-with-gatsby-create-develop-and-build-gatsby-sites-from-the-command-line)
 - [Quick Start](https://www.gatsbyjs.org/docs/quick-start/)
 - [gatsby-source-filesystem](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/?=)
+- [Creating and Modifying Pages](https://www.gatsbyjs.org/docs/creating-and-modifying-pages/)
 
 MDX
 

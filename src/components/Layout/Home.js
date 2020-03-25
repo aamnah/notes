@@ -9,10 +9,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import { useStaticQuery, graphql } from 'gatsby'
 
-import Header from './header'
-import './layout.css'
+import Header from '../Header'
+import './layout.scss'
+import { Footer, Navigation } from '../common'
 
-const Layout = ({ children }) => {
+const HomeLayout = ({ children }) => {
   return (
     <>
       <Header />
@@ -23,19 +24,16 @@ const Layout = ({ children }) => {
           padding: `0 1.0875rem 1.45rem`,
         }}
       >
+        <Navigation />
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <Footer />
       </div>
     </>
   )
 }
 
-Layout.propTypes = {
+HomeLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default HomeLayout

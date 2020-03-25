@@ -14,8 +14,10 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 - [ ] Add sitemap
 - [ ] Add RSS feed
 - [ ] Figure out post images
-- [ ] Fix post routes for MDX
+- [ ] (in progress) Fix post routes for MDX
 - [ ] Add a component for inline SVGs
+- [ ] Add SVG icon component (heart)
+- [ ] Convert to Sass, see [Using Sass in Gatsby](https://www.gatsbyjs.org/docs/sass/)
 
 ## Notes
 
