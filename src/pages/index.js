@@ -44,9 +44,9 @@ const IndexPage = () => {
         <p>Some of my interests are electronics, DIY, design, technology and cooking.</p>
       </div>
 
-      <div id="work">
+      {/* <div id="work">
         <h1>Work</h1>
-      </div>
+      </div> */}
 
       <div id="recent-posts">
         <h1>Recent Posts</h1>
