@@ -13,11 +13,13 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Header from '../Header'
 import Post, { Footer, Navigation } from '../common'
 import './layout.scss'
+import SEO from '../common/SEO'
 
 const PostsLayout = ({ pageContext, children }) => {
   const { title, body } = pageContext
   return (
     <>
+      <SEO title={title} />
       <Header />
       <div
         style={{
