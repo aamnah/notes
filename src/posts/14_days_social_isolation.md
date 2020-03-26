@@ -29,7 +29,7 @@ I am going out today though, have to meet the bestie who's leaving, and also nee
 - i can work in my pajamas
 - no commute, no wasting an hour driving every day
 - more focus, don't have to talk to anyone
-- more privacy, my screen is nor for everyone in the office to see
+- more privacy, my screen is not for everyone in the office to see
 - more flexibility in the start and end of work hours
 
 ### Goals
@@ -125,8 +125,8 @@ images: ukulele
 
 Sat 21 March, 2020
 
-Productivity level: 100
-Motivation level: 90
+Productivity level: 100  
+Motivation level: 90  
 Brain Activity/Alertness level: 100
 
 - Practiced playing ukulele for almost 5 hours today. Wanna know how much i practice every time? till my fingers hurt, that much. it usually happens after an hour or so. today my fingertips really hurt because i practiced longer. Practiced a new strumming pattern (down down up down up) and a new chord sequence (Am F C G). There is video evidence of the practice..
@@ -141,8 +141,8 @@ Brain Activity/Alertness level: 100
 
 Sun 22 March, 2020
 
-Productivity level: 5
-Motivation level: 10
+Productivity level: 5  
+Motivation level: 10  
 Brain Activity/Alertness level: 15
 
 - watched _1917_ and three episodes of _The World's Most Extraordinary Homes_ (Spain, Norway, Israel)
@@ -156,8 +156,8 @@ Brain Activity/Alertness level: 15
 
 Mon 23 March, 2020
 
-Productivity level: 100
-Motivation level: 80
+Productivity level: 100  
+Motivation level: 80  
 Brain Activity/Alertness level: 100
 
 - So far, i have avoided eating at the keyboard. Wouldn't wanna get any crumbs in my fancy mechanical keyboard.
@@ -170,8 +170,8 @@ Brain Activity/Alertness level: 100
 
 Tues 24 March, 2020
 
-Productivity level: 100
-Motivation level: 100
+Productivity level: 100  
+Motivation level: 100  
 Brain Activity/Alertness level: 100
 
 - watched an episode of _Amazing Interiors_
@@ -182,8 +182,8 @@ Brain Activity/Alertness level: 100
 
 Wed 25 March, 2020
 
-Productivity level: 100
-Motivation level: 100
+Productivity level: 100  
+Motivation level: 100  
 Brain Activity/Alertness level: 100
 
 - watched an episode each of _Stay Here_ and _Tidying up with Marie Kondo_
@@ -197,8 +197,8 @@ Brain Activity/Alertness level: 100
 
 Thu 26 March, 2020
 
-Productivity level: 100
-Motivation level: 100
+Productivity level: 100  
+Motivation level: 100  
 Brain Activity/Alertness level: 100
 
 - watched an episode of _The Final Table_ and the Fat episode of _Salt Fat Acid Heat_
