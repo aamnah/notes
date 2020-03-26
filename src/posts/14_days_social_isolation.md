@@ -44,7 +44,7 @@ Because i have extra 2 hours in my work day now, no commute and more focus, i pl
 TODO:
 
 - [ ] (in progress) Setup the blog site with Gatsby
-- [ ] get them StickerMule strickers designed
+- [x] get them StickerMule strickers designed (..turns out 50 means 50 copies of the _same_ sticker. I don't need to collect all logos afterall, i'll just print my own brand. Will do this after the social isolation thing is over so that it gets delivered to the office)
 - [ ] add a project shot on Dribbble
 
 ## Day 1
@@ -79,7 +79,7 @@ Brain Activity/Alertness level: 100
   - DevOps Culture
 
 * Went to Zara's for an _alwidai mulaqat_ and got Sunia's ukulele
-* Tuned the ukulele using an app called
+* Tuned the ukulele using an app called _Yousician_
 * Watched a couple of beginner ukulele videos on YouTube
 * Figured out the difference between chords, strumming, picking and _open_ strings
 * Spent 2 hours practicing strumming (Am7) and chords (C major, F major, G major)
@@ -190,6 +190,7 @@ Brain Activity/Alertness level: 100
 - spent hours woking on the blog. The page routes work. Also got Sass and `styled-components` going
 - still annoyed with the Netflix app. The _horizontal scrolling_ is meh. I can see very little at a glance (e.g. only 5-ish episodes are listed in one view), and there are no visual sorting options.
 - worked out? a little
+- practiced uke? nope
 - enjoyed an hour long call with a friend
 
 ## Day 10
@@ -203,6 +204,7 @@ Brain Activity/Alertness level: 100
 - watched an episode of _The Final Table_ and the Fat episode of _Salt Fat Acid Heat_
 - another thing missing from Netflix is viewing _History_. I forgot the series i watched yesterday..
 - worked out? yes
+- practiced uke? nope
 - enjoyed an hour long call with a friend
 - i have been having difficulty falling asleep. I think it's because of hunger, i'm not eating enough. I'm out of coffee and cream.. Anyone who really knows me knows that i survive on coffee and cream.
 - More than missing the office, i missed a good steak today.
