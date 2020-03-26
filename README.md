@@ -22,3 +22,4 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 ## Notes
 
 - consider moving this blog to aamnah.com/blog, for SEO reasons. aamnah.com would then become the home page of this gatsby site..
+- renaming files to `.mdx` seems to be a good idea. kept getting random errors. Changing extension back to `.md` fixed build errors
