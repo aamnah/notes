@@ -62,12 +62,12 @@ module.exports = {
     //     ignore: [`**/\.*`], // ignore files starting with a dot
     //   },
     // },
-    {
-      resolve: `gatsby-plugin-page-creator`,
-      options: {
-        path: `${__dirname}/src/posts`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-page-creator`,
+    //   options: {
+    //     path: `${__dirname}/src/posts`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

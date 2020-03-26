@@ -15,7 +15,7 @@ import Post, { Footer, Navigation } from '../common'
 import './layout.scss'
 import SEO from '../common/SEO'
 
-const PostsLayout = ({ pageContext, children }) => {
+export default function PostsLayout({ pageContext, children }) {
   const { title, body } = pageContext
   return (
     <>
@@ -44,5 +44,3 @@ const PostsLayout = ({ pageContext, children }) => {
 PostsLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
-
-export default PostsLayout
