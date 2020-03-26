@@ -91,7 +91,7 @@ images: ukulele
 - woke up and practiced strumming and chords for an hour
 - designed and updated my [social profile banner]() (YouTube, LinkedIn, Twitter)
 
-images: profile banner
+![social profile banner](images/Banner-Aamnah-LinkedIn.png)
 
 - work: added the Activity screen and bottom tab navigation to MVP app
 - watched: _The Soloist_. was okay, nothing i'd wanna watch again. acting was good.
@@ -168,7 +168,7 @@ Brain Activity/Alertness level: 100
 
 ## Day 8
 
-Mon 24 March, 2020
+Tues 24 March, 2020
 
 Productivity level: 100
 Motivation level: 100
@@ -180,7 +180,7 @@ Brain Activity/Alertness level: 100
 
 ## Day 9
 
-Mon 25 March, 2020
+Wed 25 March, 2020
 
 Productivity level: 100
 Motivation level: 100
