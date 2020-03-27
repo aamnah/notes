@@ -9,9 +9,9 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import './main.scss'
-import { Header, Footer, Navigation } from '../common'
+import { Header, Footer, Navigation, SiteContainer } from '../common'
 
-export function DefaultLayout({ children }) {
+export default function DefaultLayout({ children }) {
   const data = useStaticQuery(graphql`
     query PageQuery {
       site {
@@ -23,21 +23,12 @@ export function DefaultLayout({ children }) {
   `)
 
   return (
-    <>
+    <SiteContainer>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <Navigation />
-
-        <main>{children}</main>
-        <Footer />
-      </div>
-    </>
+      <Navigation />
+      <main>{children}</main>
+      <Footer />
+    </SiteContainer>
   )
 }
 
