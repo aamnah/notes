@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import './main.scss'
-import { Header, Footer, Navigation, SEO, SiteContainer } from '../common'
+import { Header, Footer, Navigation, SEO, SiteContainer, ContentContainer } from '../common'
 
 export default function PostLayout({ pageContext, children }) {
   const { title, body } = pageContext
@@ -12,15 +12,15 @@ export default function PostLayout({ pageContext, children }) {
   return (
     <SiteContainer>
       <SEO title={title} />
-      <Header />
+      {/* <Header /> */}
 
       <Navigation />
-      <h1>{title}</h1>
 
-      <main>
+      <ContentContainer>
+        <h1>{title}</h1>
         <MDXRenderer>{body}</MDXRenderer>
         {children}
-      </main>
+      </ContentContainer>
       <Footer />
     </SiteContainer>
   )
