@@ -1,14 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link } from '../components/common'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import HomeLayout from '../components/Layout/Home'
-import Image from '../components/Image'
-import SEO from '../components/common/SEO'
-import Post from '../components/common'
-import { Contact } from '../components/Contact'
+import { HomeLayout } from '../components/Layout'
+import Contact from '../components/Contact.jsx'
+import { Image, SEO } from '../components/common'
 
-const IndexPage = () => {
+export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query IndexQuery {
       allFile(filter: { sourceInstanceName: { eq: "posts" } }) {
@@ -72,5 +70,3 @@ const IndexPage = () => {
     </HomeLayout>
   )
 }
-
-export default IndexPage

@@ -9,11 +9,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 // import { useStaticQuery, graphql } from 'gatsby'
 
-import Header from '../Header'
-import './layout.scss'
-import { Footer, Navigation } from '../common'
+import './main.scss'
+import { Header, Footer, Navigation } from '../common'
 
-const HomeLayout = ({ children }) => {
+export function HomeLayout({ children }) {
   return (
     <>
       <Header />
@@ -35,5 +34,3 @@ const HomeLayout = ({ children }) => {
 HomeLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }
-
-export default HomeLayout

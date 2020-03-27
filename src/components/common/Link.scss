@@ -1,0 +1,17 @@
+.Link {
+  font-size: 2em;
+
+  &-internal {
+    color: cyan
+  }
+
+  &-external {
+    color: plum
+  }
+
+  &-active {
+    font-weight: bold;
+    color: red;
+    background: black;
+  }
+}

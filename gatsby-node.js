@@ -41,7 +41,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       // (or `node.frontmatter.path`)
       path: node.frontmatter.path,
       // This component will wrap our MDX content
-      component: path.resolve(`./src/components/Layout/Post.js`), // /media/aamnah/Files/Sites/blog.aamnah.com/src/components/Layout/Post.js
+      component: path.resolve(`./src/components/Layout/Post.jsx`), // /media/aamnah/Files/Sites/blog.aamnah.com/src/components/Layout/Post.jsx
       // You can use the values in this context in
       // our page layout component
       context: {

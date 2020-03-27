@@ -18,14 +18,36 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 - [ ] Add a component for inline SVGs
 - [ ] Add SVG icon component (heart)
 - [ ] Convert to Sass, see [Using Sass in Gatsby](https://www.gatsbyjs.org/docs/sass/)
+- [ ] Use IP detection and show different placeholder text (e.g. phone format) for different countries
 
 ## Notes
 
-- consider moving this blog to aamnah.com/blog, for SEO reasons. aamnah.com would then become the home page of this gatsby site..
-- renaming files to `.mdx` seems to be a good idea. kept getting random errors. Changing extension back to `.md` fixed build errors
+- consider moving this blog to aamnah.com/blog, for SEO reasons. aamnah.com would then become the home page of this gatsby site..\
+
+## .mdx and .jsx
+
+- renaming files to `.mdx` seems to be a bad idea. kept getting random errors. Changing extension back to `.md` fixed build errors
 
 ```
 Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: null.
 ```
 
 I commented out the `gatsby-plugin-page-creator` out of the config since i had added my own in `gatsby-config.js` as well. That solved the build error.
+
+- renaming files to `.jsx` means you gotta specify the file extension everywhere (e.g. `gatsby-config.js` and `gatsby-node.js`). You'd also need to specify the file extension if you are importing components in an `index.js` file. For example
+
+```js
+// components/common/index.js
+
+export * from './Button.jsx'
+export * from './Favicon.jsx'
+export * from './Footer.jsx'
+export * from './Header.jsx'
+export * from './Link.jsx'
+export * from './Navigation.jsx'
+export * from './SEO.jsx'
+```
+
+## Linking
+
+If you use Gatsby `<Link>` instead of `<a>` it makes the change of _internal_ pages smooth, you don't do a full page refresh every time. Underneath, it's using Reach Router `@reach/router`, so it only works on internal links. For external links you'd still use `<a>`

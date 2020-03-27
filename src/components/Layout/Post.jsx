@@ -7,15 +7,13 @@
 
 import React from 'react'
 import PropTypes from 'prop-types'
-import { useStaticQuery, graphql } from 'gatsby'
+// import { useStaticQuery, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import Header from '../Header'
-import Post, { Footer, Navigation } from '../common'
-import './layout.scss'
-import SEO from '../common/SEO'
+import './main.scss'
+import { Header, Footer, Navigation, SEO } from '../common'
 
-export default function PostsLayout({ pageContext, children }) {
+export function PostLayout({ pageContext, children }) {
   const { title, body } = pageContext
   return (
     <>
@@ -41,6 +39,6 @@ export default function PostsLayout({ pageContext, children }) {
   )
 }
 
-PostsLayout.propTypes = {
+PostLayout.propTypes = {
   children: PropTypes.node.isRequired,
 }

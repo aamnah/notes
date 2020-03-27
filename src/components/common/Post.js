@@ -1,7 +1,7 @@
 import React from 'react'
 
-export function Post({ Post }) {
-  let { title, path, description, date } = Post.frontmatter
+export function Post({ post }) {
+  let { title, path, description, date } = post.frontmatter
   return (
     <>
       <h1>{title}</h1>
@@ -10,7 +10,7 @@ export function Post({ Post }) {
         {description} <br />
         {date} <br />
       </div>
-      <main>{Post.body}</main>
+      <main>{post.body}</main>
     </>
   )
 }

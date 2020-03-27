@@ -3,6 +3,7 @@
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   --font-family-code: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono', 'Liberation Mono', Menlo, Courier,
     monospace;
+  --color-brand-turquoise: #76CED3;
 }
 
 html {
@@ -214,6 +215,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
+  background-color: #f6f6f6;
   font-family: var(--font-family-default);
   font-weight: normal;
   word-wrap: break-word;
@@ -627,3 +629,44 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+
+// type-scale.com
+// Base size: 16px (1em)
+// Scale: 1.250 - Major Third
+@import url('https://fonts.googleapis.com/css?family=Poppins:400|Poppins:400');
+
+html {font-size: 100%;} /*16px*/
+// html {font-size: 112.5%;} /*18px*/
+
+body {
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #333;
+}
+
+p {margin-bottom: 1.15rem;}
+
+h1, h2, h3, h4, h5 {
+  margin: 2.75rem 0 1.05rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052em;
+}
+
+h2 {font-size: 2.441em;}
+
+h3 {font-size: 1.953em;}
+
+h4 {font-size: 1.563em;}
+
+h5 {font-size: 1.25em;}
+
+small, .text_small {font-size: 0.8em;}

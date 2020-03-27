@@ -1,8 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import Layout from '../components/Layout'
-import SEO from '../components/common/SEO'
+import { DefaultLayout } from '../components/Layout'
+import { SEO } from '../components/common'
 
 export default function BlogPage() {
   const data = useStaticQuery(graphql`
@@ -28,7 +28,7 @@ export default function BlogPage() {
   `)
 
   return (
-    <Layout>
+    <DefaultLayout>
       <SEO title="Blog" />
 
       <h1>Recent Posts</h1>
@@ -44,6 +44,6 @@ export default function BlogPage() {
           )
         })}
       </ul>
-    </Layout>
+    </DefaultLayout>
   )
 }

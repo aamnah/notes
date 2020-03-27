@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Button from './common/Button'
-import Input from './common/Form/Input'
-export function Contact() {
+// import Button from './common'
+// import Input from './common/Form'
+export default function Contact() {
   return (
     <div id="contact">
       <h1>Contact</h1>
