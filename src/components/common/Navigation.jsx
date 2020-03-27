@@ -6,6 +6,9 @@ export function Navigation() {
   return (
     <div className="Navigation">
       <Link className="Navigation-item" to="#about">
+        Home
+      </Link>
+      <Link className="Navigation-item" to="#about">
         About
       </Link>
       <Link className="Navigation-item" to="#work">
