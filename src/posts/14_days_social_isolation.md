@@ -211,3 +211,9 @@ Brain Activity/Alertness level: 100
 - work involved setting up a country/site selection modal that shows up on site load and asks you to pick the site you want to go to by clicking a flag. It then saves that choice in a cookie and doesn't ask you again on next visit
 
 ![country-selection-modal.png](images/country-selection-modal.png)
+
+## Day 11
+
+- spent hours working on the blog, added components and restructured..
+- didn't watch much in terms of entertainment, except one 30 minute timelapse video on YouTube where a guy [rebuilt a 1996 Kawasaki Cafe Racer](https://www.youtube.com/watch?v=nYiRe5xvAJs)
+- cooked mutton handi, good stuff
