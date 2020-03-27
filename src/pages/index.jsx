@@ -1,10 +1,9 @@
 import React from 'react'
-import { Link } from '../components/common'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { HomeLayout } from '../components/Layout'
+import { Image, Link, SEO } from '../components/common'
 import Contact from '../components/Contact.jsx'
-import { Image, SEO } from '../components/common'
 
 export default function IndexPage() {
   const data = useStaticQuery(graphql`

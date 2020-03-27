@@ -23,6 +23,13 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 ## Notes
 
 - consider moving this blog to aamnah.com/blog, for SEO reasons. aamnah.com would then become the home page of this gatsby site..\
+- it seems that Layout _pages_ need to be a default export. In your `index.js` for the `Layouts` folder, you'd export default components as follows:
+
+```js
+export { default as DefaultLayout } from './Default.jsx'
+export { default as HomeLayout } from './Home.jsx'
+export { default as PostLayout } from './Post.jsx'
+```
 
 ## .mdx and .jsx
 

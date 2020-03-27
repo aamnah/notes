@@ -1,41 +1,28 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from 'react'
 import PropTypes from 'prop-types'
 // import { useStaticQuery, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import './main.scss'
-import { Header, Footer, Navigation, SEO } from '../common'
+import { Header, Footer, Navigation, SEO, SiteContainer } from '../common'
 
-export function PostLayout({ pageContext, children }) {
+export default function PostLayout({ pageContext, children }) {
   const { title, body } = pageContext
+
   return (
-    <>
+    <SiteContainer>
       <SEO title={title} />
       <Header />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <Navigation />
-        <h1>{title}</h1>
 
-        <main>
-          <MDXRenderer>{body}</MDXRenderer>
-          {children}
-        </main>
-        <Footer />
-      </div>
-    </>
+      <Navigation />
+      <h1>{title}</h1>
+
+      <main>
+        <MDXRenderer>{body}</MDXRenderer>
+        {children}
+      </main>
+      <Footer />
+    </SiteContainer>
   )
 }
 
