@@ -17,13 +17,13 @@ export function Header({ siteTitle }) {
   let headerTitle = siteTitle ? siteTitle : data.site.siteMetadata.title
 
   return (
-    <div className="Header">
+    <header className="Header">
       <h1 style={{ margin: 0 }}>
         <Link to="/" className="Header-title">
           {headerTitle}
         </Link>
       </h1>
-    </div>
+    </header>
   )
 }
 

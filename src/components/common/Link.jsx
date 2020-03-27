@@ -1,7 +1,3 @@
-import React from 'react'
-import { Link as GatsbyLink } from 'gatsby'
-
-import './Link.scss'
 /**
 Custom link component that handles both internal and external links
 
@@ -11,6 +7,11 @@ which link the component returns depends on the `external: boolean` prop being p
 
 https://www.gatsbyjs.org/docs/gatsby-link/
 */
+
+import React from 'react'
+import { Link as GatsbyLink } from 'gatsby'
+
+import './Link.scss'
 
 export function Link({ to, children, external, target = '_blank', className }) {
   if (external) {
