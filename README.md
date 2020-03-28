@@ -10,14 +10,15 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 - [x] Get MDX posts working
 - [ ] (in progress) Build a layout for posts
 - [ ] (in progress) Build a layout for the Home page of the site
-- [ ] (in progress) Add Recent posts tp the Home page
+- [x] Add Recent posts tp the Home page
 - [ ] Add sitemap
 - [ ] Add RSS feed
 - [ ] Figure out post images
-- [ ] (in progress) Fix post routes for MDX
+- [x] Fix post routes for MDX
 - [ ] Add a component for inline SVGs
-- [ ] Add SVG icon component (heart)
-- [ ] Convert to Sass, see [Using Sass in Gatsby](https://www.gatsbyjs.org/docs/sass/)
+- [ ] Add SVG icon component (heart, external link)
+- [x] Convert to Sass, see [Using Sass in Gatsby](https://www.gatsbyjs.org/docs/sass/)
+- [ ] (in progress) Add a Contact form
 - [ ] Use IP detection and show different placeholder text (e.g. phone format) for different countries
 
 ## Notes
