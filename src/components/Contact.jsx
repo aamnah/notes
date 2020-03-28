@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <div id="contact">
       <h1>Send me a message</h1>
-      <form>
+      <form name="contact" method="POST" data-netlify="true">
         <InputGroup>
           <FormInput>
             <InputLabel htmlFor="name">Name</InputLabel>
