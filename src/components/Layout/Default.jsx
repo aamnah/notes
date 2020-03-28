@@ -24,7 +24,7 @@ export default function DefaultLayout({ children }) {
 
   return (
     <SiteContainer>
-      <Header />
+      {/* <Header /> */}
       <Navigation />
       <ContentContainer>{children}</ContentContainer>
       <Footer />

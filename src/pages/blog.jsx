@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultLayout } from '../components/Layout'
-import { SEO } from '../components/common'
+import { Link, SEO } from '../components/common'
 
 export default function BlogPage() {
   const data = useStaticQuery(graphql`
@@ -37,7 +37,7 @@ export default function BlogPage() {
           let { title, path, description, date } = post.childMdx.frontmatter
           return path ? (
             <li key={post.id}>
-              <a href={path}>{title !== '' ? title : post.name}</a>
+              <Link to={path}>{title !== '' ? title : post.name}</Link>
             </li>
           ) : (
             <li key={post.id}>{title !== '' ? title : post.name}</li>

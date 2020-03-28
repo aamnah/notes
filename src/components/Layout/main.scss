@@ -4,12 +4,13 @@
   --font-family-code: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono', 'Liberation Mono', Menlo, Courier,
     monospace;
   --color-brand-turquoise: #76CED3;
-  --color-primary: ##76ced3;
+  --color-primary: #42BCC3;
   --color-dark: #202938;
   --color-muted: #4e4e4e;
   --color-faded: #9C9C9C;
   --color-light: #f6f6f6;
   
+  --box-shadow-default: 0 5px 10px rgba(21, 102, 107,0.1);
 }
 
 html {
@@ -640,13 +641,13 @@ pre tt:after {
 // type-scale.com
 // Base size: 16px (1em)
 // Scale: 1.250 - Major Third
-@import url('https://fonts.googleapis.com/css?family=Poppins:400|Poppins:400');
+// @import url('https://fonts.googleapis.com/css?family=Poppins:400|Poppins:400');
 
 html {font-size: 100%;} /*16px*/
 // html {font-size: 112.5%;} /*18px*/
 
 body {
-  font-family: 'Poppins', var(--font-family-default), sans-serif;
+  font-family: var(--font-family-default), sans-serif;
   font-weight: 400;
   line-height: 1.65;
   color: var(--color-dark);
@@ -656,7 +657,7 @@ p {margin-bottom: 1.15rem;}
 
 h1, h2, h3, h4, h5 {
   margin: 2.75rem 0 1.05rem;
-  font-family: 'Poppins', var(--font-family-default), sans-serif;
+  font-family: var(--font-family-default), sans-serif;
   font-weight: 400;
   line-height: 1.15;
 }

@@ -15,7 +15,6 @@ import { Header, Footer, Navigation, SiteContainer, ContentContainer } from '../
 export default function HomeLayout({ children }) {
   return (
     <SiteContainer>
-      {/* <Header /> */}
       <Navigation />
       <ContentContainer>{children}</ContentContainer>
       <Footer />

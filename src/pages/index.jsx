@@ -30,6 +30,9 @@ export default function IndexPage() {
   return (
     <HomeLayout>
       <SEO title="Home" />
+      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
+        <Image />
+      </div>
       <h1>Hi, I'm Aamnah</h1>
       <div id="about">
         <p>I'm a frontend developer. I design, develop and maintain sites, apps and user interfaces.</p>
@@ -52,7 +55,7 @@ export default function IndexPage() {
             let { title, path, description, date } = post.childMdx.frontmatter
             return path ? (
               <li key={post.id}>
-                <a href={path}>{title !== '' ? title : post.name}</a>
+                <Link to={path}>{title !== '' ? title : post.name}</Link>
               </li>
             ) : (
               <li key={post.id}>{title !== '' ? title : post.name}</li>
@@ -60,9 +63,6 @@ export default function IndexPage() {
           })}
         </ul>
         <Link to="/blog">view all</Link>
-      </div>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
       </div>
 
       <Contact />

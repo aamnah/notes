@@ -12,7 +12,6 @@ export default function PostLayout({ pageContext, children }) {
   return (
     <SiteContainer>
       <SEO title={title} />
-      {/* <Header /> */}
 
       <Navigation />
 

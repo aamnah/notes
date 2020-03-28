@@ -2,17 +2,23 @@
   text-decoration: none;
   // color: red;
 
+  &:hover {
+    border-bottom: 1px solid var(--color-primary);
+  }
+
   &-internal {
-    color: cyan
+    color: var(--color-primary);
   }
 
   &-external {
     color: plum
   }
-
+  &-external:hover {
+    color: goldenrod;
+    border-bottom: 1px solid plum;
+  }
   &-active {
     font-weight: bold;
-    color: red;
-    background: black;
+    text-decoration: underline;
   }
 }

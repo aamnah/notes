@@ -168,3 +168,5 @@ The plan: buy an existing cheap mechanical keyboard with RGB and swap the swicth
 The T-DAGGER Destroyer comes with detachable OUTEMU blue switches by default (it's a hot swap PCB? =D ). Cable is not detachable, wrist rest is
 
 The T-DAGGER Bora also comes with detachable OUTEMU switches, and the cable is a micro-USB detachable. No wrist-rest and no numpad.
+
+note: make sure the leaaves match, i.e. the yellow gaterons can fit in place of outemu blues..
