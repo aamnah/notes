@@ -5,7 +5,7 @@ import './Navigation.scss'
 export function Navigation() {
   return (
     <div className="Navigation">
-      <Link className="Navigation-item" to="#about">
+      <Link className="Navigation-item" to="/">
         Home
       </Link>
       <Link className="Navigation-item" to="#about">
