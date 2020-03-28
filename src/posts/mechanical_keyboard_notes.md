@@ -9,7 +9,7 @@ Stuff you need
 
 - PCB ($35-$60)
 - Case
-- Plate (\$18-\$40)
+- Plate ($18-$40) (optional - use 5-pin switches and leave the plate out)
 - Switches ([\$3.85](https://dailyclack.com/collections/switches/products/gateron-yellow-switches) for pack of 10, $5.15 on AliExpress - around $30 for 110 switches)
 - Stabilizers ($14-$19)
 - Keycaps
@@ -22,6 +22,8 @@ Optional
 Software is also needed to customize the keyboard (e.g. QMK, [Karabiner](https://karabiner-elements.pqrs.org/) for macOS)
 
 A DIY kit on KBDfans cost $129-$299
+
+Also, [watch this](https://www.youtube.com/watch?v=0c8UdKX6GBA)
 
 ## PCB
 
@@ -145,3 +147,24 @@ These are the mounty things you find under keys like Space, Shift, Backspace etc
 - Look into bottom out force, Gateron Yellows bottom out at around 170g. That's heavy!
 - Is the light in the switch or in the PCB?
 - Bottoming out. You can use plastic O-rings to reduce the noise from bottoming out
+
+# My Build
+
+- some switches with high bottoming out force, e.g. for the Spacebar to reduce that spacebar thud.
+- lubed switches
+- stabilizer mods
+- At least 75% keyboard, preferably a 87-key TKL. I want those six Ins/Del/Home/End/PgUp/PgDn keys, i use them on a daily basis, for Del, and for changing workspaces. Ins is also required for some shortcuts. And dedicated arrow keys. Who even uses an arrow-key less keyboard?!
+- Backlit
+
+## Retrofitting an existing keyboard
+
+[watch this](https://www.youtube.com/watch?v=hdds7D-vW9s)
+
+The plan: buy an existing cheap mechanical keyboard with RGB and swap the swicthes and keycaps. You would not need the casing, plate, PCB and cable
+
+- [T-DAGGER Bora T-TGK315 - 87-key TKL](https://www.t-dagger.com/collections/keyboard/products/t-dagger-bora-t-tgk315-gaming-mechanical-keyboard-rgb-backlighting) (Rs. 5900)
+- [T-DAGGER Destroyer T-TGK305-G - 104-key](https://www.t-dagger.com/collections/keyboard/products/t-dagger-destroyer-t-tgk305-gaming-mechanical-keyboard) (Rs. 5420, [used - 3500](https://www.olx.com.pk/item/t-dagger-mechanical-keyboard-tgk-305-destroyer-iid-1009368900))
+
+The T-DAGGER Destroyer comes with detachable OUTEMU blue switches by default (it's a hot swap PCB? =D ). Cable is not detachable, wrist rest is
+
+The T-DAGGER Bora also comes with detachable OUTEMU switches, and the cable is a micro-USB detachable. No wrist-rest and no numpad.

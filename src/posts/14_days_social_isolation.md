@@ -217,3 +217,7 @@ Brain Activity/Alertness level: 100
 - spent hours working on the blog, added components and restructured..
 - didn't watch much in terms of entertainment, except one 30 minute timelapse video on YouTube where a guy [rebuilt a 1996 Kawasaki Cafe Racer](https://www.youtube.com/watch?v=nYiRe5xvAJs)
 - cooked mutton handi, good stuff
+
+## Day 12
+
+- Spent 3+ hours watching _typing sound_ videos (119+ videos..) and listening to the sounds. What i'm loooking for is the sound of a key that doesn't sound too loud or feels too heavy. I'm fairly certain i want to go with Gateron Yellow switched and lube them.
