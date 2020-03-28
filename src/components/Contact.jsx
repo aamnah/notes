@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <div id="contact">
       <h1>Send me a message</h1>
-      <form name="Aamnah.com Contact" method="POST" netlify data-netlify="true">
+      <form name="Aamnah.com Contact" method="POST" data-netlify-honeypot="bot-field" data-netlify="true">
         <input type="hidden" name="form-name" value="Aamnah.com Contact" />
         <InputGroup>
           <FormInput>
