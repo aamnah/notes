@@ -18,7 +18,7 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 - [ ] Add a component for inline SVGs
 - [ ] Add SVG icon component (heart, external link)
 - [x] Convert to Sass, see [Using Sass in Gatsby](https://www.gatsbyjs.org/docs/sass/)
-- [ ] (in progress) Add a Contact form
+- [ ] (in progress) Add a [Contact form](https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/)
 - [ ] Use IP detection and show different placeholder text (e.g. phone format) for different countries
 
 ## Notes

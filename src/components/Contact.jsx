@@ -7,7 +7,8 @@ export default function Contact() {
   return (
     <div id="contact">
       <h1>Send me a message</h1>
-      <form name="Aamnah.com Contact" method="POST" data-netlify="true">
+      <form name="Aamnah.com Contact" method="POST" netlify data-netlify="true">
+        <input type="hidden" name="form-name" value="Aamnah.com Contact" />
         <InputGroup>
           <FormInput>
             <InputLabel htmlFor="name">Name</InputLabel>
@@ -15,24 +16,24 @@ export default function Contact() {
           </FormInput>
           <FormInput>
             <InputLabel htmlFor="phone">Phone (optional)</InputLabel>
-            <Input type="text" placeholder="+1 (123) 1234567" name="phone" id="phone" />
+            <Input type="phone" placeholder="+1 (123) 1234567" name="phone" id="phone" />
           </FormInput>
         </InputGroup>
         <InputGroup>
           <FormInput>
             <InputLabel htmlFor="email">Email</InputLabel>
-            <Input type="text" placeholder="you@yourdomain.com" id="email" />
+            <Input type="email" placeholder="you@yourdomain.com" name="email" id="email" />
           </FormInput>
           <FormInput>
             <InputLabel htmlFor="website">Website (optional)</InputLabel>
-            <Input type="text" placeholder="www.domain.com" id="website" />
+            <Input type="url" placeholder="www.domain.com" name="website" id="website" />
           </FormInput>
         </InputGroup>
 
         <InputGroup>
           <FormInput>
             <InputLabel htmlFor="message">Message</InputLabel>
-            <textarea placeholder="say something pleasant" className="Input" id="message" />
+            <textarea placeholder="say something pleasant" className="Input" name="message" id="message" />
           </FormInput>
         </InputGroup>
 
