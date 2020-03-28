@@ -1,9 +1,9 @@
 import React from 'react'
 
 import './Label.scss'
-export function Label({ children, className, ...rest }) {
+export function Label({ children, htmlFor, className, ...rest }) {
   return (
-    <label className={`${className} Label`} {...rest}>
+    <label htmlFor={htmlFor} className={`${className} Label`} {...rest}>
       {children}
     </label>
   )
