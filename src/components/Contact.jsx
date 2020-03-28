@@ -7,27 +7,27 @@ export default function Contact() {
   return (
     <div id="contact">
       <h1>Send me a message</h1>
-      <form name="Aamnah.com Contact" method="POST" data-netlify-honeypot="bot-field" data-netlify="true">
+      <form name="Contact" method="POST" data-netlify-honeypot="bot-field" data-netlify="true">
         <input type="hidden" name="form-name" value="Aamnah.com Contact" />
         <InputGroup>
           <FormInput>
             <Label htmlFor="name">Name</Label>
-            <Input name="name" type="text" placeholder="Henry Cavill" id="name" />
+            <input name="name" type="text" placeholder="Henry Cavill" id="name" />
           </FormInput>
           <FormInput>
             <Label htmlFor="phone">Phone (optional)</Label>
-            <Input name="phone" type="phone" placeholder="+1 (123) 1234567" id="phone" />
+            <input name="phone" type="phone" placeholder="+1 (123) 1234567" id="phone" />
           </FormInput>
         </InputGroup>
 
         <InputGroup>
           <FormInput>
             <Label htmlFor="email">Email</Label>
-            <Input name="email" type="email" placeholder="you@yourdomain.com" id="email" />
+            <input name="email" type="email" placeholder="you@yourdomain.com" id="email" />
           </FormInput>
           <FormInput>
             <Label htmlFor="website">Website (optional)</Label>
-            <Input name="website" type="text" placeholder="www.domain.com" id="website" />
+            <input name="website" type="text" placeholder="www.domain.com" id="website" />
           </FormInput>
         </InputGroup>
 
