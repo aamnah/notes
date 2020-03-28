@@ -12,29 +12,29 @@ export default function Contact() {
         <InputGroup>
           <FormInput>
             <Label htmlFor="name">Name</Label>
-            <Input type="text" placeholder="Henry Cavill" name="name" id="name" />
+            <Input name="name" type="text" placeholder="Henry Cavill" id="name" />
           </FormInput>
           <FormInput>
             <Label htmlFor="phone">Phone (optional)</Label>
-            <Input type="phone" placeholder="+1 (123) 1234567" name="phone" id="phone" />
+            <Input name="phone" type="phone" placeholder="+1 (123) 1234567" id="phone" />
           </FormInput>
         </InputGroup>
 
         <InputGroup>
           <FormInput>
             <Label htmlFor="email">Email</Label>
-            <Input type="email" placeholder="you@yourdomain.com" name="email" id="email" />
+            <Input name="email" type="email" placeholder="you@yourdomain.com" id="email" />
           </FormInput>
           <FormInput>
             <Label htmlFor="website">Website (optional)</Label>
-            <Input type="text" placeholder="www.domain.com" name="website" id="website" />
+            <Input name="website" type="text" placeholder="www.domain.com" id="website" />
           </FormInput>
         </InputGroup>
 
         <InputGroup>
           <FormInput>
             <Label htmlFor="message">Message</Label>
-            <textarea placeholder="say something pleasant" className="Input" name="message" id="message" />
+            <textarea name="message" placeholder="say something pleasant" className="Input" id="message" />
           </FormInput>
         </InputGroup>
 
