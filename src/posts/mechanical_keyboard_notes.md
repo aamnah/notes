@@ -160,7 +160,7 @@ These are the mounty things you find under keys like Space, Shift, Backspace etc
 
 [watch this](https://www.youtube.com/watch?v=hdds7D-vW9s)
 
-The plan: buy an existing cheap mechanical keyboard with RGB and swap the swicthes and keycaps. You would not need the casing, plate, PCB and cable
+The plan: buy an existing cheap mechanical keyboard with RGB and swap the swicthes and keycaps. You would not need the casing, plate, PCB and cable. Instead of buying a $160 something kit (the fancy ones, like R2 Zephyr 65%, cost $600. yikes. Keycult No. 2 Classic is $885, Keycult No. 2 Rev. 1 is $900.. wow.) and getting it shipped and paying for shipping as well, i could just get a cheap mech keyboard (\$30-50) with cheap switches and swap it. KBDfans sells just the PCB for \$35 minimum, excluding shipping
 
 - [T-DAGGER Bora T-TGK315 - 87-key TKL](https://www.t-dagger.com/collections/keyboard/products/t-dagger-bora-t-tgk315-gaming-mechanical-keyboard-rgb-backlighting) (Rs. 5900)
 - [T-DAGGER Destroyer T-TGK305-G - 104-key](https://www.t-dagger.com/collections/keyboard/products/t-dagger-destroyer-t-tgk305-gaming-mechanical-keyboard) (Rs. 5420, [used - 3500](https://www.olx.com.pk/item/t-dagger-mechanical-keyboard-tgk-305-destroyer-iid-1009368900))
