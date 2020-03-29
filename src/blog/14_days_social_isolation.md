@@ -220,4 +220,25 @@ Brain Activity/Alertness level: 100
 
 ## Day 12
 
+Saturday
+
 - Spent 3+ hours watching _typing sound_ videos (119+ videos..) and listening to the sounds. What i'm loooking for is the sound of a key that doesn't sound too loud or feels too heavy. I'm fairly certain i want to go with Gateron Yellow switched and lube them.
+- Spent an hour practicing uke
+- no worksout
+- defrosted the freezer
+- spent hours working on this Gatsby blog. Added a contact form via Netlify and added some styles. The site kinda looks presentable now..s
+- watched two episodes of _Tiny House Nation_
+
+## Day 13 (Sunday)
+
+March 29, 2020
+
+- spent hours with Gatsby and GarphQL. Troubleshooted the Contact form, now getting email notifications for form responses and getting all the fields as well.
+- the weekend was spent in two mega project. One was defrosting the deep freezer, and the other was taking apart my wooden bed.
+- defrosting the freezer took days and a lot of effort, but it ended with me finding hidden treasures of haleem and nihari.
+- workout included taking bricks up the stairs and moving heavy furniture
+- The bedroom took half the day but it went better than i had expected. The bed wasn't as heavy as i had imagined.. maybe the recent workouts helped? Overall, i'm not as exhausted as i was expecting. I'm not even tired after these mega projects.
+- set up a stereo system in the room, now i have music! with good speakers! and a remote! The music added a nice touch while i worked around the room. I can listen to FM stations as well, that's nice, i find new songs i like by listening to the radio.
+- Overall, i am happy i decided to finally work on my room. Been putting this off for a long time. I'm happy that i'm doing what i want, and i'm happy that i have the capacity to do so.
+- Looking forward to having a proper media center setup in the room. And having more room to walk around
+- Next project? Painting the room! Been waiting for summer so it dries off quickly and i don't have to stay in the room with wet paint. Kind of decided on a color too, something pastel..
