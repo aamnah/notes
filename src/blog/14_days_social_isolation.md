@@ -222,6 +222,10 @@ Brain Activity/Alertness level: 100
 
 Saturday
 
+Productivity level: 90  
+Motivation level: 80  
+Brain Activity/Alertness level: 90
+
 - Spent 3+ hours watching _typing sound_ videos (119+ videos..) and listening to the sounds. What i'm loooking for is the sound of a key that doesn't sound too loud or feels too heavy. I'm fairly certain i want to go with Gateron Yellow switched and lube them.
 - Spent an hour practicing uke
 - no worksout
@@ -232,6 +236,10 @@ Saturday
 ## Day 13 (Sunday)
 
 March 29, 2020
+
+Productivity level: 100  
+Motivation level: 100  
+Brain Activity/Alertness level: 100
 
 - spent hours with Gatsby and GarphQL. Troubleshooted the Contact form, now getting email notifications for form responses and getting all the fields as well.
 - the weekend was spent in two mega project. One was defrosting the deep freezer, and the other was taking apart my wooden bed.
