@@ -4,11 +4,22 @@ import styled from 'styled-components'
 // import Button from './common'
 import { Input, Label } from './common/Form'
 export default function Contact() {
+  const handleContactSubmit = (e) => {
+    e.preventDefault()
+  }
   return (
     <div id="contact">
       <h1>Send me a message</h1>
-      <form name="Contact" method="POST" data-netlify-honeypot="bot-field" netlify data-netlify="true">
-        <Input type="hidden" name="form-name" value="Aamnah.com Contact" />
+      <form
+        name="Contact"
+        method="POST"
+        action="/thanks/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        // onSubmit={handleContactSubmit}
+      >
+        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+        <Input type="hidden" name="form-name" value="Contact" />
         <InputGroup>
           <FormInput>
             <Label htmlFor="name">Name</Label>
@@ -41,7 +52,6 @@ export default function Contact() {
         <button type="submit" className="Button">
           Send Message
         </button>
-        {/* <Button>Send</Button> */}
       </form>
     </div>
   )
