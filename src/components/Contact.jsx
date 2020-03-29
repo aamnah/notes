@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 // import Button from './common'
 import { Input, Label } from './common/Form'
 export default function Contact() {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [website, setWebsite] = useState('')
+  const [phone, setPhone] = useState('')
+  const [message, setMessage] = useState('')
+
   const handleContactSubmit = (e) => {
     e.preventDefault()
   }
@@ -11,15 +17,15 @@ export default function Contact() {
     <div id="contact">
       <h1>Send me a message</h1>
       <form
-        name="Contact"
+        name="Contact-form"
         method="POST"
-        action="/thanks/"
+        // action="/thanks/" // this will be our custom Thank You page
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         // onSubmit={handleContactSubmit}
       >
         {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-        <Input type="hidden" name="form-name" value="Contact" />
+        <Input type="hidden" name="form-name" value="Contact-form" />
         <InputGroup>
           <FormInput>
             <Label htmlFor="name">Name</Label>
@@ -34,11 +40,11 @@ export default function Contact() {
         <InputGroup>
           <FormInput>
             <Label htmlFor="email">Email</Label>
-            <Input name="email" type="email" placeholder="you@yourdomain.com" id="email" />
+            <Input name="email" type="email" placeholder="henry@cavill.com" id="email" />
           </FormInput>
           <FormInput>
             <Label htmlFor="website">Website (optional)</Label>
-            <Input name="website" type="text" placeholder="www.domain.com" id="website" />
+            <Input name="website" type="text" placeholder="www.cavill.com" id="website" />
           </FormInput>
         </InputGroup>
 
