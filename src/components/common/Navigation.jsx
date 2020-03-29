@@ -8,24 +8,16 @@ export function Navigation() {
       <Link className="Navigation-item" to="/">
         Home
       </Link>
-      <Link className="Navigation-item" to="#about">
-        About
-      </Link>
-      <Link className="Navigation-item" to="#work">
-        Work
+      <Link className="Navigation-item" to="/#contact">
+        Contact
       </Link>
       <Link className="Navigation-item" to="/blog">
         Blog
       </Link>
       <Link className="Navigation-item" to="/notes">
-        notes
+        Notes
       </Link>
-      <Link className="Navigation-item" to="#testimonials">
-        Testimonials
-      </Link>
-      <Link className="Navigation-item" to="#contact">
-        Contact
-      </Link>
+
       <Link external className="Navigation-item" to="https://tldrdevnotes.com">
         Notes
       </Link>

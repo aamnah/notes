@@ -4,6 +4,10 @@ path: gatsby_graphql_queries
 date: 2020-03-29
 ---
 
+NOTES:
+
+- can't do string interpolation or use props in a static query
+
 ### Get all files in a specific folder
 
 You can do that with `sourceInstanceName` on `file`
