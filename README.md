@@ -1,5 +1,7 @@
 # Aamnah's Blog
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f69f90e0-215e-464d-9240-af3be99d3d6f/deploy-status)](https://app.netlify.com/sites/blog-aamnah/deploys)
+
 Gatsby based site for the blog on [blog.aamnah.com](https://blog.aamnah.com)
 
 Uses MDX for the post content. I always had this issue where i couldn't use CSS classes in Makrdown, and if i did add any HTML, any markdown wouldn't render inside that HTML block. MDX fixes that. I can write in the Markdown that i am familiar with, and add all the jazz with JSX as well.
