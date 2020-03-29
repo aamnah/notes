@@ -7,7 +7,7 @@ import { Link, SEO } from '../components/common'
 export default function BlogPage() {
   const data = useStaticQuery(graphql`
     query BlogQuery {
-      allFile(filter: { sourceInstanceName: { eq: "posts" } }) {
+      allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
         nodes {
           id
           childMdx {
@@ -33,7 +33,7 @@ export default function BlogPage() {
 
       <h1>Recent Posts</h1>
       <ul>
-        {data.allFile.nodes.map(post => {
+        {data.allFile.nodes.map((post) => {
           let { title, path, description, date } = post.childMdx.frontmatter
           return path ? (
             <li key={post.id}>

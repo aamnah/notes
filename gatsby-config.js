@@ -50,8 +50,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts`,
+        name: `blog`,
+        path: `${__dirname}/src/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `notes`,
+        path: `${__dirname}/src/notes`,
       },
     },
     // {
@@ -65,7 +72,7 @@ module.exports = {
     // {
     //   resolve: `gatsby-plugin-page-creator`,
     //   options: {
-    //     path: `${__dirname}/src/posts`,
+    //     path: `${__dirname}/src/blog`,
     //   },
     // },
     {
@@ -74,7 +81,8 @@ module.exports = {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
           default: require.resolve(`./src/components/Layout/Default.jsx`),
-          posts: require.resolve(`./src/components/Layout/Post.jsx`),
+          blog: require.resolve(`./src/components/Layout/Post.jsx`),
+          notes: require.resolve(`./src/components/Layout/Post.jsx`),
         },
       },
     },

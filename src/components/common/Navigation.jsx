@@ -17,6 +17,9 @@ export function Navigation() {
       <Link className="Navigation-item" to="/blog">
         Blog
       </Link>
+      <Link className="Navigation-item" to="/notes">
+        notes
+      </Link>
       <Link className="Navigation-item" to="#testimonials">
         Testimonials
       </Link>
