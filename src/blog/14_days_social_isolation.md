@@ -273,7 +273,7 @@ Brain Activity/Alertness level: 100
 
 ## Day 17
 
-- Did the _Hello World_ of [CodeCademy's C# course](https://www.codecademy.com/learn/learn-c-sharp) (and streamed the process). 10% done with that course. Plan on doing an hour of C# every day till i finish that course.
+- Did the _Hello World_ of [CodeCademy's C# course](https://www.codecademy.com/learn/learn-c-sharp) (and streamed the process). 10% done with that course. Plan on doing an hour of C# every day till i finish that course. I'm doing the 30 day challenge!
 - watched different prgramming streams on Twitch. Got noticed on 3 (Gatsbyjs, csharpfritz, Lana_Lux). They said my name on screem (fangirl moment).
 - finally called _Ami Jan_ today. Been meaning to but kept forgetting..
 - Fiigured out how to do Team Libraries in Figma. Now i can use the same colors within different projects and have them in sync without having to open the other file to copy that color code. Same for components. Awesome!
