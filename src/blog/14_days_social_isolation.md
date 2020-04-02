@@ -125,8 +125,8 @@ images: ukulele
 
 Sat 21 March, 2020
 
-Productivity level: 100  
-Motivation level: 90  
+Productivity level: 100
+Motivation level: 90
 Brain Activity/Alertness level: 100
 
 - Practiced playing ukulele for almost 5 hours today. Wanna know how much i practice every time? till my fingers hurt, that much. it usually happens after an hour or so. today my fingertips really hurt because i practiced longer. Practiced a new strumming pattern (down down up down up) and a new chord sequence (Am F C G). There is video evidence of the practice..
@@ -141,8 +141,8 @@ Brain Activity/Alertness level: 100
 
 Sun 22 March, 2020
 
-Productivity level: 5  
-Motivation level: 10  
+Productivity level: 5
+Motivation level: 10
 Brain Activity/Alertness level: 15
 
 - watched _1917_ and three episodes of _The World's Most Extraordinary Homes_ (Spain, Norway, Israel)
@@ -156,8 +156,8 @@ Brain Activity/Alertness level: 15
 
 Mon 23 March, 2020
 
-Productivity level: 100  
-Motivation level: 80  
+Productivity level: 100
+Motivation level: 80
 Brain Activity/Alertness level: 100
 
 - So far, i have avoided eating at the keyboard. Wouldn't wanna get any crumbs in my fancy mechanical keyboard.
@@ -170,8 +170,8 @@ Brain Activity/Alertness level: 100
 
 Tues 24 March, 2020
 
-Productivity level: 100  
-Motivation level: 100  
+Productivity level: 100
+Motivation level: 100
 Brain Activity/Alertness level: 100
 
 - watched an episode of _Amazing Interiors_
@@ -182,8 +182,8 @@ Brain Activity/Alertness level: 100
 
 Wed 25 March, 2020
 
-Productivity level: 100  
-Motivation level: 100  
+Productivity level: 100
+Motivation level: 100
 Brain Activity/Alertness level: 100
 
 - watched an episode each of _Stay Here_ and _Tidying up with Marie Kondo_
@@ -197,8 +197,8 @@ Brain Activity/Alertness level: 100
 
 Thu 26 March, 2020
 
-Productivity level: 100  
-Motivation level: 100  
+Productivity level: 100
+Motivation level: 100
 Brain Activity/Alertness level: 100
 
 - watched an episode of _The Final Table_ and the Fat episode of _Salt Fat Acid Heat_
@@ -222,8 +222,8 @@ Brain Activity/Alertness level: 100
 
 Saturday
 
-Productivity level: 90  
-Motivation level: 80  
+Productivity level: 90
+Motivation level: 80
 Brain Activity/Alertness level: 90
 
 - Spent 3+ hours watching _typing sound_ videos (119+ videos..) and listening to the sounds. What i'm loooking for is the sound of a key that doesn't sound too loud or feels too heavy. I'm fairly certain i want to go with Gateron Yellow switched and lube them.
@@ -237,8 +237,8 @@ Brain Activity/Alertness level: 90
 
 March 29, 2020
 
-Productivity level: 100  
-Motivation level: 100  
+Productivity level: 100
+Motivation level: 100
 Brain Activity/Alertness level: 100
 
 - spent hours with Gatsby and GarphQL. Troubleshooted the Contact form, now getting email notifications for form responses and getting all the fields as well.
@@ -250,3 +250,30 @@ Brain Activity/Alertness level: 100
 - Overall, i am happy i decided to finally work on my room. Been putting this off for a long time. I'm happy that i'm doing what i want, and i'm happy that i have the capacity to do so.
 - Looking forward to having a proper media center setup in the room. And having more room to walk around
 - Next project? Painting the room! Been waiting for summer so it dries off quickly and i don't have to stay in the room with wet paint. Kind of decided on a color too, something pastel..
+
+## Day 14
+
+- Morale was strangely low after a very productive yesterday. I think the tiredness set in the next day.
+- Watched four episodes of _Interior Design Masters_
+- Looked at paint shades for the room
+- Moved morrre furnniture. Not really happy with how much space that darn dressing table is taking, and making it difficult to get an empty wall to put the TV on
+- Workout included moving furniture
+- Practices uke a little
+
+## Day 15
+
+- Morale is seriously low, don't feel like working at all. Took two days off to work on morale.
+- Will probably end up doing _home maintenance_ projects.. The windows need cleaning..
+- Didn't clean windows.. ended up going on a grocery haul instead. Met my coleague and went grocery shopping. Was out of coffee. And cream. A creative out of coffee is never a good thing
+
+## Day 16
+
+- worked mainly. Mostly uneventful day
+- worked a few hours on the new design on aamnah.com in Figma. Added styles for Testimonials. So now i have two parts done, i.e.the contact form and thetestimonials section. Need to add a section about work or projects on Github and then i'll be mostly done.
+
+## Day 17
+
+- Did the _Hello World_ of [CodeCademy's C# course](https://www.codecademy.com/learn/learn-c-sharp) (and streamed the process). 10% done with that course. Plan on doing an hour of C# every day till i finish that course.
+- watched different prgramming streams on Twitch. Got noticed on 3 (Gatsbyjs, csharpfritz, Lana_Lux). They said my name on screem (fangirl moment).
+- finally called _Ami Jan_ today. Been meaning to but kept forgetting..
+- Fiigured out how to do Team Libraries in Figma. Now i can use the same colors within different projects and have them in sync without having to open the other file to copy that color code. Same for components. Awesome!
