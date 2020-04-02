@@ -8,7 +8,8 @@ import Contact from '../components/Contact.jsx'
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query IndexQuery {
-      allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
+      allFile(filter: { sourceInstanceName: { eq: "blog" } }, sort: { fields: modifiedTime, order: DESC }) {
+        # get reverse chronologoical order, i.e. lastmod on top
         nodes {
           id
           childMdx {
@@ -17,6 +18,7 @@ export default function IndexPage() {
               path # the URL path
               description
               date
+              lastmod
             }
           }
           name # filename
