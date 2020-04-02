@@ -277,3 +277,4 @@ Brain Activity/Alertness level: 100
 - watched different prgramming streams on Twitch. Got noticed on 3 (Gatsbyjs, csharpfritz, Lana_Lux). They said my name on screem (fangirl moment).
 - finally called _Ami Jan_ today. Been meaning to but kept forgetting..
 - Fiigured out how to do Team Libraries in Figma. Now i can use the same colors within different projects and have them in sync without having to open the other file to copy that color code. Same for components. Awesome!
+- Fixed Recent Posts on the home page of this Gatsby site, sorted posts by date, and added support for _Draft_ status, i.e. not get the post if Draft
