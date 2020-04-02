@@ -13,3 +13,10 @@ I'll be doing 30 days (hopefully) of C#, starting with the course on Codecademy.
 April 2, 2020
 
 Went through the [Hello World of C#](https://www.codecademy.com/learn/learn-c-sharp)
+
+Learned:
+
+- basic data types
+- outputing stuff to the console
+- reading user input from the console
+- changing (casting) data types
