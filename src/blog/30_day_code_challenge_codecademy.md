@@ -20,6 +20,28 @@ Learned:
 - Setting VS Code up for C#
 - Running the project with `dotnet` CLI
 - General project structure
+- String interpolation
+  - inside the `{}` you can put an expression
+  - an _expression_ produces some sort of value
+
+```c#
+static void Main(string[] args)
+{
+  Console.WriteLine("Hello, " + args[0] + " !");
+  Console.WriteLine($"Hello, {args[0]} !");
+}
+```
+
+- passing params to the application
+
+```bash
+dotnet run BLAH # params for the dotnet CLI
+dotnet run -- BLAH # params for the application
+```
+
+- an _exception_ represents an error condition
+- _handled_ exception = yes, i expected this error to occur
+- _unhandled_ exception = halt/crash your program, .NET runtime won't allow program to continue executing
 
 - Finished the [Working with Numbers](https://www.codecademy.com/courses/learn-c-sharp/lessons/csharp-working-with-numbers/) section on Codecademy
 
