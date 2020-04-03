@@ -2,7 +2,7 @@
 title: Working from Home during the COVID-19 Social Isolation
 path: working-from-home-covid19
 date: 2020-03-17
-lastmod: 2020-03-23
+lastmod: 2020-04-03
 description: Getting ready for self-isolation, and how it's going so far..
 ---
 
@@ -270,6 +270,7 @@ Brain Activity/Alertness level: 100
 
 - worked mainly. Mostly uneventful day
 - worked a few hours on the new design on aamnah.com in Figma. Added styles for Testimonials. So now i have two parts done, i.e.the contact form and thetestimonials section. Need to add a section about work or projects on Github and then i'll be mostly done.
+- Watched two episodes of _Car Masters: Rust to Riches_
 
 ## Day 17
 
@@ -277,4 +278,13 @@ Brain Activity/Alertness level: 100
 - watched different prgramming streams on Twitch. Got noticed on 3 (Gatsbyjs, csharpfritz, Lana_Lux). They said my name on screem (fangirl moment).
 - finally called _Ami Jan_ today. Been meaning to but kept forgetting..
 - Fiigured out how to do Team Libraries in Figma. Now i can use the same colors within different projects and have them in sync without having to open the other file to copy that color code. Same for components. Awesome!
-- Fixed Recent Posts on the home page of this Gatsby site, sorted posts by date, and added support for _Draft_ status, i.e. not get the post if Draft
+- Fixed Recent Posts on the home page of this Gatsby site, sorted posts by date, and added support for _Draft_ status, i.e. not get the post if status is `draft`
+
+## Day 18
+
+April 04, 2020
+
+- watched two episodes of _Money Heist_ and two of _Chef's Table: France_
+- Cleaned the room a little. 90% happy with the layout at this point. The view out the window at around 5pm (sunset) warmed my heart. Perfect day with green leaves and not a lot of heat.
+- started [C# Fundamentals](https://app.pluralsight.com/courses/0096b00d-2398-435a-82f7-3f5401408ab1/table-of-contents) on Pluralsight, finished the section on _Introducing C# and .NET_
+- Did a few lessons on C# on Codecademy too to maintain my streak
