@@ -6,6 +6,18 @@ path: 30_day_code_challenge_codecademy
 
 I'll be doing 30 days (hopefully) of C#, starting with the course on Codecademy. I'll be happy if i even manage to do two weeks though. A month is a long time to plan for.
 
+## Day 3
+
+Was too occupied with other things on the weekend (setup an Ubuntu server with Opencart and added SFTP user etc.). Only did the bare minimum to keep the 30 days streak
+
+Codecademy:
+
+- Working with Numbers
+  - Numerical Data Types
+  - Arithmetic Operators
+
+The Pluralsight course is much better in terms of it's knowledge level and thoroughness. Where Codecademy is going on about data types and numbers, the Pluralsight course started with an intro to the `dotnet` CLI, project structure and debugging in the first section.
+
 ## Day 2
 
 April 3, 2020
