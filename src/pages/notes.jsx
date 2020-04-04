@@ -3,19 +3,25 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { SiteContainer, Link } from '../components/common'
 import { DefaultLayout } from '../components/Layout'
+import { RecentPosts } from '../components/common/Recent'
 export default function NotesPage() {
   const data = useStaticQuery(graphql`
     query NotesQuery {
-      allFile(filter: { sourceInstanceName: { eq: "notes" } }) {
+      allFile(filter: { sourceInstanceName: { eq: "notes" } }, sort: { fields: modifiedTime, order: DESC }) {
         nodes {
-          sourceInstanceName
-          name
+          id
           childMdx {
             frontmatter {
               title
-              path
+              path # the URL path
+              description
+              date
             }
           }
+          name # filename
+          base # filename.ext
+          absolutePath # the file path
+          dir # absolutePath minus base
         }
       }
     }
@@ -35,6 +41,8 @@ export default function NotesPage() {
             )
           })}
         </ul>
+
+        {/* <RecentPosts title="Recent dev notes" folder="notes" /> */}
       </SiteContainer>
     </DefaultLayout>
   )
