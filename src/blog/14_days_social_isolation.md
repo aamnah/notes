@@ -296,3 +296,5 @@ April 04, 2020
 - spent most of the day setting up an Ubuntu server with Opencart and SFTP user..
 - made art on Skype video call
 - practiced uke for 15 minutes
+
+This lockdown has extended beyond what i expected. 19 days already! I have been home too long =(
