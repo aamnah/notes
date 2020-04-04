@@ -288,3 +288,11 @@ April 04, 2020
 - Cleaned the room a little. 90% happy with the layout at this point. The view out the window at around 5pm (sunset) warmed my heart. Perfect day with green leaves and not a lot of heat.
 - started [C# Fundamentals](https://app.pluralsight.com/courses/0096b00d-2398-435a-82f7-3f5401408ab1/table-of-contents) on Pluralsight, finished the section on _Introducing C# and .NET_
 - Did a few lessons on C# on Codecademy too to maintain my streak
+- worked out
+
+## Day 19
+
+- Played _Risk of Rain 2_ for a short while before had to work on my brother's project. Good game, FPS is my thing. Also realized i have _Destiny 2_ on my Steam account. I saw a guy stream the gameplay on Twitch just two days ago and was drooling over it. Turns out i already have it in my account! Yayy.. It's downloading at the moment..
+- spent most of the day setting up an Ubuntu server with Opencart and SFTP user..
+- made art on Skype video call
+- practiced uke for 15 minutes
