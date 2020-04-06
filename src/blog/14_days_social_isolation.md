@@ -282,7 +282,7 @@ Brain Activity/Alertness level: 100
 
 ## Day 18
 
-April 04, 2020
+April 03, 2020
 
 - watched two episodes of _Money Heist_ and two of _Chef's Table: France_
 - Cleaned the room a little. 90% happy with the layout at this point. The view out the window at around 5pm (sunset) warmed my heart. Perfect day with green leaves and not a lot of heat.
@@ -292,9 +292,27 @@ April 04, 2020
 
 ## Day 19
 
+April 04, 2020
+
 - Played _Risk of Rain 2_ for a short while before had to work on my brother's project. Good game, FPS is my thing. Also realized i have _Destiny 2_ on my Steam account. I saw a guy stream the gameplay on Twitch just two days ago and was drooling over it. Turns out i already have it in my account! Yayy.. It's downloading at the moment..
-- spent most of the day setting up an Ubuntu server with Opencart and SFTP user..
+- spent most of the day setting up a Linux Ubuntu server and installing Opencart on it so an online shop could be migrated. Then also adding SFTP users to be able to transfer files using FTP software.
 - made art on Skype video call
 - practiced uke for 15 minutes
 
-This lockdown has extended beyond what i expected. 19 days already! I have been home too long =(
+This lockdown has extended beyond what i expected. 19 days already! I have been home too long. I miss being able to go out whenever i wanted to, wherever i wanted to =(
+
+## Day 20 (Sunday)
+
+April 05, 2020
+
+- practiced uke for almost an hour. Can play the chords for _happy birthday to you_. The first two lines only.
+- worked out
+- spent majority of my Sunday playing [_Insurgency_](https://store.steampowered.com/app/222880/Insurgency/). Good game. I'm not very good at it though. Felt good to finally play an FPS game again, been long. All those headshots!
+- Food involved burgers.
+- Watched an episode of _Grace and Frankie_ before internet started acting up and the hanged Netflix ruined the mood.
+
+## Day 21
+
+April 06, 2020
+
+- Work day again..
