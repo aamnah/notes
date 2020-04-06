@@ -35,13 +35,16 @@ export default function IndexPage() {
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
       </div>
+
       <h1>Hi, I'm Aamnah</h1>
       <div id="about">
         <p>I'm a frontend developer. I design, develop and maintain sites, apps and user interfaces.</p>
 
         <p>ISTP, minimalist, chronically curious, and usually a good listener.</p>
 
-        <p>Life is a balance between work, home and dolce far niente.</p>
+        <p>
+          Life is a balance between work, home and <em>dolce far niente</em>.
+        </p>
 
         <p>Some of my interests are electronics, DIY, design, technology and cooking.</p>
       </div>
