@@ -15,7 +15,15 @@ git checkout master
 git branch staging
 ```
 
-Update your `.git/config` file to change the `master` branch for gitflow
+Now run
+
+```bash
+git flow init -f
+```
+
+The `-f` will let you force the reconfiguration of branches even if they are already set
+
+Alternative is to manually update your `.git/config` file to change the `master` branch for gitflow
 
 ```bash
 [gitflow "branch"]
