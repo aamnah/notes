@@ -71,18 +71,17 @@ Brain Activity/Alertness level: 100
   - [ ] Grand Designs
   - [ ] Chef's Table
 
-* Got an [internet package](https://www.zong.com.pk/internet/internet-sim-plans) for backup
-
-* Started the [DevOps Essentials](https://linuxacademy.com/cp/modules/view/id/192) course on Linux Academy and finished the following sections:
+- Got an [internet package](https://www.zong.com.pk/internet/internet-sim-plans) for backup
+- Started the [DevOps Essentials](https://linuxacademy.com/cp/modules/view/id/192) course on Linux Academy and finished the following sections:
 
   - Introduction
   - DevOps Culture
 
-* Went to Zara's for an _alwidai mulaqat_ and got Sunia's ukulele
-* Tuned the ukulele using an app called _Yousician_
-* Watched a couple of beginner ukulele videos on YouTube
-* Figured out the difference between chords, strumming, picking and _open_ strings
-* Spent 2 hours practicing strumming (Am7) and chords (C major, F major, G major)
+- Went to Zara's for an _alwidai mulaqat_ and got Sunia's ukulele
+- Tuned the ukulele using an app called _Yousician_
+- Watched a couple of beginner ukulele videos on YouTube
+- Figured out the difference between chords, strumming, picking and _open_ strings
+- Spent 2 hours practicing strumming (Am7) and chords (C major, F major, G major)
 
 images: ukulele
 
@@ -317,6 +316,11 @@ April 05, 2020
 
 April 06, 2020
 
-- Work day again..
-- Today i'm going to launch this Gatsby blog site. Meaning `aamnah.com` will land on this from now on.
-  In order to do that, i need to work on the styles a bit, make them presentable. I think i should be able to do that by fixing margins and padding here and there and making that SVG component so i could add icons and my logo (in SVG)
+- Oh this day was eventful. The kitchen caught fire. It was hard to breathe in black clouds of smoke. Had to call the neighbours in. To give you an idea of how bad is it: the kitchen is on ground. my room is on the upper floor. the PC in my room _on the upper floor_ has soot _inside it_. The microwave melted, so i gotta buy that, and need a new cooking range too. The roof in the kitchen that used to be white is now black. So is the roof of the dining room and lounge.. the cabinetry above the cooking range was wooden, that is now charred and part coal.
+- how'd it catch fire? good question. well, i put oil in a pan for frying and turned on the stove. then i forgot i had done that. And somehow that oil caught fire.. In my defence, i had just found out my nan who got hospitalized two days ago was serious and they were gonna move her to the ICU. i tend to forget things when i'm under emotional stress. i was so worried and shocked about my nan that i forgot the stove was on. i did smell barbecue when i was in the loo, but kept wondering who in the neighbours was cooking. only when i heard my mom's yelling from downstairs is when i rushed down. and only remembered there was oil on stove when i saw the fire.
+- so to sum up: i've been in self-isolation for 21 days, my kitchen caught fire, and my nan's in an unstable condition in the ICU. oh, and everything in my room is covered in soot. it hurts to breathe throw my nose because i inhaled a lot of that black smoke.
+- will take days to wash down things. May have to paint the house again.
+- the upside: well, i showered, been putting that off for days (because i'm a lazy person who has isn't getting out). and i'll get a new cooking range and microwave?
+- i did workout (before the fire happened)
+
+![image-soot-inside-pc]()
