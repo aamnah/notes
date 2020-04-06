@@ -294,10 +294,12 @@ April 03, 2020
 
 April 04, 2020
 
-- Played _Risk of Rain 2_ for a short while before had to work on my brother's project. Good game, FPS is my thing. Also realized i have _Destiny 2_ on my Steam account. I saw a guy stream the gameplay on Twitch just two days ago and was drooling over it. Turns out i already have it in my account! Yayy.. It's downloading at the moment..
+- Played _Risk of Rain 2_ for a short while before had to work on my brother's project. Good game, FPS is my thing. But i had to lower down _all_ the video settings in order for it to not be laggy. The game didn't look all that jazzy though. The environments don't have scenes where i'd go this must take lots of GPU. Didn't understand why the game was hogging resources for what looked basic. Insurgency, an FPS, played very smooth in comparison, on the integrated graphics of an 8th gen i3.
+- Also realized i have _Destiny 2_ on my Steam account. I saw a guy stream the gameplay on Twitch just two days ago and was drooling over it. Turns out i already have it in my account! Yayy.. It's downloading at the moment, will take me days to download those 80GBs..
 - spent most of the day setting up a Linux Ubuntu server and installing Opencart on it so an online shop could be migrated. Then also adding SFTP users to be able to transfer files using FTP software.
 - made art on Skype video call
 - practiced uke for 15 minutes
+- In the morning, i searched for 4k wallpapers for my high resolution monitor screen (2k). Found some really nice ones too. But when i set them as Desktop background, it looked all pixelated because the _fit_ wasn't right. I couldn't change the setting because Windows wanted me to _Activate_ in order to personalize. What a weird way to make people pay. Meh. Made me appreciate Ubuntu and FOSS just a little bit more.
 
 This lockdown has extended beyond what i expected. 19 days already! I have been home too long. I miss being able to go out whenever i wanted to, wherever i wanted to =(
 
@@ -316,3 +318,5 @@ April 05, 2020
 April 06, 2020
 
 - Work day again..
+- Today i'm going to launch this Gatsby blog site. Meaning `aamnah.com` will land on this from now on.
+  In order to do that, i need to work on the styles a bit, make them presentable. I think i should be able to do that by fixing margins and padding here and there and making that SVG component so i could add icons and my logo (in SVG)
