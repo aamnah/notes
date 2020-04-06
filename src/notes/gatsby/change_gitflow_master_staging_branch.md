@@ -13,6 +13,9 @@ Create a `staging` branch based on `master`
 ```bash
 git checkout master
 git branch staging
+
+# push the new staging branch to remote as well so other people can see it
+git push -u origin staging
 ```
 
 Now run
