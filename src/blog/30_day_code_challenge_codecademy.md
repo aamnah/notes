@@ -6,8 +6,21 @@ path: 30_day_code_challenge_codecademy
 
 I'll be doing 30 days (hopefully) of C#, starting with the course on Codecademy. I'll be happy if i even manage to do two weeks though. A month is a long time to plan for.
 
+## Day 4
+
+April 5, 2020
+
+- Again, did the bare minimum to maintain my streak. It's weekend, i need to relax, enjoy and unplug. And i'll not compromise on the quality of my free time. Somehow, maintaining a streak felt like a chore. I should be doing it because i enjoy doing it, not because it's a chore.
+- Also, i would have done more of my C# learning but i ended up doing a favor to my brother that involved setting up a Linux server and installing Opencart on it so an online shop could be migrated. Then also adding SFTP users to be able to transfer files using FTP software. That took majority of my Saturday and entirety of my _weekend learning quota_ =)
+
+The bare minimum was at Codecademy:
+
+- Working with Numbers
+  - Operator shortcuts
+
 ## Day 3
 
+April 4, 2020
 Was too occupied with other things on the weekend (setup an Ubuntu server with Opencart and added SFTP user etc.). Only did the bare minimum to keep the 30 days streak
 
 Codecademy:
