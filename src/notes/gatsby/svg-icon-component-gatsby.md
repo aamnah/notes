@@ -40,3 +40,9 @@ function App() {
   )
 }
 ```
+
+So we gotta create a component for icons that'll return SVGs based on the `name` we pass to it.
+
+## Links
+
+- [Adding Images, Fonts, and Files](https://create-react-app.dev/docs/adding-images-fonts-and-files/)
