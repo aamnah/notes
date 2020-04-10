@@ -324,3 +324,13 @@ April 06, 2020
 - i did workout (before the fire happened)
 
 ![image-soot-inside-pc]()
+
+## Day 25
+
+April 10, 2020
+
+- Been in survival mode lately. Time was spent between getting the car maintained, visiting the hospital, scrubbing walls, arranging alternate stove and microwave and getting some office work done all at the same time. That's the gist of the last 4 days.
+- Good thing is that the kitchen is 60% clean and you can cook and use dishes and move around. The counter tops are no longer covered in soot, so you can put stuff there while working.
+- I have food sources secured, have a microwave and functional stove. Also blessed to have people who cooked for me in this hard time and delivered me food. And lent me their rice cookers. (Sunia is awesome!)
+- The work load for the job is getting back on track.
+- The shock of Ami jan being in hospital has somewhat settled. And the experience of a fire in the house has also mellowed down. I now feel gratitude that the fire was contained. Could have been a lot worse, and i'm glad it wasn't. Alhamdulillah.
