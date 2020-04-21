@@ -334,3 +334,24 @@ April 10, 2020
 - I have food sources secured, have a microwave and functional stove. Also blessed to have people who cooked for me in this hard time and delivered me food. And lent me their rice cookers. (Sunia is awesome!)
 - The work load for the job is getting back on track.
 - The shock of Ami jan being in hospital has somewhat settled. And the experience of a fire in the house has also mellowed down. I now feel gratitude that the fire was contained. Could have been a lot worse, and i'm glad it wasn't. Alhamdulillah.
+- workout has mostly been moving around a lot.
+
+## Day 35
+
+April 20, 2020
+
+- Ami jan (my nano) passed away on the 15th of April. The funeral was attended by the closest of family. A majority of people could not come because of the COVID-19 situation. There were no hugs and no handshakes and most people wore masks. Hurts me that she's gone. But i would probably not talk about it. I have already been through half a dozen deaths of close family members at this point, and the platitude people give me doesn't comfort much. Talking is moot.
+- Her heart stopped once, the night before the morning she passed away. I was standing there, holding her hand, looking at her when that happened.. Stayed up that night, looking at her, making sure she was breathing. Around 4am i had started drifting off every now and then. But every time i'd wake with a start and resume looking at her intently, counting the seconds, waiting for her to take a breath. Even at that time, in her condition, it mattered that she breathed and she was alive. Around 6am i slept for good. Around 10:45 we woke and left for our place, had to get Ami's (my mum) medicine. By 11am Ami Jan was no more.
+- She died peacefully, and she was not in pain at the time.
+
+## Day 36
+
+April 21, 2020
+
+- I have been all sorts of distraught of course.
+- Nothing much in terms of code related learning has been going on.
+- Practiced the uke every day in the days i haven't written the posts, keeps me occupied and somewhat comforts me too.
+- Worked out yesterday. That's probably once in 15 days..
+- Got back to work yesterday after taking two days off.
+- Seriously struggling with motivation these days. Trying my best to not go in a depression.
+- I am blessed with amazing friends, alhamdulillah.
