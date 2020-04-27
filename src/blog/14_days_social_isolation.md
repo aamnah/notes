@@ -355,3 +355,16 @@ April 21, 2020
 - Got back to work yesterday after taking two days off.
 - Seriously struggling with motivation these days. Trying my best to not go in a depression.
 - I am blessed with amazing friends, alhamdulillah.
+
+## Day 42
+
+April 27, 2020
+
+- Morale has been really low lately. I have lost appetite and feel lethargic most of the time. Keep wondering what _the point_ is.
+- This site wasn't being published for a while, build errors.. fixed those.
+- Playing the uke has been the one thing that has stayed constant throughout.
+- Workout isn't happening..
+- Learning of all sorts of programming has stopped and i find it hard to get excited about things
+- Netflix sucks. I have been watching _Bon Appétit_ videos on Youtube instead, so much gold!
+- I find it hard to keep sitting at the workstation. Been missing my Macbook with which i could just lounge and work fluently. The Windows laptop isn't powerful enough to run an emulator, and you can't change workspaces with a 3-finger swipe =(
+- I have been using my iPad more and more for watching Youtube, and browsing the web. I can do that in my bed, and the screen quality is really good. I always liked bigger screens, but convenience seems to have overtaken screen size.
