@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { SiteContainer, Link } from '../components/common'
 import { DefaultLayout } from '../components/Layout'
-import { RecentPosts } from '../components/common/Recent'
+// import { RecentPosts } from '../components/common/Recent'
 export default function NotesPage() {
   const data = useStaticQuery(graphql`
     query NotesQuery {
