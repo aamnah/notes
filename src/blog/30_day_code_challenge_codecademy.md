@@ -6,6 +6,22 @@ path: 30_day_code_challenge_codecademy
 
 I'll be doing 30 days (hopefully) of C#, starting with the course on Codecademy. I'll be happy if i even manage to do two weeks though. A month is a long time to plan for.
 
+## Day 5
+
+April 29, 2020
+
+Took a break, because life happened. There was a death, and there was a fire.. Got back to it today, finished Module 3 of _C# Fundamentals_
+
+- Learning the C# Syntax
+  - Introduction
+  - Working with Code Blocks and Statements
+  - Adding Numbers and Creating Arrays
+  - Looping through Arrays
+  - Using a List
+  - Computing and Formatting the Result
+
+Took me about 3 hours, even though i am familiar with the subject and it wasn't difficult. That's what it usually takes though, 30mins of video means 3hrs for me. Now i'm worried that the #freeApril will end and so will my subscription =(
+
 ## Day 4
 
 April 5, 2020
