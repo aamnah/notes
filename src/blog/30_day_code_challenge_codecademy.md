@@ -10,7 +10,7 @@ I'll be doing 30 days (hopefully) of C#, starting with the course on Codecademy.
 
 April 29, 2020
 
-Took a break, because life happened. There was a death, and there was a fire.. Got back to it today, finished Module 3 of _C# Fundamentals_
+Took a break, because life happened. There was a death, and there was a fire.. Got back to learning today, finished Module 3 of _C# Fundamentals_
 
 - Learning the C# Syntax
   - Introduction
