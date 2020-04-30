@@ -36,7 +36,7 @@ export default function IndexPage() {
         <Image />
       </div>
 
-      <h1>Hi, I'm Aamnah</h1>
+      <h2>Hi, I'm Aamnah</h2>
       <div id="about">
         <p>I'm a frontend developer. I design, develop and maintain sites, apps and user interfaces.</p>
 
@@ -50,11 +50,11 @@ export default function IndexPage() {
       </div>
 
       {/* <div id="work">
-        <h1>Work</h1>
+        <h2>Work</h2>
       </div> */}
 
       <div id="recent-posts">
-        <h1>Recent Posts</h1>
+        <h2>Recent Posts</h2>
         <ul>
           {data.allFile.nodes.map((post) => {
             let { title, path, description, date } = post.childMdx.frontmatter
