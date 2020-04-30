@@ -25,7 +25,7 @@ I might just move back to plain and simple markdown, no JSX in it. That will kee
 - [x] Add a [Contact form](https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/)
 - [ ] Use IP detection and show different placeholder text (e.g. phone format) for different countries
 - [x] Add syntax highlighting for code blocks ([Prismjs](https://prismjs.com/))
-  - [ ] Add a custom theme for highlighting
+  - [x] Add a custom theme for highlighting
   - [ ] [Add additional languages](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)
 - [x] Add support for _Draft_ status
 
