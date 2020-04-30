@@ -7,7 +7,7 @@ https://betterstack.dev/blog/how-to-embed-a-github-gist-in-your-website/
 export class Gist extends React.Component {
   constructor(props) {
     super(props)
-    this.gist = props.gist
+    this.gist = props.id
     this.file = props.file
     this.stylesheetAdded = false
     this.state = {
@@ -42,7 +42,7 @@ export class Gist extends React.Component {
       })
       this.addStylesheet(gist.stylesheet)
     }.bind(this)
-    var url = 'https://gist.github.com/' + this.props.gist + '.json?callback=' + gistCallback
+    var url = 'https://gist.github.com/' + this.props.id + '.json?callback=' + gistCallback
     if (this.props.file) {
       url += '&file=' + this.props.file
     }
@@ -54,7 +54,7 @@ export class Gist extends React.Component {
   }
   render() {
     if (this.state.loading) {
-      return <div>loading...</div>
+      return <div>loading gist from github...</div>
     } else {
       return <div dangerouslySetInnerHTML={{ __html: this.state.src }} />
     }
@@ -68,5 +68,5 @@ Gist.nextGistCallback = () => {
 }
 
 // USAGE
-// <Gist gist="aVolpe/fffbe6a9e9858c7e3546fb1d55782152"/>
-// <Gist gist="aVolpe/fffbe6a9e9858c7e3546fb1d55782152" file="SetUtils.java"/>
+// <Gist id="aVolpe/fffbe6a9e9858c7e3546fb1d55782152"/>
+// <Gist id="aVolpe/fffbe6a9e9858c7e3546fb1d55782152" file="SetUtils.java"/>
