@@ -371,8 +371,16 @@ April 27, 2020
 
 ## Day 43
 
-April 29, 2020
+April 28, 2020
 
-- Coded yesterday, followed along a C# course for 3 hours. Felt nice to have that enthusiasm back, felt normal.
+- Followed along a C# course for 3 hours. Felt nice to have that enthusiasm back, felt normal.
 - Worked out as well. Very little, but it's progress nonetheless.
 - Been making progress on the uke as well. Learnt the _major scale_ and the sequence for _sa re ga ma_. Making good progress on that pink panther theme song as well.
+
+## Day 44
+
+April 29, 2020
+
+- nothing out of the ordinary
+- generally felt better in terms of morale and spirit
+- cooked biryani
