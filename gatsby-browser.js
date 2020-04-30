@@ -9,7 +9,7 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import Highlight, { defaultProps, theme } from 'prism-react-renderer'
-import github from 'prism-react-renderer/themes/github'
+import syntaxTheme from './src/SyntaxHighlightTheme'
 
 /* eslint-disable */
 const component = {
@@ -21,7 +21,7 @@ const component = {
         {...defaultProps}
         code={props.children.props.children}
         language={matches && matches.groups && matches.groups.lang ? matches.groups.lang : ''}
-        theme={github}
+        theme={syntaxTheme}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={className} style={style}>
