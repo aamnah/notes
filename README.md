@@ -22,7 +22,8 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 - [x] Convert to Sass, see [Using Sass in Gatsby](https://www.gatsbyjs.org/docs/sass/)
 - [x] Add a [Contact form](https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/)
 - [ ] Use IP detection and show different placeholder text (e.g. phone format) for different countries
-- [ ] Add syntax highlighting for code blocks ([Prismjs](https://prismjs.com/))
+- [x] Add syntax highlighting for code blocks ([Prismjs](https://prismjs.com/))
+  - [ ] Add a custom theme for highlighting
 - [x] Add support for _Draft_ status
 
 ## Notes
