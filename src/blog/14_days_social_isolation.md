@@ -368,3 +368,19 @@ April 27, 2020
 - Netflix sucks. I have been watching _Bon Appétit_ videos on Youtube instead, so much gold!
 - I find it hard to keep sitting at the workstation. Been missing my Macbook with which i could just lounge and work fluently. The Windows laptop isn't powerful enough to run an emulator, and you can't change workspaces with a 3-finger swipe =(
 - I have been using my iPad more and more for watching Youtube, and browsing the web. I can do that in my bed, and the screen quality is really good. I always liked bigger screens, but convenience seems to have overtaken screen size.
+
+## Day 43
+
+April 28, 2020
+
+- Followed along a C# course for 3 hours. Felt nice to have that enthusiasm back, felt normal.
+- Worked out as well. Very little, but it's progress nonetheless.
+- Been making progress on the uke as well. Learnt the _major scale_ and the sequence for _sa re ga ma_. Making good progress on that pink panther theme song as well.
+
+## Day 44
+
+April 29, 2020
+
+- nothing out of the ordinary
+- generally felt better in terms of morale and spirit
+- cooked biryani
