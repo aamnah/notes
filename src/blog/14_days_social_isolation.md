@@ -384,3 +384,9 @@ April 29, 2020
 - nothing out of the ordinary
 - generally felt better in terms of morale and spirit
 - cooked biryani
+
+## Day 45
+
+April 30, 2020
+
+- Added a Gist component to the blog. Turns out React applications [can't show embedded gists](https://stackoverflow.com/a/30429689)
