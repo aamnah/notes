@@ -58,6 +58,26 @@ The theme i am using [came with the plugin](https://github.com/FormidableLabs/pr
 
 Will probably have to add support for additional languages
 
+### Add support for additional languages
+
+You have to install the `prismjs` package
+
+```bash
+npm i prismjs
+```
+
+And then add the following to `gatsby-browser.js`
+
+```jsx
+import Prism from 'prism-react-renderer/prism'
+
+;(typeof global !== 'undefined' ? global : window).Prism = Prism // gotta do this one otherwise it'll say Prism is not defined
+
+require('prismjs/components/prism-csharp')
+```
+
+You can see a [list of included languages here](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js) and [all supported langs here](https://github.com/PrismJS/prism/tree/master/components)
+
 ## Links
 
 - [Syntax Highlighting in Gatsby MDX](https://malikgabroun.com/syntax-highlighting-in-gatsby-mdx)
