@@ -2,7 +2,7 @@
 title: Working from Home during the COVID-19 Social Isolation
 path: working-from-home-covid19
 date: 2020-03-17
-lastmod: 2020-04-03
+lastmod: 2020-05-02
 description: Getting ready for self-isolation, and how it's going so far..
 ---
 
@@ -403,3 +403,5 @@ May 1, 2020
 - Created my custom light and dark syntax highlighting themes, named `PrismMonaco`
 
 ![monacolight & monacodark]()
+
+- Started a [GraphQL course on edx](https://www.edx.org/course/exploring-graphql-a-query-language-for-apis).. half way through the fundamentals. Am now familiar with a bunch of core concepts like types, queries, mutations, and subscriptions etc.
