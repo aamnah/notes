@@ -1,14 +1,20 @@
 let Color = {
-  color: '#393A34',
-  background: '#f5f2f0',
-  comment: '#999988',
+  background: '#f1f1f1',
+  color: '#333',
+  punctuation: '#6a737d',
+  keyword: '#ac19d8',
+  tag: '#f92672',
   string: '#690',
-  punctuation: '#393A34',
-  property: '#1BBC9B',
-  atrule: '#07a',
-  function: '#905',
+  property: '#ff6400',
+  // parameter: '#e5c07b',
+  parameter: '#16967f',
+  function: '#07a',
+  operator: '#56b6c2',
+  comment: '#abb2bf',
+
+  color5: '#56b6c2',
   color9: '#6f42c1',
-  keyword: '#ff6400',
+  color3: '#f92672',
 }
 
 var theme = {
@@ -37,7 +43,7 @@ var theme = {
       },
     },
     {
-      types: ['punctuation', 'operator'],
+      types: ['operator', 'punctuation'],
       style: {
         color: Color.punctuation,
       },
@@ -49,27 +55,51 @@ var theme = {
       },
     },
     {
-      types: ['atrule', 'keyword', 'attr-name', 'selector'],
+      types: ['attr-name'], // className, style, onClick etc
+      style: {
+        color: Color.property,
+      },
+    },
+    {
+      types: ['atrule'], // ? not in jsx
       style: {
         color: Color.atrule,
       },
     },
     {
-      types: ['function', 'deleted', 'tag'],
+      types: ['selector'], // ? not in jsx
+      style: {
+        color: '#f00',
+      },
+    },
+    {
+      types: ['function'], // render(), getElementById(), map() etc.
       style: {
         color: Color.function,
       },
     },
     {
-      types: ['function-variable'],
+      types: ['deleted', 'tag'], // div, pre, button etc.
+      style: {
+        color: Color.tag,
+      },
+    },
+    {
+      types: ['function-variable'], // ?
       style: {
         color: Color.color9,
       },
     },
     {
-      types: ['tag', 'selector', 'keyword'],
+      types: ['keyword'], // import, class, extends etc.
       style: {
         color: Color.keyword,
+      },
+    },
+    {
+      types: ['parameter'], // import, class, extends etc.
+      style: {
+        color: Color.parameter,
       },
     },
   ],

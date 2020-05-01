@@ -2,11 +2,11 @@ import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import Prism from 'prism-react-renderer/prism'
-import syntaxTheme from './src/SyntaxHighlightTheme'
+import PrismMonacoLight from './src/PrismMonacoLight'
 ;(typeof global !== 'undefined' ? global : window).Prism = Prism
 
-require('prismjs/components/prism-csharp')
-require('prismjs/components/prism-php')
+require('prismjs/components/prism-csharp.min')
+require('prismjs/components/prism-php.min')
 
 const component = {
   pre: (props) => {
@@ -17,7 +17,7 @@ const component = {
         {...defaultProps}
         code={props.children.props.children}
         language={matches && matches.groups && matches.groups.lang ? matches.groups.lang : ''}
-        theme={syntaxTheme}
+        theme={PrismMonacoLight}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
           <pre className={className} style={style}>
