@@ -1,5 +1,5 @@
 import React from 'react'
 
-export function ContentContainer({ children }) {
-  return <main>{children}</main>
+export function ContentContainer({ children, ...rest }) {
+  return <main {...rest}>{children}</main>
 }
