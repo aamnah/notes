@@ -3,6 +3,7 @@ module.exports = {
     title: `Aamnah's Blog`,
     description: `Life of Aamnah, in blog version`,
     author: `@aamnahakram`,
+    github_url: `https://github.com/aamnah/blog.aamnah.com/`,
   },
   plugins: [
     `gatsby-plugin-sass`,
@@ -80,7 +81,7 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
-          default: require.resolve(`./src/components/Layout/Default.jsx`),
+          default: require.resolve(`./src/components/Layout/Default.jsx`), // require.resolve give us the absolute path name
           blog: require.resolve(`./src/components/Layout/Post.jsx`),
           notes: require.resolve(`./src/components/Layout/Post.jsx`),
         },
