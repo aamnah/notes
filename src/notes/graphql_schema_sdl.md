@@ -53,9 +53,25 @@ type Subscription {
 
 ```graphql
 # QUERIES
+{
+  allPersons {
+    id
+    name
+    age
+  }
+}
+
 mutation {
   createPerson(name: "Henry", age: 32) {
     id
+  }
+}
+
+subscription {
+  newPerson {
+    id
+    name
+    age
   }
 }
 ```
