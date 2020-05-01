@@ -392,4 +392,11 @@ April 30, 2020
 - Added a Gist component to the blog. Turns out React applications [can't show embedded gists](https://stackoverflow.com/a/30429689)
 - the tldrdevnotes.com domain is expiring, and i have decided to let it go. The site and content will be moved to notes.aamnah.com, which is more appropriate. It'll also serve well for the Aamnah.com brand. TLDR Dev Notes never really took off, and never got any interaction. at. all. Part of that may have been because there is no comments system..
 - Started work on the migration and got 90% there.
-- The site has 857 page btw, nice.
+- The notes site has 857 page btw, nice.
+- Added syntax highlighting for fenced code blocks on the Gatsby site
+
+## Day 46
+
+May 1, 2020
+
+- Updated styles for code blocks and inline code.
