@@ -4,9 +4,9 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
 const path = require('path')
 exports.createPages = async ({ graphql, actions, reporter }) => {
+  // `reporter` is like Gatsby's internal console.log()
   // Destructure the createPage function from the actions object
   const { createPage } = actions
   const result = await graphql(`
@@ -30,7 +30,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     }
   `)
   if (result.errors) {
-    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query', result.errors)
   }
   // Create blog post pages.
   const posts = result.data.allMdx.edges
@@ -56,6 +56,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         id: node.id,
         title: node.frontmatter.title,
         body: node.body,
+        date: node.frontmatter.date,
+        description: node.frontmatter.description,
+        excerpt: node.frontmatter.excerpt,
+        lastmod: node.frontmatter.lastmod,
       },
     })
   })
