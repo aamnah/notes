@@ -400,3 +400,6 @@ April 30, 2020
 May 1, 2020
 
 - Updated styles for code blocks and inline code.
+- Created my custom light and dark syntax highlighting themes, named `PrismMonaco`
+
+![monacolight & monacodark]()
