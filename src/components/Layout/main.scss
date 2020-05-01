@@ -4,7 +4,8 @@
   --font-family-code: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono', 'Liberation Mono', Menlo, Courier,
     monospace;
   --color-brand-turquoise: #76CED3;
-  --color-primary: #42BCC3;
+  // --color-primary: #42BCC3;
+  --color-primary: #13B2A9;
   --color-dark: #202938;
   --color-muted: #4e4e4e;
   --color-faded: #9C9C9C;
@@ -421,7 +422,7 @@ pre {
   font-size: 0.85rem;
   line-height: 1.42;
   background: hsla(0, 0%, 0%, 0.04);
-  border-radius: 3px;
+  border-radius: 8px;
   overflow: auto;
   word-wrap: normal;
   padding: 1.45rem;
@@ -609,7 +610,7 @@ tt,
 code {
   background-color: hsla(0, 0%, 0%, 0.04);
   border-radius: 3px;
-  font-family: var(--font-family-default);
+  font-family: var(--font-family-code);
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
@@ -623,7 +624,7 @@ code:after,
 tt:before,
 tt:after {
   letter-spacing: -0.2em;
-  content: ' ';
+  // content: ' ';
 }
 pre code:before,
 pre code:after,
@@ -676,3 +677,9 @@ h4 {font-size: 1.563em;}
 h5 {font-size: 1.25em;}
 
 small, .text_small {font-size: 0.8em;}
+
+tt, code {
+  padding: 0.2em .4em;
+  margin: 0 .2em;
+  border-radius: 4px;
+}

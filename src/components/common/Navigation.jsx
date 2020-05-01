@@ -18,7 +18,7 @@ export function Navigation() {
         Notes
       </Link>
 
-      <Link external className="Navigation-item" to="https://tldrdevnotes.com">
+      <Link external className="Navigation-item" to="https://notes.aamnah.com">
         Notes
       </Link>
     </div>

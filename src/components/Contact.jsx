@@ -15,7 +15,7 @@ export default function Contact() {
   }
   return (
     <div id="contact">
-      <h1>Send me a message</h1>
+      <h2>Send me a message</h2>
       <form
         name="Contact-form"
         method="POST"

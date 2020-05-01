@@ -6,6 +6,8 @@ Gatsby based site for the blog on [blog.aamnah.com](https://blog.aamnah.com)
 
 Uses MDX for the post content. I always had this issue where i couldn't use CSS classes in Makrdown, and if i did add any HTML, any markdown wouldn't render inside that HTML block. MDX fixes that. I can write in the Markdown that i am familiar with, and add all the jazz with JSX as well.
 
+I might just move back to plain and simple markdown, no JSX in it. That will keep the content more portable. MDX sounds awesome but i haven't really used it yet to justify the necessity of it
+
 ## TODO
 
 - [x] Deploy the blog at Netlify
@@ -22,7 +24,9 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 - [x] Convert to Sass, see [Using Sass in Gatsby](https://www.gatsbyjs.org/docs/sass/)
 - [x] Add a [Contact form](https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/)
 - [ ] Use IP detection and show different placeholder text (e.g. phone format) for different countries
-- [ ] Add syntax highlighting for code blocks ([Prismjs](https://prismjs.com/))
+- [x] Add syntax highlighting for code blocks ([Prismjs](https://prismjs.com/))
+  - [x] Add a custom theme for highlighting
+  - [ ] [Add additional languages](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)
 - [x] Add support for _Draft_ status
 
 ## Notes
