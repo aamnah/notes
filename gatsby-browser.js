@@ -44,7 +44,7 @@ const component = {
         theme={PrismMonacoLight}
       >
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={className} style={style}>
+          <Pre className={className} style={style}>
             {tokens.map((line, i) => (
               <Line key={i} {...getLineProps({ line, key: i })}>
                 <LineNo>{i + 1}</LineNo>
@@ -55,7 +55,7 @@ const component = {
                 </LineContent>
               </Line>
             ))}
-          </pre>
+          </Pre>
         )}
       </Highlight>
     )
