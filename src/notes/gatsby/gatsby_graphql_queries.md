@@ -25,7 +25,7 @@ You can do that with `sourceInstanceName` on `file`
 
 `notes` is the folder in the above query, and you'll get the names of all files in that folder. Without that filter, you'll get something like this
 
-```
+```graphql
 {
   allFile {
     nodes {
@@ -36,7 +36,7 @@ You can do that with `sourceInstanceName` on `file`
 }
 ```
 
-```
+```graphql
 {
   "data": {
     "allFile": {
