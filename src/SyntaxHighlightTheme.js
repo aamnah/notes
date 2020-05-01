@@ -6,9 +6,9 @@ let Color = {
   punctuation: '#393A34',
   property: '#1BBC9B',
   atrule: '#07a',
-  function: '#ff6400',
+  function: '#905',
   color9: '#6f42c1',
-  keyword: '#905',
+  keyword: '#ff6400',
 }
 
 var theme = {
