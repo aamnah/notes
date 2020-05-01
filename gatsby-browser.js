@@ -1,15 +1,12 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
-
-// You can delete this file if you're not using it
-
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import Highlight, { defaultProps, theme } from 'prism-react-renderer'
+import Highlight, { defaultProps } from 'prism-react-renderer'
+import Prism from 'prism-react-renderer/prism'
 import syntaxTheme from './src/SyntaxHighlightTheme'
+
+// Add more language highlighting support
+;(typeof global !== 'undefined' ? global : window).Prism = Prism
+require('prismjs/components/prism-csharp')
 
 /* eslint-disable */
 const component = {
