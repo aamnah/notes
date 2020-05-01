@@ -3,12 +3,11 @@ import { MDXProvider } from '@mdx-js/react'
 import Highlight, { defaultProps } from 'prism-react-renderer'
 import Prism from 'prism-react-renderer/prism'
 import syntaxTheme from './src/SyntaxHighlightTheme'
-
-// Add more language highlighting support
 ;(typeof global !== 'undefined' ? global : window).Prism = Prism
-require('prismjs/components/prism-csharp')
 
-/* eslint-disable */
+require('prismjs/components/prism-csharp')
+require('prismjs/components/prism-php')
+
 const component = {
   pre: (props) => {
     const className = props.children.props.className || ''
