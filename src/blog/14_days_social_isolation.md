@@ -405,3 +405,16 @@ May 1, 2020
 ![monacolight & monacodark](../images/)
 
 - Started a [GraphQL course on edx](https://www.edx.org/course/exploring-graphql-a-query-language-for-apis).. half way through the fundamentals. Am now familiar with a bunch of core concepts like types, queries, mutations, and subscriptions etc.
+
+## Day 47
+
+May 2, 2020 Saturday
+
+- Finished the first module of fundamentals and core concepts of GraphQL
+- Create my custom _oh-my-zsh_ theme
+
+## Day 48
+
+May 3, 2020 Sunday
+
+- fixed images for the Gastby blog
