@@ -32,7 +32,25 @@ set the theme to random
 ZSH_THEME="random"
 ```
 
-every time you like a prompt, run `echo $PROMPT` to get the prompt string value for the current theme and copy it. I immediately liked [af-magic](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/af-magic.zsh-theme) when i came across it, it was similar to what i wanted so i based my custom theme on it
+every time you like a prompt, run `echo $PROMPT` to get the prompt string value for the current theme and copy it. If you want to check the name of the theme, run `echo -e ${ZSH_THEME}`
+
+I immediately liked [af-magic](https://github.com/ohmyzsh/ohmyzsh/blob/master/themes/af-magic.zsh-theme) when i came across it, it was similar to what i wanted so i based my custom theme on it
+
+### Where do i put my theme?
+
+Themes are located in a `themes` folder and must end with `.zsh-theme`. The basename of the file is the name of the theme.
+
+```
+zsh_custom
+└── themes
+    └── amnastic.zsh-theme
+```
+
+Then edit your `.zshrc` to use that theme.
+
+```bash
+ZSH_THEME="amnastic"
+```
 
 ### Prompt and such
 
@@ -105,7 +123,14 @@ else
 fi
 ```
 
-- Colors are represented as `%F{237}` or `%F{red}` or `$FG[237]` or `$fg[red]`. All are valid formats - `%F{237}` 256 color number - `%F{red}` 8 color name (black, red, green, yellow, blue, magenta, cyan, white) - `$FG[237]` (notice the `$` sign instead of `%`) 256 color number - `$fg[red]` (notice the `$` and lower case `fg`) 8 color name (black, red, green, yellow, blue, magenta, cyan, white) - `%{$fg_bold[blue]%}`
+- Colors are represented as `%F{237}` or `%F{red}` or `$FG[237]` or `$fg[red]`. All are valid formats. The reset for the color value can change based on the format you use
+
+  - `%F{237}` 256 color number
+  - `%F{red}` 8 color name (black, red, green, yellow, blue, magenta, cyan, white)
+  - `$FG[237]` (notice the `$` sign instead of `%`) 256 color number
+  - `$fg[red]` (notice the `$` and lower case `fg`) 8 color name (black, red, green, yellow, blue, magenta, cyan, white)
+  - `%{$fg_bold[blue]%}` bold variants
+
 - `%F` is Foreground color, `$f` for resetting foreground color
 - `%K` is bacKground color, `%k` for resetting background color
 - `$reset_color` is a Zsh variable that resets the color of output
@@ -122,7 +147,9 @@ print -P '%F{237} %m %f'
 
 ### Git
 
-You can use `$(git_prompt_info)` to show git branch and whether it is _dirty_ or not. It's a function that comes buit in with oh-my-zsh. You can find all git functions in `~/.oh-my-zsh/lib/git.zsh`
+You can use `$(git_prompt_info)` to show git branch and whether it is _dirty_ or not. It's a function that comes buit in with oh-my-zsh.
+
+You can find all git functions in `~/.oh-my-zsh/lib/git.zsh`
 
 ```bash
 $(git_prompt_info) # Outputs current branch info in prompt format
@@ -142,7 +169,7 @@ $(git_current_user_email) # Outputs the email of the current user
 $(git_repo_name) # Output the name of the root directory of the git repository
 ```
 
-Then you also have a bunch of theme prompt varibles to customize the git info
+`git_prompt_info` can further be customized with plenty of `ZSH_THEME_GIT_PROMPT_` variables that let you customize things like prefix and suffix and much more
 
 ```bash
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075]($FG[078]"
@@ -199,7 +226,7 @@ You need to set the prompt string with single quotes `' '`
 PS1='%{$blue%}%c %{$purple%}%(!.#.») %{$reset_color%}'
 ```
 
-will work just fine
+above code will work just fine, whereas
 
 ```bash
 PS1="%{$blue%}%c %{$purple%}%(!.#.») %{$reset_color%}"
@@ -214,5 +241,6 @@ will show proper syntax highlighting in code editor, but will [not update git wh
 - [Prompt Expansion](http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html)
 - [Consistent terminal colors with 16-ANSI-color Vim themes](https://jeffkreeftmeijer.com/vim-16-color/)
 - [Zsh: Available ZSH*THEME_GIT_PROMPT*\* variables](https://gist.github.com/vergenzt/33a45a9a9218b38bd4bf)
-- [](https://github.com/ohmyzsh/ohmyzsh/issues/6887)
-- [](https://github.com/ohmyzsh/ohmyzsh/wiki/Customization#overriding-and-adding-themes)
+- [How do I create a zsh theme?](https://github.com/ohmyzsh/ohmyzsh/issues/6887)
+- [Customization](https://github.com/ohmyzsh/ohmyzsh/wiki/Customization#overriding-and-adding-themes)
+- [256 Colors](https://jonasjacek.github.io/colors/)
