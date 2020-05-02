@@ -402,7 +402,8 @@ May 1, 2020
 - Updated styles for code blocks and inline code.
 - Created my custom light and dark syntax highlighting themes for Prism, named `PrismMonaco`
 
-![monacolight & monacodark](../images/)
+![monacolight](../images/prism-monaco-light.png)
+![monacodark](../images/prism-monaco-dark.png)
 
 - Started a [GraphQL course on edx](https://www.edx.org/course/exploring-graphql-a-query-language-for-apis).. half way through the fundamentals. Am now familiar with a bunch of core concepts like types, queries, mutations, and subscriptions etc.
 
@@ -413,8 +414,10 @@ May 2, 2020 Saturday
 - Finished the first module of fundamentals and core concepts of GraphQL
 - Create my custom _oh-my-zsh_ theme
 
+![screenshot amnastic.zsh-theme.png](../images/amnastic.zsh-theme.png)
+
 ## Day 48
 
 May 3, 2020 Sunday
 
-- fixed images for the Gastby blog
+- fixed images for the Gatsby blog
