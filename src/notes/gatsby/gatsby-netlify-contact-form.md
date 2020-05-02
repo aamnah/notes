@@ -24,11 +24,11 @@ The issues i had were:
 
 To fix not getting email notifications, just edit the notification and set the Form value to _Any form_. That fixed it for me.
 
-![email-notification-settings](images/notes/email-notification-settings.png)
+![email-notification-settings](../images/notes/email-notification-settings.png)
 
 The not sending all input fields seems to have been a known bug since March 2018, when Scott Tolinski made [this video](https://www.youtube.com/watch?v=hF7xJhzrr9s). The workaround is to **rename your form** to something else (essentially making Netlify detect it as a new form). If you add fields to an existing form, they'll not show up.
 
-![netlify-contact-submission-response](images/notes/netlify-contact-submission-response.png)
+![netlify-contact-submission-response](../images/notes/netlify-contact-submission-response.png)
 
 ## Links
 

@@ -17,7 +17,8 @@ I might just move back to plain and simple markdown, no JSX in it. That will kee
 - [x] Add Recent posts tp the Home page
 - [ ] Add sitemap
 - [ ] Add RSS feed
-- [ ] Figure out post images
+- [x] Figure out post images
+  - [ ] Serve images from the post folder. This isn't working at the moment, build fails if i move post inside a folder
 - [x] Fix post routes for MDX
 - [ ] Add a component for inline SVGs (logo)
 - [ ] Add SVG icon component (heart, external link)
@@ -26,7 +27,7 @@ I might just move back to plain and simple markdown, no JSX in it. That will kee
 - [ ] Use IP detection and show different placeholder text (e.g. phone format) for different countries
 - [x] Add syntax highlighting for code blocks ([Prismjs](https://prismjs.com/))
   - [x] Add a custom theme for highlighting
-  - [ ] [Add additional languages](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)
+  - [x] [Add additional languages](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)
 - [x] Add support for _Draft_ status
 
 ## Notes
@@ -67,3 +68,9 @@ export * from './SEO.jsx'
 ## Linking
 
 If you use Gatsby `<Link>` instead of `<a>` it makes the change of _internal_ pages smooth, you don't do a full page refresh every time. Underneath, it's using Reach Router `@reach/router`, so it only works on internal links. For external links you'd still use `<a>`
+
+## Images
+
+- Follow this for MDX [Working with Images in Markdown Posts and Pages](https://www.gatsbyjs.org/docs/working-with-images-in-markdown/)
+
+- The image path will be relative to where the post file is. For example, if it's in `images/` one level up, you'll link to `../images/foo.png`

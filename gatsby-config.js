@@ -8,6 +8,9 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -16,8 +19,25 @@ module.exports = {
         // path: path.join(__dirname, `src`, `images`),
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          default: require.resolve(`./src/components/Layout/Default.jsx`), // require.resolve give us the absolute path name
+          blog: require.resolve(`./src/components/Layout/Post.jsx`),
+          notes: require.resolve(`./src/components/Layout/Post.jsx`),
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -76,16 +96,5 @@ module.exports = {
     //     path: `${__dirname}/src/blog`,
     //   },
     // },
-    {
-      resolve: `gatsby-plugin-mdx`,
-      options: {
-        extensions: [`.mdx`, `.md`],
-        defaultLayouts: {
-          default: require.resolve(`./src/components/Layout/Default.jsx`), // require.resolve give us the absolute path name
-          blog: require.resolve(`./src/components/Layout/Post.jsx`),
-          notes: require.resolve(`./src/components/Layout/Post.jsx`),
-        },
-      },
-    },
   ],
 }
