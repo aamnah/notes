@@ -69,6 +69,8 @@ export * from './SEO.jsx'
 
 If you use Gatsby `<Link>` instead of `<a>` it makes the change of _internal_ pages smooth, you don't do a full page refresh every time. Underneath, it's using Reach Router `@reach/router`, so it only works on internal links. For external links you'd still use `<a>`
 
-## Links
+## Images
 
-- [Working with Images in Markdown Posts and Pages](https://www.gatsbyjs.org/docs/working-with-images-in-markdown/)
+- Follow this for MDX [Working with Images in Markdown Posts and Pages](https://www.gatsbyjs.org/docs/working-with-images-in-markdown/)
+
+- The image path will be relative to where the post file is. For example, if it's in `images/` one level up, you'll link to `../images/foo.png`
