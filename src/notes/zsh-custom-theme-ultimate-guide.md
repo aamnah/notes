@@ -23,6 +23,8 @@ $ mysite.com (master)                                               Sat 2, 15:39
 
 ```
 
+![amnastic.zsh-theme.png](../images/amnastic.zsh-theme.png)
+
 ### Gameplan
 
 set the theme to random
