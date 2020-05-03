@@ -16,19 +16,18 @@ export default function IndexPage() {
         # get reverse chronologoical order, i.e. lastmod on top
         nodes {
           id
-          childMdx {
-            frontmatter {
-              title
-              path # the URL path
-              description
-              date
-              lastmod
-            }
-          }
           name # filename
           base # filename.ext
           absolutePath # the file path
           dir # absolutePath minus base
+          childMdx {
+            frontmatter {
+              title
+              path # the URL path
+              date
+              lastmod
+            }
+          }
         }
       }
     }
@@ -61,7 +60,7 @@ export default function IndexPage() {
         <h2>Recent Posts</h2>
         <ul>
           {data.allFile.nodes.map((post) => {
-            let { title, path, description, date } = post.childMdx.frontmatter
+            let { title, path, date } = post.childMdx.frontmatter
             return path ? (
               <li key={post.id}>
                 <Link to={path}>{title !== '' ? title : post.name}</Link>
