@@ -243,6 +243,30 @@ PS1="%{$blue%}%c %{$purple%}%(!.#.») %{$reset_color%}"
 
 will show proper syntax highlighting in code editor, but will [not update git when directory is changed](https://github.com/olivierverdier/zsh-git-prompt/issues/55). The double quotes make the variables in PROMPT to get evaluated when sourcing `.zshrc` and that's an issue.
 
+That's a big issue to be honest, because it applies for not just the theme, it applies for _all files_ in the `custom/` folder. This gave me a hard time after having copied over code from my `.bash_aliases`. Some aliases there defined with double quotes made my git prompt stopped working again.
+
+The following will cause issues
+
+```bash
+## Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+## Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+```
+
+Had to flip the single and double arrangement: single quote outside, double quote inside
+
+```bash
+## Recursively delete `.DS_Store` files
+alias cleanup='find . -type f -name "*.DS_Store$" -ls -delet'
+
+## Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill='ps ux | grep "[C]hrome Helper --type=renderer" | grep -v extension-process | tr -s " " | cut -d " " -f2 | xargs kill'
+```
+
 ## Links
 
 - [Prompting](http://zsh.sourceforge.net/Intro/intro_14.html)
