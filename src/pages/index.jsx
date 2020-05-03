@@ -9,8 +9,9 @@ export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query IndexQuery {
       allFile(
-        filter: { sourceInstanceName: { eq: "blog" } }
+        filter: { sourceInstanceName: { in: ["blog", "notes"] } }
         sort: { order: DESC, fields: childMdx___frontmatter___date }
+        limit: 5
       ) {
         # get reverse chronologoical order, i.e. lastmod on top
         nodes {
