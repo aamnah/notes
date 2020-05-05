@@ -260,7 +260,7 @@ Had to flip the single and double arrangement: single quote outside, double quot
 
 ```bash
 ## Recursively delete `.DS_Store` files
-alias cleanup='find . -type f -name "*.DS_Store$" -ls -delet'
+alias cleanup='find . -type f -name "*.DS_Store" -ls -delete'
 
 ## Kill all the tabs in Chrome to free up memory
 # [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
