@@ -17,8 +17,12 @@ sudo apt install -y sysstat
 # Set ENABLED="true" in "/etc/default/sysstat"
 sudo sed -i 's/ENABLED="false"/ENABLED="true"/g' /etc/default/sysstat
 
+# change the collection interval from every 10 minutes to every 2 minutes.
+sudo sed -i 's/5-55\/10/*\/2/g' /etc/cron.d/sysstat
+
 # restart sysstat for the change to take effect and data collection to start working
 sudo service sysstat restart
+
 
 # check cpu utilization
 sar
@@ -49,7 +53,7 @@ sudo service sysstat restart
 
 ## Real-time CPU and memory usage
 
-- `top` and `htop`. `htop` is definitely an improvement over `top`
+- `htop` and `top`. `htop` is definitely an improvement over `top`
 
 ![htop-vs-top-cpu-memory-usage-stats](../images/htop-vs-top-cpu-memory-usage-stats.png)
 
