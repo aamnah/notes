@@ -7,21 +7,24 @@ import { Link, SEO } from '../components/common'
 export default function BlogPage() {
   const data = useStaticQuery(graphql`
     query BlogQuery {
-      allFile(filter: { sourceInstanceName: { eq: "blog" } }) {
+      allFile(
+        filter: { sourceInstanceName: { eq: "blog" } }
+        sort: { order: DESC, fields: childMdx___frontmatter___date }
+      ) {
         nodes {
           id
-          childMdx {
-            frontmatter {
-              title
-              path # the URL path
-              description
-              date
-            }
-          }
           name # filename
           base # filename.ext
           absolutePath # the file path
           dir # absolutePath minus base
+          childMdx {
+            frontmatter {
+              title
+              path # the URL path
+              # description
+              date(formatString: "YYYY, MMM DD") # 2020, May 03
+            }
+          }
         }
       }
     }
@@ -34,13 +37,16 @@ export default function BlogPage() {
       <h1>Recent Posts</h1>
       <ul>
         {data.allFile.nodes.map((post) => {
-          let { title, path, description, date } = post.childMdx.frontmatter
+          let { title, path, date } = post.childMdx.frontmatter
+          let { id, name } = post
           return path ? (
-            <li key={post.id}>
-              <Link to={path}>{title !== '' ? title : post.name}</Link>
+            <li key={id}>
+              <small>{date}</small> <Link to={path}>{title !== '' ? title : name}</Link>
             </li>
           ) : (
-            <li key={post.id}>{title !== '' ? title : post.name}</li>
+            <li key={id}>
+              <small>{date}</small> {title !== '' ? title : name}
+            </li>
           )
         })}
       </ul>

@@ -4,7 +4,7 @@ date: 2020-05-02
 path: zsh-custom-theme-ultimate-guide
 ---
 
-Now that Zsh is now the default shell on macOS, i figured it was a good time to install [oh-my-zsh]() and give it another go. And obviously, i immediately wanted to customize my prompt. So i ended up going through the process of creating a custom Zsh theme..
+Now that Zsh is now the default shell on macOS, i figured it was a good time to install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and give it another go. And obviously, i immediately wanted to customize my prompt. So i ended up going through the process of creating a custom Zsh theme..
 
 I need a minimalist prompt with
 
@@ -23,7 +23,11 @@ $ mysite.com (master)                                               Sat 2, 15:39
 
 ```
 
+and i ended up with this
+
 ![amnastic.zsh-theme.png](../images/amnastic.zsh-theme.png)
+
+code is [here on Github](https://github.com/aamnah/oh-my-zsh-custom)
 
 ### Gameplan
 
@@ -238,6 +242,30 @@ PS1="%{$blue%}%c %{$purple%}%(!.#.») %{$reset_color%}"
 ```
 
 will show proper syntax highlighting in code editor, but will [not update git when directory is changed](https://github.com/olivierverdier/zsh-git-prompt/issues/55). The double quotes make the variables in PROMPT to get evaluated when sourcing `.zshrc` and that's an issue.
+
+That's a big issue to be honest, because it applies for not just the theme, it applies for _all files_ in the `custom/` folder. This gave me a hard time after having copied over code from my `.bash_aliases`. Some aliases there defined with double quotes made my git prompt stopped working again.
+
+The following will cause issues
+
+```bash
+## Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+## Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+```
+
+Had to flip the single and double arrangement: single quote outside, double quote inside
+
+```bash
+## Recursively delete `.DS_Store` files
+alias cleanup='find . -type f -name "*.DS_Store" -ls -delete'
+
+## Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill='ps ux | grep "[C]hrome Helper --type=renderer" | grep -v extension-process | tr -s " " | cut -d " " -f2 | xargs kill'
+```
 
 ## Links
 

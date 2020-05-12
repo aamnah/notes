@@ -8,23 +8,26 @@ import Contact from '../components/Contact.jsx'
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query IndexQuery {
-      allFile(filter: { sourceInstanceName: { eq: "blog" } }, sort: { fields: modifiedTime, order: DESC }) {
+      allFile(
+        filter: { sourceInstanceName: { in: ["blog", "notes"] } }
+        sort: { order: DESC, fields: childMdx___frontmatter___date }
+        limit: 5
+      ) {
         # get reverse chronologoical order, i.e. lastmod on top
         nodes {
           id
-          childMdx {
-            frontmatter {
-              title
-              path # the URL path
-              description
-              date
-              lastmod
-            }
-          }
           name # filename
           base # filename.ext
           absolutePath # the file path
           dir # absolutePath minus base
+          childMdx {
+            frontmatter {
+              title
+              path # the URL path
+              date
+              lastmod
+            }
+          }
         }
       }
     }
@@ -57,7 +60,7 @@ export default function IndexPage() {
         <h2>Recent Posts</h2>
         <ul>
           {data.allFile.nodes.map((post) => {
-            let { title, path, description, date } = post.childMdx.frontmatter
+            let { title, path, date } = post.childMdx.frontmatter
             return path ? (
               <li key={post.id}>
                 <Link to={path}>{title !== '' ? title : post.name}</Link>
@@ -69,7 +72,27 @@ export default function IndexPage() {
         </ul>
         <Link to="/blog">view all</Link>
       </div>
-
+      <div id="projects">
+        {/* TODO: Jazz this up. Add screenshots, description, github icons and more */}
+        <h2>Projects</h2>
+        <h4>Themes</h4>
+        <ul>
+          <li>
+            <a href="https://github.com/aamnah/oh-my-zsh-custom/blob/master/themes/amnastic.zsh-theme">
+              amnastic.zsh-theme
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/aamnah/tmux-flat-theme">tmux Flat Theme</a>
+          </li>
+          <li>
+            <a href="https://github.com/aamnah/MarkdownEditing-BlackboardTheme">MarkdownEditing-BlackboardTheme</a>
+          </li>
+          <li>
+            <a href="https://github.com/aamnah/LightPaper-Blackboardish">LightPaper-Blackboardish</a>
+          </li>
+        </ul>
+      </div>
       <Contact />
     </HomeLayout>
   )

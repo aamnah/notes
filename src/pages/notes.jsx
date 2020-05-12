@@ -7,7 +7,10 @@ import { DefaultLayout } from '../components/Layout'
 export default function NotesPage() {
   const data = useStaticQuery(graphql`
     query NotesQuery {
-      allFile(filter: { sourceInstanceName: { eq: "notes" } }, sort: { fields: modifiedTime, order: DESC }) {
+      allFile(
+        filter: { sourceInstanceName: { eq: "notes" } }
+        sort: { order: DESC, fields: childMdx___frontmatter___date }
+      ) {
         nodes {
           id
           childMdx {
@@ -15,7 +18,7 @@ export default function NotesPage() {
               title
               path # the URL path
               description
-              date
+              date(formatString: "YYYY, MMM DD")
             }
           }
           name # filename
@@ -33,10 +36,11 @@ export default function NotesPage() {
         <h1>Notes</h1>
         <ul>
           {data.allFile.nodes.map((note) => {
-            let { title, path } = note.childMdx.frontmatter
+            let { title, path, date } = note.childMdx.frontmatter
             return (
               <li>
-                <Link to={path}>{title}</Link>
+                <small>{date}</small>
+                <Link to={path}> {title}</Link>
               </li>
             )
           })}
