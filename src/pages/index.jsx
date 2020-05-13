@@ -6,26 +6,48 @@ import { Image, Link, SEO } from '../components/common'
 import Contact from '../components/Contact.jsx'
 
 export default function IndexPage() {
+  // const data = useStaticQuery(graphql`
+  //   query IndexQuery {
+  //     allFile(
+  //       filter: { sourceInstanceName: { in: ["blog", "notes"] } }
+  //       sort: { order: DESC, fields: childMdx___frontmatter___date }
+  //       limit: 5
+  //     ) {
+  //       # get reverse chronologoical order, i.e. lastmod on top
+  //       nodes {
+  //         id
+  //         name # filename
+  //         base # filename.ext
+  //         absolutePath # the file path
+  //         dir # absolutePath minus base
+  //         childMdx {
+  //           frontmatter {
+  //             title
+  //             path # the URL path
+  //             date
+  //             lastmod
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+
   const data = useStaticQuery(graphql`
     query IndexQuery {
-      allFile(
-        filter: { sourceInstanceName: { in: ["blog", "notes"] } }
-        sort: { order: DESC, fields: childMdx___frontmatter___date }
-        limit: 5
-      ) {
+      allMdx(sort: { order: DESC, fields: frontmatter___date }, limit: 7) {
         # get reverse chronologoical order, i.e. lastmod on top
-        nodes {
-          id
-          name # filename
-          base # filename.ext
-          absolutePath # the file path
-          dir # absolutePath minus base
-          childMdx {
+        edges {
+          node {
+            id
+            excerpt
             frontmatter {
               title
-              path # the URL path
+              path
               date
-              lastmod
+            }
+            fields {
+              slug
             }
           }
         }
@@ -59,14 +81,15 @@ export default function IndexPage() {
       <div id="recent-posts">
         <h2>Recent Posts</h2>
         <ul>
-          {data.allFile.nodes.map((post) => {
-            let { title, path, date } = post.childMdx.frontmatter
-            return path ? (
+          {/* {data.allFile.nodes.map((post) => { */}
+          {data.allMdx.edges.map((post) => {
+            let { title } = post.node.frontmatter
+            let { slug } = post.node.fields
+
+            return (
               <li key={post.id}>
-                <Link to={path}>{title !== '' ? title : post.name}</Link>
+                <Link to={slug}>{title !== '' ? title : slug}</Link>
               </li>
-            ) : (
-              <li key={post.id}>{title !== '' ? title : post.name}</li>
             )
           })}
         </ul>
