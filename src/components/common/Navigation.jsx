@@ -14,9 +14,9 @@ export function Navigation() {
       <Link className="Navigation-item" to="/blog">
         Blog
       </Link>
-      <Link className="Navigation-item" to="/notes">
+      {/* <Link className="Navigation-item" to="/notes">
         Notes
-      </Link>
+      </Link> */}
 
       <Link external className="Navigation-item" to="https://notes.aamnah.com">
         Notes
