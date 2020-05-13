@@ -5,6 +5,11 @@ description: figuring out what caused the server to go down this morning
 date: 2020-05-12
 ---
 
+Basically, i'm looking for answers to these:
+
+- Why did the server go down?
+- What process was taking so many resources that the server crashed?
+
 ## CPU utilization history and logs with System Activity Reporter (SAR)
 
 The `sar` command can give you CPU utilization history. It's a part of a software bundle called `sysstat` which you'll need to install on Debian/Ubuntu

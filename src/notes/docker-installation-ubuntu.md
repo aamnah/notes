@@ -7,7 +7,14 @@ date: 2020-05-13
 ## Install on Ubuntu (easy way)
 
 ```bash
+# install
 sudo apt install -y docker.io docker-compose
+
+# use Docker as a non-root user
+# get rid of having to sudo or be root
+sudo usermod -aG docker $(whoami)
+
+# logout and login again for the group change to work
 ```
 
 You don't need to install the long manual way, `docker.io` is already provided as a package in the Ubuntu repos and the version is fairly up to date (`19.03.8-0ubuntu1` as of this writing, which is the latest [version](https://docs.docker.com/engine/release-notes/)). You can check which version comes with the command`apt info docker.io`
@@ -38,6 +45,23 @@ sudo apt-get update && sudo apt-get install -y docker-ce docker-ce-cli container
 ```
 
 Since the release for 20.04 LTS is not available as of this writing, i'm adding the bionic repo instead [ref](https://askubuntu.com/a/1230190). `bionic` instead of `$(lsb_release -cs)`
+
+## User permissions
+
+If you keep getting `permission denied` errors like these
+
+```
+docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.40/containers/create: dial unix /var/run/docker.sock: connect: permission denied.
+See 'docker run --help'.
+```
+
+This means you need to run the command with `sudo`. You can get rid of having to `sudo` by adding yourself to the `docker` user group
+
+```bash
+sudo usermod -aG docker $(whoami)
+```
+
+Make sure you logout and log back in after this in order for the change to work
 
 ## Links
 
