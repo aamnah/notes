@@ -17,10 +17,10 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             id
             frontmatter {
               path
-              date
+              date(formatString: "MMM DD, YYYY")
               description
               excerpt
-              lastmod
+              lastmod(formatString: "MMM DD, YYYY")
               title
             }
             body
@@ -60,6 +60,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         description: node.frontmatter.description,
         excerpt: node.frontmatter.excerpt,
         lastmod: node.frontmatter.lastmod,
+        path: node.frontmatter.path,
       },
     })
   })
