@@ -11,10 +11,15 @@ export function Footer() {
         perfection, i’d never get anything done.{' '}
       </p>
       <small>
-        Coded with love and built using{' '}
+        Powered by{' '}
         <Link external to="https://www.gatsbyjs.org">
           Gatsby
-        </Link>
+        </Link>{' '}
+        and{' '}
+        <Link external to="https://www.netlify.com/">
+          Netlify
+        </Link>{' '}
+        and magic!
       </small>
     </footer>
   )
