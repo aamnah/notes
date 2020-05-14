@@ -47,20 +47,20 @@ export default function PostLayout({ data, children }) {
         <h1>{title}</h1>
         {description ? <h4>{description}</h4> : excerpt ? <h4>{excerpt}</h4> : null}
         <div className="Post-meta">
-          <div>
+          {/* <div>
             <a href="{`${data.site.siteMetadata.github_url}/blob/master/content/devops/dotnet_core_bitbucket_pipelines_aws_ebs.md`}">
               Edit on Github {path}
             </a>
-          </div>
-          <div>{path}devops/dotnet_core_bitbucket_pipelines_aws_ebs.md</div>
+          </div> */}
+          {/* <div>{path}</div> */}
           {lastmod ? (
             <div className="Post-meta-date">Last updated: {lastmod}</div>
           ) : (
             <div className="Post-meta-date">{date}</div>
           )}
-          <div className="Post-meta-section">
+          {/* <div className="Post-meta-section">
             <a href="/devops">DevOps</a>
-          </div>
+          </div> */}
         </div>
 
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
