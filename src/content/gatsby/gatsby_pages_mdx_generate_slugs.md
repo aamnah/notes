@@ -3,11 +3,9 @@ title: Dynamically generate Mdx pages based on file name
 date: 2020-05-14
 ---
 
-I followed some tutorial online to setup generating pages for MDX content.
+I followed some article to setup generating pages for MDX content. That tutorial used the `path` value defined in frontmatter to build the page. Which is bothersome because now i gotta specify a `path` in frontmatter every time. Otherwsie the build will fail. I'm coming from Jekyll and Hugo, and the path was always optional.
 
-My setup is a bit different right now as i don't have content in just one directory called pages. I have two different directories at the same level that both contain blog posts..
-
-This setup was bothersome because i had to specify a `path` in frontmatter every time. I'd much rather it take the filename as the basis for the URL.
+I'd much rather it take the filename as the basis for the URL, which i have now managed to do, by following yet another article.
 
 Here's the code for both.
 
@@ -72,7 +70,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       name: 'slug',
       node,
-      value: `/notes${slug}`,
+      value: `${slug}`,
     })
   }
 }
@@ -109,3 +107,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   })
 }
 ```
+
+Now i want it to use `path` (if defined) for custom URL slug and use filename as a default fallback. But that bit i'll get to at some other time..
+
+## Links
+
+- [Programmatically Creating Pages](https://www.gatsbyjs.org/docs/mdx/programmatically-creating-pages/)
+- [Creating Slugs for Pages](https://www.gatsbyjs.org/docs/creating-slugs-for-pages/)
+- [gatsby-source-filesystem](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/)
+- [createFilePath](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/#createfilepath)
+- [createNodeField](https://www.gatsbyjs.org/docs/actions/#createNodeField)
+- [How to create pages dynamically in Gatsby using MDX](https://malikgabroun.com/gatsby-create-pages-with-mdx)
+- [Static vs Normal Queries](https://www.gatsbyjs.org/docs/static-vs-normal-queries/)
