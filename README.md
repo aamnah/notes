@@ -8,6 +8,13 @@ Uses MDX for the post content. I always had this issue where i couldn't use CSS 
 
 I might just move back to plain and simple markdown, no JSX in it. That will keep the content more portable. MDX sounds awesome but i haven't really used it yet to justify the necessity of it
 
+```
+dark theme
+#1e1e1e
+#e9425f
+#fff
+```
+
 ## TODO
 
 - [x] Deploy the blog at Netlify
