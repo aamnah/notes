@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://aamnah.com`,
-    title: `Aamnah's Blog`,
+    siteUrl: `https://blog.aamnah.com`,
+    title: `Aamnah - Frontend developer`,
     description: `Life of Aamnah, in blog version`,
     author: `@aamnahakram`,
     github_url: `https://github.com/aamnah/blog.aamnah.com/`,
