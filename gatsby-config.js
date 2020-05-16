@@ -1,11 +1,13 @@
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://aamnah.com`,
     title: `Aamnah's Blog`,
     description: `Life of Aamnah, in blog version`,
     author: `@aamnahakram`,
     github_url: `https://github.com/aamnah/blog.aamnah.com/`,
   },
   plugins: [
+    `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
@@ -78,31 +80,12 @@ module.exports = {
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
-    //     name: `blog`,
-    //     path: `${__dirname}/src/blog`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `notes`,
-    //     path: `${__dirname}/src/notes`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
     //     name: `data`,
     //     path: `${__dirname}/src/data`,
     //     ignore: [`**/\.*`], // ignore files starting with a dot
     //   },
     // },
-    // {
-    //   resolve: `gatsby-plugin-page-creator`,
-    //   options: {
-    //     path: `${__dirname}/src/blog`,
-    //   },
-    // },
+
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
