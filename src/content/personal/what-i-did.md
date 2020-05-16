@@ -7,9 +7,20 @@ lastmod: 2020-05-14
 
 For the past month or so, read the [working from home during COVID-19]() post
 
+## May 16, 2020 (Sat)
+
+- Spent the most part of the day looking into an Opencart website and transferring it's setup as well as upgrading the server it was on
+- Made notes on C#, wrote a couple of blog posts
+- Added Google Analytics and RSS feed to the Gatsby site
+
+## May 15, 2020
+
+- Spent a lot of time looking into Zendesk API and handling customer support for work
+- Implemented incremental Netlify builds for the Gatsby site
+
 ## May 14, 2020
 
-- revised the C# course modules on []()
+- revised the C# course modules on [C# Fundamentals](https://app.pluralsight.com/library/courses/csharp-fundamentals-dev)
 - pushed major updates to the Gatsby blog including generating pages for MDX posts based on filenames instead of `path` in frontmatter. Also merged the content into one folder. So it's `content` for all of them with a folder called `personal` inside. Previously it used to be a folder called `notes` for non-personal dev notes and a folder called `blog` for personal blog posts. Having multiple folders made it difficult when building templates as i always had to apply filters on queries..
 - Work included looking into SignalR connectivity issues and stuff like wildcard SSLs and custom domain names for Azure services
 - practiced uke
