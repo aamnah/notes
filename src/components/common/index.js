@@ -1,6 +1,6 @@
 export * from './Button.jsx'
 export * from './ContentContainer.jsx'
-export * from './Favicon.jsx'
+export * from './Head.jsx'
 export * from './Footer.jsx'
 export * from './Gist.jsx'
 export * from './Header.jsx'
