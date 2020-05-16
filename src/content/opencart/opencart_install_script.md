@@ -1,5 +1,5 @@
 ---
-title: Bash script to install LAMP and Opencart on a fresh Ubuntu server
+title: Bash script to install AMP and Opencart on a fresh Ubuntu server
 date: 2020-05-16
 status: draft
 ---
