@@ -9,16 +9,18 @@ Work in Progress script. Basically combining [this one](https://github.com/aamna
 Will get around to it eventually, OpenCart doesn't get much love from me, and i don't have to do this a whole lot..
 
 ```bash
+sudo bash install_opencart.sh mydomain.com
+```
+
+```bash
 #!/bin/bash
 
 # https://github.com/aamnah/bash-scripts/blob/master/install/amp_debian.sh
 # https://github.com/aamnah/bash-scripts/blob/master/setup/virtualhost.sh
 # https://github.com/aamnah/bash-scripts/blob/master/install/opencart.sh
 
-# php-gd php-zip
-
 installAMP() {
-
+# php-gd php-zip
 }
 
 setApachePerms() {
