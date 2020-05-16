@@ -9,6 +9,9 @@ export function Navigation() {
         <Link className="Navigation-item" to="/">
           Home
         </Link>
+        <Link className="Navigation-item" to="/about">
+          About
+        </Link>
         <Link className="Navigation-item" to="/#contact">
           Contact
         </Link>
@@ -18,7 +21,6 @@ export function Navigation() {
         {/* <Link className="Navigation-item" to="/notes">
         Notes
       </Link> */}
-
         <Link external className="Navigation-item" to="https://notes.aamnah.com">
           Notes
         </Link>
