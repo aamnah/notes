@@ -4,7 +4,7 @@
 
 Gatsby based site for the blog on [blog.aamnah.com](https://blog.aamnah.com)
 
-Uses MDX for the post content. I always had this issue where i couldn't use CSS classes in Makrdown, and if i did add any HTML, any markdown wouldn't render inside that HTML block. MDX fixes that. I can write in the Markdown that i am familiar with, and add all the jazz with JSX as well.
+Uses MDX for the post content. I always had this issue where i couldn't use CSS classes in Markdown, and if i did add any HTML, any markdown wouldn't render inside that HTML block. MDX fixes that. I can write in the Markdown that i am familiar with, and add all the jazz with JSX as well.
 
 I might just move back to plain and simple markdown, no JSX in it. That will keep the content more portable. MDX sounds awesome but i haven't really used it yet to justify the necessity of it
 
@@ -16,9 +16,10 @@ I might just move back to plain and simple markdown, no JSX in it. That will kee
 - [ ] (in progress) Build a layout for the Home page of the site
 - [x] Add Recent posts tp the Home page
 - [ ] Add sitemap
-- [ ] Add RSS feed
+- [x] Add RSS feed [gatsby-plugin-feed-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-feed-mdx/)
+- [x] Add Google Analytics [gatsby-plugin-google-analytics]()
 - [x] Figure out post images
-  - [ ] Serve images from the post folder. This isn't working at the moment, build fails if i move post inside a folder
+  - [ ] Serve images from the post folder
 - [x] Fix post routes for MDX
 - [ ] Add a component for inline SVGs (logo)
 - [ ] Add SVG icon component (heart, external link)
