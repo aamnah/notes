@@ -5,31 +5,6 @@ import { DefaultLayout } from '../components/Layout'
 import { Link, SEO, Head } from '../components/common'
 
 export default function BlogPage() {
-  // const data = useStaticQuery(graphql`
-  //   query BlogQuery {
-  //     allFile(
-  //       filter: { sourceInstanceName: { eq: "blog" } }
-  //       sort: { order: DESC, fields: childMdx___frontmatter___date }
-  //     ) {
-  //       nodes {
-  //         id
-  //         name # filename
-  //         base # filename.ext
-  //         absolutePath # the file path
-  //         dir # absolutePath minus base
-  //         childMdx {
-  //           frontmatter {
-  //             title
-  //             path # the URL path
-  //             # description
-  //             date(formatString: "YYYY, MMM DD") # 2020, May 03
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   const data = useStaticQuery(graphql`
     query BlogQuery {
       allMdx(sort: { order: DESC, fields: frontmatter___date }) {
