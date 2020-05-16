@@ -1,11 +1,31 @@
 .Navigation {
   display: flex;
-  padding: 1em;
-  padding-left: 0;
+  justify-content: space-between;
   list-style: none;
-  margin: 2em 0;
-
+  padding: 1em;
+  padding-left: 0;  
+  margin: 2em 0 4em 0;
+  
   &-item {
     margin-right: 1em;
- } 
+  }
+  
+  .Link {
+    background: transparent;
+    padding: .8em 1em;
+  }
+
+  .Link-internal {
+    border-radius: 8px;
+  }
+  
+  .Link-internal:hover,
+  .Link-active {
+    text-decoration: none;
+    background: var(--color-primary);
+    color: var(--color-light);
+  }
+
+
+  
 }

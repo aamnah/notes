@@ -11,11 +11,13 @@
   }
 
   &-external {
-    color: plum
+    color: plum;
+    border: 1px solid transparent;
+
   }
   &-external:hover {
-    color: goldenrod;
-    border-bottom: 1px solid plum;
+    color: #ab2aab;
+    border-bottom: 1px solid #ab2aab;
   }
   &-active {
     font-weight: bold;
