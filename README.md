@@ -16,6 +16,8 @@ I might just move back to plain and simple markdown, no JSX in it. That will kee
 - [ ] (in progress) Build a layout for the Home page of the site
 - [x] Add Recent posts tp the Home page
 - [ ] Add sitemap
+- [x] Add favicon
+- [x] Add web manifest
 - [x] Add RSS feed [gatsby-plugin-feed-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-feed-mdx/)
 - [x] Add Google Analytics [gatsby-plugin-google-analytics]()
 - [x] Figure out post images

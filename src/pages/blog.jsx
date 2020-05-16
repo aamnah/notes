@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultLayout } from '../components/Layout'
-import { Link, SEO } from '../components/common'
+import { Link, SEO, Head } from '../components/common'
 
 export default function BlogPage() {
   // const data = useStaticQuery(graphql`
@@ -53,6 +53,7 @@ export default function BlogPage() {
 
   return (
     <DefaultLayout>
+      <Head />
       <SEO title="Blog" />
 
       <h1>Blog</h1>

@@ -9,7 +9,7 @@ import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import './main.scss'
-import { Header, Footer, Navigation, SiteContainer, ContentContainer } from '../common'
+import { Head, Footer, Navigation, SiteContainer, ContentContainer } from '../common'
 
 export default function DefaultLayout({ children }) {
   const data = useStaticQuery(graphql`
@@ -24,7 +24,6 @@ export default function DefaultLayout({ children }) {
 
   return (
     <SiteContainer>
-      {/* <Header /> */}
       <Navigation />
       <ContentContainer>{children}</ContentContainer>
       <Footer />

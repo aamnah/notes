@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { SiteContainer, Link } from '../components/common'
+import { SiteContainer, Link, Head } from '../components/common'
 import { DefaultLayout } from '../components/Layout'
 // import { RecentPosts } from '../components/common/Recent'
 export default function NotesPage() {
@@ -32,6 +32,7 @@ export default function NotesPage() {
 
   return (
     <DefaultLayout>
+      <Head />
       <SiteContainer>
         <h1>Notes</h1>
         <ul>

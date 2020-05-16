@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 // import { useStaticQuery, graphql } from 'gatsby'
 
 import './main.scss'
-import { Header, Footer, Navigation, SiteContainer, ContentContainer } from '../common'
+import { Footer, Navigation, SiteContainer, ContentContainer } from '../common'
 
 export default function HomeLayout({ children }) {
   return (

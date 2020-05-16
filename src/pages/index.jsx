@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { HomeLayout } from '../components/Layout'
-import { Image, Link, SEO } from '../components/common'
+import { Head, Image, Link, SEO } from '../components/common'
 import Contact from '../components/Contact.jsx'
 import Portfolio from '../components/Portfolio'
 
@@ -57,6 +57,8 @@ export default function IndexPage() {
   `)
   return (
     <HomeLayout>
+      <Head />
+
       <SEO title="Home" />
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
@@ -64,7 +66,12 @@ export default function IndexPage() {
 
       <h2>Hi, I'm Aamnah</h2>
       <div id="about">
-        <p>I'm a frontend developer. I design, develop and maintain sites, apps and user interfaces.</p>
+        <p>
+          I'm a <strong>frontend software developer</strong> with a passion for <strong>UI & UX design</strong>.{' '}
+          <Link internal to="/#contact">
+            Let's connect
+          </Link>
+        </p>
 
         <p>ISTP, minimalist, chronically curious, and usually a good listener.</p>
 
