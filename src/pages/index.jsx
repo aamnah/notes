@@ -1,39 +1,12 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { HomeLayout } from '../components/Layout'
+import { DefaultLayout } from '../components/Layout'
 import { Head, Image, Link, SEO } from '../components/common'
 import Contact from '../components/Contact.jsx'
 import Portfolio from '../components/Portfolio'
 
 export default function IndexPage() {
-  // const data = useStaticQuery(graphql`
-  //   query IndexQuery {
-  //     allFile(
-  //       filter: { sourceInstanceName: { in: ["blog", "notes"] } }
-  //       sort: { order: DESC, fields: childMdx___frontmatter___date }
-  //       limit: 5
-  //     ) {
-  //       # get reverse chronologoical order, i.e. lastmod on top
-  //       nodes {
-  //         id
-  //         name # filename
-  //         base # filename.ext
-  //         absolutePath # the file path
-  //         dir # absolutePath minus base
-  //         childMdx {
-  //           frontmatter {
-  //             title
-  //             path # the URL path
-  //             date
-  //             lastmod
-  //           }
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   const data = useStaticQuery(graphql`
     query IndexQuery {
       allMdx(sort: { order: DESC, fields: frontmatter___date }, limit: 7) {
@@ -56,7 +29,7 @@ export default function IndexPage() {
     }
   `)
   return (
-    <HomeLayout>
+    <DefaultLayout>
       <Head />
 
       <SEO title="Home" />
@@ -105,6 +78,6 @@ export default function IndexPage() {
       </div>
       <Portfolio />
       <Contact />
-    </HomeLayout>
+    </DefaultLayout>
   )
 }
