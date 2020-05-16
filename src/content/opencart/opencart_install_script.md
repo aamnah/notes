@@ -11,7 +11,7 @@ Also, setup SFTP so that we someone can FTP theme files if need be.
 Will get around to it eventually, OpenCart doesn't get much love from me, and i don't have to do this a whole lot..
 
 ```bash
-sudo bash install_opencart.sh mydomain.com
+sudo bash install_opencart_amp_sftp.sh mydomain.com
 ```
 
 ```bash
@@ -21,7 +21,7 @@ sudo bash install_opencart.sh mydomain.com
 #         Author: Aamnah Akram
 #           Link: http://github.com/aamnah/bash-scripts
 #    Description: installs AMP and Opencart on a fresh Ubuntu server
-#            Run: sudo bash install_opencart.sh mydomain.com
+#            Run: sudo bash install_opencart_amp_sftp.sh mydomain.com
 ###################################################################
 
 # https://github.com/aamnah/bash-scripts/blob/master/install/amp_debian.sh
@@ -142,8 +142,22 @@ setupSSL() {
 
 }
 
+setOpencartInstallPermissions() {
+	# Set install permissions for files and folders
+	chmod 777 config.php
+	chmod 777 admin/config.php
+	chmod -R 777 image/
+	chmod -R 777 image/cache/
+	chmod -R 777 image/catalog/
+	chmod -R 777 system/storage/cache/
+	chmod -R 777 system/storage/logs/
+	chmod -R 777 system/storage/download/
+	chmod -R 777 system/storage/upload/
+	chmod -R 777 system/storage/modification/
+}
+
 # Set permissions
-secureInstallation() {
+secureOpencartInstallation() {
   # delete install folder
   if [ -d "install/" ]; then
     echo -e "${Cyan} Deleting install/ folder.. ${Color_Off}"
@@ -172,6 +186,10 @@ secureInstallation() {
   chmod 777 system/storage/cache/
 }
 
+
+SETUP() {
+
+}
 
 
 # EXECUTE
