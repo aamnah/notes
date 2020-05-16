@@ -123,9 +123,6 @@ configureSFTP() {
   sudo chmod 755 ${CHROOT}
   # web directories have to be owned by www-data (assuming you're creating sftp users for websites)
   sudo chown -R www-data:www-data /var/www/*
-
-  # Change group ownership for `/var/www` to `www-data`
-  sudo chgrp -R www-data /var/www/*
   # Give write permission to the group
   sudo chmod -R g+w /var/www/*
 
