@@ -1,11 +1,5 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-const { createFilePath } = require('gatsby-source-filesystem')
 const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 // `onCreateNode` is a Gatsby lifecycle method that gets called whenever a new node is created. In this case only MDX nodes are touched.
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -54,27 +48,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // `reporter` is like Gatsby's internal console.log()
   // Destructure the createPage function from the actions object
   const { createPage } = actions
-  // const result = await graphql(`
-  //   query {
-  //     allMdx {
-  //       edges {
-  //         node {
-  //           id
-  //           frontmatter {
-  //             path
-  //             date(formatString: "MMM DD, YYYY")
-  //             description
-  //             excerpt
-  //             lastmod(formatString: "MMM DD, YYYY")
-  //             title
-  //           }
-  //           body
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
-
   const result = await graphql(`
     query {
       allMdx {
@@ -92,45 +65,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   if (result.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query', result.errors)
   }
+
   // Create blog post pages.
   const posts = result.data.allMdx.edges
-  // you'll call `createPage` for each result
-  // posts.forEach(({ page }, index) => {
-  //   createPage({
-  //     // This is the path you created before
-  //     // (or `page.frontmatter.path`)
-  //     path: page.frontmatter.path,
-  //     // This component will wrap our MDX content
-  //     component: path.resolve(`./src/components/Layout/Post.jsx`), // /media/aamnah/Files/Sites/blog.aamnah.com/src/components/Layout/Post.jsx
-  //     // You can use the values in this context in
-  //     // our page layout component
-  //     context: {
-  //       // Add optional context data to be inserted
-  //       // as props into the page component..
-  //       //
-  //       // The context data can also be used as
-  //       // arguments to the page GraphQL query.
-  //       //
-  //       // The page "path" is always available as a GraphQL
-  //       // argument.
-  //       id: page.id,
-  //       // title: page.frontmatter.title,
-  //       // body: page.body,
-  //       // date: page.frontmatter.date,
-  //       // description: page.frontmatter.description,
-  //       // excerpt: page.frontmatter.excerpt,
-  //       // lastmod: page.frontmatter.lastmod,
-  //       // path: page.frontmatter.path,
-  //     },
-  //   })
-  // })
 
-  // you'll call `createPage` for each result
   posts.forEach(({ node }, index) => {
     createPage({
-      // This is the slug you created before
-      // (or `node.frontmatter.slug`)
-      path: node.fields.slug,
+      path: node.fields.slug, // This is the slug you created before
       // This component will wrap our MDX content
       component: path.resolve(`./src/components/Layout/Post.jsx`),
       // You can use the values in this context in
