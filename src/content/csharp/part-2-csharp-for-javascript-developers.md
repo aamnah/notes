@@ -1,8 +1,9 @@
 ---
-path: csharp-for-javascript-developers-part-2
+slug: csharp-for-javascript-developers-part-2
 title: C# for JavaScript developers - part 2
 description: Introduction to the syntax and debugging
 date: 2020-05-16
+lastmod: 2020-05-18
 ---
 
 - Comments are same as usual, `//` for inline and `/* */` for multiline
@@ -13,6 +14,8 @@ date: 2020-05-16
 - the braces `{}` on their own lines is a C# style thing
 - `void` means we are not _returning_ any values
 - arrays are 0-based index, no surprise there
+- `cw` is the snippet shortcut for `Console.WriteLine`
+- `ctrl` + `.` is the shortcut to add using statements
 
 ```c#
 if (args.Length > 0)
@@ -90,12 +93,110 @@ is the JS equivalent of
 ```csharp
 void // returns nothing
 string[] // string array
+double[] grades // array called 'grades' containing 'double' value type
 List<double> // a List of type double
+float // floating point values
+double // double precision floating point values, like financial software precise, takes up more storage space than float
 ```
+
+```csharp
+int x = 34; // explicit type, explicitly tell what type it is
+var y = 34; // implicit type, let compiler figure out type
+```
+
+Implicit typing with `var` is nice because it can automatically determine the type and looks neat. Some people prefer it, some don't.
+
+`var` is still strongly types though, because `var` only works when you are initialize the value.
+
+```c#
+var z = 87.2; // var figures out type
+
+z = "string"; // illegal!
+```
+
+```c#
+var z; // implicit typing won't work
+z = 87.2;
+```
+
+### Arrays
+
+```c#
+double[] numbers; // declare array
+double[] grades = new double[3] // initialize array and specify the no. of elements it'll contain
+```
+
+```c#
+double[] grades = new double[3]; // explicit typing
+var numbers = new double[3]; // implicit typing
+```
+
+```c#
+// array initialization syntax
+var number = new double[] {13.2, 29.1, 22.1, 33.1};
+```
+
+```c#
+var number = new[] {13.2, 29.1, 22.1, 33.1}; // compiler will figure out array size and array type
+```
+
+When also initializing the array with values, you don't need to provide the size of the array, the compiler will figure out how many by the amount of initial values you provided
 
 ### Looping through Arrays
 
+```c#
+foreach (double grade in grades)
+{
+  // code goes here
+}
+```
+
 ### Arrays vs. Lists
+
+Arrays don't dynamically grow. That means they are impossible to use when we don't know the quantity of values the array is going to hold.
+
+Unlike arrays, you can keep adding values into a list with the `.Add()` method
+
+### Lists
+
+```c#
+List<T> // T = type of elements in the list
+```
+
+```c#
+List<double> grades = new List<double>(); // explicit typing
+```
+
+```c#
+var numbers = new List<double>(); // implicit typing
+```
+
+```c#
+List<double> grades = new List<double>() { 13.2, 29.1, 33.1 };
+```
+
+Notice the `()` at the end.
+
+```c#
+{
+  List<double> grades = new List<double>() { 13.2, 29.1, 33.1 };
+
+  grades.Add(52.1);
+
+  var result = 0.0;
+
+  foreach (double grade in grades)
+  {
+    result += grade;
+  }
+
+  var averageGrade = result / grades.Count;
+
+  Console.WriteLine($"The average grade is: {averageGrade:N1}"); // The average grade is 31.8
+}
+```
+
+`:N1` is a format specifier, it means show 1 number after the double, i.e. `31.8` instead of `31.875`
 
 ## Links
 
