@@ -7,7 +7,19 @@ date: 2017-03-17
 lastmod: 2020-05-14
 ---
 
-For the month of March, Arpil and May or so of 2020, read the [working from home during COVID-19]() post
+For the month of March, Arpil and May or so of 2020, read the [working from home during COVID-19](https://blog.aamnah.com/personal/14_days_social_isolation) post
+
+#### May 18, 2020
+
+- Finished the fourth module of C# Fundamentals
+  - [Working with Classes and Objects](https://app.pluralsight.com/player?course=csharp-fundamentals-dev&author=scott-allen&name=1d2231ff-33d0-499b-8934-94df99d39d74&clip=0&mode=live)
+
+#### May 17, 2020
+
+- Spent a whole lot of time fixing a broken Opencart site. Turned out it was _cache_ inside a folder that was outside of `public_html/`. smh.
+
+- Finished the third module of [Object-Oriented Programming Fundamentals in C#](https://app.pluralsight.com/library/courses/object-oriented-programming-fundamentals-csharp)
+  - [Identifying Classes from Requirements](https://app.pluralsight.com/player?course=object-oriented-programming-fundamentals-csharp&author=deborah-kurata&name=oop-fundamentals-csharp-m2-identifying-classes&clip=0&mode=live)
 
 #### May 16, 2020 (Sat)
 
