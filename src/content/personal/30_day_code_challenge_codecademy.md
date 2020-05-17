@@ -6,6 +6,55 @@ path: 30_day_code_challenge_codecademy
 
 I'll be doing 30 days (hopefully) of C#, starting with the course on Codecademy. I'll be happy if i even manage to do two weeks though. A month is a long time to plan for.
 
+Resources:
+
+- [Pluralsight: C# Fundamentals](https://app.pluralsight.com/library/courses/csharp-fundamentals-dev)
+- [Pluralsight: Object-Oriented Programming Fundamentals in C#](https://app.pluralsight.com/library/courses/object-oriented-programming-fundamentals-csharp)
+
+---
+
+## Day 8
+
+May 18, 2020
+
+Finished the fourth module of _C# Fundamentals_
+
+- Working with Classes and Objects
+
+  - Creating a Class
+  - Adding State and Behavior
+  - Defining a Method
+  - Defining a Field
+  - Adding a Constructor
+  - Requiring Constructor Parameters
+  - Working with Static Members
+
+- [C# for JavaScript developers - part 3]()
+
+## Day 7
+
+May 17, 2020
+
+Finished the third module of _Object-Oriented Programming Fundamentals in C#_
+
+- Identifying Classes from Requirements
+  - Analyze the Business Problem
+  - Start with the Nouns
+  - Define Appropriate Members
+  - Consider Time
+  - Abstraction
+  - Encapsulation
+
+## Day 6
+
+May 16, 2020
+
+Restarted learning after getting a new Pluralsight subscription, cost me PKR 32000 with a 33% off deal. Figured the amount spent will serve as motivation for finishing the courses. It's an investment in myself, of course.
+
+- Revised all C# learning so far in the form of a blog post
+  - [C# for JavaScript developers - part 2]()
+  - [C# for JavaScript developers - part 1]()
+
 ## Day 5
 
 April 29, 2020
