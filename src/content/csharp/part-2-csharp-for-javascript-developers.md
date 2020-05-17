@@ -6,7 +6,9 @@ date: 2020-05-16
 lastmod: 2020-05-18
 ---
 
-- Comments are same as usual, `//` for inline and `/* */` for multiline
+- Comments are same as usual, `//` for inline and `/* */` for multiline.
+  - Visual Studio shortcut is `ctrl` + `K` `C`
+  - Visual Studio Code shortcut is `Ctrl` + `/`
 - `if () {} else {}` is the same
 - semicolons `;` are _not_ optional
 - it's strongly typed, which you should be comfortable with if you have used Typescript
