@@ -24,3 +24,7 @@ The things that i have to consider
 That's where my Hugo setup has an edge over my Gatsby setup. Hugo uses markdown, plain and simple. Gatsby uses MDX. And MDX is new and not that well supported. I mean, i couldn't even find a proper syntax highlighting plugin for the existing fenced code blocks in markdown.. I have hundreds of posts written in Markdown, written before Gatsby was even released, and MDX expects me to use a `<Highlight />` React component instead just to be able to do syntax highlights for code blocks.
 
 There is a [postmark](https://github.com/dirtsimple/postmark) extension for `wp-cli` that syncs markdown files to WordPress posts and pages and lets you chose stuff from frontmatter as well.
+
+## Links
+
+- [My Impressions of Hugo as a WordPress Developer](https://dev.to/tylerlwsmith/my-impressions-of-hugo-as-a-wordpress-developer-1hho)
