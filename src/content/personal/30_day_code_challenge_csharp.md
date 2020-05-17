@@ -14,7 +14,7 @@ Resources:
 
 ---
 
-## Day 8
+## Day 9
 
 May 18, 2020
 
@@ -30,9 +30,9 @@ Finished the fourth module of _C# Fundamentals_
   - Requiring Constructor Parameters
   - Working with Static Members
 
-- [C# for JavaScript developers - part 3]()
+- [C# for JavaScript developers - part 3](https://blog.aamnah.com/csharp/part-3-csharp-for-javascript-developers)
 
-## Day 7
+## Day 8
 
 May 17, 2020
 
@@ -46,15 +46,20 @@ Finished the third module of _Object-Oriented Programming Fundamentals in C#_
   - Abstraction
   - Encapsulation
 
-## Day 6
+## Day 7
 
 May 16, 2020
 
+- Revised all C# learning so far
+- [C# for JavaScript developers - part 2](https://blog.aamnah.com/csharp/part-2-csharp-for-javascript-developers)
+
+## Day 6
+
+May 14, 2020
+
 Restarted learning after getting a new Pluralsight subscription, cost me PKR 32000 with a 33% off deal. Figured the amount spent will serve as motivation for finishing the courses. It's an investment in myself, of course.
 
-- Revised all C# learning so far in the form of a blog post
-  - [C# for JavaScript developers - part 2]()
-  - [C# for JavaScript developers - part 1]()
+- [C# for JavaScript developers - part 1](https://blog.aamnah.com/csharp/part-1-csharp-for-javascript-developers)
 
 ## Day 5
 
