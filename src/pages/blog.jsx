@@ -16,6 +16,7 @@ export default function BlogPage() {
             frontmatter {
               title
               date(formatString: "YYYY, MMM DD") # 2020, May 03
+              status
             }
             fields {
               slug
@@ -34,7 +35,7 @@ export default function BlogPage() {
       <h1>Blog</h1>
       <ul>
         {data.allMdx.edges.map((post) => {
-          let { title, date } = post.node.frontmatter
+          let { title, date, status } = post.node.frontmatter
           let { slug } = post.node.fields
 
           {
@@ -45,7 +46,9 @@ export default function BlogPage() {
           }
           return (
             <li key={post.node.id}>
-              <small>{date}</small> <Link to={slug}>{title !== '' ? title : slug}</Link>
+              <small style={{ color: 'var(--color-faded)' }}>{date}</small>{' '}
+              {status === 'draft' ? <span>DRAFT </span> : null}
+              <Link to={slug}>{title !== '' ? title : slug}</Link>
             </li>
           )
         })}

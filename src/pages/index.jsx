@@ -2,10 +2,11 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultLayout } from '../components/Layout'
-import { Head, Image, Link, SEO } from '../components/common'
+import { Head, Image, Link, SEO, SvgIcon } from '../components/common'
 import Contact from '../components/Contact.jsx'
 import Portfolio from '../components/Portfolio'
 
+import './index.scss'
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query IndexQuery {
@@ -19,6 +20,7 @@ export default function IndexPage() {
               title
               path
               date
+              status
             }
             fields {
               slug
@@ -33,6 +35,8 @@ export default function IndexPage() {
       <Head />
 
       <SEO title="Home" />
+      <SvgIcon name="external-link2" size="64" />
+
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
       </div>
@@ -55,20 +59,17 @@ export default function IndexPage() {
         <p>Some of my interests are electronics, DIY, design, technology and cooking.</p>
       </div>
 
-      {/* <div id="work">
-        <h2>Work</h2>
-      </div> */}
-
       <div id="recent-posts">
         <h2>Recent Posts</h2>
         <ul>
           {/* {data.allFile.nodes.map((post) => { */}
           {data.allMdx.edges.map((post) => {
-            let { title } = post.node.frontmatter
+            let { title, status } = post.node.frontmatter
             let { slug } = post.node.fields
 
             return (
               <li key={post.id}>
+                {status === 'draft' ? <span>DRAFT </span> : null}
                 <Link to={slug}>{title !== '' ? title : slug}</Link>
               </li>
             )

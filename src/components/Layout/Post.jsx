@@ -28,6 +28,7 @@ export const data = graphql`
         excerpt
         lastmod(formatString: "MMM DD, YYYY")
         title
+        status
       }
     }
   }
@@ -35,7 +36,7 @@ export const data = graphql`
 
 export default function PostLayout({ data, children }) {
   // const { title, body, date, description, excerpt, lastmod, path } = pageContext
-  const { title, date, description, excerpt, lastmod, path } = data.mdx.frontmatter
+  const { title, date, description, excerpt, lastmod, status } = data.mdx.frontmatter
 
   return (
     <SiteContainer>
@@ -58,6 +59,7 @@ export default function PostLayout({ data, children }) {
           ) : (
             <div className="Post-meta-date">{date}</div>
           )}
+          {status === 'draft' ? <div className="Post-meta-status">DRAFT</div> : null}
           {/* <div className="Post-meta-section">
             <a href="/devops">DevOps</a>
           </div> */}
