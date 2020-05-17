@@ -107,7 +107,20 @@ Yep, `this` is in C#, it's and Object oriented language, duh. `this` refers to v
 
 ### static
 
-`static` class and members can not be _instantiated_. They will not be passed on to the object instance. `static` members are part of the Class, but not part of the resulting object
+`static` class and members can not be _instantiated_. They will not be passed on to the object instance. `static` members are part of the Class, but not part of the resulting object.
+
+Consequently, you can only reference static members using the type name and not via object reference (a variable reference to the object)
+
+```c#
+var grades = new Book("Sam's Gradebook");
+
+book.AddGrade() // object reference
+Book.AddGrade() // static method referencing Class
+```
+
+changing `static` values changes them on the Class itself. be very conservative when using them. kind of not needed much in OOP..
+
+`Console.WriteLine()` is static, since you don't need to instantiate it in order to use it.
 
 ## Links
 
