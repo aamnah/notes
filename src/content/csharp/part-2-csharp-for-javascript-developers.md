@@ -7,8 +7,8 @@ lastmod: 2020-05-18
 ---
 
 - Comments are same as usual, `//` for inline and `/* */` for multiline.
-  - Visual Studio shortcut is `ctrl` + `K` `C`
-  - Visual Studio Code shortcut is `Ctrl` + `/`
+  - Visual Studio shortcut to comment is `ctrl` + `K` `C`, to uncomment `ctrl` + `K` `U`
+  - Visual Studio Code shortcut to comment/uncomment is `Ctrl` + `/`
 - `if () {} else {}` is the same
 - semicolons `;` are _not_ optional
 - it's strongly typed, which you should be comfortable with if you have used Typescript
@@ -203,3 +203,4 @@ Notice the `()` at the end.
 ## Links
 
 - [docs: Console Class](https://docs.microsoft.com/en-us/dotnet/api/system.console?view=netcore-3.1)
+- [C# Fundamentals: Learning the C# Syntax](https://app.pluralsight.com/player?course=csharp-fundamentals-dev&author=scott-allen&name=6ca45ca9-e54b-4ed0-83d7-ae27f1c6078d&clip=0&mode=live)
