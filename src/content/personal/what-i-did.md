@@ -9,6 +9,12 @@ lastmod: 2020-05-14
 
 For the month of March, Arpil and May or so of 2020, read the [working from home during COVID-19](https://blog.aamnah.com/personal/14_days_social_isolation) post
 
+#### May 19, 2020
+
+- Watched [TypeScript: The Big Picture](https://app.pluralsight.com/library/courses/typescript-big-picture/).
+
+Love [Simon Allardice](https://app.pluralsight.com/profile/author/simon-allardice) and his courses, the guy has a knack of explaining things in a simple and understandable way
+
 #### May 18, 2020
 
 - Finished the fourth module of C# Fundamentals
