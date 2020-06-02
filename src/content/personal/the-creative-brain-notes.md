@@ -6,7 +6,7 @@ slug: the-creative-brain-notes
 
 So i watched this documentary called _The Creative Brain_.. because a) i am a creative, and b) i'm always learning something new.. Here are a few quotes from the documentary that resonated with me..
 
-> The world rewards specialization, but specialization comes at a cost. you learn more and more about less and less until you know everything about nothing.
+> The world rewards specialization, but specialization comes at a cost. You learn more and more about less and less until you know everything about nothing.
 
 - Nathan Myhrvold
 
@@ -14,4 +14,4 @@ So i watched this documentary called _The Creative Brain_.. because a) i am a cr
 
 - Nathan Myhrvold
 
-> Creating something can be agonizing and excruciating, because we risk failing... which takes us to the third way our brains can interfere with the creative process. Failure feels awful so we often avoid it.. but we need to do the opposite
+> Creating something can be agonizing and excruciating, because we risk failing... which takes us to the third way our brains can interfere with the creative process. Failure feels awful so we often avoid it.. but we need to do the opposite.
