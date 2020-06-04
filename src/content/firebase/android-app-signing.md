@@ -38,6 +38,24 @@ Keystore credentials
   Path to Keystore:  /media/aamnah/Files/Sites/appreactnative/appreactnative.jks
 ```
 
+### Generating a keystore manually
+
+You can use `keytool`. `keytool` is part of JDK so it should be available in you PATH
+
+```bash
+keytool -keypasswd -keystore <keystore path> -alias <key alias> -storepass <keystore password> -keypass <key password> -new <key password>
+```
+
+```bash
+keytool -genkeypair -v -keystore <keystore path> -alias <key alias> -keyalg RSA -keysize 4096 -validity 9125
+```
+
+9125 days is 25 years (default when you create a keystore with Android Studio..)
+
+```bash
+keytool -list -keystore keystore.jks
+```
+
 ### Upload key vs. Signing key
 
 The _App signing certificate_ is the public part of the _App signing key_. You use the cert to register your app signing key
@@ -50,10 +68,15 @@ The main difference between signing key and upload key is that upload key can be
 
 Keep in mind that you need to sign all future releases of the app with the same key. If you sign your app with an app signing key that isn't managed by Google Play (i.e. you aren't opted in to App Signing by Google Play, in scenarios where you want to use the key for signing app on marketplaces other than Google Play..) and you lose it, you're fudged.
 
+> If you also distribute your app outside of Google Play or plan to later, you can generate the app signing key you want to use for every app store, and then upload it to Google when you opt in to app signing by Google Play.
+
+> The certificate used to sign the first APK uploaded to the store will be your upload certificate and each new release needs to be signed with it. [ref](https://docs.expo.io/distribution/app-signing/)
+
 ## Links
 
-- https://docs.expo.io/distribution/app-signing/
-- https://developer.android.com/studio/publish/app-signing
+- [Expo: App signing](https://docs.expo.io/distribution/app-signing/)
+- [Sign your app](https://developer.android.com/studio/publish/app-signing)
 - https://support.google.com/googleplay/android-developer/answer/7384423
 - [Enroll in Google Play App Signing to Secure Your App Keys](https://www.youtube.com/watch?v=PuaYhnGmeEk)
 - [How To Publish An Android App | Keystore, Generate Signed APK or App Bundle, Proguard, R8](https://www.youtube.com/watch?v=akDXw9n3gFY)
+- [Build Standalone Expo .apk and .ipa with Turtle CLI](https://www.robincussol.com/build-standalone-expo-apk-ipa-with-turtle-cli/)
