@@ -35,4 +35,20 @@ nvm install 12.18.0 --reinstall-packages-from=10.15.3 --latest-npm
 
 The `--latest-npm`, if you explicitly specify it, also updates the `npm` version for the packages you're migrating. It wasn't needed in my case..
 
-Lastly, run `nvm use --lts` to make sure we're using the latest LTS we just installed. Even though it said `Now using node v12.18.0 (npm v6.14.4)`, it didn't actually switch to `v12.18.0`. I found that out when my build failed because of Node version incompatibility..
+Lastly, set the new LTS version we just installed as the new default Node version. Otherwise it'll keep using the old default version every time you restart Terminal. I found that out when my build failed because of Node version incompatibility..
+
+```bash
+# Set 12.18.0 (or another version) as default
+nvm alias default 12.18.0
+
+# or
+nvm alias default lts/*
+```
+
+You can see all versions and defaults with:
+
+```bash
+nvm list
+```
+
+If you still keep getting the old Node version, check your `~/.bashrc`. I had a PATH value added that was referencing old Node version. Removing that fixed everything
