@@ -9,6 +9,24 @@ tags:
   - Turtle CLI
 ---
 
+**tl;dr**
+
+1. Get a secure URL to publish project to `ngrok http 127.0.0.1:8080 -host-header="127.0.0.1:8080"`
+1. Export project to secure URL `expo export --public-url https://XXXXXXXXXXXX.ngrok.io`
+1. Run project on secure local server `cd dist/ && npx http-server` and confirm it's running `curl https://XXXXXXXXXXXX.ngrok.io/android-index.json`
+1. Build project using `turtle-cli` with `--public-url` pointing to the secure server
+
+```bash
+EXPO_ANDROID_KEYSTORE_PASSWORD="XXXXXXXX" \
+EXPO_ANDROID_KEY_PASSWORD="XXXXXXXX" \
+turtle build:android \
+  --keystore-path /PATH/TO/YOUR/KEYSTORE_FILE.jks \
+  --keystore-alias PUT_KEYSTORE_ALIAS_HERE
+  --public-url https://XXXXXXXXXXXX.ngrok.io/android-index.json
+```
+
+---
+
 Right now when you run the expo build command, it puts you into a queue, and stores the build on Expo servers. I obviously don't want that because a queue slows me down (the build keeps failing..) and once the build is done i have to manually download it in order to be able to upload it somewhere else..
 
 The answer to this is [turtle](https://github.com/expo/turtle), the standalone app builder service by Expo
@@ -23,15 +41,26 @@ On first run it'll start downloading and installing Android SDK, which will take
 
 ## Export app
 
-Run a local server and note the URL, i used `http-server` whose default URL is `http://127.0.0.1:8080`
+Run a local server and note the URL, i used `http-server` whose default URL is `http://127.0.0.1:8080`. Then use `ngrok` to serve that over an HTTPS link. (I tried running http-server with SSL but got a `Error: self signed certificate` in the end)
 
 ```bash
+# run http-server
 npx http-server
+
+# run ngrok over http-server to get an HTTPS secure URL
+ngrok http 127.0.0.1:8080 -host-header="127.0.0.1:8080"
 ```
 
+Copy the `https` forwarding URL `ngrok` gives you. For example: `https://XXXXXXXXXXXX.ngrok.io`
+
 ```bash
-expo export --dev --public-url http://127.0.0.1:8080
+#expo export --dev --public-url http://127.0.0.1:8080
+expo export --public-url https://XXXXXXXXXXXX.ngrok.io
 ```
+
+Exporting takes less than a minute..
+
+(the `--dev` is supposed to get rid of `--public-url must be a valid HTTPS URL.` error, which it doesn't..)
 
 ```
 dist
@@ -48,12 +77,20 @@ dist
 └── ios-index.json
 ```
 
-Run the exported app on local server and confirm sure it's running ..
+Run the exported app `dist/` on local server and confirm it's running ..
 
 ```bash
 cd dist/
 npx http-server
-curl http://127.0.0.1:8080/android-index.json
+curl https://XXXXXXXXXXXX.ngrok.io/android-index.json
+```
+
+```bash
+#cd dist/
+
+# create a key and run http-server with SSL
+#openssl req -newkey rsa:2048 -new -nodes -x509 -days 3650 -keyout key.pem -out cert.pem
+#npx http-server -S -C cert.pem
 ```
 
 ## Build
@@ -66,12 +103,14 @@ expo fetch:android:keystore
 
 ```
 Keystore credentials
-  Keystore password: xx299bxxxxxxxx98a9a42e1cxxxxxxxx
-  Key alias:         xxxxxxxlc3BlbxxxxxxxxnBwcmVhY3Ruxxxxxxxx
-  Key password:      3d1xxxxxxxx744xxxxxxxx9bcxxxxxxx
+  Keystore password: xxxxxxxxxxxxxx98a9a42e1cxxxxxxxx
+  Key alias:         xxxxxxxxxxxxxxxxxxxxxnBwcmVhY3Ruxxxxxxxx
+  Key password:      xxxxxxxxxxxxxxxxxxxxxx9bcxxxxxxx
 
   Path to Keystore:  /media/aamnah/Files/Sites/fppreactnative/fppreactnative.jks
 ```
+
+From the project root, run the following
 
 ```bash
 EXPO_ANDROID_KEYSTORE_PASSWORD="XXXX" \
@@ -79,11 +118,14 @@ EXPO_ANDROID_KEY_PASSWORD="XXXX" \
 turtle build:android \
   --keystore-path /PATH/TO/YOUR/KEYSTORE_FILE.jks \
   --keystore-alias PUT_KEYSTORE_ALIAS_HERE
-  --public-url http://127.0.0.1:8080/android-index.json
+  --public-url https://XXXXXXXXXXXX.ngrok.io/android-index.json
 ```
 
-- The `--public-url` here is the local server we ran inside `dist/` with `http-server`
+- The `--public-url` here is the secure URL we git with `ngrok` which is forwarding to `https-server` running inside `dist/`
 - This will generate an app bundle `.aab` file. To get an APK, pass it as a flag `--type apk`
+
+Build failed after 10 minutes.. =( [Removed `~/.turtle/workingdir`](https://github.com/expo/turtle/issues/92#issuecomment-501234902) and ran the build again. Build failed again because of node version incompatibility. Upgraded node and ran the build again..
+Building took around 10:29 minutes..
 
 ## Java 8
 
@@ -110,8 +152,18 @@ https://download.oracle.com/otn-pub/java/jdk/8u251-b08/3d5a2bb8f8d4428bbe94aed7e
 https://download.oracle.com/otn-pub/java/jdk/8u251-b08/3d5a2bb8f8d4428bbe94aed7ec7ae784/jdk-8u251-windows-x64.exe
 ```
 
+## Troubleshooting
+
+```
+ERROR: Failed to build standalone app
+  err: Error: --public-url is invalid - only HTTPS urls are supported
+```
+
+Using `--dev` exports the app but i kept getting error when trying to build standalone app with turtle. Ended up installing `http-server` in order to [configure SSL](https://github.com/http-party/http-server#tlsssl).
+
 ## Links
 
 - [Building Standalone Apps on Your CI](https://docs.expo.io/distribution/turtle-cli/)
 - [Turtle CLI](https://github.com/expo/turtle)
 - [Build Standalone Expo .apk and .ipa with Turtle CLI](https://www.robincussol.com/build-standalone-expo-apk-ipa-with-turtle-cli/)
+- [turtle build creating apk with old version](https://forums.expo.io/t/turtle-build-creating-apk-with-old-version/37135/4)
