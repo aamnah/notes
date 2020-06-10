@@ -12,7 +12,7 @@ tags:
 **tl;dr**
 
 1. Get a secure URL to publish project to `ngrok http 127.0.0.1:8080 -host-header="127.0.0.1:8080"`
-1. Export project to secure URL `expo export --public-url https://XXXXXXXXXXXX.ngrok.io`
+1. Export project to secure URL `rm -rf dist/ && expo export --public-url https://XXXXXXXXXXXX.ngrok.io`
 1. Run project on secure local server `cd dist/ && npx http-server` and confirm it's running `curl https://XXXXXXXXXXXX.ngrok.io/android-index.json`
 1. Build project using `turtle-cli` with `--public-url` pointing to the secure server
 
@@ -113,10 +113,10 @@ Keystore credentials
 From the project root, run the following
 
 ```bash
-EXPO_ANDROID_KEYSTORE_PASSWORD="XXXX" \
-EXPO_ANDROID_KEY_PASSWORD="XXXX" \
+EXPO_ANDROID_KEYSTORE_PASSWORD="XXXXXXXX" \
+EXPO_ANDROID_KEY_PASSWORD="XXXXXXXX" \
 turtle build:android \
-  --keystore-path /PATH/TO/YOUR/KEYSTORE_FILE.jks \
+  --keystore-path /PATH/TO/YOUR/KEYSTORE/XXXXXXXX.jks \
   --keystore-alias PUT_KEYSTORE_ALIAS_HERE
   --public-url https://XXXXXXXXXXXX.ngrok.io/android-index.json
 ```
@@ -124,8 +124,9 @@ turtle build:android \
 - The `--public-url` here is the secure URL we git with `ngrok` which is forwarding to `https-server` running inside `dist/`
 - This will generate an app bundle `.aab` file. To get an APK, pass it as a flag `--type apk`
 
-Build failed after 10 minutes.. =( [Removed `~/.turtle/workingdir`](https://github.com/expo/turtle/issues/92#issuecomment-501234902) and ran the build again. Build failed again because of node version incompatibility. Upgraded node and ran the build again..
-Building took around 10:29 minutes..
+Build failed after 10 minutes.. =( [Removed `~/.turtle/workingdir`](https://github.com/expo/turtle/issues/92#issuecomment-501234902) and ran the build again. Build failed again because of node version incompatibility. Upgraded node and ran the build again.. Build failed because of an invalid keystore error.. Fixed that, ran the build again. Success! Took around 5 minutes to give me an app bundle `.aab` file. Yesssss!
+
+The build is saved inside a folder called `expo-apps` inside the user's `Home` directory (Ubuntu).
 
 ## Java 8
 
@@ -167,3 +168,4 @@ Using `--dev` exports the app but i kept getting error when trying to build stan
 - [Turtle CLI](https://github.com/expo/turtle)
 - [Build Standalone Expo .apk and .ipa with Turtle CLI](https://www.robincussol.com/build-standalone-expo-apk-ipa-with-turtle-cli/)
 - [turtle build creating apk with old version](https://forums.expo.io/t/turtle-build-creating-apk-with-old-version/37135/4)
+- [Expo: Hosting An App on Your Servers](https://docs.expo.io/distribution/hosting-your-app/)
