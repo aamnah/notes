@@ -9,6 +9,7 @@ slug: beta-test-distribute-react-native-app
 - [Firebase App Distribution](https://firebase.google.com/products/app-distribution) (Android, iOS)
 - [Google Play Console](https://developer.android.com/distribute/console) (Android)
 - [TestFlight](https://developer.apple.com/testflight/) (iOS)
+- [App Center](https://appcenter.ms/) (iOS, Android, Windows)
 
 ### Fastlane
 
