@@ -6,7 +6,7 @@ import { Head, Image, Link, SEO, SvgIcon } from '../components/common'
 import Contact from '../components/Contact.jsx'
 import Portfolio from '../components/Portfolio'
 
-import './index.scss'
+// import './index.scss'
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query IndexQuery {
@@ -41,13 +41,11 @@ export default function IndexPage() {
         <Image />
       </div>
 
-      <h2>Hi, I'm Aamnah</h2>
       <div id="about">
+        <h2>Hi, I'm Aamnah</h2>
         <p>
           I'm a <strong>frontend software developer</strong> with a passion for <strong>UI & UX design</strong>.{' '}
-          <Link internal to="/#contact">
-            Let's connect
-          </Link>
+          <Link to="/contact">Let's connect</Link>.
         </p>
 
         <p>ISTP, minimalist, chronically curious, and usually a good listener.</p>
