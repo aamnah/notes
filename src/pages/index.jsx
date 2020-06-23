@@ -2,11 +2,11 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultLayout } from '../components/Layout'
-import { Head, Image, Link, SEO, SvgIcon } from '../components/common'
+import { Head, Image, Link, SEO } from '../components/common'
 import Contact from '../components/Contact.jsx'
 import Portfolio from '../components/Portfolio'
 
-// import './index.scss'
+import './index.scss'
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query IndexQuery {
@@ -35,8 +35,6 @@ export default function IndexPage() {
       <Head />
 
       <SEO title="Home" />
-      <SvgIcon name="external-link2" size="64" />
-
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
       </div>
