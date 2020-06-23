@@ -65,7 +65,7 @@ export default function AboutPage() {
       </p>
 
       <p>
-        On occasion i use the command line to manage Linux servers for WordPress website using the LAMP stack. This
+        On occasion i use the command line to manage Linux servers for WordPress websites using the LAMP stack. This
         includes installing packages, setting up Apache server, setting up virtual hosts, install SSLs, creating user
         accounts and changing file and folder permissions.
       </p>
