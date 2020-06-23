@@ -6,7 +6,6 @@ import { Head, Image, Link, SEO } from '../components/common'
 import Contact from '../components/Contact.jsx'
 import Portfolio from '../components/Portfolio'
 
-import './index.scss'
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query IndexQuery {
