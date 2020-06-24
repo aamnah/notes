@@ -70,5 +70,9 @@ export default function App() {
 
 At this point your installation of react-navigation is done. Now come the _navigators_. There are different kinds: stack, drawer, tab.. Each navigator is it's own library, so you'll have to install them separately
 
+```bash
+npm install @react-navigation/stack
+```
+
 - [react-navigation: Getting started](https://reactnavigation.org/docs/getting-started)
 - [react-navigation: Hello React Navigation](https://reactnavigation.org/docs/hello-react-navigation)
