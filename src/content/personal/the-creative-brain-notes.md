@@ -1,5 +1,5 @@
 ---
-title: [Notes] The Creative Brain
+title: Notes on The Creative Brain
 date: 2020-05-29
 slug: the-creative-brain-notes
 ---

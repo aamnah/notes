@@ -12,15 +12,12 @@ export function Navigation() {
         <Link className="Navigation-item" to="/about">
           About
         </Link>
-        <Link className="Navigation-item" to="/#contact">
-          Contact
-        </Link>
         <Link className="Navigation-item" to="/blog">
           Blog
         </Link>
-        {/* <Link className="Navigation-item" to="/notes">
-        Notes
-      </Link> */}
+        <Link className="Navigation-item" to="/contact">
+          Contact
+        </Link>
         <Link external className="Navigation-item" to="https://notes.aamnah.com">
           Notes
         </Link>

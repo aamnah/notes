@@ -1,0 +1,15 @@
+.Tag {
+  background: white;
+  border: 1px solid #d6d9dc;
+  border-radius: 4px;
+  padding: .4em .8em;
+  margin-right: .4em;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  // &:hover {
+  //   box-shadow: var(--box-shadow-default);
+  // }
+}
