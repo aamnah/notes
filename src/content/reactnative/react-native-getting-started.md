@@ -9,7 +9,7 @@ slug: react-native-getting-started
 You need to run
 
 ```bash
-npx react-native run
+npx react-native start
 ```
 
 to start the app. And then
@@ -20,7 +20,7 @@ npx react-native run-android
 
 to start the app in an Android emulator or on device.
 
-The docs are a bit misleading here, as they only mention the `rnu-android` command. but if you run that directly, you'll get a red error saying script not found. So `npx react-native run` first and then in another Terminal, do `npx react-native run-android`
+The docs are a bit misleading here, as they only mention the `rnu-android` command. but if you run that directly, you'll get a red error saying script not found. So `npx react-native start` first and then in another Terminal, do `npx react-native run-android`
 
 ### Seeing changes and debugging
 
