@@ -4,11 +4,17 @@ date: 2020-06-11
 slug: eject-expo
 ---
 
-What you'll lose
+Cons
 
 - The expo build tool chain
-- Short of some Expo modules you find useful, there isn't much else for you
 - You start doing react _native_ development for iOS and Android
+
+Pros
+
+- full Firebase SDK
+- automate deployments and distributionn to app stores
+- CodePush or RemoteConfig
+- SDKs for React Native by Google and Microsoft
 
 ## Links
 
