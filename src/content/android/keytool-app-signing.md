@@ -1,5 +1,5 @@
 ---
-title: Using keytool for keystore managemennt and app signing
+title: Using keytool for keystore management and app signing
 date: 2020-06-29
 description: Generate a new keystore, or extract the certficate for an upload key
 slug: keytool-app-signing-keystore-management
@@ -166,3 +166,4 @@ Import command completed:  1 entries successfully imported, 0 entries failed or 
 - [The keytool Command (JDK 13)](https://docs.oracle.com/en/java/javase/13/docs/specs/man/keytool.html)
 - [Keystore type: which one to use?](https://stackoverflow.com/a/11540061)
 - [StackOverflow: How can I create a keystore?](https://stackoverflow.com/questions/3997748/how-can-i-create-a-keystore)
+- [The Most Common Java Keytool Keystore Commands](https://www.sslshopper.com/article-most-common-java-keytool-keystore-commands.html)
