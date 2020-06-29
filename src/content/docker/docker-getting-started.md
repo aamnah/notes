@@ -14,6 +14,18 @@ docker ps -a # see running (and stopped) containers
 docker images # see info about images
 ```
 
+```bash
+# 1. Clone
+git clone https://github.com/docker/getting-started.git
+
+# 2. Build
+cd getting-started
+docker build -t docker101tutorial .
+
+# 3. Run
+docker run -d -p 80:80 --name docker-tutoial docker101tutorial
+```
+
 ## What's the difference between Docker and Docker Compose?
 
 The gist is that `docker` manages individual containers while `docker-compose` manages multiple containers..

@@ -93,6 +93,8 @@ curl https://XXXXXXXXXXXX.ngrok.io/android-index.json
 #npx http-server -S -C cert.pem
 ```
 
+NOTE: I went with publishing the app using a Netlify URL. And the site gets automatically published when i push code to the repo.. No fussing with `ngrok` and `http-server` (which are both local). This URL is called by the app, so it needs to be publicly available over the internet.. Something like `http://build.myapp.com` is awesome
+
 ## Build
 
 If you have previously published an Android app with Expo, get the keystore
