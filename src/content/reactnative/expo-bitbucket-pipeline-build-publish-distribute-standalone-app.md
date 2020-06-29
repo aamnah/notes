@@ -6,6 +6,7 @@ description: Automatically build your app and send it to the app store using Bit
 tags:
   - CD
   - DevOps
+  - Expo
 ---
 
 Steps
