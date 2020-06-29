@@ -2,6 +2,8 @@
 title: Copying and pasting text in tmux
 slug: tmux-copy-paste
 date: 2020-06-28
+lastmod: 2020-06-30
+status: DRAFT
 ---
 
 - Hold down `Shift` (or `Option` on macOS) key and select text with mouse to **copy**
@@ -64,9 +66,11 @@ bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel "xc
 - To copy, left click and drag to highlight text in yellow, press Enter and then release mouse.
 - `Ctrl + Shift + V` to paste
 
-### Writing one config for both Linux and macOS
+### DRAFT Writing one config for both Linux and macOS
 
 Get the system you're on with `uname -s`. Ubuntu gives `Linux` while macOS gives `Darwin`
+
+NOTE: Bash variables and conditionals don't work inside a tmux conf file. Update these with `if-shell` or `run-shell` to get `uname` result, and then `%if ... %else ... %endif` to write the confitional
 
 ```bash
 MACHINE=$(uname -s | tr '[:upper:]' '[:lower:]')
