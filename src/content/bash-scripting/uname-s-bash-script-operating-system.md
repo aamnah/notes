@@ -41,5 +41,5 @@ I got this from Google's [install script from Firebase CLI](https://firebase.too
 Once you have the , you can use an `if/esle` or `case` statement
 
 ```bash
-[[ $UNAME = linux ]] && a="$c" || a="$d"
+[[ $UNAME = darwin ]] && echo 'macOS' || echo 'Linux'
 ```
