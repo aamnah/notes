@@ -18,6 +18,7 @@ Use this tool to export private keys from a Java Keystore and encrypt them for t
 - `--encryptionkey=` will already be pre-filled for you
 
 ```bash
+# from within the same folder where you downloaded pepk.jar
 java -jar pepk.jar --keystore=foo.keystore --alias=foo --output=output.zip --encryptionkey=XXXXXXXXXX7c9df715022017bXXXXXXXXXXXXXXXXXa11e6c09ffe3056a10XXXXXXXXXXa955f4ba4fe93fc8ceXXXXXXXXXX9d2a529aXXXXXXXXXX33b656XXXXXXXXXX --include-cert
 ```
 
