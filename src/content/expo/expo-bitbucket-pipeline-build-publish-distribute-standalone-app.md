@@ -265,6 +265,23 @@ pipelines:
 
 - the `>-` symbol is for non white space multiple lines.
 
+#### Changing --release-channel based on branch or deployment
+
+The cleaner way of doing this is with **Deployment variables** defined in Settings. Based on the deployment, the variable `RELEASE_CHANNEL` will have different values. Make sure you also specify `deployment` in your `step` for `RELEASE_CHANNEL` to change accordingly.
+
+```yaml
+- expo publish --non-interactive --clear --release-channel ${RELEASE_CHANNEL} # make sure your have Deployment variables set
+```
+
+The hacky way of doing this is to run `if` statements to check the branch and setting the `--release-channel` values accordingly
+
+```yaml
+# Publish to Expo server (change release channels based on branches)
+- if [[ ${BITBUCKET_BRANCH} = develop ]]; then expo publish --clear --release-channel develop; fi
+- if [[ ${BITBUCKET_BRANCH} = staging ]]; then expo publish --clear --release-channel staging; fi
+- if [[ ${BITBUCKET_BRANCH} = master ]]; then expo publish --clear --release-channel production; fi
+```
+
 ```yaml
 # Build standalone app
 - expo export --public-url ${EXPO_PUBLIC_URL} # will publish the app to dist/ folder, which is being served by Netlify
@@ -329,3 +346,4 @@ was using `app.config.ts` (experimental). Changed it to `app.config.js`
 - [Bitbucket Pipeline Hack: Wrapping multiline script command](https://community.atlassian.com/t5/Bitbucket-articles/Bitbucket-Pipeline-Hack-Wrapping-multiline-script-command/ba-p/1289800?lightbox-message-images-1289800=81455iF5C825E5ED5537CA)
 - [Automating Standalone Expo App Builds and Deployments with Fastlane and Expo CLI](https://blog.expo.io/automating-standalone-expo-app-builds-and-deployments-with-fastlane-exp-and-exptool-9b2f5ad0a2cd)
 - [Deploy build artifacts to Bitbucket Downloads](https://support.atlassian.com/bitbucket-cloud/docs/deploy-build-artifacts-to-bitbucket-downloads/)
+- [Bitbucket Pipelines share SOME steps between branches](https://stackoverflow.com/a/50173421/890814)
