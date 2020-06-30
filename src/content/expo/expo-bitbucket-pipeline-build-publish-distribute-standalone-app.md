@@ -11,12 +11,23 @@ tags:
 
 Steps
 
+- Build your app and let Expo manage your key
+
 - Generate a keystore
 - Sign the app and set it up in the Play Console
 - Setup Netlify to serve the app
 - Export the app to Netlify's public URL
 - Build the app and mention that URL (will be used for OTA)
 - Send the builds (`.aab` and `.ipa`)to a distribution service (Firebase App Distribution or Microsoft AppCenter)
+
+The reason i'm building with `turtle` and not with `expo` is because Expo builds are put in a build queue, which can take up to 45 minutes to build your app.. I can not waste this many minutes in a CI/CD pipeline. For reference, the Bitbucket free plan gives you only 50 build minutes for an entire month. I actually ran out of build minutes while putting the pipeline together..
+
+Github gives your 2000 action minutes though. Go Github!
+
+Needed
+
+- An app that is ready to be published
+- Login details for Expo account
 
 ### Sign your app
 
@@ -50,6 +61,106 @@ My app's URL is now: `https://expo-devops-pipeline.netlify.app/`
 
 ### Setting up the app in the Play Console
 
+### Build the app for the first time
+
+You need to build the app at least once for it to generate a _keystore_. If you have already done this then skip this step.
+
+Before building, make sure your config file contains the required Android and iOS config. This includes version numbers and package names to identify your app builds.
+
+```json
+{
+  "expo": {
+    "name": "Your App Name",
+    "icon": "./path/to/your/app-icon.png",
+    "version": "1.0.0",
+    "slug": "your-app-slug",
+    "ios": {
+      "bundleIdentifier": "com.yourcompany.yourappname",
+      "buildNumber": "1.0.0"
+    },
+    "android": {
+      "package": "com.yourcompany.yourappname",
+      "versionCode": 1
+    }
+  }
+}
+```
+
+then login to your Expo account with `expo login` and run
+
+```bash
+expo build:android
+```
+
+and when prompted select the first option to **Generate new keystore** (previously it used to be _Let Expo handle the process!_)
+
+```
+✔ Choose the build type you would like: › app-bundle
+Checking if there is a build in progress...
+
+Configuring credentials for forcespenpals in project expo-devops-pipeline
+✔ Would you like to upload a Keystore or have us generate one for you?
+If you don't know what this means, let us generate it! :) › Generate new keystore
+Keystore updated successfully
+Unable to find an existing Expo CLI instance for this directory; starting a new one...
+Starting Metro Bundler on port 19001.
+Publishing to channel 'default'...
+Building iOS bundle
+Building Android bundle
+Finished building JavaScript bundle in 25430ms.
+Analyzing assets
+Finished building JavaScript bundle in 21802ms.
+Finished building JavaScript bundle in 969ms.
+Finished building JavaScript bundle in 943ms.
+Uploading assets
+No assets changed, skipped.
+Processing asset bundle patterns:
+- /media/aamnah/Files/Projects/expo-devops-pipeline/**/*
+Uploading JavaScript bundles
+Publish complete
+
+The manifest URL is: https://exp.host/@aamnah/expo-devops-pipeline. Learn more.
+The project page is: https://expo.io/@aamnah/expo-devops-pipeline. Learn more.
+› Closing Expo server
+› Stopping Metro bundler
+Checking if this build already exists...
+
+Build started, it may take a few minutes to complete.
+You can check the queue length at https://expo.io/turtle-status
+
+You can make this faster. 🐢
+Get priority builds at: https://expo.io/settings/billing
+
+You can monitor the build at
+
+ https://expo.io/dashboard/aamnah/builds/47defda7-9a59-47fa-be54-b9f2c5d4ce31
+
+Waiting for build to complete.
+You can press Ctrl+C to exit. It won't cancel the build, you'll be able to monitor it at the printed URL.
+⠏ Build queued...
+
+...
+```
+
+After it has been successfully built, get the details for the keystore with
+
+```bash
+expo fetch:android:keystore
+```
+
+```
+Configuring credentials for aamnah in project expo-devops-pipelinezu
+Saving Keystore to /media/aamnah/Files/Projects/expo-devops-pipeline/expo-devops-pipeline.jks
+Keystore credentials
+  Keystore password: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  Key alias:         xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  Key password:      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+  Path to Keystore:  /media/aamnah/Files/Projects/expo-devops-pipeline/expo-devops-pipeline.jks
+```
+
+You'll need to provide these to `turtle` when we build the standalone apps with it
+
 ### Enable Bitbucket Pipelines and setup repository variables
 
 - Go to _Repository settings > Pipelnines > Settings_ and turn the toggle ON for **Enable Pipleines**
@@ -62,15 +173,97 @@ Now we have a file called `bitbucket-pipelines.yml` in our repo that will contai
 Now, setup repository variables. This will include all of the necessary information needed to sign your app, including the keystore location, keystore password, key name, and key password.
 
 - `EXPO_ANDROID_KEYSTORE_BASE64` - base64-encoded Android keystore
-- `EXPO_ANDROID_KEYSTORE_ALIAS` - Android keystore alias
 - `EXPO_ANDROID_KEYSTORE_PASSWORD` - Android keystore password
+- `EXPO_ANDROID_KEYSTORE_ALIAS` - Android keystore alias
 - `EXPO_ANDROID_KEY_PASSWORD` - Android key password
 - `EXPO_PUBLIC_URL` - URL where the app is published
 
-Needed
+Also, `git pull` in your project to start editing the file locally
 
-- An app that is ready to be published
-- Login details for Expo account
+### Encoding and decoding the keystore
+
+I am not going to commit the keystore file to git, but i need to use it in the pipeline..
+
+The solution is to **base64** encode the key, save it as a repository variable, and then decode and save the key in a file as part of the build step. Then i'll save that key as an _artifcat_ so that i am able to use it in further steps.
+
+To encode the key
+
+```bash
+openssl base64 -A -in keystore.jks
+```
+
+On macOS, you can base64-encode the contents of a file and copy the string to the clipboard by running `base64 some-file | pbcopy` in a terminal.
+
+To decode the key (saved as a variable) and save it in a file
+
+```bash
+echo $DEBUG_KEYSTORE_BASE64 | base64 --decode > keystore.jks
+```
+
+In the pipeline i have defined it as a step of it's own
+
+```yaml
+- step: &decode-keystore
+    name: Decode the keystore
+    script:
+      - echo ${EXPO_ANDROID_KEYSTORE_BASE64} | base64 --decode > keystore.jks
+    artifacts:
+      - keystore.jks
+```
+
+### Setting up the pipeline
+
+Now we start editing the `bitbucket-pipelines.yml` file. You can validate the file [here](https://bitbucket-pipelines.prod.public.atl-paas.net/validator)
+
+#### npm ci
+
+- removes existing `node_modules/` before installation
+- only works if a lockfile (`package-lock.json`) exists
+
+#### npx
+
+- `npx expo publish --clear` (as mentioned in [Expo docs](https://docs.expo.io/guides/setting-up-continuous-integration/)) doesn't work. You have to install it inside the pipeline
+
+#### --unsafe-perm
+
+The `--unsafe-perm` flag avoids the following error when installing npm packages
+
+```
+ERR! sharp EACCES: permission denied, mkdir '/root/.npm'
+```
+
+#### YAML Anchors
+
+You can define and re-use steps with YAML anchors.
+
+- anchor `&` to define a chunk of configuration
+- alias `*` to refer to that chunk elsewhere
+
+```yaml
+image: node:latest
+
+definitions:
+  caches:
+    npm: '${HOME}/.npm'
+    jest: .jest
+  steps:
+    - step: &expo-publish
+        name: Publish to Expo
+        caches:
+          - npm
+          - node
+        script:
+          - npm ci
+          - npm i -g expo-cli
+          - expo login -u ${EXPO_USERNAME} -p ${EXPO_PASSWORD}
+          - expo publish --clear
+
+pipelines:
+  default:
+    - step: *expo-publish
+```
+
+- the `>-` symbol is for non white space multiple lines.
 
 ```yaml
 # Build standalone app
@@ -97,8 +290,6 @@ turtle build:android \
 turtle build:android --help
 ```
 
-You can safely git ignore `.turtle`
-
 ```
 Usage: build:android|ba [options] [project-dir]
 
@@ -119,6 +310,22 @@ Options:
   -h, --help                        output usage information
 ```
 
+You can safely git ignore `.turtle`
+
+### Troubleshooting
+
+```
+ERROR: Failed to build standalone app
+  err: Error: Couldn't find app.json.
+```
+
+was using `app.config.ts` (experimental). Changed it to `app.config.js`
+
 ## Links
 
 - [Android Developers: Sign your app](https://developer.android.com/studio/publish/app-signing)
+- [YAML anchors](https://support.atlassian.com/bitbucket-cloud/docs/yaml-anchors/)
+- [Where to Store Android KeyStore File in CI/CD Cycle?](https://android.jlelse.eu/where-to-store-android-keystore-file-in-ci-cd-cycle-2365f4e02e57)
+- [Bitbucket Pipeline Hack: Wrapping multiline script command](https://community.atlassian.com/t5/Bitbucket-articles/Bitbucket-Pipeline-Hack-Wrapping-multiline-script-command/ba-p/1289800?lightbox-message-images-1289800=81455iF5C825E5ED5537CA)
+- [Automating Standalone Expo App Builds and Deployments with Fastlane and Expo CLI](https://blog.expo.io/automating-standalone-expo-app-builds-and-deployments-with-fastlane-exp-and-exptool-9b2f5ad0a2cd)
+- [Deploy build artifacts to Bitbucket Downloads](https://support.atlassian.com/bitbucket-cloud/docs/deploy-build-artifacts-to-bitbucket-downloads/)
