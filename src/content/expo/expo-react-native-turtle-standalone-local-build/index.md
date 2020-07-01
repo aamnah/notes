@@ -164,6 +164,17 @@ ERROR: Failed to build standalone app
 
 Using `--dev` exports the app but i kept getting error when trying to build standalone app with turtle. Ended up installing `http-server` in order to [configure SSL](https://github.com/http-party/http-server#tlsssl).
 
+```
+Jul 1 11:22:10 turtle[424759] ERROR: Failed to build standalone app
+  err: Error: Couldn't find app.json.
+      at Object.loadAppJSON (/home/aamnah/.nvm/versions/node/v12.18.0/lib/node_modules/turtle-cli/src/bin/utils/project.ts:14:11)
+      at /home/aamnah/.nvm/versions/node/v12.18.0/lib/node_modules/turtle-cli/src/bin/utils/builder.ts:77:23
+      at Command.<anonymous> (/home/aamnah/.nvm/versions/node/v12.18.0/lib/node_modules/turtle-cli/src/bin/index.ts:23:12)
+  platform: "android"
+```
+
+Turtle only works with `app.json` and not `app.config.js` or `app.config.ts`. Changed back to `app.json` and it worked.
+
 ## Links
 
 - [Building Standalone Apps on Your CI](https://docs.expo.io/distribution/turtle-cli/)
@@ -171,3 +182,6 @@ Using `--dev` exports the app but i kept getting error when trying to build stan
 - [Build Standalone Expo .apk and .ipa with Turtle CLI](https://www.robincussol.com/build-standalone-expo-apk-ipa-with-turtle-cli/)
 - [turtle build creating apk with old version](https://forums.expo.io/t/turtle-build-creating-apk-with-old-version/37135/4)
 - [Expo: Hosting An App on Your Servers](https://docs.expo.io/distribution/hosting-your-app/)
+- [Bitbucket pipeline reuse of code](https://community.atlassian.com/t5/Bitbucket-questions/Bitbucket-pipeline-reuse-of-code/qaq-p/1134797)
+- [App Center: API-First CI/CD for iOS and Android App Development](https://devblogs.microsoft.com/appcenter/app-center-api-first-cicd-for-ios-and-android-app-development/)
+- [https://github.com/Microsoft/appcenter-cli](https://github.com/Microsoft/appcenter-cli)
