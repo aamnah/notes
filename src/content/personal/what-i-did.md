@@ -4,8 +4,21 @@ description: an almost daily log of the things i end up doing, What i learned an
 slug: progress
 sidemenu: true
 date: 2017-03-17
-lastmod: 2020-05-14
+lastmod: 2020-06-30
 ---
+
+#### June 30, 2020
+
+- Learned and used YAML anchors
+- Used artifacts in a bitbucket pipeline
+- Setup a step that changes `--release-channel` based on Deployment variables
+- Deployment variables vs. Repository variables
+- Encoding and decoding a keystore as base64 for use in CI/CD
+
+#### June 29, 2020
+
+- Seep dive into the Android app signing process
+- App signing key vs. Upload key
 
 For the month of March, Arpil and May or so of 2020, read the [working from home during COVID-19](https://blog.aamnah.com/personal/14_days_social_isolation) post
 
