@@ -1,6 +1,7 @@
 ---
 title: Setup a publish, build and distribute pipeline for Expo based React Native project
 date: 2020-06-29
+lastmod: 2020-07-01
 slug: expo-bitbucket-pipeline-build-publish-distribute-standalone-app
 description: Automatically build your app and send it to the app store using Bitbucket Pipelines or Github Actions
 tags:
@@ -336,7 +337,7 @@ ERROR: Failed to build standalone app
   err: Error: Couldn't find app.json.
 ```
 
-was using `app.config.ts` (experimental). Changed it to `app.config.js`
+Turtle only works with `app.json` and not `app.config.js` or `app.config.ts`. Changed back to `app.json` and it worked.
 
 ## Links
 
@@ -347,3 +348,5 @@ was using `app.config.ts` (experimental). Changed it to `app.config.js`
 - [Automating Standalone Expo App Builds and Deployments with Fastlane and Expo CLI](https://blog.expo.io/automating-standalone-expo-app-builds-and-deployments-with-fastlane-exp-and-exptool-9b2f5ad0a2cd)
 - [Deploy build artifacts to Bitbucket Downloads](https://support.atlassian.com/bitbucket-cloud/docs/deploy-build-artifacts-to-bitbucket-downloads/)
 - [Bitbucket Pipelines share SOME steps between branches](https://stackoverflow.com/a/50173421/890814)
+- [How to access deployment environment variables in more than one step?](https://community.atlassian.com/t5/Bitbucket-questions/How-to-access-deployment-environment-variables-in-more-than-one/qaq-p/1073876)
+- [Get started with Netlify CLI](https://docs.netlify.com/cli/get-started/)
