@@ -190,8 +190,13 @@ The solution is to **base64** encode the key, save it as a repository variable, 
 To encode the key
 
 ```bash
+# openssl base64 -in <infile> -out <outfile>
 openssl base64 -A -in keystore.jks
 ```
+
+- `-in` is for an input file
+- `-out` can be provided. If not, it'll output to terminal
+- `-A` will put it on a single line, which is useful when you're saving it as a variable
 
 On macOS, you can base64-encode the contents of a file and copy the string to the clipboard by running `base64 some-file | pbcopy` in a terminal.
 
@@ -232,6 +237,10 @@ The `--unsafe-perm` flag avoids the following error when installing npm packages
 ```
 ERR! sharp EACCES: permission denied, mkdir '/root/.npm'
 ```
+
+#### `set -e` vs. `set +e`
+
+Pipelines achieves the default behaviour of exiting on first error by prepending your script with the "set -e" bash command. You can "undo" this at any point in your script using the command "set +e". If you want all the commands in your script to execute regardless of errors then put "set +e" at the top of your script. If you just want to ignore the error for one particular command then put "set +e" before that command and "set -e" after it.
 
 #### YAML Anchors
 
@@ -330,6 +339,30 @@ Options:
 
 You can safely git ignore `.turtle`
 
+### AppCenter
+
+create a 'user' api token (as opposed to an 'app' api token)
+
+```bash
+appcenter tokens create -d 'Bitbucket Pipelines'
+```
+
+```bash
+ID:          xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+API Token:   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+Description: Bitbucket Pipelines
+Created at:  2020-07-01T12:28:27.000Z
+```
+
+```yaml
+- step: &appcenter-distribute-android
+    name: Send the app to App Center
+    script:
+      - npm install appcenter-cli –g
+      - appcenter login --token ${APPCENTER_TOKEN}
+      - appcenter distribute release -f myapp.apk -r "My First Release"
+```
+
 ### Troubleshooting
 
 ```
@@ -350,3 +383,4 @@ Turtle only works with `app.json` and not `app.config.js` or `app.config.ts`. Ch
 - [Bitbucket Pipelines share SOME steps between branches](https://stackoverflow.com/a/50173421/890814)
 - [How to access deployment environment variables in more than one step?](https://community.atlassian.com/t5/Bitbucket-questions/How-to-access-deployment-environment-variables-in-more-than-one/qaq-p/1073876)
 - [Get started with Netlify CLI](https://docs.netlify.com/cli/get-started/)
+- [netlify cli: deploy](https://cli.netlify.com/commands/deploy/)
