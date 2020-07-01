@@ -1,6 +1,7 @@
 ---
 title: Expo builds vs. Turtle builds
 date: 2020-07-01
+lastmod: 2020-07-02
 slug: expo-build-vs-turtle-build
 ---
 
@@ -10,7 +11,9 @@ slug: expo-build-vs-turtle-build
 | Calls Expo URL for future OTAs `exp://i3-kvb.ccheever.an-example.exp.direct:80` | Calls our server's URL for furture OTAs `http://build.myserver.com/android-index.json` |
 | OTAs will fetch JS bundles and assets from Expo’s CDN                           | OTAs will fetch JS bundles and assets from your servers                                |
 | Build is put in a build queue, you wait for your turn                           | No build queue                                                                         |
-| ~ 32 minutes in pipeline                                                        | ~ minutes in pipeline                                                                  |
+| ~ 32 minutes in pipeline                                                        | ~ 8 minutes in pipeline                                                                |
+
+The entire pipeline including installing JDK, setting up Android SDK, the actual build of the app bundle, and uploading of the artifacts took less than 8 minutes.
 
 ```bash
 # Expo build
