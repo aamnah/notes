@@ -2,6 +2,7 @@
 title: Building Standalone Expo React Native apps locally
 description: Use turtle to build standalone apps on local machine and for Continuous Integration (CI) setups
 date: 2020-06-04
+lastmod: 2020-07-02
 slug: expo-react-native-turtle-standalone-local-build
 tags:
   - Expo
@@ -184,4 +185,4 @@ Turtle only works with `app.json` and not `app.config.js` or `app.config.ts`. Ch
 - [Expo: Hosting An App on Your Servers](https://docs.expo.io/distribution/hosting-your-app/)
 - [Bitbucket pipeline reuse of code](https://community.atlassian.com/t5/Bitbucket-questions/Bitbucket-pipeline-reuse-of-code/qaq-p/1134797)
 - [App Center: API-First CI/CD for iOS and Android App Development](https://devblogs.microsoft.com/appcenter/app-center-api-first-cicd-for-ios-and-android-app-development/)
-- [https://github.com/Microsoft/appcenter-cli](https://github.com/Microsoft/appcenter-cli)
+- [AppCenter CLI](https://github.com/Microsoft/appcenter-cli)
