@@ -33,3 +33,13 @@ turtle build:android \
 The Over The Air (OTA) updates work by calling the URL where your app's JS bundle and assets are hosted. With apps built with `expo build`, it is hosted and handled on Expo servers. For `turtle` builds, you usually pass a `--public-url` option specifying the URL the app is supposed to call for updates.
 
 If the `--public-url` you specified is offline or unreachable, the app could result in a blank white screen. This was the case for my app where i had set `updates.checkAutomatically` to `ON_LOAD` which basically means that it would check for updates every time the app was loaded. This combined with no error-handling for this scenario resulted in a blank white screen on app load and 500 errors in Sentry because the URL couldn't be reached
+
+### Self-hosting and Publishing
+
+It is possible to publish your app on Expo servers and then build it with Turtle CLI. This saves you from self-publishing the app and maintaining servers.
+
+Instead of providing `--public-url`, you'd save `EXPO_USERNAME` and `EXPO_PASSWORD` as environment variables.
+
+But this flow only works if you have an [Expo developer account](https://expo.io/developer-services) which is \$29/m
+
+I'm using Netlify to self-host the app. It's an additional step in the build pipeline, but it's free to use once setup. I love Netlify!
