@@ -7,6 +7,18 @@ date: 2017-03-17
 lastmod: 2020-06-30
 ---
 
+#### July 1, 2020
+
+- Got the entire pipeline tested up till the point where i'm sending a built Android app bundle `.aab` to Firebase App Distribution
+- The pipeline at this point has these steps:
+  - Publish to Expo
+  - Export static files
+  - Deploy to Netlify (self-host)
+  - Build app bundle
+  - Send to Firebase
+- Got familiar with using custom Docker containers inside the pipeline
+- Brought down the time to build from ~40 minutes (using Expo) to ~10 minutes (using turtle)
+
 #### June 30, 2020
 
 - Learned and used YAML anchors
