@@ -42,4 +42,14 @@ App Center uses fastlane under the hood
 - [The NEW Visual Studio App Center!](https://www.youtube.com/watch?v=po5bL7vLbQU)
 - [React Native EU 2019: Nick de Jesus - Continuous Integration With Microsoft App Center](https://www.youtube.com/watch?v=zLY2a5enUhE)
 
+App Center requires you to sign in to App Center (cerate an account or social login), and then download the `.apk` file and install it. I don't see this as much different from just sending people a link to the `.apk` file to download. At least direct downloads don't make you sign in. And it still gives you that security warning..
+
+![screenshot about security warning]()
+
+And if i open the link (from the email) on my desktop, it tells me the app is not compatible with Linux. Duh.
+
+![screenshot app not compatible with linux]()
+
+I prefer Firebase over this.
+
 ### CodePush vs. RemoteConfig vs. Expo OTA
