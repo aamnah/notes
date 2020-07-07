@@ -122,3 +122,5 @@ bind-key -T copy-mode-vi MouseDragEnd1Pane send-keys -X copy-pipe-and-cancel [[ 
 ## Links
 
 - [tmux manual](https://man7.org/linux/man-pages/man1/tmux.1.html)
+- [Copying Text With Mouse In TMUX](https://blog.jasonmeridth.com/posts/copying-text-with-mouse-in-tmux/#:~:text=TL%3BDR%20Hold%20down%20shift,Voila!)
+- [How to copy and paste with a mouse with tmux](https://unix.stackexchange.com/a/318285)
