@@ -273,7 +273,47 @@ pipelines:
     - step: *expo-publish
 ```
 
-- the `>-` symbol is for non white space multiple lines.
+#### Reusing steps and scripts
+
+```yaml
+definitions:
+  scripts:
+    - script: &install-netlify
+        - npm install -g netlify-cli
+
+    - script: &commonScript1
+        - echo "common script 2"
+
+  steps:
+    - step: &build
+        name: Common Step 1
+
+    - step: &deploy
+        name: Common Step 2
+        deployment: test
+
+pipelines:
+  default:
+    - step: *build # use common step as is
+    - step:
+        <<: *deploy # update or override values with <<
+        deploymetr: staging
+    - step:
+        script:
+          - *install-netlify # use pre-defined scripts
+          - *commonScript2
+          - echo "extra script here.."
+```
+
+#### Multiline commands with block scalars
+
+- the `>` symbol is for multiline blocks which replace newlines with spaces (folded), and a single newline at the end (clip).
+- `>-` is same as above, but no newline at the end (strip)
+- `>+` will keep all newlines at the end (keep)
+- the `|` symbol is for multiline blocks where it keeps newlines (literal).
+- `>-` is for multiline blocks with a line break at the end
+
+[block scalars](https://yaml-multiline.info/)
 
 #### Changing --release-channel based on branch or deployment
 
@@ -339,6 +379,10 @@ Options:
 
 You can safely git ignore `.turtle`
 
+### Netlify
+
+You should stop auto-publishing to save on build minutes, which you get 300 of on the free plan. The deploys will be triggered from the pipeline
+
 ### AppCenter
 
 create a 'user' api token (as opposed to an 'app' api token)
@@ -355,7 +399,7 @@ Created at:  2020-07-01T12:28:27.000Z
 ```
 
 ```yaml
-- step: &appcenter-distribute-android
+- step:
     name: Send the app to App Center
     script:
       - npm install appcenter-cli –g
@@ -384,3 +428,5 @@ Turtle only works with `app.json` and not `app.config.js` or `app.config.ts`. Ch
 - [How to access deployment environment variables in more than one step?](https://community.atlassian.com/t5/Bitbucket-questions/How-to-access-deployment-environment-variables-in-more-than-one/qaq-p/1073876)
 - [Get started with Netlify CLI](https://docs.netlify.com/cli/get-started/)
 - [netlify cli: deploy](https://cli.netlify.com/commands/deploy/)
+- [YAML Multiline](https://yaml-multiline.info/)
+- [Bitbucket pipeline reuse of code](https://community.atlassian.com/t5/Bitbucket-questions/Bitbucket-pipeline-reuse-of-code/qaq-p/1134797)

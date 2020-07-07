@@ -5,8 +5,18 @@ date: 2020-06-23
 ---
 
 ```bash
-sudo apt update
-sudo apt install -y zsh
+# install ZSH
+sudo apt update && sudo apt install -y zsh
+
+# Set ZSH as default shell
+chsh -s $(which zsh)
+
+# logout and log back in for the shell change to take effect..
+
+# confirm shell has been changed
+echo $SHELL # /usr/bin/zsh
+
+# instll oh-my-zsh
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
@@ -24,18 +34,35 @@ The `~/.bashrc` is replaced with `~/.zshrc`. And the default installation locati
 Since i already had a `.bash_aliases` file, i just copied the contents over
 
 ```bash
-touch ~/oh-my-zsh/aliases.zsh
+touch ~/.oh-my-zsh/aliases.zsh
 cat ~/.bash_aliases >> ~/.oh-my-zsh/custom/aliases.zsh
 
 source ~/.zshrc
 ```
 
-You can then confirm your aliases are loaded with `alias`
+You can then confirm your aliases are loaded with `alias`.
+
+NOTE: You may have to go over your aliases file and change the double quotes to single quotes.. something about execution at run time or some such
 
 ### Installing plugins
 
-Links
----
+```bash
+plugins=(git cp colored-man-pages colorize)
+```
+
+### Installing themes
+
+I have [my own theme](https://github.com/aamnah/tmux-flat-theme) that i install on every system..
+
+```bash
+
+export ZSH_THEME="amnastic"
+```
+
+ZSH_CUSTOM
+
+## Links
 
 - [Aamnah's oh-my-zsh](https://github.com/aamnah/oh-my-zsh-custom)
 - [5 Types Of ZSH Aliases You Should Know](https://thorsten-hans.com/5-types-of-zsh-aliases)
+- [Aliasing](http://zsh.sourceforge.net/Intro/intro_8.html)

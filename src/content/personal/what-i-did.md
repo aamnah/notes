@@ -22,6 +22,7 @@ lastmod: 2020-06-30
 #### June 30, 2020
 
 - Learned and used YAML anchors
+- [Block Scalars](https://yaml-multiline.info/) -> multiline strings
 - Used artifacts in a bitbucket pipeline
 - Setup a step that changes `--release-channel` based on Deployment variables
 - Deployment variables vs. Repository variables

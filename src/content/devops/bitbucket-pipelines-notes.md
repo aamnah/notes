@@ -23,3 +23,16 @@ This can happen for large steps, in my case building an app bundle with `turtle-
     script:
       - echo 'this is my step with 2x memory'
 ```
+
+### Get the commit message for the commit that triggered the pipeline
+
+```yaml
+pipelines:
+  default:
+    - step:
+        script:
+          - COMMIT_MESSAGE=`git log --format=%B -n 1 $BITBUCKET_COMMIT`
+          - echo $COMMIT_MESSAGE
+```
+
+[ref](https://community.atlassian.com/t5/Bitbucket-Pipelines-questions/Commit-message/qaq-p/1202595)
