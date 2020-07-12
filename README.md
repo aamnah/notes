@@ -19,7 +19,7 @@ dark theme
 
 - [x] Deploy the blog at Netlify
 - [x] Get MDX posts working
-- [ ] (in progress) Build a layout for posts
+- [x] Build a layout for posts
 - [ ] (in progress) Build a layout for the Home page of the site
 - [x] Add Recent posts tp the Home page
 - [ ] Add sitemap
