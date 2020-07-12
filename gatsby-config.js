@@ -4,10 +4,11 @@ module.exports = {
     title: `Aamnah - Frontend developer`,
     description: `Life of Aamnah, in blog version`,
     author: `@aamnahakram`,
-    github_url: `https://github.com/aamnah/blog.aamnah.com/`,
+    github_url: `https://github.com/aamnah/blog.aamnah.com`,
     instagram_username: 'aamnahakram',
     behance_username: 'aamnah',
     github_username: 'aamnah',
+    post_edit_url: `https://github.com/aamnah/blog.aamnah.com/tree/master/src/content`,
   },
   plugins: [
     `gatsby-plugin-feed-mdx`,

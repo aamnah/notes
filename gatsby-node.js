@@ -48,15 +48,23 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // `reporter` is like Gatsby's internal console.log()
   // Destructure the createPage function from the actions object
   const { createPage } = actions
+
+  // Query for markdown nodes to use in creating pages.
+  // You can query for whatever data you want to create pages for e.g.
+  // products, portfolio items, landing pages, etc.
+  // Variables can be added as the second function parameter
+
+  // This query is only useful in the next step, where you use the `slug` value to create pages
+  // and can pass content to the page being created
   const result = await graphql(`
     query {
       allMdx {
         edges {
           node {
-            id
             fields {
               slug
             }
+            fileAbsolutePath
           }
         }
       }
@@ -74,9 +82,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       path: node.fields.slug, // This is the slug you created before
       // This component will wrap our MDX content
       component: path.resolve(`./src/components/Layout/Post.jsx`),
-      // You can use the values in this context in
-      // our page layout component
-      context: { id: node.id },
+      // Add optional context data to be inserted as props into the page component..
+      // The context data can also be used as arguments to the page GraphQL query.
+      // The page "path" is always available as a GraphQL argument.
+      // Keys in the context object that match up with arguments in the page query (in this case: "title"), will be used as variables. Variables are prefaced with $, so passing a title property will become $title in the query.
+      context: { absolutePath: node.fileAbsolutePath },
     })
   })
 }

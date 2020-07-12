@@ -11,25 +11,30 @@ import { Header, Footer, Navigation, SEO, SiteContainer, ContentContainer } from
 
 // For pages, Gatsby is capable of handling queries with variables because of its awareness of page context. However, page queries can only be made in top-level page components.
 // and you need to `export` this query
+// Keys in the context object that match up with arguments in the page query (in this case: "title"), will be used as variables. Variables are prefaced with $, so passing a title property will become $title in the query.
 export const data = graphql`
-  query PostQuery($id: String!) {
+  query PostQuery($absolutePath: String!) {
     site {
       siteMetadata {
-        github_url
+        post_edit_url
       }
     }
-    mdx(id: { eq: $id }) {
-      id
+    mdx(fileAbsolutePath: { eq: $absolutePath }) {
       body
       frontmatter {
+        title
+        status
         path
+        slug
         date(formatString: "MMM DD, YYYY")
         description
         excerpt
         lastmod(formatString: "MMM DD, YYYY")
-        title
-        status
       }
+    }
+    file(absolutePath: { eq: $absolutePath }) {
+      relativePath
+      relativeDirectory
     }
   }
 `
@@ -37,6 +42,7 @@ export const data = graphql`
 export default function PostLayout({ data, children }) {
   // const { title, body, date, description, excerpt, lastmod, path } = pageContext
   const { title, date, description, excerpt, lastmod, status } = data.mdx.frontmatter
+  const { relativePath, relativeDirectory } = data.file
 
   return (
     <SiteContainer>
@@ -46,24 +52,22 @@ export default function PostLayout({ data, children }) {
 
       <ContentContainer className="Post">
         <h1>{title}</h1>
-        {description ? <h4>{description}</h4> : excerpt ? <h4>{excerpt}</h4> : null}
         <div className="Post-meta">
-          {/* <div>
-            <a href="{`${data.site.siteMetadata.github_url}/blob/master/content/devops/dotnet_core_bitbucket_pipelines_aws_ebs.md`}">
-              Edit on Github {path}
-            </a>
-          </div> */}
-          {/* <div>{path}</div> */}
+          <div>
+            <a href={`${data.site.siteMetadata.post_edit_url}/${relativePath}`}>Edit on Github</a>
+            <br />
+            <span>{relativePath}</span>
+            <br />
+            <span>{relativeDirectory}</span>
+          </div>
           {lastmod ? (
             <div className="Post-meta-date">Last updated: {lastmod}</div>
           ) : (
             <div className="Post-meta-date">{date}</div>
           )}
           {status === 'draft' ? <div className="Post-meta-status">DRAFT</div> : null}
-          {/* <div className="Post-meta-section">
-            <a href="/devops">DevOps</a>
-          </div> */}
         </div>
+        {description ? <h4>{description}</h4> : excerpt ? <h4>{excerpt}</h4> : null}
 
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
         {children}
