@@ -58,7 +58,9 @@ export default function PostLayout({ data, children }) {
             <br />
             <span>{relativePath}</span>
             <br />
-            <span>{relativeDirectory}</span>
+            <span>
+              <a href={`/${relativeDirectory}`}>{relativeDirectory}</a>
+            </span>
           </div>
           {lastmod ? (
             <div className="Post-meta-date">Last updated: {lastmod}</div>

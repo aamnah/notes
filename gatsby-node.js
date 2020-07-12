@@ -8,7 +8,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   // you only want to operate on `Mdx` nodes. If you had content from a
   // remote CMS you could also check to see if the parent node was a
   // `File` node here
-  if (node.internal.type === 'Mdx') {
+  if (node.internal.type === 'Mdx' || node.internal.type === 'File') {
     // `createFilePath` is a function from gatsby-source-filesystem that translates file paths to usable URLs.
     const slug = createFilePath({
       // The node you'd like to convert to a path
@@ -56,7 +56,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // This query is only useful in the next step, where you use the `slug` value to create pages
   // and can pass content to the page being created
-  const result = await graphql(`
+  const postResults = await graphql(`
     query {
       allMdx {
         edges {
@@ -70,12 +70,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     }
   `)
-  if (result.errors) {
-    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query', result.errors)
+  if (postResults.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query', postResults.errors)
   }
 
   // Create blog post pages.
-  const posts = result.data.allMdx.edges
+  const posts = postResults.data.allMdx.edges
 
   posts.forEach(({ node }, index) => {
     createPage({
@@ -88,5 +88,33 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       // Keys in the context object that match up with arguments in the page query (in this case: "title"), will be used as variables. Variables are prefaced with $, so passing a title property will become $title in the query.
       context: { absolutePath: node.fileAbsolutePath },
     })
+  })
+
+  // CATEGORY PAGES
+  const categoryResults = await graphql(`
+    query {
+      allDirectory(filter: { sourceInstanceName: { eq: "content" } }) {
+        edges {
+          node {
+            name
+            relativePath
+          }
+        }
+      }
+    }
+  `)
+
+  if (categoryResults.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query', categoryResults.errors)
+  }
+
+  categoryResults.data.allDirectory.edges.forEach(({ node }) => {
+    if (node.name === node.relativePath) {
+      createPage({
+        path: node.name,
+        component: path.resolve(`./src/components/Layout/Category.jsx`),
+        context: { name: node.name, relativePath: node.relativePath },
+      })
+    }
   })
 }
