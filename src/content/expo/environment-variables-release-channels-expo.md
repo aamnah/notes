@@ -16,6 +16,18 @@ Here's what i use, it uses `indexOf` to accomodate for different variations in c
 ```ts
 import Constants from 'expo-constants'
 
+const ENV = {
+  develop: {
+    API_URL: 'https://api-dev.myapp.net/v1',
+  },
+  staging: {
+    API_URL: 'https://api-stg.myapp.net/v1',
+  },
+  production: {
+    API_URL: 'https://api.myapp.net/v1',
+  },
+}
+
 const getEnvVars = (env = Constants.manifest.releaseChannel) => {
   // Default values for `releaseChannel` are `undefined` in dev mode and `default` in production
   if (__DEV__) {
@@ -30,7 +42,40 @@ const getEnvVars = (env = Constants.manifest.releaseChannel) => {
   return ENV.develop // If you do not specify a channel, you will publish to the `default` channel.
 }
 
-export default getEnvVars
+export default getEnvVars()
+```
+
+here's how you'd use it in another file
+
+```js
+import ENV from '../../environment'
+
+const activityUrl = `${ENV.API_URL}/activity`
+```
+
+here's how `indexOf` works: if the `env` string contains the string `dev`, it'll return the index of where it occurs. if `env` starts with `dev`, it'll return `0`. if it returned `-1`, then the substring wasn't found inside the `env` string
+
+```js
+let env1 = 'development'
+console.info(env1.indexOf('dev')) // 0
+
+let env2 = 'dev'
+console.info(env2.indexOf('dev')) // 0
+
+let env3 = 'develop'
+console.info(env3.indexOf('dev')) // 0
+
+let env4 = 'dev-v1'
+console.info(env4.indexOf('dev')) // 0
+
+let env5 = 'develop-v3'
+console.info(env5.indexOf('dev')) // 0
+
+let env6 = 'prod-v3'
+console.info(env6.indexOf('dev')) // -1
+
+let env7 = 'development'
+console.info(env7.indexOf('ment')) // 7
 ```
 
 Here's Peter Piekarczyk's snippet:
@@ -79,6 +124,12 @@ const getEnvVars = (env = Constants.manifest.releaseChannel) => {
 }
 
 export default getEnvVars
+```
+
+```js
+// Import getEnvVars() from environment.js
+import getEnvVars from '../environment'
+const { apiUrl } = getEnvVars()
 ```
 
 ## Links
