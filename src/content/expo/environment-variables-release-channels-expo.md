@@ -86,3 +86,4 @@ export default getEnvVars
 - [Expo: Release Channels](https://docs.expo.io/distribution/release-channels/)
 - [Environment Variables in Expo using Release Channels](https://medium.com/@peterpme/environment-variables-in-expo-using-release-channels-4934594c5307)
 - [Environment Management in Expo](https://alxmrtnz.com/thoughts/2019/03/12/environment-variables-and-workflow-in-expo.html)
+- [String.prototype.indexOf()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf)
