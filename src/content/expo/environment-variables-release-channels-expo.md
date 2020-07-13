@@ -1,0 +1,88 @@
+---
+title: Environment variables in Expo using Release Channels
+slug: environment-variables-release-channels-expo
+date: 2020-07-13
+---
+
+- You can reference the release channel with `Constants.manifest.releaseChannel`. It's part of `expo-constants`
+- Default values for `releaseChannel` are:
+  - `undefined` in dev mode
+  - `default` in production
+- `Constants.manifest.releaseChannel` does NOT exist in dev mode, it'll return `undefined`. It does exist, however when you explicitly publish / build with it.
+- If you don't specify a release channel, it'll publish to a channel called `default`
+
+Here's what i use, it uses `indexOf` to accomodate for different variations in channel names and `__DEV__` to set default environment when `releaseChannel` is `undefined`
+
+```ts
+import Constants from 'expo-constants'
+
+const getEnvVars = (env = Constants.manifest.releaseChannel) => {
+  // Default values for `releaseChannel` are `undefined` in dev mode and `default` in production
+  if (__DEV__) {
+    return ENV.develop
+  }
+
+  // using `indexOf` will let you pick up dev, develop, development, dev-v1, dev-v2, dev-v3, and so on..
+  // Returns `-1` if the value is not found.
+  if (env.indexOf('dev') !== -1) return ENV.develop
+  if (env.indexOf('staging') !== -1) return ENV.staging
+  if (env.indexOf('prod') !== -1) return ENV.production
+  return ENV.develop // If you do not specify a channel, you will publish to the `default` channel.
+}
+
+export default getEnvVars
+```
+
+Here's Peter Piekarczyk's snippet:
+
+```ts
+import { Constants } from 'expo'
+
+const ENV = {
+  dev: {
+    apiUrl: 'http://localhost:1337/api',
+  },
+  staging: {
+    apiUrl: 'https://staging.orchard.ai/api',
+  },
+  prod: {
+    apiUrl: 'https://orchard.ai/api',
+  },
+}
+
+function getEnvVars(env = '') {
+  if (env === null || env === undefined || env === '') return ENV.dev
+  if (env.indexOf('dev') !== -1) return ENV.dev
+  if (env.indexOf('staging') !== -1) return ENV.staging
+  if (env.indexOf('prod') !== -1) return ENV.prod
+}
+
+export default getEnvVars(Constants.manifest.releaseChannel)
+```
+
+and here's Alex's snippet:
+
+```ts
+import Constants from 'expo-constants'
+
+const getEnvVars = (env = Constants.manifest.releaseChannel) => {
+  // What is __DEV__ ?
+  // This variable is set to true when react-native is running in Dev mode.
+  // __DEV__ is true when run locally, but false when published.
+  if (__DEV__) {
+    return ENV.dev
+  } else if (env === 'staging') {
+    return ENV.staging
+  } else if (env === 'prod') {
+    return ENV.prod
+  }
+}
+
+export default getEnvVars
+```
+
+## Links
+
+- [Expo: Release Channels](https://docs.expo.io/distribution/release-channels/)
+- [Environment Variables in Expo using Release Channels](https://medium.com/@peterpme/environment-variables-in-expo-using-release-channels-4934594c5307)
+- [Environment Management in Expo](https://alxmrtnz.com/thoughts/2019/03/12/environment-variables-and-workflow-in-expo.html)
