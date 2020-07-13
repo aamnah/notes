@@ -4,21 +4,22 @@ date: 2020-07-03
 status: draft
 ---
 
-`.env` is for _environment specific_ variables (DEBUG=true), it's not for storing secrets (API keys..)
-
-The `process.env` property returns an object containing the user environment. Check out all the environment variables that are set
+- `.env` is for _environment specific_ variables (DEBUG=true), it's not for storing secrets (API keys..)
+- The `process.env` property returns an object containing the user environment. Check out all the environment variables that are set
 
 ```
 console.log(process.env);
 ```
 
-You can't `process.env` use values in `app.json`, but you can use them in `app.config.js`. So, for example, `hooks.postPublish.config.authToken` for Sentry was in `app.json` before (as recommended in the docs), but if you use `app.config.js` you can load that auth token in via a secured environment variable.
+- You can't `process.env` use values in `app.json`, but you can use them in `app.config.js`. So, for example, `hooks.postPublish.config.authToken` for Sentry was in `app.json` before (as recommended in the docs), but if you use `app.config.js` you can load that auth token in via a secured environment variable.
+- On Windows, we use `set` to define environment variables while on Linux we use `export`
+- In React Native, `__DEV__` is a global variable with a boolean value that indicates whether you're running in development mode or not. iOS or Android simulators will have his value `true`
+- `__DEV__` can not be set inside `babel.config.js` (Expo). You'll get
 
-On Windows, we use `set` to define environment variables while on Linux we use `export`
-
-In React Native, `__DEV__` is a global variable with a boolean value that indicates whether you're running in development mode or not. iOS or Android simulators will have his value `true`
-
-`__DEV__` can not be sed inside `babel.config.js`
+```
+node_modules/expo/AppEntry.js: __DEV__ is not defined
+Failed building JavaScript bundle.
+```
 
 Expo options:
 
@@ -65,18 +66,27 @@ console.log(Constants.manifest.releaseChannel)
 
 ## dotenv vs. release channels
 
-Release channels use `Constants.manifest.releaseChannel` to change things inside the code, while dotenv uses `process.env`. Both need some value to be passed while running the command. Neither can be used for secrets..
+- Release channels use `Constants.manifest.releaseChannel` to change things inside the code, while dotenv uses `process.env`. Both need some value to be passed while running the command. Neither can be used for secrets..
+- Default values for `releaseChannel` are `undefined` in dev mode, and `default` in production
 
 ```ts
-const getEnvVars = (env = '') => {
-  if (env === null || env === undefined || env === '') return ENV.dev // since env is undefined, return dev as default.
-  if (env.indexOf('dev') !== -1) return ENV.dev // this would pick up dev-v1, dev-v2, dev-v3
+const getEnvVars = (env = Constants.manifest.releaseChannel) => {
+  // Default values for `releaseChannel` are `undefined` in dev mode and `default` in production
+  if (__DEV__) {
+    return ENV.develop
+  }
+
+  // using `indexOf` will let you pick up dev, develop, development, dev-v1, dev-v2, dev-v3, and so on..
+  // Returns `-1` if the value is not found.
+  if (env.indexOf('dev') !== -1) return ENV.develop
   if (env.indexOf('staging') !== -1) return ENV.staging
-  if (env.indexOf('prod') !== -1) return ENV.prod
-  return ENV.dev
+  if (env.indexOf('prod') !== -1) return ENV.production
+
+  // If you do not specify a channel, you will publish to the `default` channel.
+  return ENV.develop
 }
 
-export default getEnvVars(Constants.manifest.releaseChannel)
+export default getEnvVars()
 ```
 
 ## react-native-dotenv
