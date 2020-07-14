@@ -1,6 +1,6 @@
 ---
 title: How i got this blog site up with Gatsby
-path: setup-gatsby-mdx-blog
+slug: setup-gatsby-mdx-blog
 date: 2020-03-19
 ---
 

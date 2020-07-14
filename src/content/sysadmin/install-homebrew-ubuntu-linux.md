@@ -25,7 +25,4 @@ echo 'eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)' >> ${HOME}/.profile
 
 # Add Homebrew to your PATH
 eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-
-# install GCC (recommended)
-brew install gcc
 ```

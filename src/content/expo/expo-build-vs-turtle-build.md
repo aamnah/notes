@@ -45,4 +45,4 @@ Instead of providing `--public-url`, you'd save `EXPO_USERNAME` and `EXPO_PASSWO
 
 But this flow only works if you have an [Expo developer account](https://expo.io/developer-services) which is \$29/m
 
-I'm using Netlify to self-host the app. It's an additional step in the build pipeline, but it's free to use once setup. I love Netlify!
+I'm using Netlify to self-host the app. It's an additional step in the build pipeline, but it's free to use once setup (and gives you 800 build minutes per month for automated deploys). I love Netlify!

@@ -1,6 +1,6 @@
 ---
 title: Beta testing your React Native app
-discription: Making your app available for beta testers and distributing it to play stores
+description: Making your app available for beta testers and distributing it to play stores
 date: 2020-06-03
 slug: beta-test-distribute-react-native-app
 ---
