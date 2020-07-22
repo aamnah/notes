@@ -1,6 +1,6 @@
 ---
-title: Passing params to React Navigation Header
-slug: pass-params-react-navigation-header
+title: Passing params to React Navigation Header in Functional Components
+slug: pass-params-react-navigation-header-functional-components
 date: 2020-07-22
 ---
 
