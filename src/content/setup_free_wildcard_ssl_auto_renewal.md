@@ -66,6 +66,12 @@ export ACCOUNT_EMAIL=${ACCOUNT_EMAIL}
 acme.sh --issue --dns dns_aws -d ${MAIN_DOMAIN} -d ${WILDCARD_DOMAIN}
 ```
 
+After the install is succesful, it'll tell you where all the generated files are. It'll also give you a link where you can download the cert from (useful when you need to share the cert)
+
+```
+https://acme-v02.api.letsencrypt.org/acme/cert/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+```
+
 Issuing a wildcard certifcate is simple, just pass a wildcard domain to the `-d` flag,
 
 ```bash
