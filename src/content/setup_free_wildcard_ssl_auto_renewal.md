@@ -7,8 +7,6 @@ lastmod: 2020-07-31
 
 #### tl;dr
 
-install, config, generate
-
 ```bash
 sudo wget -O -  https://get.acme.sh | sh
 
@@ -66,7 +64,7 @@ export ACCOUNT_EMAIL=${ACCOUNT_EMAIL}
 acme.sh --issue --dns dns_aws -d ${MAIN_DOMAIN} -d ${WILDCARD_DOMAIN}
 ```
 
-After the install is succesful, it'll tell you where all the generated files are. It'll also give you a link where you can download the cert from (useful when you need to share the cert)
+After the install is succesful, it'll tell you where all the generated files are (usually `~/.acme.sh/domain.com/`). It'll also give you a link where you can download the cert from (useful when you need to share the cert)
 
 ```
 https://acme-v02.api.letsencrypt.org/acme/cert/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -79,6 +77,21 @@ acme.sh  --issue -d example.com  -d '*.example.com'  --dns dns_aws
 ```
 
 All certs are renewed automatically every **60** days
+
+### Downloading the generated files
+
+In case you need all the files that were generated and not just the cert, create an archive of all files with `tar`
+
+```bash
+tar -czvf mydaomin.com.tar.gz mydomain.com/
+```
+
+and download on your system with `scp`
+
+```bash
+# scp -i ~/.ssh/SSH_KEY REMOTE_USER@REMOTE_SERVER:REMOTE_FILE_PATH LOCAL_SAVE_LOCATION
+scp -i ~/.ssh/id_rsa root@myserver.com:home/root/mydomain.tar.gz ~/Downloads
+```
 
 #### Maintenance
 
@@ -107,3 +120,5 @@ source ~/.bashrc
 - [acme.sh - How to issue a cert](https://github.com/acmesh-official/acme.sh/wiki/How-to-issue-a-cert)
 - [acme.sh - How to use Amazon Route53 API](https://github.com/acmesh-official/acme.sh/wiki/How-to-use-Amazon-Route53-API)
 - [acme.sh - Advanced installation](https://github.com/acmesh-official/acme.sh/wiki/How-to-install#4-advanced-installation)
+- [`tar`](https://notes.aamnah.com/commands/tar-compressed-archives/)
+- [`scp`](https://notes.aamnah.com/commands/scp-secure-copy/)
