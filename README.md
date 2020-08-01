@@ -17,32 +17,35 @@ dark theme
 
 ## TODO
 
+- [ ] (in progress) Build a layout for the Home page of the site
+- [ ] Add sitemap
+- [ ] Add a component for inline SVGs (logo)
+- [ ] Use IP detection and show different placeholder text (e.g. phone format) for different countries
+- [ ] fix folder based categories if the post is in a `slug/index.md` pattern (e.g. Redux folder structure patterns)
+  - [ ] fix category on post page
+  - [ ] fix category listing page to include the post
+- [ ] Add `.mdx` support for the above nested post structure
+
+## Done
+
 - [x] Deploy the blog at Netlify
 - [x] Get MDX posts working
 - [x] Build a layout for posts
-- [ ] (in progress) Build a layout for the Home page of the site
 - [x] Add Recent posts tp the Home page
-- [ ] Add sitemap
 - [x] Add favicon
 - [x] Add web manifest
 - [x] Add RSS feed [gatsby-plugin-feed-mdx](https://www.gatsbyjs.org/packages/gatsby-plugin-feed-mdx/)
 - [x] Add Google Analytics [gatsby-plugin-google-analytics]()
 - [x] Figure out post images
-  - [ ] Serve images from the post folder
+  - [x] Serve images from the post folder
 - [x] Fix post routes for MDX
-- [ ] Add a component for inline SVGs (logo)
-- [ ] Add SVG icon component (heart, external link)
+- [x] Add SVG icon component (heart, external link)
 - [x] Convert to Sass, see [Using Sass in Gatsby](https://www.gatsbyjs.org/docs/sass/)
 - [x] Add a [Contact form](https://www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/)
-- [ ] Use IP detection and show different placeholder text (e.g. phone format) for different countries
 - [x] Add syntax highlighting for code blocks ([Prismjs](https://prismjs.com/))
   - [x] Add a custom theme for highlighting
   - [x] [Add additional languages](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)
 - [x] Add support for _Draft_ status
-- [ ] fix folder based categories if the post is in a `slug/index.md` pattern (e.g. Redux folder structure patterns)
-  - [ ] fix category on post page
-  - [ ] fix category listing page to include the post
-- [ ] Add `.mdx` support for the above nested post structure
 
 ## Notes
 
