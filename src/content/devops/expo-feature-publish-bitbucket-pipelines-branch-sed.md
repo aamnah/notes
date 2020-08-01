@@ -18,6 +18,10 @@ Publish every branch to it's own release channel automatically
 
 Because i'm using Git Flow, the branch naming is `feature/my-awesome-branch`. I can get the branch name with a built-in [pipeline variable](https://support.atlassian.com/bitbucket-cloud/docs/variables-in-pipelines/), but the `/` after `feature` doesn't work with Expo release channel naming. You can't have a `/` in a release channel name..
 
+```
+[06:23:47] Release channel name can only contain lowercase letters, numbers and special characters . _ and -
+```
+
 ## the solution
 
 - Get the branch name with `${BITBUCKET_BRANCH}`, do some `sed` magic to remove `/` in the name, and voila!
