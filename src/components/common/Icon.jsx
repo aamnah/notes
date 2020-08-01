@@ -1,12 +1,19 @@
 import React from 'react'
 // getIconSvg is only used within this file, to define the SVG code for different icon names, and to pass props to the SVG code
 const getIconSvg = (name, props) => {
-  const { fill, size, opacity, stroke } = props
+  const { fill, size, opacity, stroke, className } = props
 
   switch (name) {
     case 'heart':
       return (
-        <svg width={size} height={size} viewBox="0 0 100 100" opacity={opacity} xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width={size}
+          height={size}
+          viewBox="0 0 100 100"
+          opacity={opacity}
+          className={`Icon ${className}`}
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="M83.6549 21.8671C81.6343 19.8454 79.2352 18.2416 76.5946 17.1474C73.954 16.0532 71.1237 15.49 68.2654 15.49C65.4071 15.49 62.5768 16.0532 59.9362 17.1474C57.2956 18.2416 54.8965 19.8454 52.8759 21.8671L50.2343 24.4974L47.5814 21.8501C45.5864 19.7278 43.1852 18.028 40.5206 16.8517C37.8559 15.6754 34.982 15.0466 32.0696 15.0025C29.1572 14.9584 26.2656 15.5 23.5665 16.5952C20.8675 17.6903 18.4161 19.3167 16.3578 21.3776C14.2995 23.4386 12.6763 25.8922 11.5846 28.5926C10.493 31.2931 9.95509 34.1854 10.0029 37.0977C10.0508 40.0101 10.6833 42.8832 11.8631 45.5463C13.0429 48.2094 14.7457 50.6084 16.8706 52.6006L48.9902 84.7202C49.3194 85.0319 49.7555 85.2056 50.2088 85.2056C50.6621 85.2056 51.0981 85.0319 51.4273 84.7202L83.6208 52.6517C87.6997 48.5675 89.9936 43.0331 90 37.2608C90.0064 31.4886 87.7247 25.9491 83.6549 21.8558V21.8671Z"
             fill={fill}
@@ -16,7 +23,14 @@ const getIconSvg = (name, props) => {
 
     case 'external-link':
       return (
-        <svg width={size} height={size} viewBox="0 0 100 100" opacity={opacity} xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width={size}
+          height={size}
+          viewBox="0 0 100 100"
+          opacity={opacity}
+          className={`Icon ${className}`}
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
@@ -28,7 +42,14 @@ const getIconSvg = (name, props) => {
 
     case 'plane':
       return (
-        <svg width={size} height={size} viewBox="0 0 100 100" opacity={opacity} xmlns="http://www.w3.org/2000/svg">
+        <svg
+          width={size}
+          height={size}
+          viewBox="0 0 100 100"
+          opacity={opacity}
+          className={`Icon ${className}`}
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
             d="M12.1934 50.5134C9.16382 52.152 9.28951 54.5518 12.4657 55.8476L21.8766 59.6862C25.0555 60.9874 29.8657 60.2774 32.5601 58.1097L73.427 24.8845C76.1136 22.706 76.4017 23.0272 74.0686 25.6025L41.7615 61.2519C39.4206 63.8191 40.1119 66.9721 43.3012 68.2436L44.4036 68.6863C47.5929 69.9578 52.7907 72.0931 55.959 73.4212L66.3964 77.8025C69.5674 79.1306 72.9557 77.5649 73.8565 74.1636L89.7639 13.884C90.662 10.4827 88.9181 9.03847 85.8885 10.6744L12.1934 50.5134Z"
             fill={fill}
@@ -48,6 +69,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 352 512"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -65,6 +87,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 448 448"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -75,7 +98,14 @@ const getIconSvg = (name, props) => {
       )
     case 'folder':
       return (
-        <svg opacity={opacity} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width={size} height={size}>
+        <svg
+          opacity={opacity}
+          className={`Icon ${className}`}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 576 512"
+          width={size}
+          height={size}
+        >
           <path
             fill={fill}
             d="M572.694 292.093L500.27 416.248A63.997 63.997 0 0 1 444.989 448H45.025c-18.523 0-30.064-20.093-20.731-36.093l72.424-124.155A64 64 0 0 1 152 256h399.964c18.523 0 30.064 20.093 20.73 36.093zM152 224h328v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v278.046l69.077-118.418C86.214 242.25 117.989 224 152 224z"
@@ -85,7 +115,14 @@ const getIconSvg = (name, props) => {
 
     case 'github':
       return (
-        <svg opacity={opacity} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" width={size} height={size}>
+        <svg
+          opacity={opacity}
+          className={`Icon ${className}`}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 496 512"
+          width={size}
+          height={size}
+        >
           <path
             fill={fill}
             d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
@@ -95,7 +132,14 @@ const getIconSvg = (name, props) => {
 
     case 'terminal':
       return (
-        <svg opacity={opacity} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" width={size} height={size}>
+        <svg
+          opacity={opacity}
+          className={`Icon ${className}`}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 640 512"
+          width={size}
+          height={size}
+        >
           <path
             fill={fill}
             d="M257.981 272.971L63.638 467.314c-9.373 9.373-24.569 9.373-33.941 0L7.029 444.647c-9.357-9.357-9.375-24.522-.04-33.901L161.011 256 6.99 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L257.981 239.03c9.373 9.372 9.373 24.568 0 33.941zM640 456v-32c0-13.255-10.745-24-24-24H312c-13.255 0-24 10.745-24 24v32c0 13.255 10.745 24 24 24h304c13.255 0 24-10.745 24-24z"
@@ -105,7 +149,14 @@ const getIconSvg = (name, props) => {
 
     case 'history':
       return (
-        <svg opacity={opacity} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width={size} height={size}>
+        <svg
+          opacity={opacity}
+          className={`Icon ${className}`}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          width={size}
+          height={size}
+        >
           <path
             fill={fill}
             d="M504 255.531c.253 136.64-111.18 248.372-247.82 248.468-59.015.042-113.223-20.53-155.822-54.911-11.077-8.94-11.905-25.541-1.839-35.607l11.267-11.267c8.609-8.609 22.353-9.551 31.891-1.984C173.062 425.135 212.781 440 256 440c101.705 0 184-82.311 184-184 0-101.705-82.311-184-184-184-48.814 0-93.149 18.969-126.068 49.932l50.754 50.754c10.08 10.08 2.941 27.314-11.313 27.314H24c-8.837 0-16-7.163-16-16V38.627c0-14.254 17.234-21.393 27.314-11.314l49.372 49.372C129.209 34.136 189.552 8 256 8c136.81 0 247.747 110.78 248 247.531zm-180.912 78.784l9.823-12.63c8.138-10.463 6.253-25.542-4.21-33.679L288 256.349V152c0-13.255-10.745-24-24-24h-16c-13.255 0-24 10.745-24 24v135.651l65.409 50.874c10.463 8.137 25.541 6.253 33.679-4.21z"
@@ -121,6 +172,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 36 36"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -143,6 +195,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 36 36"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -162,6 +215,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 36 36"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <rect x="2" y="15" width="32" height="6" rx="3" fill={fill} />
@@ -176,6 +230,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <circle cx="12" cy="6" r="2" fill={fill} />
@@ -192,6 +247,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -211,6 +267,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 36 36"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -229,6 +286,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 36 36"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -247,6 +305,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 36 36"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -266,6 +325,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 32 30"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -283,6 +343,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 36 36"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -300,6 +361,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 22 22"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -317,6 +379,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 149 149"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <circle cx="74.5" cy="74.5" r="72.5" stroke={stroke} stroke-width="4" />
@@ -337,6 +400,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <circle cx="12" cy="12" r="11.5" fill="none" stroke={stroke} />
@@ -352,6 +416,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <circle cx="12" cy="12" r="11.5" fill="none" stroke={stroke} />
@@ -366,6 +431,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -385,6 +451,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -402,6 +469,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -421,6 +489,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -440,6 +509,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -459,6 +529,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -478,6 +549,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -495,6 +567,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <circle cx="12" cy="6" r="2" fill={fill} />
@@ -511,6 +584,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 10 10"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -528,6 +602,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -547,6 +622,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -566,6 +642,7 @@ const getIconSvg = (name, props) => {
           viewBox="0 0 24 24"
           fill="none"
           opacity={opacity}
+          className={`Icon ${className}`}
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -579,7 +656,7 @@ const getIconSvg = (name, props) => {
 
     default:
       return (
-        <svg viewBox="0 0 100 100" opacity={opacity} xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 100 100" opacity={opacity} className={`Icon ${className}`} xmlns="http://www.w3.org/2000/svg">
           <rect width="32" height="32" rx="8" fill={fill} />
         </svg>
       )
@@ -622,7 +699,7 @@ export function Icon({
     //   height={size ? size : height}
     //   className={`SvgIcon ${name ? `SvgIcon-${name}` : null} ${className}`}
     //   // viewBox={getViewBox(name)}
-    //   opacity={opacity} xmlns="http://www.w3.org/2000/svg"
+    //   opacity={opacity} className={`Icon ${className}`} xmlns="http://www.w3.org/2000/svg"
     //
     //   {...rest}
     // >
@@ -643,5 +720,6 @@ I am repeating things over and over in every SVG i return. For example
 - height
 - width
 - fill
+- classNames
 
 */
