@@ -39,6 +39,10 @@ dark theme
   - [x] Add a custom theme for highlighting
   - [x] [Add additional languages](https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js)
 - [x] Add support for _Draft_ status
+- [ ] fix folder based categories if the post is in a `slug/index.md` pattern (e.g. Redux folder structure patterns)
+  - [ ] fix category on post page
+  - [ ] fix category listing page to include the post
+- [ ] Add `.mdx` support for the above nested post structure
 
 ## Notes
 
