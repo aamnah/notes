@@ -26,19 +26,55 @@ src
         └── search.ts
 ```
 
+```
+src
+├── components
+│   ├── Activity.tsx
+│   ├── Conversations.tsx
+│   ├── index.ts
+│   ├── Report.tsx
+│   └── Search.tsx
+└── store
+    ├── actions
+    │   ├── activity.ts
+    │   ├── conversations.ts
+    │   ├── index.ts
+    │   ├── report.ts
+    │   └── search.ts
+    ├── index.ts
+    └── reducers
+        ├── activity.ts
+        ├── conversations.ts
+        ├── index.ts
+        ├── report.ts
+        └── search.ts
+```
+
 ## The Redux toolkit
 
 ### Feature based: one folder for one feature
 
-Following is from the [offical Redux template](https://github.com/reduxjs/cra-template-redux) for Create React App
+Following is based on the [offical Redux template](https://github.com/reduxjs/cra-template-redux) for Create React App
 
 ```
 src
 └── features
-    └── counter
-        ├── Counter.js
-        ├── Counter.module.css
-        └── counterSlice.js
+    ├── activity
+    │   ├── Activity.js
+    │   ├── Activity.styles.scss
+    │   ├── activitySlice.js
+    ├── conversations
+    │   ├── Conversations.js
+    │   ├── Conversations.styles.scss
+    │   ├── conversationsSlice.js
+    ├── report
+    │   ├── Report.js
+    │   ├── Report.styles.scss
+    │   ├── reportSlice.js
+    └── search
+        ├── Search.js
+        ├── Search.styles.scss
+        └── searchSlice.js
 ```
 
 ### Functionality based: one file for all redux
@@ -71,7 +107,7 @@ src
      └── counter.js
 ```
 
-if you're creating separate files for component styles
+if you're creating separate files for component styles (e.g. `Counter.module.css`, or `Counter.styles.ts`)
 
 ```
 src
