@@ -81,7 +81,7 @@ export default function App() {
 import React, { useState } from 'react'
 import useSWR from 'swr'
 
-export default function APp() {
+export default function App() {
   const { data, error } = useSWR('http://blah', (url:string) => axios(url).then(response) => response.data )
 
   if (error) { // there was an error }
@@ -98,3 +98,4 @@ export default function APp() {
 - [swr docs](https://swr.vercel.app/getting-started)
 - [Youtube: React Data Fetching with Hooks using SWR](https://www.youtube.com/watch?v=oWVW8IqpQ-A)
 - [Why You Should Be Storing Remote Data in a Cache (and Not in State)](https://medium.com/better-programming/why-you-should-be-separating-your-server-cache-from-your-ui-state-1585a9ae8336)
+- [Managing Remote Data with SWR](https://dev.to/juliang/managing-remote-data-with-swr-7cf)
