@@ -25,6 +25,8 @@ My config is in YAML because i prefer YAML (it has comments). You can [convert i
 
 ```yml
 # .eslintrc.yaml
+# Configuration: https://eslint.org/docs/user-guide/configuring
+# Using with Prettier: https://prettier.io/docs/en/integrating-with-linters.html#recommended-configuration
 
 extends:
   - eslint:recommended
