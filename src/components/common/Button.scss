@@ -10,7 +10,16 @@
   box-shadow: 0 5px 10px rgba(21, 102, 107,0.1);
   outline: none;
 
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
   &:hover {
     background-color: plum;
+  }
+
+  &-icon {
+    margin-right: 8px;
   }
 }
