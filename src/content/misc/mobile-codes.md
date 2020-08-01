@@ -1,6 +1,6 @@
 ---
 title: Mobile codes to check SIM status for Pakistani networks
-date: 2020-08-09
+date: 2020-07-09
 ---
 
 | Details                                         | Ufone                     | Telenor                                                               | Zong                      | Jazz                      |
