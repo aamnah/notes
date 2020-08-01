@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 
 import './main.scss'
 import './Post.scss'
-import { Header, Footer, Navigation, SEO, SiteContainer, ContentContainer } from '../common'
+import { Header, Footer, Navigation, SEO, SiteContainer, ContentContainer, Icon } from '../common'
 // import { useStaticQuery } from 'gatsby'
 
 // For pages, Gatsby is capable of handling queries with variables because of its awareness of page context. However, page queries can only be made in top-level page components.
@@ -54,20 +54,40 @@ export default function PostLayout({ data, children }) {
         <h1>{title}</h1>
         <div className="Post-meta">
           <div>
-            <a href={`${data.site.siteMetadata.post_edit_url}/${relativePath}`}>Edit on Github</a>
-            <br />
-            <span>{relativePath}</span>
+            <a href={`${data.site.siteMetadata.post_edit_url}/${relativePath}`}>
+              <Icon name="github" size={16} className="Post-meta-icon" />
+              Edit on Github
+            </a>
             <br />
             <span>
-              <a href={`/${relativeDirectory}`}>{relativeDirectory}</a>
+              <Icon name="terminal" size={16} className="Post-meta-icon" />
+              {relativePath}
+            </span>
+            <br />
+            <span>
+              <a href={`/${relativeDirectory}`}>
+                <Icon name="folder" size={16} className="Post-meta-icon" />
+                {relativeDirectory}
+              </a>
             </span>
           </div>
           {lastmod ? (
-            <div className="Post-meta-date">Last updated: {lastmod}</div>
+            <div className="Post-meta-date">
+              <Icon name="history" size={16} className="Post-meta-icon" />
+              Last updated: {lastmod}
+            </div>
           ) : (
-            <div className="Post-meta-date">{date}</div>
+            <div className="Post-meta-date">
+              <Icon name="history" size={16} className="Post-meta-icon" />
+              {date}
+            </div>
           )}
-          {status === 'draft' ? <div className="Post-meta-status">DRAFT</div> : null}
+          {status === 'draft' ? (
+            <div className="Post-meta-status">
+              <Icon name="bulb" size={16} className="Post-meta-icon" />
+              DRAFT
+            </div>
+          ) : null}
         </div>
         {description ? <h4>{description}</h4> : excerpt ? <h4>{excerpt}</h4> : null}
 
