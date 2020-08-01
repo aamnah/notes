@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-// import Button from './common'
+import { Button, Icon } from './common'
 import { Input, Label } from './common/Form'
 export default function Contact() {
   const [name, setName] = useState('')
@@ -55,9 +55,9 @@ export default function Contact() {
           </FormInput>
         </InputGroup>
 
-        <button type="submit" className="Button">
+        <Button type="submit" className="Button" icon="plane">
           Send Message
-        </button>
+        </Button>
       </form>
     </div>
   )
