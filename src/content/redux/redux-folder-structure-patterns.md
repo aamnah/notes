@@ -62,15 +62,15 @@ src
     ├── activity
     │   ├── Activity.js
     │   ├── Activity.styles.scss
-    │   ├── activitySlice.js
+    │   └── activitySlice.js
     ├── conversations
     │   ├── Conversations.js
     │   ├── Conversations.styles.scss
-    │   ├── conversationsSlice.js
+    │   └── conversationsSlice.js
     ├── report
     │   ├── Report.js
     │   ├── Report.styles.scss
-    │   ├── reportSlice.js
+    │   └── reportSlice.js
     └── search
         ├── Search.js
         ├── Search.styles.scss
@@ -79,7 +79,7 @@ src
 
 ### Functionality based: one file for all redux
 
-This is what i have been following up till now
+This is what i have been following up till now, but plan on moving to the feature based structure
 
 ```
 src
