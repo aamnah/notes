@@ -77,6 +77,41 @@ src
         └── searchSlice.js
 ```
 
+If i were to include services and sagas
+
+```
+src
+└── features
+    ├── activity
+    │   ├── Activity.js
+    │   ├── Activity.sagas.ts
+    │   ├── Activity.services.ts
+    │   ├── Activity.styles.ts
+    │   └── activitySlice.js
+    ├── conversations
+    │   ├── Conversations.js
+    │   ├── Conversations.sagas.ts
+    │   ├── Conversations.services.ts
+    │   ├── Conversations.styles.ts
+    │   └── conversationsSlice.js
+    ├── report
+    │   ├── Report.js
+    │   ├── Report.sagas.ts
+    │   ├── Report.services.ts
+    │   ├── Report.styles.ts
+    │   └── reportSlice.js
+    └── search
+        ├── Search.js
+        ├── Search.sagas.ts
+        ├── Search.services.ts
+        ├── Search.styles.ts
+        └── searchSlice.js
+```
+
+Not only is this less scrolling through to get to relevant functionality, it also has the major benefit of having the functionality in the filename. This makes it very easy to know what file it is by looking at the filename in VS Code tabs.
+
+When all files are named `activity.ts`, it is hard to differentiate them when selecting the tab.
+
 ### Functionality based: one file for all redux
 
 This is what i have been following up till now, but plan on moving to the feature based structure
@@ -149,3 +184,39 @@ src
     ├── rootReducer.ts
     └── search.ts
 ```
+
+## Feature vs. Functionalty
+
+```
+featureBased
+└── src
+    └── feature
+        └── conversation
+            ├── Conversations.sagas.ts
+            ├── Conversations.services.ts
+            ├── conversationsSlice.ts
+            ├── Conversations.styles.ts
+            └── Conversations.tsx
+
+3 directories, 5 files
+```
+
+![Feature based folder structure in VS Code](./feature_based_structure_tabs.png)
+
+```
+functionalityBased
+└── src
+    ├── components
+    │   ├── Conversations.styles.ts
+    │   └── Conversations.tsx
+    ├── sagas
+    │   └── conversations.ts
+    ├── services
+    │   └── conversations.ts
+    └── store
+        └── conversations.ts
+
+5 directories, 5 files
+```
+
+![Functionality based folder structure in VS Code](./functionality_based_structure_tabs.png)
