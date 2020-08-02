@@ -1,6 +1,6 @@
 ---
 title: Move Ubuntu `/home` partition to another one
-slug: move_home_partition
+slug: move_home_partition_ubuntu
 date: 2020-08-02
 ---
 
