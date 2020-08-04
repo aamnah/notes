@@ -112,6 +112,8 @@ Not only is this less scrolling through to get to relevant functionality, it als
 
 When all files are named `activity.ts`, it is hard to differentiate them when selecting the tab.
 
+An interesting read is Kent C. Dodds' article on [colocation](https://kentcdodds.com/blog/colocation), i agree with his argument of placing code as close to where it's relevant as possible. In other words, things that change together should stay together. Keep the styles, state, tests for your component in one folder.
+
 ### Functionality based: one file for all redux
 
 This is what i have been following up till now, but plan on moving to the feature based structure
@@ -220,3 +222,7 @@ functionalityBased
 ```
 
 ![Functionality based folder structure in VS Code](./functionality_based_structure_tabs.png)
+
+## Links
+
+- [Colocation](https://kentcdodds.com/blog/colocation)
