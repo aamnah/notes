@@ -226,3 +226,4 @@ functionalityBased
 ## Links
 
 - [Colocation](https://kentcdodds.com/blog/colocation)
+- [State Colocation will make your React app faster](https://kentcdodds.com/blog/state-colocation-will-make-your-react-app-faster)
