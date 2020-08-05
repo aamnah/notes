@@ -1,6 +1,16 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 
+// Absolute imports
+// https://www.gatsbyjs.org/docs/add-custom-webpack-config/#absolute-imports
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    },
+  })
+}
+
 // `onCreateNode` is a Gatsby lifecycle method that gets called whenever a new node is created. In this case only MDX nodes are touched.
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
