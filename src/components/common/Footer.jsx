@@ -7,8 +7,9 @@ export function Footer() {
     <footer className="Footer">
       {' '}
       <p>
-        Please note that this site and the posts on it are, and will always be, a work in progress. If i waited for
-        perfection, i’d never get anything done.{' '}
+        Please note that this site and the posts on it are, and will always be,
+        a work in progress. If i waited for perfection, i’d never get anything
+        done.{' '}
       </p>
       <div className="Footer-bottom">
         <small>
