@@ -33,6 +33,13 @@ export default function BlogPage() {
       <SEO title="Blog" />
 
       <h1>Blog</h1>
+      <p>
+        Here is my dev notebook and braindump. Use the `Ctrl/Cmd + F` to find what you are looking for. <br />
+      </p>
+      <p>
+        Please note that this site and the posts on it are, and will always be, a work in progress. If i waited for
+        perfection, i’d never get anything done.
+      </p>
       <ul style={{ marginLeft: 0 }}>
         {data.allMdx.edges.map((post) => {
           let { title, date, status } = post.node.frontmatter
