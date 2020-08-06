@@ -16,7 +16,7 @@ import './Link.scss'
 export function Link({ to, children, external, target = '_blank', className }) {
   if (external) {
     return (
-      <a href={to} target={target} rel="noopener noreferrer" className={`${className} Link Link-external`}>
+      <a href={to} target={target} rel="noopener noreferrer" className={`${className} Link`}>
         {children}
       </a>
     )
