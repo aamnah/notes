@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultLayout } from 'components/Layout'
 import { Head, Image, Link, SEO, Icon } from 'components/common'
-import Contact from 'components/Contact.jsx'
 import Portfolio from 'components/Portfolio'
 
 export default function IndexPage() {
@@ -72,7 +71,6 @@ export default function IndexPage() {
         <Link to="/blog">view all</Link>
       </div>
       <Portfolio />
-      <Contact />
     </DefaultLayout>
   )
 }
