@@ -64,3 +64,9 @@ const moreExtended2 = [...original, ...extended2]
 ```
 
 fyi: according to an article, `Array.push()` is 945x faster than `Array.concat()`
+
+## Links
+
+- [MDN: Spread syntax (...)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+- [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign)
+- [MDN: Array.prototype.concat()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)
