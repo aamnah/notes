@@ -6,10 +6,10 @@
   letter-spacing: .05em;
   padding: 1em;
   padding-left: 0;  
-  margin: 2em 0 4em 0;
+  margin: 2em 0 2em 0;
   
   &-item {
-    margin-right: 1em;
+    margin-right: .6em;
   }
 
   .Icon:hover { 
@@ -34,6 +34,9 @@
     color: var(--color-light);
   }
 
+  &-right {
+    .Link {padding: 0}
+  }
 
   
 }
