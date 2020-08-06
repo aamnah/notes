@@ -338,6 +338,17 @@ hr {
   height: 1px;
 }
 
+a {
+  text-decoration: none;
+  // border-bottom: 1px solid transparent;
+  color: var(--color-primary);
+
+  &:hover {
+    color: #147974;
+    // border-bottom: 1px solid #147974;
+  }
+}
+
 b,
 strong,
 dt,
@@ -489,4 +500,9 @@ tt, code {
   padding: 0.2em .4em;
   margin: 0 .2em;
   border-radius: 4px;
+}
+
+body {
+  background: url('/bg-icons.svg') no-repeat bottom center;
+  background-size: contain;
 }
