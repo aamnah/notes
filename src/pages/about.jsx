@@ -1,8 +1,8 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { DefaultLayout } from '../components/Layout'
-import { Head, Image, Link, SEO, Tag, Pullquote } from '../components/common'
+import { DefaultLayout } from 'components/Layout'
+import { Head, Image, Link, SEO, Tag, Pullquote } from 'components/common'
 
 export default function AboutPage() {
   // const data = useStaticQuery(graphql`
