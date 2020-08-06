@@ -2,6 +2,8 @@
 title: Pure ways of editing objects and arrays in JavaScript
 date: 2020-08-06
 slug: pure-edit-copy-array-object-javascript
+tags:
+  - redux
 ---
 
 tl;dr: use speard operator for both arrays and objects for consistent syntax. Alternatives are `Obect.assign()` and `Array.concat()`
