@@ -1,31 +1,33 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export function Testimonial() {
+export function Testimonial({ quote, author, position, company }) {
   return (
     <Container>
-      <Quote>
-        Aamnah is a great person to work with as she is able to manage her own
-        time and continuously contribute to the organization. She is creative
-        and a thought leader in the internet industry.
-      </Quote>
+      <Quote>{quote}</Quote>
       <Cite>
-        <Author>Amir Anzur</Author>
-        <Position>
-          Director of Digital Innovation, <br /> HM Revenue & Customs
-        </Position>
+        <Author>{author}</Author>
+        {position ? <Position>{position}</Position> : null}
+        {company ? (
+          <Company>
+            , <br />
+            {company}
+          </Company>
+        ) : null}
       </Cite>
     </Container>
   )
 }
 
 const Container = styled.div`
-  padding: 1em;
+  padding: 1.6rem;
   background: white;
   border-radius: 8px;
+  margin-bottom: 1.6rem;
 `
 const Cite = styled.p`
   line-height: 1.2;
+  color: var(--color-faded);
 `
 const Quote = styled.p``
 const Author = styled.span`
@@ -35,4 +37,7 @@ const Author = styled.span`
 const Position = styled.span`
   font-size: 0.8em;
   color: var(--color-faded);
+`
+const Company = styled.span`
+  font-size: 0.8em;
 `
