@@ -1,10 +1,10 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { DefaultLayout } from '../components/Layout'
-import { Head, Image, Link, SEO } from '../components/common'
-import Contact from '../components/Contact.jsx'
-import Portfolio from '../components/Portfolio'
+import { DefaultLayout } from 'components/Layout'
+import { Head, Image, Link, SEO, Icon } from 'components/common'
+import Contact from 'components/Contact.jsx'
+import Portfolio from 'components/Portfolio'
 
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
@@ -34,9 +34,8 @@ export default function IndexPage() {
       <Head />
 
       <SEO title="Home" />
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
+
+      <Icon name="logo" fill="#202938" size={200} />
 
       <div id="about">
         <h2>Hi, I'm Aamnah</h2>
