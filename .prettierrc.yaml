@@ -1,9 +1,8 @@
----
-printWidth: 120
+printWidth: 80
 semi: false
 singleQuote: true
 tabWidth: 2
-trailingComma: es5 # Trailing commas where valid in ES5 (objects, arrays, etc.)
+trailingComma: all # Trailing commas where valid in ES5 (objects, arrays, etc.)
 bracketSpacing: true # { foo: bar }
 jsxBracketSameLine: false
 arrowParens: always # (x) => x
