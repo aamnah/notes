@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Link } from './Link'
 import './Navigation.scss'
+import { Icon } from './Icon'
 export function Navigation() {
   return (
     <div className="Navigation">
@@ -24,13 +25,16 @@ export function Navigation() {
       </div>
       <div className="Navigation-right">
         <Link external className="Navigation-item" to="https://www.behance.net/aamnah">
-          Behance
+          <Icon name="behance" />
         </Link>
         <Link external className="Navigation-item" to="https://www.instagram.com/aamnahakram/">
-          Instagram
+          <Icon name="instagram" />
+        </Link>
+        <Link external className="Navigation-item" to="https://www.linkedin.com/in/aamnah/">
+          <Icon name="linkedin" />
         </Link>
         <Link external className="Navigation-item" to="https://github.com/aamnah">
-          Github
+          <Icon name="github" />
         </Link>
       </div>
     </div>

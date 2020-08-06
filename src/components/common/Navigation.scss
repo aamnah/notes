@@ -11,10 +11,16 @@
   &-item {
     margin-right: 1em;
   }
-  
+
+  .Icon:hover { 
+    opacity: 0.8;
+  }
+
   .Link {
     background: transparent;
     padding: .8em 1em;
+
+
   }
 
   .Link-internal {
