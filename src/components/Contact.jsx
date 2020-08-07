@@ -33,15 +33,15 @@ export default function Contact() {
             <Input name="name" type="text" placeholder="Henry Cavill" id="name" />
           </FormInput>
           <FormInput>
-            <Label htmlFor="phone">Phone (optional)</Label>
-            <Input name="phone" type="phone" placeholder="+1 (123) 1234567" id="phone" />
+            <Label htmlFor="email">Email</Label>
+            <Input name="email" type="email" placeholder="henry@cavill.com" id="email" />
           </FormInput>
         </InputGroup>
 
         <InputGroup>
           <FormInput>
-            <Label htmlFor="email">Email</Label>
-            <Input name="email" type="email" placeholder="henry@cavill.com" id="email" />
+            <Label htmlFor="phone">Phone (optional)</Label>
+            <Input name="phone" type="phone" placeholder="+1 (123) 1234567" id="phone" />
           </FormInput>
           <FormInput>
             <Label htmlFor="website">Website (optional)</Label>
