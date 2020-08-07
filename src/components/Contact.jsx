@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import { Breakpoint } from 'Theme'
-import { Button, Icon } from './common'
+import { Button, Icon, Link } from './common'
 import { Input, Label } from './common/Form'
 export default function Contact() {
   const [name, setName] = useState('')
@@ -16,7 +16,22 @@ export default function Contact() {
   }
   return (
     <div id="contact">
-      <h1>Send me a message</h1>
+      <h1>Contact</h1>
+      <Social>
+        <Link external className="Social-link" to="https://www.behance.net/aamnah">
+          <Icon name="behance" />
+        </Link>
+        <Link external className="Social-link" to="https://www.instagram.com/aamnahakram/">
+          <Icon name="instagram" />
+        </Link>
+        <Link external className="Social-link" to="https://www.linkedin.com/in/aamnah/">
+          <Icon name="linkedin" />
+        </Link>
+        <Link external className="Social-link" to="https://github.com/aamnah">
+          <Icon name="github" />
+        </Link>
+      </Social>
+      <p>Use the form below to send me a message..</p>
       <Form
         name="Contact-form"
         method="POST"
@@ -93,4 +108,12 @@ const InputGroup = styled.div`
 
 const Textarea = styled.textarea`
   min-height: 10rem;
+`
+const Social = styled.div`
+  margin-bottom: 1em;
+  display: flex;
+
+  .Social-link {
+    padding: 0 1em;
+  }
 `
