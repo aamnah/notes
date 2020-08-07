@@ -1,17 +1,25 @@
 .Link {
-  &-internal {
-    color: var(--color-primary);
+  color: var(--color-primary);
+
+  &:hover {
+    cursor: pointer;
   }
 
-  &-external {
-    color: plum;
-    // border: 1px solid transparent;
+  // &-internal {
+  //   color: var(--color-primary);
+  // }
 
-  }
-  &-external:hover {
-    color: #ab2aab;
-    // border-bottom: 1px solid #ab2aab;
-  }
+  // &-external {
+  //   color: plum;
+  //   border: 1px solid transparent;
+  // }
+
+  // &-external:hover {
+  //   color: #ab2aab;
+    
+  //   border-bottom: 1px solid #ab2aab;
+  // }
+
   &-active {
     font-weight: bold;
     text-decoration: underline;

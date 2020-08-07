@@ -5,11 +5,6 @@ import { DefaultLayout } from 'components/Layout'
 import { Head, Image, Link, SEO, Tag, Pullquote } from 'components/common'
 
 export default function AboutPage() {
-  // const data = useStaticQuery(graphql`
-  //   query AboutQuery {
-
-  //   }
-  // `)
   return (
     <DefaultLayout>
       <Head />
@@ -83,7 +78,9 @@ export default function AboutPage() {
           and hosting standups.
         </p>
         <nav>
-          <a href="https://stackoverflow.com/users/story/890814">Stackoverflow</a>
+          <Link external href="https://stackoverflow.com/users/story/890814">
+            Stackoverflow
+          </Link>
         </nav>
       </section>
     </DefaultLayout>
