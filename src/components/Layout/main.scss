@@ -503,7 +503,9 @@ tt, code {
 }
 
 body {
-  background: url('/footer-bg.svg') no-repeat bottom center ;
+  background-image: url('/footer-bg.svg');
+  background-position: bottom center;
+  background-repeat: no-repeat;
   background-size: contain;
   margin-bottom: 12em;
 }
