@@ -24,6 +24,11 @@ const Container = styled.div`
   background: white;
   border-radius: 8px;
   margin-bottom: 1.6rem;
+
+  box-shadow: 0 12px 16px rgba(55, 178, 168, 0.05);
+  border: #eee;
+  border-radius: 25px;
+  border-top-left-radius: 0;
 `
 const Cite = styled.p`
   line-height: 1.2;

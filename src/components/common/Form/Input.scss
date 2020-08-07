@@ -1,11 +1,12 @@
 .Input {
-  border: 2px solid rgba(125,125,125,0.1);
+  border: 2px solid transparent;
   border-radius: 8px;
   padding: 1em;
   outline: none;
   margin-right: 1em;
   margin-bottom: 1em;
   width: 100%;
+  box-shadow: 0 12px 16px rgba(55, 178, 168, 0.05);
 
  &:focus {
    border: 2px solid var(--color-primary);
