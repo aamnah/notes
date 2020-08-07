@@ -1,5 +1,12 @@
+@import '../Layout/variables';
+
 .Pullquote {
-  font-size: 1.6em;
-  padding: 1em 2em;
   display: block;
+  font-size: 1.6em;
+  padding: .8em 1em;
+
+
+  @media all and ($breakpoint-tablet) {
+    padding: 1em 2em;
+  }
 }
