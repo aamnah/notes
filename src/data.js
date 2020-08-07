@@ -1,4 +1,21 @@
 export const data = {
+  projects: {
+    themes: [
+      // { title: 'LightPaper', link: 'LightPaper' },
+      {
+        id: 0,
+        title: 'amnastic.zsh-theme',
+        link: 'https://github.com/aamnah/oh-my-zsh-custom/blob/master/themes/amnastic.zsh-theme',
+      },
+      { id: 1, title: 'tmux Flat Theme', link: 'https://github.com/aamnah/tmux-flat-theme' },
+      {
+        id: 2,
+        title: 'MarkdownEditing-BlackboardTheme',
+        link: 'https://github.com/aamnah/MarkdownEditing-BlackboardTheme',
+      },
+      { id: 3, title: 'LightPaper-Blackboardish', link: 'https://github.com/aamnah/LightPaper-Blackboardish' },
+    ],
+  },
   testimonials: [
     {
       quote:
@@ -40,13 +57,11 @@ export const data = {
       author: 'Kayla Zeiters',
     },
     {
-      quote:
-        'Aamnah was a great help to my company and I highly recommend her!',
+      quote: 'Aamnah was a great help to my company and I highly recommend her!',
       author: 'Stacy Taylor',
     },
     {
-      quote:
-        'Awesome work using a theme that was new to her. Will definitely hire again!',
+      quote: 'Awesome work using a theme that was new to her. Will definitely hire again!',
       author: 'James Steele',
     },
   ],
