@@ -22,6 +22,9 @@ export default function AboutPage() {
         <li>studied Media Studies at Kinnaird College</li>
         <li>is fluent in three languages</li>
         <li>enjoys writing bash scripts</li>
+        <li>
+          balances between work, home and <em>dolce far niente</em>
+        </li>
         <li>needs coffee</li>
         <li>loves steak</li>
         <li>owns a company</li>
@@ -31,12 +34,6 @@ export default function AboutPage() {
         Out of all the things that i do, i particularly enjoy writing Sass stylesheets, designing UI mockups and writing
         bash scripts.
       </Pullquote>
-      <h3>In three lines</h3>
-      <ul>
-        <li>ISTP, minimalist, chronically curious, and usually a good listener.</li>
-        <li>Life is a balance between work, home and dolce far niente.</li>
-        <li>Some of my interests are electronics, DIY, design, technology and cooking.</li>
-      </ul>
       <h3>Current setup</h3>
       <ul>
         <li>Computer: Custom built PC / Lenovo Thinkpad / Macbook Air</li>
