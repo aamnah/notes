@@ -10,7 +10,7 @@ tl;dr:
 - Application state !== remote data from a server. Remote data should be in a cache, application state should be in state (React Context is fine)
 - Once you accept the above, you'll stop using Redux to store everything that comes back from the server (i.e. remote data)
 - Because you stopped making a client side copy of the server side data, you no longer have to worry about your state becoming stale
-- You can access the data from the SWR cache the same way you can access data from a store. Because SWR cahce is a global state object. (fyi, server side data is also called cache)
+- You can access the data from the SWR cache the same way you can access data from a store. Because SWR cahce is a global state object. (fyi, server side data is also called server cache)
 - You can use Axios with SWR, it will not force you to give it up. As a matter of fact, you can use any library you want for making HTTP requests
 - With SWR, you no longer have to worry about manually updating `error`, `loading`, `success` state and write reducers for them. SWR gives you these out of the box
 - SWR is only meant for reading data (GET), for other CRUD operations, you can [handle them outside SWR](https://github.com/vercel/swr/discussions/364#discussioncomment-24398)
@@ -27,9 +27,10 @@ Basic mentality behind SWR is that **remote data is not state**, it belongs in a
 
 If you don't keep server side data in state (making a client side copy), it won't become stale.
 
-| Server cache                             | Local state                            |
-| ---------------------------------------- | -------------------------------------- |
-| Conversations, User profiles, Blog posts | Is the modal open? Is the box checked? |
+| Server cache                                                                           | Local (UI) state                                                                    |
+| -------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| State that's actually stored on the server and we store in the client for quick-access | State that's only useful in the UI for controlling the interactive parts of our app |
+| Conversations, User profiles, Blog posts                                               | Is the modal open? Is the box checked?                                              |
 
 ### Bandwidth concerns
 
@@ -51,7 +52,12 @@ SWR is using an in-memory Map for the cache (both React and React Native). It do
 
 With Redux, persisting is simple, you use [redux-persist](https://github.com/rt2zz/redux-persist). A similar ready made solution for SWR doesn't exist yet. There is [swr-sync-storage](https://github.com/sergiodxa/swr-sync-storage) from a guy who used to work at Vercel, and it'll sync SWR cache with `localStorage` or `sessionStorage` to get offline cache. But it's for web and not React Native.
 
-tl;d: you can do it, but it'll save the entire cache and is not performant as disk IO is heavy
+There is [this solution](https://gist.github.com/derindutz/179990f266e25306601dd53b8fbd8c6a) that [derindutz](https://github.com/derindutz) is using in production. You can switch out `localforage` for whichever caching mechanism you want.
+
+tl;d: you can do it, but it'll save the entire cache and is not performant as disk IO is heavy.
+
+> We did an extensive experiment with IndexedDB and it was awful from a product perspective. Disks are slow and customers tend to want strong reads from the kind of apps and dashboards that you use SWR for.
+> <small>- Vercel CEO</small>
 
 ### Conclusion
 
@@ -71,3 +77,4 @@ My ideal scenario is using SWR on the web with GraphQL API and persisting it to 
 - [How SWR works behind the scenes](https://dev.to/juliang/how-swr-works-4lkb)
 - [Usage with Redux and Redux ORM](https://github.com/vercel/swr/discussions/364)
 - [Four Ways to Fetch Data in React](https://www.bitnative.com/2020/07/06/four-ways-to-fetch-data-in-react/)
+- [Sync SWR cache with Web Storage](https://sergiodxa.com/articles/swr/storage-sync/)
