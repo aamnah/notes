@@ -35,19 +35,17 @@ export default function IndexPage() {
       <SEO title="Home" />
 
       <Intro>
-        <Icon name="logo" fill="#202938" size={200} />
         <div id="about">
-          <h2>Hi, I'm Aamnah</h2>
-          <p>
-            I'm a <strong>frontend software developer</strong> with a passion for <strong>UI & UX design</strong>.{' '}
-            <Link to="/contact">Let's connect</Link>.
-          </p>
-          <p>ISTP, minimalist, chronically curious, and usually a good listener.</p>
-          <p>
-            Life is a balance between work, home and <em>dolce far niente</em>.
-          </p>
-          <p>Some of my interests are electronics, DIY, design, technology and cooking.</p>
+          <h1>Hi, I'm Aamnah</h1>
+          <h3>
+            I'm a <strong>frontend software developer</strong> <br />
+            with a passion for <strong>UI & UX design</strong>
+          </h3>
+          <Link to="/contact" className="Button">
+            Let's connect
+          </Link>
         </div>
+        {/* <Icon name="logo" fill="#202938" size={200} /> */}
       </Intro>
 
       <div id="recent-posts">
@@ -66,7 +64,7 @@ export default function IndexPage() {
             )
           })}
         </ul>
-        <Link to="/blog">view all</Link>
+        <Link to="/notes">view all</Link>
       </div>
       <Portfolio />
     </DefaultLayout>
