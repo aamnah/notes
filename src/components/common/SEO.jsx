@@ -22,7 +22,7 @@ export function SEO({ lang = 'en', meta = [], title, description = '' }) {
           }
         }
       }
-    `
+    `,
   )
 
   const metaDescription = description || site.siteMetadata.description

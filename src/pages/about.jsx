@@ -15,7 +15,7 @@ export default function AboutPage() {
       <Head />
       <SEO title="About" />
 
-      <h3>Aamnah</h3>
+      <h1>Aamnah</h1>
       <ul>
         <li>works as a frontend developer</li>
         <li>has a degree in Journalism and Maths</li>
