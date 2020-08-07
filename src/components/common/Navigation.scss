@@ -1,5 +1,8 @@
+@import '../Layout/variables';
+
 .Navigation {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   list-style: none;
   font-weight: bold;
@@ -7,36 +10,45 @@
   padding: 1em;
   padding-left: 0;  
   margin: 2em 0 2em 0;
+
+  @media screen and ($breakpoint-tablet) {
+    flex-direction: row;
+  }
+
+  &-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   
   &-item {
     margin-right: .6em;
-  }
-
-  .Icon:hover { 
-    opacity: 0.8;
+    margin-bottom: .6em;
   }
 
   .Link {
     background: transparent;
-    padding: .8em 1em;
-
-
-  }
-
-  .Link-internal {
     border-radius: 8px;
+    padding: .6em .8em;
+    background: #d4ecea;
+    color: var(--color-primary);
+
+    @media screen and ($breakpoint-tablet) {
+      padding: .8em 1em;
+      background: none;
+      color: var(--color-primary);
+    }
   }
-  
-  .Link-internal:hover,
-  .Link-active {
+
+  .Link-internal:hover {
+    background: #d4ecea;
+    color: var(--color-primary);
+  }
+
+  .Link-active,
+  .Link-active:hover {
     text-decoration: none;
     background: var(--color-primary);
     color: var(--color-light);
   }
-
-  &-right {
-    .Link {padding: 0}
-  }
-
-  
 }
