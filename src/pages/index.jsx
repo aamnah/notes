@@ -1,10 +1,10 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-
+import styled from 'styled-components'
 import { DefaultLayout } from 'components/Layout'
-import { Head, Image, Link, SEO, Icon } from 'components/common'
+import { Head, Link, SEO, Icon } from 'components/common'
 import Portfolio from 'components/Portfolio'
-
+import { Breakpoint } from 'Theme'
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query IndexQuery {
@@ -34,23 +34,21 @@ export default function IndexPage() {
 
       <SEO title="Home" />
 
-      <Icon name="logo" fill="#202938" size={200} />
-
-      <div id="about">
-        <h2>Hi, I'm Aamnah</h2>
-        <p>
-          I'm a <strong>frontend software developer</strong> with a passion for <strong>UI & UX design</strong>.{' '}
-          <Link to="/contact">Let's connect</Link>.
-        </p>
-
-        <p>ISTP, minimalist, chronically curious, and usually a good listener.</p>
-
-        <p>
-          Life is a balance between work, home and <em>dolce far niente</em>.
-        </p>
-
-        <p>Some of my interests are electronics, DIY, design, technology and cooking.</p>
-      </div>
+      <Intro>
+        <Icon name="logo" fill="#202938" size={200} />
+        <div id="about">
+          <h2>Hi, I'm Aamnah</h2>
+          <p>
+            I'm a <strong>frontend software developer</strong> with a passion for <strong>UI & UX design</strong>.{' '}
+            <Link to="/contact">Let's connect</Link>.
+          </p>
+          <p>ISTP, minimalist, chronically curious, and usually a good listener.</p>
+          <p>
+            Life is a balance between work, home and <em>dolce far niente</em>.
+          </p>
+          <p>Some of my interests are electronics, DIY, design, technology and cooking.</p>
+        </div>
+      </Intro>
 
       <div id="recent-posts">
         <h2>Recent Posts</h2>
@@ -74,3 +72,16 @@ export default function IndexPage() {
     </DefaultLayout>
   )
 }
+
+const Intro = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media all and ${Breakpoint.tablet} {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  align-content: center;
+  align-items: center;
+`

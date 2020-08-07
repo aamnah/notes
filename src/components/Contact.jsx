@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
+import { Breakpoint } from 'Theme'
 import { Button, Icon } from './common'
 import { Input, Label } from './common/Form'
 export default function Contact() {
@@ -15,8 +16,8 @@ export default function Contact() {
   }
   return (
     <div id="contact">
-      <h2>Send me a message</h2>
-      <form
+      <h1>Send me a message</h1>
+      <Form
         name="Contact-form"
         method="POST"
         // action="/thanks/" // this will be our custom Thank You page
@@ -51,22 +52,45 @@ export default function Contact() {
         <InputGroup>
           <FormInput>
             <Label htmlFor="message">Message</Label>
-            <textarea name="message" placeholder="say something pleasant" className="Input" id="message" />
+            <Textarea
+              name="message"
+              placeholder="say what you mean, mean what you say"
+              className="Input"
+              id="message"
+            />
           </FormInput>
         </InputGroup>
 
         <Button type="submit" className="Button" icon="plane">
           Send Message
         </Button>
-      </form>
+      </Form>
     </div>
   )
 }
 
+const Form = styled.form`
+  max-width: 40rem;
+`
+
 const FormInput = styled.div`
   display: inline-block;
+  width: 100%;
+  margin-right: 2em;
+  margin-bottom: 0.6em;
 `
 
 const InputGroup = styled.div`
-  ${'' /* background: goldenrod; */}
+  display: flex;
+  justify-content: space-between;
+  align-content: stretch;
+  flex-direction: column;
+
+  @media screen and ${Breakpoint.tablet} {
+    flex-direction: row;
+  }
+`
+
+const Textarea = styled.textarea`
+  min-height: 10rem;
 `
