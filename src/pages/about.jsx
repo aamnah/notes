@@ -45,7 +45,7 @@ export default function AboutPage() {
       {/* Add pictures of workspace */}
       <h3>Current job: Frontend Developer</h3>
       <p>
-        <Tag>reactjs</Tag> <Tag>react-native</Tag> <Tag>react-redux</Tag> <Tag>typescript</Tag>
+        <Tag>reactjs</Tag> <Tag>react-native</Tag> <Tag>redux</Tag> <Tag>typescript</Tag> <Tag>styled-components</Tag>
       </p>
       <p>
         I am the project manager / UI UX person / frontend developer who also sets up CI/CD build pipelines and manages
