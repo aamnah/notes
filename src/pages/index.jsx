@@ -38,7 +38,7 @@ export default function IndexPage() {
         <div id="about">
           <h1>Hi, I'm Aamnah</h1>
           <h3>
-            I'm a <strong>frontend software developer</strong> <br />
+            I'm a <strong>frontend developer</strong> <br />
             with a passion for <strong>UI & UX design</strong>
           </h3>
           <Link to="/contact" className="Button">
@@ -49,7 +49,7 @@ export default function IndexPage() {
       </Intro>
 
       <section id="recent-posts">
-        <h2>Recent Posts</h2>
+        <h3>Recent Posts</h3>
         <ul>
           {/* {data.allFile.nodes.map((post) => { */}
           {data.allMdx.edges.map((post) => {
