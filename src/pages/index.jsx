@@ -48,7 +48,7 @@ export default function IndexPage() {
         {/* <Icon name="logo" fill="#202938" size={200} /> */}
       </Intro>
 
-      <div id="recent-posts">
+      <section id="recent-posts">
         <h2>Recent Posts</h2>
         <ul>
           {/* {data.allFile.nodes.map((post) => { */}
@@ -65,13 +65,13 @@ export default function IndexPage() {
           })}
         </ul>
         <Link to="/notes">view all</Link>
-      </div>
+      </section>
       <Portfolio />
     </DefaultLayout>
   )
 }
 
-const Intro = styled.div`
+const Intro = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;

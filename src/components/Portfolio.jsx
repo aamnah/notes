@@ -3,7 +3,7 @@ import React from 'react'
 import { data } from 'data'
 export default function Portfolio() {
   return (
-    <div id="projects">
+    <section id="projects">
       {/* TODO: Jazz this up. Add screenshots, description, github icons and more */}
       <h2>Projects</h2>
       <h4>Themes</h4>
@@ -17,6 +17,6 @@ export default function Portfolio() {
           )
         })}
       </ul>
-    </div>
+    </section>
   )
 }
