@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { data } from 'data'
 export default function Portfolio() {
   return (
     <div id="projects">
@@ -7,20 +8,14 @@ export default function Portfolio() {
       <h2>Projects</h2>
       <h4>Themes</h4>
       <ul>
-        <li>
-          <a href="https://github.com/aamnah/oh-my-zsh-custom/blob/master/themes/amnastic.zsh-theme">
-            amnastic.zsh-theme
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/aamnah/tmux-flat-theme">tmux Flat Theme</a>
-        </li>
-        <li>
-          <a href="https://github.com/aamnah/MarkdownEditing-BlackboardTheme">MarkdownEditing-BlackboardTheme</a>
-        </li>
-        <li>
-          <a href="https://github.com/aamnah/LightPaper-Blackboardish">LightPaper-Blackboardish</a>
-        </li>
+        {data.projects.themes.map((theme) => {
+          const { id, title, link } = theme
+          return (
+            <li key={id}>
+              <a href={link}>{title}</a>
+            </li>
+          )
+        })}
       </ul>
     </div>
   )
