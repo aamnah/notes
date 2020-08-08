@@ -33,6 +33,7 @@ export default function AboutPage() {
         <h3>Current setup</h3>
         <ul>
           <li>Computer: Custom built PC / Lenovo Thinkpad / Macbook Air</li>
+          <li>Keyboard: Logitech G512 Carbon (Romer-G Linear switches)</li>
           <li>Editor: Visual Studio Code</li>
           <li>Host: Netlify</li>
           <li>Site Generator: Gatsby / Hugo</li>
