@@ -40,7 +40,7 @@ Chances are you ran `react-native run-android` first and then `react-native star
 
 What you gotta do is close the app. Run `react-native start` and then in another terminal, run `react-native run-android`. You have to run `react-native run-android` in a separate terminal because you don't get the prompt back when running `react-native start`
 
-### Could not connect to development server 500 or SHA-1 ReferenceError
+### Could not connect to development server 500 -OR- SHA-1 ReferenceError
 
 ![Screenshot for 500 error](./error_500.png)
 
