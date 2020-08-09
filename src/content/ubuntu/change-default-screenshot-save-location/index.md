@@ -51,6 +51,24 @@ After all of this, it still won't work when you take a screenshot with `Prtscr`.
 
 meh.. So, create a custom keyboard shortcut, shall we?
 
+Go to **Settings > Keyboard Shortcuts**, there will be an entire section for **Screenshots**. You can either override these or create new ones with different key bindings..
+
+![Screenshot related shortcuts]()
+
+Scroll down to the bottom and click the `+` button. (If you are overriding an existing shortcut, make sure you have disabled it first by clicking on it and pressing `Backspace`)
+
+![Adding keyboard shortcuts]()
+
+| Description                                             | Shortcut      | gnome-screenshot command |
+| ------------------------------------------------------- | ------------- | ------------------------ |
+| Save a screenshot of a window to ~/Pictures/screenshots | `Alt+Print`   | `gnome-screenshot -wb`   |
+| Save a screenshot of an area to ~/Pictures/screenshots  | `Shift+Print` | `gnome-screenshot -a`    |
+| Save a screenshot to ~/Pictures/screenshots             | `Print`       | `gnome-screenshot`       |
+
+I also updated all names to say `~/Pictures/screenshots` instead of `Pictures`. To check what the flags are doing, seeing `man gnome-screenshot`. `-a` is for selecting area, `-w` is for selecting window, and `-b` is for including borders when saving a window.
+
+Re-login for the change in location to take effect.
+
 ## Links
 
 - [CHAPTER 3. GSETTINGS AND DCONF](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/desktop_migration_and_administration_guide/gsettings-dconf)
