@@ -7,6 +7,24 @@ tags:
   - gsettings
 ---
 
+## Syntax differences between dconf and gsettings
+
+`dconf write` vs. `gsettings set`
+
+```bash
+# dconf
+dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/use-theme-colors "false"
+dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/background-color "'rgb(0,43,54)'"
+dconf write /org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/foreground-color "'rgb(131,148,150)'"
+```
+
+```bash
+# gsettings
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ use-theme-colors false
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ background-color 'rgb(0,43,54)'
+gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9/ foreground-color 'rgb(131,148,150)'
+```
+
 ## dconf
 
 ### View and backup all dconf settings
@@ -17,7 +35,13 @@ dconf dump / > dconf_settings_backup.sh
 
 If you save it as a `.sh` file, you'll get syntax highlighting when you open it with a code editor
 
-### Finding all keys
+### Search for a key/value being used in settings
+
+```bash
+dconf dump / | grep SEARCH-TERM
+```
+
+### Finding all keys with `list`
 
 ```bash
 dconf list /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/
@@ -29,7 +53,7 @@ command
 name
 ```
 
-### Finding the value of a key
+### Finding the value of a key with `read`
 
 ```bash
 # dconf read <KEY>
@@ -53,9 +77,15 @@ dconf read /org/gnome/desktop/background/picture-uri
 
 ## gsettings
 
+### Search for a key/value being used in settings
+
+```bash
+gsettings list-recursively | grep SEARCH-TERM
+```
+
 ### Get a list of all keyboard shortcuts
 
-You can get a list of ALL keyboard shortcuts (their keys and values) with the following command
+You can get a list of ALL keyboard shortcuts (their keys and values) with `list-recursively`
 
 ```bash
 gsettings list-recursively org.gnome.settings-daemon.plugins.media-keys
@@ -175,7 +205,7 @@ org.gnome.settings-daemon.plugins.media-keys volume-down-precise-static ['<Shift
 
 ### check the values of a custom shortcut
 
-You can check the keys and values for a custom command (e.g. `custom1`) with
+You can check the keys and values for a custom command (e.g. `custom1`) with `list-recursively`
 
 ```bash
 gsettings list-recursively org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/
@@ -186,3 +216,41 @@ org.gnome.settings-daemon.plugins.media-keys.custom-keybinding command 'gnome-sc
 org.gnome.settings-daemon.plugins.media-keys.custom-keybinding name 'Save a screenshot of an area to ~/Pictures/screenshots'
 org.gnome.settings-daemon.plugins.media-keys.custom-keybinding binding '<Shift>Print'
 ```
+
+### Restore default values
+
+with `reset`
+
+```bash
+# Restore default Screenshot shortcut
+gsettings reset org.gnome.settings-daemon.plugins.media-keys window-screenshot
+gsettings reset org.gnome.settings-daemon.plugins.media-keys area-screenshot
+gsettings reset org.gnome.settings-daemon.plugins.media-keys screenshot
+```
+
+### Reset all keyboard shortcuts
+
+There's a **Reset All...** button in the GUI (Settings > Keyboard Shortcuts)
+
+```bash
+gsettings reset-recursively  org.gnome.settings-daemon.plugins.media-keys
+```
+
+### Disable certain keyboard shortcuts
+
+You can use `set` and pass it an empty `[]` as value
+
+```bash
+# Restore default Screenshot shortcuts
+# You can do it by passing an empty array
+gsettings set org.gnome.settings-daemon.plugins.media-keys window-screenshot []
+gsettings set org.gnome.settings-daemon.plugins.media-keys area-screenshot []
+gsettings set org.gnome.settings-daemon.plugins.media-keys screenshot []
+```
+
+![disable default screenshot shortcuts](../bash-scripting/bash-script-update-screenshot-location-custom-key-bindings/disable_default_screenshot_shortcuts.png)
+
+## Links
+
+- [How to search dconf for keys or values?](https://askubuntu.com/questions/169704/how-to-search-dconf-for-keys-or-values)
+- [Disable all Unity keyboard shortcuts using the command line](https://askubuntu.com/questions/461701/disable-all-unity-keyboard-shortcuts-using-the-command-line)
