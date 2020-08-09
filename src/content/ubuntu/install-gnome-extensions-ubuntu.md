@@ -16,3 +16,9 @@ In case you don't have Gnome Tweaks installed:
 ```bash
 sudo apt install -y gnome-Tweaks
 ```
+
+There are also a bunch of extension available in official repos which are in-house extensions from Ubuntu developers that you might find useful. You can install them with this command:
+
+```bash
+sudo apt install -y gnome-shell-extensions
+```
