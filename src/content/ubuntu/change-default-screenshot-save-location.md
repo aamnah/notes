@@ -6,12 +6,13 @@ slug: change-default-screenshot-save-location
 
 **tl;dr**
 
-System settings are saved in the `dconf` configuration system, and you can edit them in a GUI with `dconf-editor`. But it doesn't work. It's a known bug considered as `RESOLVED WONTFIX` [ref](https://bugzilla.gnome.org/show_bug.cgi?id=699642), so you'll never be able to change the save location by editing `dconf` values. Either create a csutom keyboard shortcut after setting the path in `dconf-editor`, or use `gnome-tweaks` with an extension called [Screenshot Locations](https://extensions.gnome.org/extension/1179/screenshot-locations/).
+System settings are saved in the `dconf` configuration system, and you can edit them in a GUI with `dconf-editor`. But it doesn't work. It's a known bug considered as `RESOLVED WONTFIX` [ref](https://bugzilla.gnome.org/show_bug.cgi?id=699642), so you'll never be able to change the save location just by editing `dconf` values for `gnome-screenshot`. Either create a custom keyboard shortcut that uses `gnome-screenshot` after setting the path in `dconf-editor`, or use `gnome-tweaks` with an extension called [Screenshot Locations](https://extensions.gnome.org/extension/1179/screenshot-locations/).
 
 ---
 
 ### the short fix
 
+- Install Gnome Tweaks if you don't have it alread `sudo apt install gnome-tweaks`
 - Install GNOME Shell integration for [Chromium and Chrome](https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep?hl=en) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/gnome-shell-integration/)
 - then go to the [Screenshot Locations extension page](https://extensions.gnome.org/extension/1179/screenshot-locations/)
 - click the ON/OFF toggle on the right
@@ -42,7 +43,7 @@ You can also set the config in the Terminal with `gsettings set` or `dconf write
 gsettings set org.gnome.gnome-screenshot auto-save-directory "file:///home/${USER}/Downloads/"
 ```
 
-After al of this, it still won't work when you take a screenshot with `Prtscr`.. ¯\_(ツ)\_/¯
+After all of this, it still won't work when you take a screenshot with `Prtscr`.. ¯\_(ツ)\_/¯
 
 > You can use gnome-screenshot to save wherever you want, just create a custom keyboard shortcut for it in the keyboard settings panel.
 > There won't be a configuration option to do this in gnome-settings-daemon, as it's already trivially possible to work-around this lack of configuration.
