@@ -2,11 +2,20 @@
 title: Change default screenshot save location on Ubuntu
 date: 2020-08-09
 slug: change-default-screenshot-save-location
+tags:
+  - dconf
+  - gsettings
 ---
 
 **tl;dr**
 
 System settings are saved in the `dconf` configuration system, and you can edit them in a GUI with `dconf-editor`. But it doesn't work. It's a known bug considered as `RESOLVED WONTFIX` [ref](https://bugzilla.gnome.org/show_bug.cgi?id=699642), so you'll never be able to change the save location just by editing `dconf` values for `gnome-screenshot`. Either create a custom keyboard shortcut that uses `gnome-screenshot` after setting the path in `dconf-editor`, or use `gnome-tweaks` with an extension called [Screenshot Locations](https://extensions.gnome.org/extension/1179/screenshot-locations/).
+
+If you don't have any existing custom shortcuts, you can run this
+
+```bash
+# command to be added
+```
 
 ---
 
@@ -51,21 +60,23 @@ After all of this, it still won't work when you take a screenshot with `Prtscr`.
 
 meh.. So, create a custom keyboard shortcut, shall we?
 
-Go to **Settings > Keyboard Shortcuts**, there will be an entire section for **Screenshots**. You can either override these or create new ones with different key bindings..
+Go to **Settings > Keyboard Shortcuts**, there will be an entire section for **Screenshots**. You can either override these or create new ones with different key bindings.. If you are overriding an existing key combination, make sure you have disabled it first by clicking on it and pressing `Backspace`
 
-![Screenshot related shortcuts]()
+![Screenshot related shortcuts](./screenshots_related_shortcuts.png)
 
-Scroll down to the bottom and click the `+` button. (If you are overriding an existing shortcut, make sure you have disabled it first by clicking on it and pressing `Backspace`)
+Scroll down to the bottom and click the `+` button
 
-![Adding keyboard shortcuts]()
+![Adding keyboard shortcuts](./add_keyboard_shortcut.png)
 
-| Description                                             | Shortcut      | gnome-screenshot command |
-| ------------------------------------------------------- | ------------- | ------------------------ |
-| Save a screenshot of a window to ~/Pictures/screenshots | `Alt+Print`   | `gnome-screenshot -wb`   |
-| Save a screenshot of an area to ~/Pictures/screenshots  | `Shift+Print` | `gnome-screenshot -a`    |
-| Save a screenshot to ~/Pictures/screenshots             | `Print`       | `gnome-screenshot`       |
+| Description                                             | Shortcut                          | gnome-screenshot command |
+| ------------------------------------------------------- | --------------------------------- | ------------------------ |
+| Save a screenshot of a window to ~/Pictures/screenshots | <kbd>Alt</kbd>+<kbd>Print</kbd>   | `gnome-screenshot -wb`   |
+| Save a screenshot of an area to ~/Pictures/screenshots  | <kbd>Shift</kbd>+<kbd>Print</kbd> | `gnome-screenshot -a`    |
+| Save a screenshot to ~/Pictures/screenshots             | <kbd>Print</kbd>                  | `gnome-screenshot`       |
 
-I also updated all names to say `~/Pictures/screenshots` instead of `Pictures`. To check what the flags are doing, seeing `man gnome-screenshot`. `-a` is for selecting area, `-w` is for selecting window, and `-b` is for including borders when saving a window.
+I also updated all names to say `~/Pictures/screenshots` instead of `Pictures`. To check what flags are available, seeing `man gnome-screenshot`. `-a` is for selecting area, `-w` is for selecting window, and `-b` is for including borders when saving a window.
+
+![Custom keyboard shortcuts](./custom_shortcuts.png)
 
 Re-login for the change in location to take effect.
 
