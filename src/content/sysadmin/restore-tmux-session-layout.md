@@ -52,3 +52,4 @@ Hit `prefix + I` to fetch the plugin and source it. The plugin will automaticall
 
 - [How to start tmux with several panes open at the same time?](https://askubuntu.com/questions/830484/how-to-start-tmux-with-several-panes-open-at-the-same-time)
 - [StackOverflow: How to set up tmux so that it starts up with specified windows opened?](https://stackoverflow.com/questions/5609192/how-to-set-up-tmux-so-that-it-starts-up-with-specified-windows-opened)
+- [Start up tmux with custom windows, panes and applications running](https://gist.github.com/todgru/6224848)
