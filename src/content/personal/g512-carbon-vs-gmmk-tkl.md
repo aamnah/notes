@@ -7,9 +7,11 @@ date: 2020-08-10
 ### Logitech G512 Carbon (Romer-G Linear)
 
 - Linear is definitely not my thing. Unintended presses even after one year of use
-- Got keyboard chattering after less than 6 months of use. It does go away if i stop using the keyboard and leave it around for 8-24 hours..
+- Got keyboard chattering after less than 6 months of use. It does go away if i stop using the keyboard and leave it around for 8-24 hours.. It still is a huge nuisance though. I'm a programmer, i can't afford the Enter key not working or leaving it aside for 12 or so hours so that it starts behaving again.
 - Can't customize the switches or keycaps at all after the purchase. Both the switch and the keycaps are non-standard
 - The market for custom Romer-G keycaps is pretty much non-existent
+
+Switched to GMMK because of the keyboard chatter (keys not registering) and the typos
 
 ![TODO: add picture of the keyboards]()
 
