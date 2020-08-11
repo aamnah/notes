@@ -58,6 +58,20 @@ set REACT_DEBUGGER="rndebugger-open --open --expo" && npm start
 
 After that, open React Native Debugger and it should automatically connect to the right port.
 
+---
+
+Although on Linux React Native Debugger wouldn't open itself automatically, i have scripted that part. As part of the script that i use to open everything for the project, i have added a command to open the debugger too.
+
+```bash
+# Start the project
+REACT_DEBUGGER="rndebugger-open --open --expo" npm start
+
+# Use another Terminal to open React Native Debugger
+xterm -e react-native-debugger & disown
+```
+
+Because i don't get the prompt back after running the `start` script, i'm basically opening another terminal video to open React Native Debugger
+
 ## Links
 
 - [Debugging using a custom JavaScript debugger](https://reactnative.dev/docs/debugging#debugging-using-a-custom-javascript-debugger)
