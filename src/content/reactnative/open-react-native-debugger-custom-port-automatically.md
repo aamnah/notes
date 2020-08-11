@@ -70,7 +70,7 @@ REACT_DEBUGGER="rndebugger-open --open --expo" npm start
 xterm -e react-native-debugger & disown
 ```
 
-Because i don't get the prompt back after running the `start` script, i'm basically opening another terminal video to open React Native Debugger
+Because i don't get the prompt back after running the `start` script, i'm basically opening another terminal window to open React Native Debugger
 
 ## Links
 
