@@ -37,3 +37,4 @@ react-native-debugger
 ## Links
 
 - [get the terminal back with `& disown`](https://askubuntu.com/a/721507)
+- [Start up tmux with custom windows, panes and applications running](https://gist.github.com/todgru/6224848)
