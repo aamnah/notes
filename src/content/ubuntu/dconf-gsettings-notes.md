@@ -7,6 +7,8 @@ tags:
   - gsettings
 ---
 
+As of version `3.7.0`, `gnome-terminal` uses `GSettings` and `DConf` instead of `GConf`.
+
 ## Syntax differences between dconf and gsettings
 
 `dconf write` vs. `gsettings set`
