@@ -25,3 +25,4 @@ Switched to GMMK because of the keyboard chatter (keys not registering) and the 
 - Fully modular keys, can hot-swap switches, no soldering required
 - Cross-comaptible switches. Can use pretty much any switch from Gateron, Cherry or Kailh
 - Keycaps galore. The custom keycaps market is huge for standard stem switches as compared to romer-g switches
+- Keyboard chattering apparently can happen in all mechanical keyboards. If it happens in this one, i'll just replace the entire switch and it'll take me less than a minute and cost me less than Rs. 100.
