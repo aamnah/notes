@@ -15,11 +15,13 @@ The height is pretty much always `20`, unless it's hidden or an app is active du
 
 ### Drawing over and under
 
-On iOS, your app will draw under the status bar. You can achieve similar behaviour for Android by setting `translucent` (Android only)
+On iOS, your app will draw under the status bar. On Android, the app draws on top of the status bar. You can achieve similar behaviour for Android by setting `translucent` (Android only)
 
 ```jsx
 <StatusBar translucent={true} backgroundColor={'transparent'} {...props} />
 ```
+
+If we set `translucent={true}` on `StatusBar` then it'd behave consistently on both iOS and Adnroid, and you wouldn't have to set different values for things like `padding` and `height` in a custom header using Platform checks
 
 ### Coloring the StatusBar on iOS
 
@@ -44,17 +46,28 @@ const StatusBarBackground = styled.View`
   padding-top: ${Platform.OS === 'ios' ? Constants.statusBarHeight : 0}px;
   height: ${Platform.OS === 'ios' ? Constants.statusBarHeight + headerHeight : headerHeight}px;
 `
-const StyledHeader = styled.View<Props>`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: ${headerHeight}px;
-  padding: 8px 16px;
-`
 ```
 
-Notice that you had to keep the padding and height Platform specific. Because we only need this background on iOS, we are only adding extra padding to iOS. On Android, we can pass `backgroundColor` to the `<StatusBar>`.
+Notice that you had to keep the padding and height Platform specific. Because we are doing a workaround for background (color) on iOS, we are only adding extra padding to iOS. On Android, we can pass `backgroundColor` to the `<StatusBar>`. This can be avoided if we set `translucent={true}` on `StatusBar`, and then it'd behave consistently on both iOS and Android. By default `translucent` is `false` on Android
+
+```tsx
+<StatusBarBackground>
+  <StatusBar translucent barStyle="light-content" />
+  <SafeAreaView>{/* Code goes here */}</SafeAreaView>
+</StatusBarBackground>
+```
+
+```tsx
+import Constants from 'expo-constants'
+
+const headerHeight = 48
+
+const StatusBarBackground = styled.View`
+  background: salmon;
+  padding-top: ${Constants.statusBarHeight}px;
+  height: ${Constants.statusBarHeight + headerHeight}px;
+`
+```
 
 ## Links
 
