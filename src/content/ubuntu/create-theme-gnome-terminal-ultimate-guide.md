@@ -7,6 +7,8 @@ tags:
   - Gnome
   - Terminal
   - Theme
+  - dconf
+  - gsettings
 ---
 
 ```bash
@@ -14,11 +16,13 @@ sudo apt-get install dconf-cli uuid-runtime
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh)"
 ```
 
-### GConf, dconf and GSettings
+### GConf, DConf and GSettings
 
 Gnome Terminal color palette details originally used to be stored in `~/.gconf/apps/gnome-terminal/profiles/` and `%gconf.xml` had all palette related data. But on recent Ubuntu (20.04) you'll find `~/.gconf` to be completely empty even if you have multiple Terminal profiles saved.
 
-That's because of the transition from `GConf` (for storing user preferences) to the combination of the `GSettings` high-level configuration system and the `dconf` back end.
+That's because of the transition from `GConf` (for storing user preferences) to the combination of the `GSettings` high-level configuration system and the `DConf` back end. Updating `gsettings` is preferred over directly writing to `dconf`
+
+[As of version `3.7.0`](https://gitlab.gnome.org/GNOME/gnome-terminal/-/blob/master/NEWS), `gnome-terminal` uses `GSettings` and `DConf` instead of `GConf`. If you want your theme to be backwards comaptible, you gotta add configuration for both.
 
 Since `dconf` is a database saved in binary format, you can't just read the files as is. What you can do is dump it
 
@@ -30,6 +34,29 @@ Now you have the backup for all Terminal profiles in human-readable format. The 
 
 ```bash
 dconf dump /org/gnome/terminal/ > gnome_terminal_settings_backup.txt
+```
+
+Here's a backup of the theme Nord which gives me all keys and values. Neat!
+
+```bash
+[legacy/profiles:/:6eb7e206-f8f1-4f38-84bb-9dfbfec8e8f6]
+background-color='#2E3440'
+bold-color='#D8DEE9'
+bold-color-same-as-fg=true
+cursor-background-color='rgb(216,222,233)'
+cursor-colors-set=true
+cursor-foreground-color='rgb(59,66,82)'
+foreground-color='#D8DEE9'
+highlight-background-color='rgb(136,192,208)'
+highlight-colors-set=true
+highlight-foreground-color='rgb(46,52,64)'
+nord-gnome-terminal-version='0.1.0'
+palette=['#3B4252', '#BF616A', '#A3BE8C', '#EBCB8B', '#81A1C1', '#B48EAD', '#88C0D0', '#E5E9F0', '#4C566A', '#BF616A', '#A3BE8C', '#EBCB8B', '#81A1C1', '#B48EAD', '#8FBCBB', '#ECEFF4']
+use-theme-background=false
+use-theme-colors=false
+use-theme-transparency=false
+use-transparent-background=false
+visible-name='Nord'
 ```
 
 ### Loading settings form backup
@@ -102,7 +129,9 @@ Once you have your theme installed, click on the down arrow in top right to see 
 [Nord](https://github.com/arcticicestudio/nord-gnome-terminal)
 
 ```bash
-bash -c "$(curl -fsSL https://github.com/arcticicestudio/nord-gnome-terminal/blob/develop/src/nord.sh)"
+git clone https://github.com/arcticicestudio/nord-gnome-terminal.git
+cd nord-gnome-terminal/src
+./nord.sh
 ```
 
 [One Dark](https://github.com/denysdovhan/one-gnome-terminal)
@@ -287,6 +316,23 @@ I need 16 colors roughly to create a profile. Colors can be both HEX `#88C0D0` a
 There are two ways of creating a theme. One is to do it manually by hand via the GUIs (`dconf-editor` and **Terminal > Prefernces > Profile**). The other is writing a script (using `dconf-cli`) so that anyone can use a one-liner to
 install the theme.
 
+```bash
+
+```
+
+### Generating Profile ID
+
+Get a unique profile ID with the `uuidgen` command
+
+```bash
+# suo apt install uuid-runtime
+uuidgen
+```
+
+```bash
+1918da06-514a-4b10-bdd1-c4d8cea263c5
+```
+
 ## Links
 
 - [nord-gnome-terminal](https://github.com/arcticicestudio/nord-gnome-terminal)
@@ -296,10 +342,12 @@ install the theme.
 - [How to store my gnome terminal color palette](https://askubuntu.com/a/198979)
 - [Backup GNOME-Terminal](https://askubuntu.com/a/967535)
 - [CHAPTER 3. GSETTINGS AND DCONF](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/desktop_migration_and_administration_guide/gsettings-dconf)
+- [CHAPTER 9. CONFIGURING DESKTOP WITH GSETTINGS AND DCONF](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/desktop_migration_and_administration_guide/configuration-overview-gsettings-dconf)
 - [How to set the gnome-terminal color scheme to “Solarized Dark” via commandline?](https://askubuntu.com/questions/957257/how-to-set-the-gnome-terminal-color-scheme-to-solarized-dark-via-commandline)
 - [Change your Linux terminal color theme](https://opensource.com/article/19/8/add-color-linux-terminal)
 - [How to set built-in color scheme for gnome-terminal via CLI in Ubuntu 16?](https://askubuntu.com/a/803246)
 - [ayu-colors](https://github.com/ayu-theme/ayu-colors)
+- [Gconf, Dconf, Gsettings and the relationship between them](https://askubuntu.com/questions/249887/gconf-dconf-gsettings-and-the-relationship-between-them)
 
 ### Scripts
 

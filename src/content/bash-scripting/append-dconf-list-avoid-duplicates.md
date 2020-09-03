@@ -77,3 +77,4 @@ append_profile_uuid_to_list() {
 ## Links
 
 - [How to set custom keyboard shortcuts from terminal?](https://askubuntu.com/a/597414/897311)
+- [You don't know Bash: An introduction to Bash arrays](https://opensource.com/article/18/5/you-dont-know-bash-intro-bash-arrays)

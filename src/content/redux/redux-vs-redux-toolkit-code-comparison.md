@@ -1,5 +1,5 @@
 ---
-title: Plain Redux vs. Redux Toolkit
+title: Plain Redux vs. Redux Toolkit - Code comparison
 description: Comparison redux and redux-toolkit patterns with code examples
 slug: redux-vs-redux-toolkit-code-comparison
 statu: draft
@@ -16,6 +16,40 @@ npx create-react-app my-app --template redux
 - `createAction`
 - `createSlice`
 - `createSelector`
+
+### Store
+
+```js
+import { createStore } from 'redux'
+
+const reducer = (state, action) => {
+  return state
+}
+
+const store = createStore(reducer)
+```
+
+```js
+import { Provider } from 'react-redux'
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root'),
+)
+```
+
+with Redux Toolkit
+
+```js
+import { configureStore } from '@reduxjs/toolkit'
+
+import rootReducer from './reducers'
+
+const store = configureStore({ reducer: rootReducer })
+// The store now has redux-thunk added and the Redux DevTools Extension is turned on
+```
 
 ### Reducers
 

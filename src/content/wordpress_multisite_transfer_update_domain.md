@@ -4,7 +4,7 @@ date: 2020-04-30
 path: wordpress_multisite_transfer_update_domain
 ---
 
-import { Gist } from "../components/common"
+import { Gist } from "components/common"
 
 You need to update five different tables in the database in order to change the domain, as well as updating the `wp-config.php` file
 
