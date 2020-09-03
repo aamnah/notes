@@ -1,7 +1,7 @@
 ---
 title: script to create a new project
 slug: bash-script-project-boilerplate
-category: bash-scripting
+category: Bash Scripting
 date: 2020-07-10
 ---
 

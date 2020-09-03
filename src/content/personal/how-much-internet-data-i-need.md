@@ -2,9 +2,9 @@
 title: How much data do i need?
 date: 2020-05-29
 slug: how-much-internet-data-i-need
-category:
+category: Work
+tags:
   - personal
-  - work
 ---
 
 tl;dr: 1 minute of HD video = 1 MB. 1 hour of HD video every day = 17.6 GB of data in a month. Approximately.
