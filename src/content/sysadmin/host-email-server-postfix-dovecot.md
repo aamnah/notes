@@ -44,13 +44,12 @@ Rather than editing the configuration file directly, you can use the `postconf -
 ```bash
 sudo postconf -e 'home_mailbox = Maildir/'
 sudo postconf -e 'mydomain = <example.com>'
-
 ```
 
 _maps_ or _hashes_ need to be created, these are just mroe flat files for configs..
 
 - `/etc/mailname` contains the hostname (mail.yourdomain.com)
-- `/etc/postfix/virtual` maps email addresses to a username (pattern of <email@domain.com> <username>)
+- `/etc/postfix/virtual` maps email addresses to a username (pattern of `<email@domain.com> <username>`)
 
 ```conf
 # Mail server identity options
@@ -67,28 +66,6 @@ sudo postconf -e 'mynetworks = 127.0.0.0/8 192.168.0.0/24 [::ffff:127.0.0.0]/104
 ```
 
 ```conf
-## Customized smtpd paramters
-smtpd_banner = $myhostname ESMTP
-smtpd_helo_required = yes
-smtpd_helo_restrictions = permit_mynetworks,
-	reject_non_fqdn_helo_hostname, reject_invalid_helo_hostname,
-	reject_unknown_helo_hostname, permit
-smtpd_recipient_restrictions = reject_unknown_client_hostname,
-	reject_unknown_sender_domain, reject_unknown_recipient_domain,
-	reject_unauth_pipelining, permit_mynetworks,
-	permit_sasl_authenticated, reject_unauth_destination,
-	reject_invalid_hostname, reject_non_fqdn_sender
-smtpd_sender_restrictions = reject_unknown_sender_domain,
-	reject_sender_login_mismatch
-smtpd_sender_login_maps = $virtual_mailbox_maps
-
-
-## Dealing with rejection: use permanent 550 errors to stop retries
-unknown_address_reject_code = 550
-unknown_hostname_reject_code = 550
-unknown_client_reject_code = 550
-
-
 ## Customized Dovecot and virtual user-specific settings
 canonical_maps = hash:/etc/postfix/canonical
 home_mailbox = Maildir/
@@ -116,6 +93,28 @@ sudo ufw allow Postfix
 ```
 
 ### SSL configuration
+
+```conf
+## customized TLS parameters
+
+# ask remote servers to identify themselves with a certificate.
+smtpd_tls_ask_ccert = yes
+
+smtpd_tls_cert_file = /etc/ssl/private/ssl-chain-mail-yourdomain.pem
+smtpd_tls_key_file = /etc/ssl/private/ssl-key-decrypted-mail-yourdomain.key
+
+# smtpd_tls_CAfile is used by Postfix to validate remote servers' certificates.
+# Ubuntu comes with a large Certificate Authority bundle file at /etc/ssl/certs/ca-certificates.crt
+smtpd_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
+smtpd_tls_ciphers = high
+smtpd_tls_loglevel = 1
+
+# "May" tells Postfix that it should use SSL/TLS if the remote host supports it.
+smtpd_tls_security_level = may
+smtpd_tls_session_cache_timeout = 3600s
+```
+
+`smtpd_tls_ask_ccert = yes` should be set
 
 ```bash
 # Email to send renewal and security notices to
@@ -175,7 +174,39 @@ chmod 400 ssl-key-*
 /etc/letsencrypt/cli.ini
 ```
 
+### smtpd config
+
+```conf
+# don't reveal too much info about your system, just the minimum correct response required
+smtpd_banner = $myhostname ESMTP
+
+# remote servers must identify themselves before you'll accept e-mail commands from them - spammers often don't issue proper HELO responses.
+smtpd_helo_required = yes
+
+smtpd_helo_restrictions = permit_mynetworks,
+	reject_non_fqdn_helo_hostname, reject_invalid_helo_hostname,
+	reject_unknown_helo_hostname, permit
+smtpd_recipient_restrictions = reject_unknown_client_hostname,
+	reject_unknown_sender_domain, reject_unknown_recipient_domain,
+	reject_unauth_pipelining, permit_mynetworks,
+	permit_sasl_authenticated, reject_unauth_destination,
+	reject_invalid_hostname, reject_non_fqdn_sender
+smtpd_sender_restrictions = reject_unknown_sender_domain,
+	reject_sender_login_mismatch
+smtpd_sender_login_maps = $virtual_mailbox_maps
+
+## Dealing with rejection: use permanent 550 errors to stop retries
+# reject messages that match the our rejection criteria with a 550 error,
+# which should tell the remote server that its message wasn't delivered and it shouldn't try to send it again
+# (as opposed to the default 450 error, which implies that the remote server should retry sending.
+unknown_address_reject_code = 550
+unknown_hostname_reject_code = 550
+unknown_client_reject_code = 550
+```
+
 ### Setting up SMTP authentication
+
+- `smtpd` is the SMTP daemon—the process that sends mail
 
 ```bash
 # SASL is the protocol that Dovecot uses to authenticate itself to Postfix
@@ -304,3 +335,6 @@ Then add SPF records into the mix. This won't help with the first two places wit
 - [Hosting multiple domains on a single email server with one IP](https://serverfault.com/questions/385054/hosting-multiple-domains-on-a-single-email-server-with-one-ip)
 - [How to setup a Postfix SMTP-only for multiple domains](https://serverfault.com/a/234816)
 - [postfix Manual](http://www.postfix.org/postconf.5.html)
+- [Taking e-mail back, part 2: Arming your server with Postfix and Dovecot](https://arstechnica.com/information-technology/2014/03/taking-e-mail-back-part-2-arming-your-server-with-postfix-dovecot)
+- [Taking e-mail back, part 3: Fortifying your box against spammers](https://arstechnica.com/information-technology/2014/03/taking-e-mail-back-part-3-fortifying-your-box-against-spammers/)
+- [Taking e-mail back, part 4: The finale, with webmail & everything after](https://arstechnica.com/information-technology/2014/04/taking-e-mail-back-part-4-the-finale-with-webmail-everything-after/)
