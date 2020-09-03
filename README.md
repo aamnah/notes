@@ -91,3 +91,11 @@ If you use Gatsby `<Link>` instead of `<a>` it makes the change of _internal_ pa
 - Follow this for MDX [Working with Images in Markdown Posts and Pages](https://www.gatsbyjs.org/docs/working-with-images-in-markdown/)
 
 - The image path will be relative to where the post file is. For example, if it's in `images/` one level up, you'll link to `../images/foo.png`
+
+- In pages and JSX components, you import the file with JS first and then reference it as `src` [ref](https://www.gatsbyjs.com/docs/importing-assets-into-files/#importing-assets-with-webpack)
+
+```jsx
+import workspace_1 from '../images/aamnah_workspace_1.jpg'
+
+;<img src={workspace_1} />
+```
