@@ -60,6 +60,9 @@ add_custom_shortcuts() {
   # Make sure you don't already have keyboard
   # gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[<altered_list>]"
   #['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+
+  # TODO: append custom shortcuts to the list
+  # while making sure any existing ones aren't affected
 }
 
 configure_custom_shortcuts() {
