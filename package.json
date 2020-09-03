@@ -1,7 +1,7 @@
 {
-  "name": "blog-aamnah-gatsby",
+  "name": "aamnah-gatsby",
   "private": true,
-  "description": "Gatsby based site for my blog at blog.aamnah.com",
+  "description": "Aamnah's website and blog (Gatsby based)",
   "version": "0.1.0",
   "author": "Aamnah <hello@aamnah.com>",
   "dependencies": {
@@ -48,9 +48,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/aamnah/aamnah.com"
   }
 }

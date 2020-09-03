@@ -31,7 +31,10 @@ export default function Contact() {
           <Icon name="github" />
         </Link>
       </Social>
-      <p>Use the form below to send me a message..</p>
+      <p>
+        Send me an email with a little context on you, your business, where you’d like my support, and when you’d like
+        to start. I’ll get back to you within 2 business days, tops.
+      </p>
 
       <section>
         <Form

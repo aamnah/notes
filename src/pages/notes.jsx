@@ -34,7 +34,7 @@ export default function NotesPage() {
 
       <h1>Notes</h1>
       <p>
-        Here is my dev notebook and braindump. Use the `Ctrl/Cmd + F` to find what you are looking for. <br />
+        Here is my dev notebook and braindump. Do the `Ctrl/Cmd + F` to find what you are looking for.. <br />
       </p>
       <List>
         {data.allMdx.edges.map((post) => {

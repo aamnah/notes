@@ -3,6 +3,8 @@ import React from 'react'
 import { DefaultLayout } from 'components/Layout'
 import { Head, Link, SEO, Tag, Pullquote } from 'components/common'
 
+import workspace_1 from '../images/aamnah_workspace_1.jpg'
+import workspace_2 from '../images/aamnah_workspace_2.jpg'
 export default function AboutPage() {
   return (
     <DefaultLayout>
@@ -13,14 +15,14 @@ export default function AboutPage() {
         <ul>
           <li>works as a frontend developer</li>
           <li>has a degree in Journalism and Maths</li>
-          <li>studied Media Studies at Kinnaird College</li>
-          <li>is fluent in three languages</li>
+          <li>studied Mass Communication at Kinnaird College</li>
+          <li>fluently speaks three languages</li>
           <li>enjoys writing bash scripts</li>
           <li>
             balances between work, home and <em>dolce far niente</em>
           </li>
           <li>needs coffee</li>
-          <li>loves steak</li>
+          <li>loves a juicy medium-well steak</li>
           <li>owns a company</li>
           <li>plays the pink panther theme song on ukulele</li>
         </ul>
@@ -30,10 +32,26 @@ export default function AboutPage() {
         </Pullquote>
       </section>
       <section>
+        <img src={workspace_1} />
+      </section>
+      <section>
         <h3>Current setup</h3>
         <ul>
-          <li>Computer: Custom built PC / Lenovo Thinkpad / Macbook Air</li>
-          <li>Keyboard: The GMMK TKL (Gateron Brown switches)/ Logitech G512 Carbon (Romer-G Linear switches)</li>
+          <li>
+            Computer
+            <ul>
+              <li>Custom built PC</li>
+              <li>Lenovo Thinkpad</li>
+              <li>Macbook Air</li>
+            </ul>
+          </li>
+          <li>
+            Keyboard
+            <ul>
+              <li>The GMMK TKL (Gateron Brown switches)</li>
+              <li>Logitech G512 Carbon (Romer-G Linear switches)</li>
+            </ul>
+          </li>
           <li>Editor: Visual Studio Code</li>
           <li>Host: Netlify</li>
           <li>Site Generator: Gatsby / Hugo</li>
@@ -41,6 +59,10 @@ export default function AboutPage() {
       </section>
 
       {/* Add pictures of workspace */}
+
+      <section>
+        <img src={workspace_2} />
+      </section>
       <section>
         <h3>Current job: Frontend Developer</h3>
         <p>
