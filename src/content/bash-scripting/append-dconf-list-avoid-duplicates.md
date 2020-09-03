@@ -3,7 +3,8 @@ title: Append to a dconf list and avoiding duplicates with existing entries
 date: 2020-08-09
 slug: dconf-append-list-avoid-duplicates
 category: Bash Scripting
-tags: Ubuntu
+tags:
+  - Ubuntu
 ---
 
 I need to do this for a script i'm writing to add custom keyboard shortcuts. I get the existing list with
