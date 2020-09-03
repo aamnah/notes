@@ -1,6 +1,6 @@
 # Aamnah's Blog
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f69f90e0-215e-464d-9240-af3be99d3d6f/deploy-status)](https://app.netlify.com/sites/blog-aamnah/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/065ee265-6b0a-4525-abd4-372585bf45a0/deploy-status)](https://app.netlify.com/sites/aamnah/deploys)
 
 Gatsby based site for the blog on [blog.aamnah.com](https://blog.aamnah.com)
 
@@ -96,6 +96,5 @@ If you use Gatsby `<Link>` instead of `<a>` it makes the change of _internal_ pa
 
 ```jsx
 import workspace_1 from '../images/aamnah_workspace_1.jpg'
-
 ;<img src={workspace_1} />
 ```
