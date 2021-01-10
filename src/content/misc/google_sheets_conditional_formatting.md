@@ -28,7 +28,7 @@ date: 2020-01-10
 - `C$3` - keep row constant
 - `$C3` - keep column constant
 
-### Highlight the lowest value in row google sheets
+### Highlight the lowest value in row
 
 ```
 =C3=MIN($C3:$I3)
