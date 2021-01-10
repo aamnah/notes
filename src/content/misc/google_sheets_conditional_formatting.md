@@ -39,6 +39,8 @@ date: 2020-01-10
 
 - In the custom formula field, enter `=A1=MIN($A1:$N1)`. Substitute `A1` for the first cell in the first row you are checking, and `N1` with the last cell in the first row you are checking.
 
+![screenshot of conditional formatting rules in action](/posts/google_sheets_conditional_formatting.png)
+
 ## Links
 
 - [Google Sheets function list](https://support.google.com/docs/table/25273?hl=en&ref_topic=3105625)
