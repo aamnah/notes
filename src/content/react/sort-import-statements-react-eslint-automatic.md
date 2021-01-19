@@ -111,3 +111,4 @@ import { styles, placeholderBgColor, placeholderFgColor, viewportWidth } from '.
 
 - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
 - [import/order: Enforce a convention in module import order](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md)
+- [Sorting your imports correctly in React](https://dev.to/otamnitram/sorting-your-imports-correctly-in-react-213m)
