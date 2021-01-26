@@ -103,7 +103,12 @@ import { ProfileTabs } from '../profile/ProfileTabs'
 import { styles, placeholderBgColor, placeholderFgColor, viewportWidth } from './Profile.style'
 ```
 
+## Troubleshooting
+- If VS Code Prettier isn't formatting on Save, set Prettier as the [Default Formatter](https://github.com/microsoft/vscode/issues/108447#issuecomment-706642248) in Settings
+- Enable ESLint as a formatter, and set it as the default formatter for VS Code, that'll format the doument for import statements.
+
 ## Links
 
 - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
 - [import/order: Enforce a convention in module import order](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md)
+- [Sorting your imports correctly in React](https://dev.to/otamnitram/sorting-your-imports-correctly-in-react-213m)
