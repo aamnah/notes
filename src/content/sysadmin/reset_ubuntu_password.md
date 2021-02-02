@@ -14,6 +14,10 @@ By default the `root` user on Ubuntu has no password, hence you being able to dr
 
 After you have done this, you'll be able to login. But then the authentication prompts (e.g. when you run software update) will not accept the new password, it still recognizes the old password.
 
+![ubuntu_reset_password_error_afterwards](ubuntu_reset_password_error_afterwards.png)
+
+In this case you can just delete your Login keychain, no big deal
+
 ## Links
 
 - [How to Reset Ubuntu Password in 2 Minutes](https://itsfoss.com/how-to-hack-ubuntu-password/)
