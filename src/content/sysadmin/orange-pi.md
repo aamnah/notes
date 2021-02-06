@@ -124,6 +124,11 @@ Open _File Explorer_. Right click on _This PC_ in the sidebar and select _Add a 
 \\192.168.111.100/NAS
 ```
 
+#### Access the drive from macOS
+
+_Files > Go > _
+
+`Cmd` + `K` is the shortcut.
 
 
 ### Set up static IP
