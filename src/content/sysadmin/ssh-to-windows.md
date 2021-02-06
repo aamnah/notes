@@ -3,6 +3,8 @@ title: SSH into Windows from Linux
 date: 2021-02-05
 ---
 
+# Set up SSH on Windows
+
 Open PowerShell as Administrator and run the following command to see if OpenSSH is already installed
 
 ```
@@ -35,6 +37,12 @@ New-NetFirewallRule -Name sshd -DisplayName 'OpenSSH Server (sshd)' -Service ssh
 
 # start automatically on Startup
 Set-Service -Name sshd -StartupType 'Automatic'
+```
+
+Now you can SSH into the system like you normally would into any other system
+
+```bash
+ssh aamnah@Panda
 ```
 
 Links
