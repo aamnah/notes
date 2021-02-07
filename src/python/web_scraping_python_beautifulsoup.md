@@ -134,3 +134,8 @@ Amazfit GTR 2,"Rs 31,499"
 Amazfit GTS 2 Smart Watch,"Rs 30,599"
 Amazfit Bip U,"Rs 11,000"
 ```
+
+## Links
+
+- [BS4 Docs](https://www.crummy.com/software/BeautifulSoup/bs4/doc)
+- [Web Scraping Python Tutorial – How to Scrape Data From A Website](https://www.freecodecamp.org/news/web-scraping-python-tutorial-how-to-scrape-data-from-a-website/)
