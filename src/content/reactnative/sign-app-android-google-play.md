@@ -90,6 +90,16 @@ Generating 4,096 bit RSA key pair and self-signed certificate (SHA384withRSA) wi
 [Storing KEYSTORE_OUTPUT_FILE.keystore]
 ```
 
+`keytool` is a part of JDK, and if you have setup your dev environment for Android it should already be in the path. You'll get a prompt for setting the keystore password and then asked for some additional info about yur organization. Next it'll ask you for a password for your key _Alias_
+
+- `-genkeypair` generates a key pair (a public key and associated private key). It used to be named `-genkey` in earlier version and is still supported, but the new name `-genkeypair` is preferred going forward.
+- `-keystore` is the name of the output file for your keystore, in this case `KEYSTORE_NAME.keystore`
+- `-keysize` is the size of the key, in this case `4096`. Default is 2048 (when using `-genkeypair` and `-keyalg` is "RSA")
+- `-keyalg` is the key algorithm, in this case `RSA`
+- `-validity` is in days. 9125 days is 25 years (default when you create a keystore with Android Studio). 10000 days is a little above 27 years.
+- `-storetype` is the format the keystore should be saved in. Default was `JKS` up till JDK 8. Newer versions use `PKCS12`.
+- `-alias` is the name of the key inside your _keystore_ (one keystore can have multiple keys, you'd need to mention the alias of the key when you get to the signing part)
+
 ### 2. Convert signing key to ZIP
 
 Follow the instructions provided on screen during the App signing opt-in process
