@@ -135,6 +135,28 @@ Amazfit GTS 2 Smart Watch,"Rs 30,599"
 Amazfit Bip U,"Rs 11,000"
 ```
 
+# Getting the source of an image with a class
+
+You can do this with `.get('src')`
+
+```py
+image.get('src').strip()
+```
+
+# Removing empty white spaces
+
+This can be done with the string method `.strip()`
+
+```py
+for title, discount_price, original_price, image in zip(titles, discount_prices, original_prices, images):
+  title = title.text.strip()
+  discount_price = discount_price.text.strip()
+  original_price = original_price.text.strip()
+  image = image.get('src').strip()
+
+  print(title, discount_price, original_price, image)
+```
+
 ## Links
 
 - [BS4 Docs](https://www.crummy.com/software/BeautifulSoup/bs4/doc)
