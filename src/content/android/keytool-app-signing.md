@@ -23,10 +23,11 @@ You'll get a prompt for setting the keystore password and then asked for some ad
 - `-keyalg` is the key algorithm, in this case `RSA`
 - `-validity` is in days. 9125 days is 25 years (default when you create a keystore with Android Studio). 10000 days is a little above 27 years.
 - `-storetype` is the format the keystore should be saved in. Default was `JKS` up till JDK 8. Newer versions use `PKCS12`.
+- `-alias` is the name of the key inside your _keystore_ (one keystore can have multiple keys, you'd need to mention the alias of the key when you get to the signing part)
 
 #### Script it
 
-You can pass keystore password, alias key password, and organizatiion details for a no-prompt key generation
+You can pass keystore password, alias key password, and organization details for a no-prompt key generation
 
 ```bash
 # pass keystore password and organizatiion details for no-prompt
@@ -40,7 +41,7 @@ keytool -genkeypair -v -keyalg RSA -validity 10000 \
 - `-keypass` will only be used if `-storetype` is provided and it's not `PKCS12` (default for JDK 9+). Since different store and key passwords not supported for PKCS12 KeyStores, your keystore password and your alias password will be the same and `-keypass` value will not be used.
 
 ```bash
-# pass keystore password and organizatiion details for no-prompt
+# pass keystore password and organization details for no-prompt
 keytool -genkeypair -v -keyalg RSA -validity 10000 \
   -dname "cn=FIRSTNAME LASTNAME, ou=ORGANIZATION_UNIT, o=ORGANIZATION, c=COUNTRY_CODE" \
   -keystore "KEYSTORE_OUTPUT_FILE.keystore" -storepass "KEYSTORE_PASSWORD" \
