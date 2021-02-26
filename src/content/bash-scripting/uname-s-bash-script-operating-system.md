@@ -35,7 +35,7 @@ if [[ $UNAME = darwin ]]; then echo "You are on macOS"; else echo "You are on ma
 if [[ $UNAME = darwin ]]; then ls -G ~; else ls --color ~; fi
 ```
 
-I got this from Google's [install script from Firebase CLI](https://firebase.tools/)
+I got this from Google's [install script from Firebase CLI](https://firebase.tools/), which adjusts the binary file you need to download based on whatever system you're on
 
 
 ```bash
