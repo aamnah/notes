@@ -11,10 +11,6 @@ Because i have multiple machines and use both Ubuntu and macOS, I often need to 
 
 ```bash
 UNAME=$(uname -s | tr '[:upper:]' '[:lower:]')
-case "$UNAME" in
-    linux*)     MACHINE=linux;;
-    darwin*)    MACHINE=macos;;
-esac
 
 # example if/esle statement 1
 if [[ $UNAME = darwin ]]; then
