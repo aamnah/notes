@@ -2,6 +2,7 @@
 title: Checking operating system in a bash script and installing different programs
 slug: uname-s-bash-script-operating-system
 date: 2020-06-28
+lastmod: 2021-02-26
 ---
 
 ```bash
@@ -44,6 +45,10 @@ Once you have the , you can use an `if/esle` or `case` statement
 [[ $UNAME = darwin ]] && echo 'macOS' || echo 'Linux'
 ```
 
+```bash
+# use -G (masOS) or --color (Ubuntu) to get colorized output for ls command
+if [[ $UNAME = darwin ]]; then ls -G ~; else ls --color ~; fi
+```
 
 ```bash
 # We use "tr" to translate the uppercase "uname" output into lowercase
