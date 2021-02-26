@@ -98,3 +98,4 @@ initVersion: '0.0.1'
 
 - [yarn config](https://classic.yarnpkg.com/en/docs/cli/config/)
 - https://github.com/yarnpkg/yarn/issues/3010#issuecomment-695192320
+- [Manifest files (package.json)](https://yarnpkg.com/configuration/manifest)
