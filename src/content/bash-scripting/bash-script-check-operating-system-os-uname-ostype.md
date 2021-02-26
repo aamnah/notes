@@ -22,7 +22,7 @@ elif [[ $OSTYPE == linux* ]]; then
 fi
 ```
 
-`uname -s` prints the operating system name. Once you have the `$UNAME`, you can use an `if/esle` or `case` statement
+`uname -s` prints the operating system name. Once you have that, you can use an `if/esle` or `case` statement on it
 
 ```bash
 UNAME=$(uname -s | tr '[:upper:]' '[:lower:]')
