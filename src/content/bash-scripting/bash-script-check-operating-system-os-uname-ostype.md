@@ -1,11 +1,26 @@
 ---
 title: Checking operating system in a bash script and installing different programs
-slug: uname-s-bash-script-operating-system
+slug: bash-script-check-operating-system-os-uname-ostype
 date: 2020-06-28
 lastmod: 2021-02-26
 ---
 
 Because i have multiple machines and use both Ubuntu and macOS, I often need to alter my commands to account for differences in commands. For example, to get colorized output for the `ls` command, Ubuntu would use the `--color` flag while macOS will use the `-G` flag. `-G` in Ubuntu is for `--no-group`, i.e. don't print group names in long listing format. And i don't want to write two different files for Ubuntu and macOS, i want to be able to use the same .dotfiles on both systems.
+
+You can do this with either `$OSTYPE` or `uname -s`.
+
+`$OSTYPE` on Ubuntu 20.04 is `linux-gnu` and on macOS Big Sur it is `darwin20.0`
+
+```bash
+# Flush DNS cache
+if [[ $OSTYPE == darwin* ]]; then
+  # works on macOS
+  alias flushdns='sudo dscacheutil -flushcache'
+elif [[ $OSTYPE == linux* ]]; then
+  # works on Ubuntu 18.04+
+  alias flushdns='sudo systemd-resolve --flush-caches'
+fi
+```
 
 `uname -s` prints the operating system name. Once you have the `$UNAME`, you can use an `if/esle` or `case` statement
 
