@@ -57,3 +57,7 @@ init-author-url: 'http://aamnah.com'
 init-license: 'CC-BY-SA-4.0'
 init-version: '0.0.1'
 ```
+
+## Links
+
+- [yarn config](https://classic.yarnpkg.com/en/docs/cli/config/)
