@@ -43,3 +43,21 @@ Once you have the , you can use an `if/esle` or `case` statement
 ```bash
 [[ $UNAME = darwin ]] && echo 'macOS' || echo 'Linux'
 ```
+
+
+```bash
+# We use "tr" to translate the uppercase "uname" output into lowercase
+UNAME=$(uname -s | tr '[:upper:]' '[:lower:]')
+
+# Then we map the output to the names used on the Github releases page
+case "$UNAME" in
+    linux*)     MACHINE=linux;;
+    darwin*)    MACHINE=macos;;
+esac
+
+if [[ $UNAME = darwin ]]; then
+  echo "You are on macOS"
+elif [[ $UNAME = linux ]]; then 
+  echo "You are on Linux"
+fi
+```
