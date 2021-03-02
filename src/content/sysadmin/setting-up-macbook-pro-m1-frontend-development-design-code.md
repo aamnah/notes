@@ -3,8 +3,8 @@ title: Setting up an M1 MacBook Pro for Frontend Development
 date: 2021-02-24
 ---
 
-Install Xcode
-Install Xcode Command Line Developer Tools (don’t need Xcode installed first for that)
+Install [Xcode from the App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12&ign-mpt=uo%3D2) and accept the default options.
+Install Xcode Command Line Developer Tools (don’t need Xcode installed first for that) `xcode-select --install`
 Install Homebrew
 
 ```
@@ -41,11 +41,12 @@ DEVELOP
 Wget
 
 ```bash
-brew install wget fastlane
+brew install wget fastlane tree
 ```
 
 - `wget` so that i don't have to edit command between Linux and macOS
 - `fastlane` for automating my app releases
+- `tree` for listing files & dirs in a tree structure
 
 Others
 Logitech Options
@@ -117,6 +118,12 @@ brew install watchman
 brew install cocoapods
 ```
 
+```bash
+gem install fastlane bundler cocoapods git
+```
+
+- installing `git` with Homebrew as well because the one on Big Sur is outdated (`2.24.3 (Apple Git-128)` when the latest is `2.30.1`)
+
 #### iOS
 
 - Install JDK 8 `brew install --cask adoptopenjdk/openjdk/adoptopenjdk8`
@@ -174,3 +181,15 @@ brew install --cask rectangle
 ```
 
 [tmux](https://formulae.brew.sh/formula/tmux)
+
+# Docker
+
+Similar to Android Emulator, an [Apple M1 Tech Preview](https://docs.docker.com/docker-for-mac/apple-m1/) is available. [download build 60984](https://desktop.docker.com/mac/stable/arm64/60984/Docker.dmg). Docker Desktop is built with Go, and the Go language will support Apple Silicon in their 1.16 release which is targeted for February 2021.
+
+You also have to install Rosetta 2
+
+```bash
+softwareupdate --install-rosetta
+```
+
+Make sure you run this command in a Terminal that is not set to _Open using Rosetta_. I have both the default Terminal and iTerm2 installed. iTerms is set to Open using Rosetta, whereas the default Terminal opens without Rosetta.

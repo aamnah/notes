@@ -153,6 +153,24 @@ Two options:
 - Run on a different port `react-native start --port=8088`
 - OR find out what program is using 8081 `sudo lsof -i :8081` and kill it `kill -9 1234`
 
+### incorrect architecture 'x86_64' errors
+
+```
+warning: no rule to process file '/Users/aamnah/Sites/mobile-app/ios/Pods/Flipper-RSocket/rsocket/README.md' of type 'net.daringfireball.markdown' for architecture 'x86_64' (in target 'Flipper-RSocket' from project 'Pods')
+```
+
+add this to the `Podfile`
+
+```
+post_install do |installer|
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+  end
+end
+```
+
+run `pod install` afterwards
+
 ## Links
 
 - [Android Emulator for M1](https://github.com/google/android-emulator-m1-preview)
