@@ -1,0 +1,31 @@
+.Link {
+  color: var(--color-primary);
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  // &-internal {
+  //   color: var(--color-primary);
+  // }
+
+  // &-external {
+  //   color: plum;
+  //   border: 1px solid transparent;
+  // }
+
+  // &-external:hover {
+  //   color: #ab2aab;
+    
+  //   border-bottom: 1px solid #ab2aab;
+  // }
+
+  &-active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.Link.Button {
+  color: white;
+}
