@@ -33,7 +33,7 @@ MariaDB logs are also named `mysql-slowquery.log` and `mysql-general.log`. These
 
 ## Notes
 
-- The changes require a **reboot** to take effect.
+- The changes require a **reboot** to take effect. You have to _manually_ reboot it, `pending_reboot` will NOT result in an automatic reboot during the next maintenance window.
 - `log_output` was set to file because setting it to table can _effect the database performance for high throughput workload_. Setting it to `FILE` means you can view the logs from the RDS console, but you can not query them.
 
 > To work with the logs from the Amazon RDS console, Amazon RDS API, Amazon RDS CLI, or AWS SDKs, set the log_output parameter to FILE.
