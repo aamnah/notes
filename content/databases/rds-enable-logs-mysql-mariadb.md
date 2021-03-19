@@ -3,6 +3,14 @@ title: Enable logs (general, error, slow query) for Amazon RDS databases (MySQL,
 date: 2021-03-19
 ---
 
+Log locations are:
+
+- Error: `/rdsdbdata/log/error/mysql-error.log`
+- General: `/rdsdbdata/log/general/mysql-general.log`
+- Slow Query: `/rdsdbdata/log/slowquery/mysql-slowquery.log`
+
+MariaDB logs are also named `mysql-slowquery.log` and `mysql-general.log`. These file locations (or names) can not be changed.
+
 ### MySQL Parameters
 
 - `slow_query_log` = `1` (default value is 0 or no logging)
@@ -25,7 +33,7 @@ date: 2021-03-19
 
 ## Notes
 
-- The changes require a **reboot** to take effect
+- The changes require a **reboot** to take effect.
 - `log_output` was set to file because setting it to table can _effect the database performance for high throughput workload_. Setting it to `FILE` means you can view the logs from the RDS console, but you can not query them.
 
 > To work with the logs from the Amazon RDS console, Amazon RDS API, Amazon RDS CLI, or AWS SDKs, set the log_output parameter to FILE.
@@ -39,3 +47,4 @@ date: 2021-03-19
 - [MySQL database log files](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.Concepts.MySQL.html)
 - [MariaDB database log files](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.Concepts.MariaDB.html)
 - [How do I manage slow query logs and general logs for an RDS MySQL DB Instance?](https://www.youtube.com/watch?v=aXn4pyPgPgw&t=80s&ab_channel=AmazonWebServices)
+- [Rebooting a DB instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_RebootInstance.html)
