@@ -73,7 +73,7 @@ func main() {
 - Documentation is built in with `go doc`
 - The comments in your code make up the documentation for your app/package and can be accessed with `go doc`
 
-For example, if you wanted to learn how the `rand()` function from `math` package worked, you run `go doc math/rand` and the documentation is right there in the terminal. This is so much like Linux (which i absolutely love), and so unlike the JS world where half my day is spent on documentation websites (React Native, MDN.. )for which i need to be _online_.
+For example, if you wanted to learn how the `rand()` function from `math` package worked, you run `go doc math/rand` and the documentation is right there in the terminal. This is basically very much Linux man pages (which i absolutely love), and so unlike the JS world where half my day is spent on documentation websites (React Native, MDN.. ) for which i need to be _online_.
 
 ```bash
 go doc math/rand
@@ -121,6 +121,14 @@ type Source64 interface{ ... }
 type Zipf struct{ ... }
     func NewZipf(r *Rand, s float64, v float64, imax uint64) *Zipf
 ```
+
+Creating your own documentation for your programs is dead simple. Apparently it's _conceptually_ similar to Python's Docstring and Java's Javadoc; but i know fancy little about either, so whatever. The important thing to note is that Godoc is better! Because: **Godoc comments are just good comments**
+
+[Godoc: documenting Go code](https://blog.golang.org/godoc)
+
+The convention is simple: to document a type, variable, constant, function, or even a package, **write a regular comment directly preceding its declaration, with no intervening blank line... begins with the name of the element it describes**.
+
+You can also start the statement with `BUG(who):` (_who_ means the person who may have more info on this) to indicate a bug, and with `Deprecated:` to indicated deprecated functionality that is redundant but you're keeping for compatibility
 
 ### Running code
 
@@ -263,6 +271,12 @@ module github.com/aamnah/go-test
 go 1.16
 ```
 
+## Conclusion
+
+Alright, it's the end of the day now. I feel like i have learnt enough about Go to not be afraid of it, and be excited about its potential. I also feel i am more familiar with some of the design decisions made while creating this language was created, and why it was created. And i am also a fan of the language so far.
+
+I have done half the [Tour](https://tour.golang.org/welcome/) of the language and am comfortable with data types, project structure, packages, code organization, and documentation.
+
 ## Links
 
 - [Go: Getting Started - Pluralsight course by Mike Van Sickle](https://app.pluralsight.com/courses/f481226c-9b60-4cf5-814c-aa7a125de254/table-of-contents)
@@ -273,3 +287,4 @@ go 1.16
 - [Best practices for a new Go developer](https://blog.rubylearning.com/best-practices-for-a-new-go-developer-8660384302fc)
 - [How to Write Go Code](https://golang.org/doc/code)
 - [Go by Example](https://gobyexample.com/)
+- [Learn Go in 12 Minutes](https://www.youtube.com/watch?v=C8LgvuEBraI)
