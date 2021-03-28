@@ -1,42 +1,40 @@
 ---
-
 title: 'Write a Bash Function to Create a gruntfile.js for your project'
-description: "Create a **Gruntfile.js** with starter code everytime you type **gruntfile** in the Terminal"
+description: 'Create a **Gruntfile.js** with starter code everytime you type **gruntfile** in the Terminal'
 slug: bash-function-create-gruntfile-js
-tags: workflow
-
+tags:
+  - workflow
 ---
 
 ### Here is how it works
+
 Everyt time i type `gruntfile` in the Terminal, it creates a **gruntfile.js** for me in the folder i am in. The resulting **gruntfile.js** has the following template code:
 
 ```javascript
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
     // CONFIG
+  })
 
-    });
+  // PLUGINS
+  grunt.loadNpmTasks('')
 
-    // PLUGINS
-    grunt.loadNpmTasks('');
-
-    // TASKS
-    grunt.registerTask('default', ['', '']);
-};
+  // TASKS
+  grunt.registerTask('default', ['', ''])
+}
 ```
 
 I can now add my Grunt config to it.
 
 What i have done is create a function `gruntfile` for me and saved in my `.bash_profile` so it is available to me anywhere in the Terminal.
 
-
 ### Here is the code
 
 ```bash
-color_green='\033[92m' 
-color_red='\033[91m' 
+color_green='\033[92m'
+color_red='\033[91m'
 color_off='\033[0m'
 
 gruntfile() {
@@ -74,8 +72,8 @@ Copy this code to the bottom of your `.bash_profile`.
 
 Quit and re-open the Terminal after you are done editing. Alternatively, you can also run `source .bash_profile` to load the changes you just made.
 
-Notes
----
+## Notes
+
 - The `echo` command must be run with the `-e` flag to execute it as a command instead of just printing it out to the terminal.
 - Also, `echo` only seems to work if you wrap the statement in double quotes `" "`. It will not work with single quotes `' '`
 - Since there is no simple way of checking case-insensitively if a file exists, i have added an if statement twice to check for both `gruntfile.js` and `Gruntfile.js`
