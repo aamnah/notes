@@ -288,3 +288,6 @@ I have done half the [Tour](https://tour.golang.org/welcome/) of the language an
 - [How to Write Go Code](https://golang.org/doc/code)
 - [Go by Example](https://gobyexample.com/)
 - [Learn Go in 12 Minutes](https://www.youtube.com/watch?v=C8LgvuEBraI)
+- [Go Web Examples](https://gowebexamples.com/)
+- [Build a Todolist API Server in Golang](https://fadhil-blog.dev/blog/golang-todolist/)
+- [Effective Go](https://golang.org/doc/effective_go)
