@@ -1,8 +1,8 @@
 ---
-title: Writing a script to open all the aplications needed
+title: Writing a script to open all the applications needed
 date: 2020-08-10
 slug: script-start-all-applications-frontend-development
-status: DRAFT
+draft: true
 ---
 
 I'm working on a React Native project these days that requires me to run 5 or so commands and open 3 or so apps every time i want to start working on the project

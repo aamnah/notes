@@ -1,7 +1,7 @@
 ---
 
 title: Object copying in JavaScript
-status: draft
+draft: true
 slug: object-copying-javascript
 date: 2016-12-18
 lastmod: 2017-03-19

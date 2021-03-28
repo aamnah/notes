@@ -2,7 +2,7 @@
 
 title: Github requests with HttPie
 slug: github-httpie-requests-response-fundamentals
-status: draft
+draft: true
 date: 2017-03-07
 tags:
 - api

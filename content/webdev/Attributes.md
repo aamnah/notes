@@ -2,7 +2,7 @@
 
 title: Attributes in DOM
 subtitle: Get, Set and Remove Attributes in the DOM
-status: draft
+draft: true
 date: 2017-03-22
 
 ---

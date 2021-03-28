@@ -2,7 +2,7 @@
 
 title: Feature Detection in Browsers, Shims and Polyfills
 slug: browser-feature-detection-polyfills-shims
-status: draft
+draft: true
 date: 2017-03-21
 ---
 

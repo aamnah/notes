@@ -108,3 +108,4 @@ After learning about this hardcore `main` requirement, i now understand why some
 - [C Programming Language, 2nd Edition](https://www.amazon.com/Programming-Language-2nd-Brian-Kernighan/dp/0131103628)
 - [Why do most programming languages have to have a main function?](https://www.quora.com/Why-do-most-programming-languages-have-to-have-a-main-function)
 - [The Importance of the main() Function in C Programming](https://www.dummies.com/programming/c/the-importance-of-the-main-function-in-c-programming)
+- [Learn C](https://www.learn-c.org/)

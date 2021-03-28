@@ -1,7 +1,7 @@
 ---
 title: DFrontend Development setup on Windows 10
 date: 2019-06-27
-status: draft
+draft: true
 ---
 
 Can't believe i'm writing this one.. But need to use a Windows machine for work..

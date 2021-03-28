@@ -1,7 +1,7 @@
 ---
 title: Creating and writing to files in Node.js
 date: 2019-09-02
-status: draft
+draft: true
 ---
 
 objectives:

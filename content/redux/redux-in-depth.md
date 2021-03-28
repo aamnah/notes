@@ -2,7 +2,7 @@
 title: Redux in depth
 date: 2020-08-01
 slug: redux-in-depth
-status: draft
+draft: true
 description: This article has way too many notes to be called a summary. It's more of an aattempt at trying to understand Redux to the point where i am able to describe it 3 sentences max. Because, if you can't explain it simply, you don't understand it well enough.
 ---
 

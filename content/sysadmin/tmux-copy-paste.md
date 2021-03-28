@@ -3,7 +3,7 @@ title: Copying and pasting text in tmux
 slug: tmux-copy-paste
 date: 2020-06-28
 lastmod: 2020-06-30
-status: DRAFT
+draft: true
 ---
 
 - Hold down `Shift` (or `Option` on macOS) key and select text with mouse to **copy**

@@ -3,7 +3,7 @@ path: restore-tmux-session-layout
 title: Restore tmux session and layout
 description: save and restore tmux session and window layout after systems restarts
 date: 2020-05-13
-status: draft
+draft: true
 ---
 
 You can use tmux plugins

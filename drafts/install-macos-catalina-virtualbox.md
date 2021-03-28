@@ -2,7 +2,7 @@
 title: Installing macOS in VirtualBox on Linux
 date: 2020-08-11
 slug: install-macOS-virtualBox-catalina
-status: draft
+draft: true
 ---
 
 # Create the ISO

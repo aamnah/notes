@@ -1,7 +1,7 @@
 ---
 
 title: Bash script for installing ISPConfig 3.1 on Ubuntu 17.04
-status: draft
+draft: true
 date: 2017-05-21
 
 ---

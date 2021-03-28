@@ -2,7 +2,7 @@
 title: Docker - Getting started
 path: docker-getting-started
 date: 2020-05-13
-status: draft
+draft: true
 ---
 
 ```bash

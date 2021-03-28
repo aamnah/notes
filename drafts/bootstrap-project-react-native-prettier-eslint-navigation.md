@@ -2,7 +2,7 @@
 title: Bash script to bootstrap React Native project
 date: 2020-07-29
 slug: bootstrap-project-react-native-prettier-eslint-navigation
-status: draft
+draft: true
 category: Bash Scripting
 tags:
   - 'react native'

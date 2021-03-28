@@ -1,7 +1,7 @@
 ---
 title: Compressing and Minifying Scripts in WordPress
 date: 2015-01-26
-status: draft
+draft: true
 ---
 
 DRAFT

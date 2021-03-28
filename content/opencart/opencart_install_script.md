@@ -1,7 +1,7 @@
 ---
 title: Bash script to install AMP and Opencart on a fresh Ubuntu server
 date: 2020-05-16
-status: draft
+draft: true
 ---
 
 Work in Progress script. Basically combining [this one](https://github.com/aamnah/bash-scripts/blob/master/install/amp_debian.sh), [this one](https://github.com/aamnah/bash-scripts/blob/master/setup/virtualhost.sh) and [this one](https://github.com/aamnah/bash-scripts/blob/master/install/opencart.sh) so that i don't have to do them one by one.

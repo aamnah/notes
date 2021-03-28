@@ -1,7 +1,7 @@
 ---
 title: Shadows and Elevation in React Native
 date: 2019-12-21
-status: draft
+draft: true
 ---
 
 In Android (and React Native), you don't have `box-shadow`, you have `elevation` instead, which works with `z-index`

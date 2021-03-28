@@ -2,7 +2,7 @@
 title: Generating PDF files with JavaScript
 slug: generate_pdf_files_javascript_jspdf
 date: 2014-09-01
-status: draft
+draft: true
 ---
 
 DRAFT

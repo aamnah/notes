@@ -1,6 +1,6 @@
 ---
 title: Installing snap packages on Armbian
-status: draft
+draft: true
 date: 2018-08-16
 ---
 

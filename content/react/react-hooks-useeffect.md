@@ -1,7 +1,7 @@
 ---
 title: React Hooks - useEffect
 date: 2020-07-13
-status: draft
+draft: true
 slug: react-hooks-useeffect
 ---
 

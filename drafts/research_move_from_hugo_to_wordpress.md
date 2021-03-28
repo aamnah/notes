@@ -2,7 +2,7 @@
 title: Research on moving from Hugo to WordPress
 path: research_move_from_hugo_to_wordpress
 date: 2020-05-01
-status: draft
+draft: true
 ---
 
 Here's the thing: i want comments. And not the shitty Dsiqus, and not [roll out my own system](https://www.taniarascia.com/add-comments-to-static-site/).

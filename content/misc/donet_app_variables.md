@@ -1,7 +1,7 @@
 ---
 title: Setting and Using application variables in .NET MVC
 date: 2019-04-29
-status: draft
+draft: true
 ---
 
 

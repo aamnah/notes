@@ -1,7 +1,7 @@
 ---
 title: Notes on hosting my own email server
 date: 2020-08-28
-status: draft
+draft: true
 slug: host-email-server-postfix-dovecot
 ---
 

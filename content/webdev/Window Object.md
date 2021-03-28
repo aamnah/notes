@@ -2,7 +2,7 @@
 
 title: Window object
 slug: window-object-browser-api
-status: draft
+draft: true
 date: 2017-03-21
 ---
 

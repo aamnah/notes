@@ -1,7 +1,7 @@
 ---
 title: Environment variables in Expo projects
 date: 2020-07-03
-status: draft
+draft: true
 ---
 
 - `.env` is for _environment specific_ variables (DEBUG=true), it's not for storing secrets (API keys..)

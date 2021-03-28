@@ -1,7 +1,7 @@
 ---
 title: Change Swap partition in Ubuntu
 path: change-update-swap-partition-ubuntu
-status: draft
+draft: true
 date: 2020-04-08
 ---
 

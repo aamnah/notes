@@ -2,7 +2,7 @@
 
 title: Set up Apache, PHP, MySQL, PHPMyAdmin on macOS Sierra
 subtitle: Set up a local web development environment on your Mac machine
-status: draft
+draft: true
 slug: macos-local-development-environment
 date: 2017-07-16
 

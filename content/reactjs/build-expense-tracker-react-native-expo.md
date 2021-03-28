@@ -1,7 +1,7 @@
 ---
 title: Building an app with React Native and Expo
 date: 2019-10-03
-status: draft
+draft: true
 ---
 
 # Day 1

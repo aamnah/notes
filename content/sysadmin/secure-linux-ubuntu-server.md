@@ -2,10 +2,8 @@
 title: Secure a Linux Ubuntu Server
 subtitle: Initial steps to take for a new linux machine's security
 date: 2017-08-11
-status: draft
+draft: true
 ---
-
-STATUS: Draft
 
 ```bash
 #!/bin/bash
@@ -32,8 +30,7 @@ rkhunter() {
 
 RKHunter downloads a list of known exploits and then checks your system against the database. It also alerts you if it detects unsafe settings in some common applications.
 
-Links
----
+## Links
 
 - [The Rootkit Hunter project](http://rkhunter.sourceforge.net/)
 - [The Rootkit Hunter project: README](http://rkhunter.cvs.sourceforge.net/viewvc/rkhunter/rkhunter/files/README)

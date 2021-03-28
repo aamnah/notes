@@ -1,7 +1,7 @@
 ---
 title: How to add and enable 2K display resolution for your monitor
 description: Adding 2K 2560x1440 (WQHD) resolution for my Asus VX24AH monitor on an Armbian based Orange Pi Plus 2
-status: draft
+draft: true
 date: 2018-08-26
 lastmod: 2019-01-08
 ---

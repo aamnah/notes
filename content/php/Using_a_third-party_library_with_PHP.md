@@ -2,7 +2,7 @@
 
 title: Using a third-party library with PHP
 slug: using_a_third-party_library_with_php
-status: draft
+draft: true
 date: 2015-02-24
 
 ---

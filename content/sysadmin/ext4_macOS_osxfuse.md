@@ -1,7 +1,7 @@
 ---
 title: Mount an ext4 Linux drive on macOS Mojave
 date: 2019-01-14
-status: draft
+draft: true
 ---
 
 #### tl;dr

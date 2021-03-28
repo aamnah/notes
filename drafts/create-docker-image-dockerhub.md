@@ -1,7 +1,7 @@
 ---
 title: How to build and publish a Docker image on DockerHub
 date: 2020-07-01
-status: draft
+draft: true
 category: docker
 slug: create-docker-image-dockerhub
 ---

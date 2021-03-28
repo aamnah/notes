@@ -1,7 +1,7 @@
 ---
 title: Using Font Face Observer
 date: 2019-01-19
-status: draft
+draft: true
 ---
 
 Font Face Observer let's you add a CSS class on an element based on whether or not the font was loaded. This is useful when you want to avoid FOUT (Flash of Unstyled Text)

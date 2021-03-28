@@ -2,7 +2,7 @@
 title: Using SWR
 date: 2020-07-13
 slug: using-swr-react-hook
-status: draft
+draft: true
 ---
 
 ### Why SWR?
