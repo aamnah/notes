@@ -1,5 +1,6 @@
 ---
-title: Prototypal Inheritance in JavaScript
+title: Prototypal Inheritance in JavaScript with code examples
+category: JavaScript
 date: 2021-05-05
 ---
 
@@ -104,3 +105,10 @@ var jane = Object.create(animal, { food: { value: 'iceacream' } }) // passing it
 console.log('jane: ', jane)
 console.log(jane.food) // "iceacream"
 ```
+
+## Resources
+
+- [Advanced Javascript - Section 7: Object Orientation](https://www.udemy.com/course/javascript-advanced/learn/lecture/18034697#overview)
+- [The Modern JavaScript Bootcamp- Section 10: Advanced Objects and Functions](https://www.udemy.com/course/modern-javascript/learn/lecture/9873126#overview)
+- [JavaScript: Understanding the Weird Parts - Section 5: Object-Oriented Javascript and Prototypal Inheritance](https://www.udemy.com/course/understand-javascript/learn/lecture/2237552#overview)
+- [Creating Object-oriented TypeScript Code](https://app.pluralsight.com/library/courses/typescript-creating-object-oriented-code)
