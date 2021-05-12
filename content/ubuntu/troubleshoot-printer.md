@@ -3,7 +3,7 @@ title: Troubleshooting HP Printer on Ubuntu 2104
 date: 2021-05-12
 ---
 
-A fresh install of latest Ubuntu usually gives me some sort of printer issues. This is what i did this time:
+A fresh install of latest Ubuntu usually gives me some sort of printer issues. This time it would spend some time _Processing_ the _job_ and then _Stop_. This is what i did this time:
 
 1. Install drivers
 
