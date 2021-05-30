@@ -19,6 +19,7 @@ ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 # Install Node with nvm
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash  \
     && . ${NVM_DIR}/nvm.sh \
+    && . ${NVM_DIR}/bash_completion \
     && echo "\n npm version is: $(npm -v)" \
     && echo "\n Node version is: $(node -v)"
 
@@ -89,3 +90,4 @@ ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 - [What does unsafe-perm in npm actually do?](https://geedew.com/What-does-unsafe-perm-in-npm-actually-do/)
 - [What is the drawback of install with --unsafe-perm](https://github.com/strongloop/strong-pm/issues/334#issuecomment-203638235)
 - [Dockerfile Reference: SHELL](https://docs.docker.com/engine/reference/builder/#shell)
+- [How to make builder RUN use /bin/bash instead of /bin/sh](https://github.com/moby/moby/issues/7281#issuecomment-389440503)
