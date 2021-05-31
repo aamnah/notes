@@ -11,12 +11,12 @@ FROM ubuntu:21.04
 
 LABEL description="Install Node with nvm"
 
+# Install Node with nvm
 ARG NODE_VERSION=14.17.0
-
+ENV NPM_CONFIG_USER=root
 ENV NVM_DIR=/root/.nvm
 ENV PATH="/root/.nvm/versions/node/v${NODE_VERSION}/bin/:${PATH}"
 
-# Install Node with nvm
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash  \
     && . ${NVM_DIR}/nvm.sh \
     && . ${NVM_DIR}/bash_completion \
@@ -57,17 +57,24 @@ You can pass these config values as flag by adding a `--` to the beginning. If y
 You can do it on a per install command basis
 
 ```bash
-npm i -g --unsafe-perm expo-cli
+npm i -g --unsafe-perm --allow-root expo-cli
 ```
 
 Or you can set it for the entire script/container (which is not recommended)
 
 ```bash
+npm config set user 0
 npm config set unsafe-perm true
 npm i -g expo-cli
 ```
 
-While most online answers will include the `--allow-root` flag as well (or `npm config set user 0`), i didn't need it to install a package globally, `--unsafe-perm` was enough.
+While most online answers will include the `--allow-root` flag (or `npm config set user 0`), i went the `ENV NPM_CONFIG_USER=root` route where i set the npm user for the entire Dockerfile
+
+```dockerfile
+ENV NPM_CONFIG_USER=root
+```
+
+In the end, i don't quite see the benefit of installing via nvm since i ended up using these flags anyway and installing packages globally was a troubling experience.
 
 ### Adding Node to $PATH
 
