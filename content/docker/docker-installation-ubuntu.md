@@ -8,7 +8,13 @@ date: 2020-05-13
 
 ```bash
 # install
-sudo apt install -y docker.io docker-compose
+# sudo apt install -y docker.io docker-compose
+
+curl -sSL https://get.docker.com/ | sh
+
+
+# sudo apt-get update
+# sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 # use Docker as a non-root user
 # get rid of having to sudo or be root
