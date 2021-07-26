@@ -5,8 +5,7 @@ status: draft
 slug: fastlane-getting-started
 ---
 
-- Inside your project, create a `Gemfile`
-- Add the following to it
+- Inside your project, create a `Gemfile` and add the following to it
 
 ```ruby
 source "https://rubygems.org"
