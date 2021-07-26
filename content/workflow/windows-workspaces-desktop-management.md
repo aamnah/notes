@@ -8,6 +8,7 @@ slug: windows-workspaces-desktop-management
 - Workspaces are called _Desktops_ in Windows. They were introduced as virtual desktops in Windows 10
 - Virtual desktops in Windows are still inferior to something like Ubuntu because there are no keyboard shortcuts to move applications between desktops
 - Unlike Ubuntu, you can't search in Task View and you can't launch applications from Task View.
+- If you **scroll on the Task bar** it'll switch between desktops!
 
 | Keys                               | Description                        |
 | ---------------------------------- | ---------------------------------- |
