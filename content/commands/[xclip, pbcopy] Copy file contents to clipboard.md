@@ -3,13 +3,21 @@ title: Copy contents to clipboard form command line (Ubuntu, macOS)
 date: 2021-07-26
 ---
 
-- macOS comes with `pbcopy`
+#### macOS
+
+macOS comes with `pbcopy`
 
 ```bash
 pbcopy < ~/.ssh/id_rsa.pub
+
+# or 
+
+cat ~/.ssh/id_rsa.pub | pbcopy
 ```
 
-- On Ubuntu you can use `xclip`
+#### Ubuntu
+
+On Ubuntu you can use `xclip`
 
 ```bash
 sudo apt install xclip
