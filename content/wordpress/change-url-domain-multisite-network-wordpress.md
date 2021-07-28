@@ -12,7 +12,12 @@ changing the URL for multisite network
 
 ### Update database table
 
-Change URL from the Dashboard > Settings first and see how/where it updates the values in the database
+Change URL from the Dashboard > Settings first and see how/where it updates the values in the database. Another option is changing it via `wp-cli`
+
+```bash
+wp option update home 'http://newsiteurl.com'
+wp option update siteurl 'http://newsiteurl.com'
+```
 
 Do this for all sites in the network
 
@@ -32,11 +37,13 @@ select * from wp_site where domain LIKE CONCAT('%', 'old.siteurl.com', '%');
 select * from wp_sitemeta where meta_value LIKE CONCAT('%', 'old.siteurl.com', '%');
 select * from wp_blogs where domain LIKE CONCAT('%', 'old.siteurl.com', '%');
 select * from wp_options where option_value LIKE CONCAT('%', 'old.siteurl.com', '%');
+select * from wp_posts where guid LIKE CONCAT('%', 'old.siteurl.com', '%');
 select * from wp_posts where post_content LIKE CONCAT('%', 'old.siteurl.com', '%');
 select * from wp_postmeta where meta_value LIKE CONCAT('%', 'old.siteurl.com', '%');
 
 -- Additional sites
 select * from wp_2_options where option_value LIKE CONCAT('%', 'old.siteurl.com', '%');
+select * from wp_2_posts where guid LIKE CONCAT('%', 'old.siteurl.com', '%');
 select * from wp_2_posts where post_content LIKE CONCAT('%', 'old.siteurl.com', '%');
 select * from wp_2_postmeta where meta_value LIKE CONCAT('%', 'old.siteurl.com', '%');
 ```
@@ -44,10 +51,12 @@ select * from wp_2_postmeta where meta_value LIKE CONCAT('%', 'old.siteurl.com',
 ```sql
 -- replace old URL with new URL
 UPDATE wp_options SET option_value = replace(option_value, 'http://www.oldurl', 'http://www.newurl') WHERE option_name = 'home' OR option_name = 'siteurl';
-UPDATE wp_posts SET guid = replace(guid, 'http://www.oldurl','http://www.newurl');
+UPDATE wp_posts SET guid = replace(guid, 'http://www.oldurl','http://www.newurl'); -- this guid is kind of like permalink, mentions the entire site URL
 UPDATE wp_posts SET post_content = replace(post_content, 'http://www.oldurl', 'http://www.newurl');
 UPDATE wp_postmeta SET meta_value = replace(meta_value,'http://www.oldurl','http://www.newurl');
 ```
+
+- the `guid` in `wp_posts` is kind of like permalink, mentions the entire site URL. Consequently, the results for `guid` will be a lot more than `post_content` which is checking for links inside the post content itself. (7457 vs. 253)
 
 ### Update `wp-config.php`
 
@@ -73,4 +82,5 @@ define( 'BLOG_ID_CURRENT_SITE', 1 );
 
 - [How to Change a WordPress Multisite Primary Domain](https://www.hostgator.com/help/article/how-to-change-a-wordpress-multisite-primary-domain)
 - [Moving WordPress](https://wordpress.org/support/article/moving-wordpress/)
+- [Changing The Site URL](https://wordpress.org/support/article/changing-the-site-url/)
 - [SQL LIKE Keyword](https://www.w3schools.com/sql/sql_ref_like.asp)
