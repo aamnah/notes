@@ -28,6 +28,8 @@ wp option update home 'http://newsiteurl.com'
 wp option update siteurl 'http://newsiteurl.com'
 ```
 
+[wp option <command>](https://developer.wordpress.org/cli/commands/option/)
+
 #### Use search and replace tool
 
 Use this recommended [search and replace tool by Interconnect IT](https://github.com/interconnectit/Search-Replace-DB) to run your queries (you can also do a safe dry run). You should be wary of updating database fields, something to do with WordPress storing data in serialized arrays and PHP relying on the _string length_ of each piece of data to be able to read it properly.. [ref](https://wordpress.stackexchange.com/a/54225)
@@ -112,4 +114,6 @@ define( 'BLOG_ID_CURRENT_SITE', 1 );
 - [Moving WordPress Multisite](https://wordpress.org/support/article/moving-wordpress/#moving-wordpress-multisite)
 - [Changing The Site URL](https://wordpress.org/support/article/changing-the-site-url/)
 - [SQL LIKE Keyword](https://www.w3schools.com/sql/sql_ref_like.asp)
+- [SQL Server CONCAT() Function](https://www.w3schools.com/sql/func_sqlserver_concat.asp)
 - [Update WordPress posts for SSL https](https://github.com/aamnah/notes/blob/main/content/databases/WP_update-posts-https.md)
+- [Change and Update WordPress URLS in Database When Site is Moved to new Host](https://wpbeaches.com/updating-wordpress-mysql-database-after-moving-to-a-new-url/)
