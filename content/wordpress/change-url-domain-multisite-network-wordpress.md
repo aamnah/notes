@@ -49,19 +49,19 @@ Do this for all sites in the network
 -- find the places where the URL is used
 
 -- Main domain site
-SELECT * FROM wp_blogs where domain LIKE CONCAT('%', 'old.siteurl.com', '%'); -- has the main site for the entire network and paths for individual sites
-SELECT * FROM wp_site where domain LIKE CONCAT('%', 'old.siteurl.com', '%');
-SELECT * FROM wp_sitemeta where meta_value LIKE CONCAT('%', 'old.siteurl.com', '%');
-SELECT * FROM wp_options where option_value LIKE CONCAT('%', 'old.siteurl.com', '%');
-SELECT * FROM wp_posts where guid LIKE CONCAT('%', 'old.siteurl.com', '%'); -- this guid is kind of like permalink, mentions the entire site URL
-SELECT * FROM wp_posts where post_content LIKE CONCAT('%', 'old.siteurl.com', '%'); -- media file links
-SELECT * FROM wp_postmeta where meta_value LIKE CONCAT('%', 'old.siteurl.com', '%');
+SELECT * FROM `wp_blogs` WHERE `domain` LIKE CONCAT('%', 'old.siteurl.com', '%'); -- has the main site for the entire network and paths for individual sites
+SELECT * FROM `wp_site` WHERE `domain` LIKE CONCAT('%', 'old.siteurl.com', '%');
+SELECT * FROM `wp_sitemeta` WHERE `meta_value` LIKE CONCAT('%', 'old.siteurl.com', '%');
+SELECT * FROM `wp_options` WHERE `option_value` LIKE CONCAT('%', 'old.siteurl.com', '%');
+SELECT * FROM `wp_posts` WHERE `guid` LIKE CONCAT('%', 'old.siteurl.com', '%'); -- this guid is kind of like permalink, mentions the entire site URL
+SELECT * FROM `wp_posts` WHERE `post_content` LIKE CONCAT('%', 'old.siteurl.com', '%'); -- media file links
+SELECT * FROM `wp_postmeta` WHERE `meta_value` LIKE CONCAT('%', 'old.siteurl.com', '%');
 
 -- Additional sites
-SELECT * FROM wp_2_options where option_value LIKE CONCAT('%', 'old.siteurl.com', '%');
-SELECT * FROM wp_2_posts where guid LIKE CONCAT('%', 'old.siteurl.com', '%');
-SELECT * FROM wp_2_posts where post_content LIKE CONCAT('%', 'old.siteurl.com', '%');
-SELECT * FROM wp_2_postmeta where meta_value LIKE CONCAT('%', 'old.siteurl.com', '%');
+SELECT * FROM `wp_2_options` WHERE `option_value` LIKE CONCAT('%', 'old.siteurl.com', '%');
+SELECT * FROM `wp_2_posts` WHERE `guid` LIKE CONCAT('%', 'old.siteurl.com', '%');
+SELECT * FROM `wp_2_posts` WHERE `post_content` LIKE CONCAT('%', 'old.siteurl.com', '%');
+SELECT * FROM `wp_2_postmeta` WHERE `meta_value` LIKE CONCAT('%', 'old.siteurl.com', '%');
 ```
 
 ```sql
