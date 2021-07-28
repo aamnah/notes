@@ -24,7 +24,8 @@ Add the following to the end of your `~/.bashrc`
 . ~/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 #export PS1='\w$(__git_ps1 " (%s)")\$ '
-export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]@\[\033[01;32m\]\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] $(__git_ps1 " (%s)")\$ '
+#export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]@\[\033[01;32m\]\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] $(__git_ps1 " (%s)") \$ '
+export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[00m\]@\[\033[01;32m\]\h\[\033[00m\] \[\033[01;34m\]\w\[\033[00m\] \$ $(__git_ps1 "(%s)") '
 ```
 
 And then `source ~/.bashrc` for the changes to take effect
