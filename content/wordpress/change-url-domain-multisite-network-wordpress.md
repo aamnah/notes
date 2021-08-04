@@ -77,6 +77,7 @@ UPDATE `wp_postmeta` SET `meta_value` = REPLACE(meta_value,'http://www.oldurl','
 ```
 
 - the `guid` in `wp_posts` is kind of like permalink, mentions the entire site URL. Consequently, the results for `guid` will be a lot more than `post_content` which is checking for links inside the post content itself. (7457 vs. 253)
+- changing the `guid` is [NOT advised](https://wordpress.org/support/article/changing-the-site-url/#important-guid-note) because doing so will mess up feed readers and show _read_ items as new content again.
 
 You also need to check for **directory paths** if you have changed them during the migration. For example `/var/www/html/wp-content/` vs. `/var/www/mysite.com/public_html/wp-content/`
 
