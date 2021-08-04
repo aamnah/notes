@@ -69,6 +69,30 @@ sudo usermod -aG docker $(whoami)
 
 Make sure you logout and log back in after this in order for the change to work
 
+## Upgrade Compose
+
+the docker compose installed with Ubuntu was `1.25.0` while the latest was `1.29.2`. i wanted the latest because of `.env` file changes introduced in `+v1.28`..
+
+```bash
+# remove any existing installs
+sudo apt-get remove docker-compose
+sudo rm /usr/local/bin/docker-compose
+
+# curl + grep
+VERSION=$(curl --silent https://api.github.com/repos/docker/compose/releases/latest | grep -Po '"tag_name": "\K.*\d')
+DESTINATION=/usr/local/bin/docker-compose
+# download the current stable release of Docker Compose
+sudo curl -L "https://github.com/docker/compose/releases/download/${VERSION}/docker-compose-$(uname -s)-$(uname -m)" -o ${DESTINATION}
+
+# Apply executable permissions to the binary
+sudo chmod +x ${DESTINATION}
+
+# create a symbolic link to /usr/bin or any other directory in your path
+sudo ln -s ${DESTINATION} /usr/bin/docker-compose
+
+docker-compose --version # docker-compose version 1.29.2, build 5becea4c
+```
+
 ## Links
 
 - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
