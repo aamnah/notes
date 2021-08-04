@@ -13,7 +13,7 @@ GIT_VERSION=`git version | sed 's/git version //'`
 wget -O ~/git-prompt.sh https://raw.githubusercontent.com/git/git/v${GIT_VERSION}/contrib/completion/git-prompt.sh
 
 # one liner
-# wget -O ~/git-prompt.sh https://raw.githubusercontent.com/git/git/v$`git version | sed 's/git version //'`/contrib/completion/git-prompt.sh
+# wget -O ~/git-prompt.sh https://raw.githubusercontent.com/git/git/v`git version | sed 's/git version //'`/contrib/completion/git-prompt.sh
 ```
 
 Add the following to the end of your `~/.bashrc`
