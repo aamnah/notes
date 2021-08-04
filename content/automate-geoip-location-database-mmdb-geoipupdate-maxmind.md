@@ -41,7 +41,7 @@ geoipupdate:
     GEOIPUPDATE_ACCOUNT_ID: ${GEOIPUPDATE_ACCOUNT_ID}
     GEOIPUPDATE_LICENSE_KEY: ${GEOIPUPDATE_LICENSE_KEY}
     GEOIPUPDATE_EDITION_IDS: GeoLite2-Country
-    GEOIPUPDATE_FREQUENCY: 96 # number of hours between geoipupdate runs, 96 is four days, GeoIP2 Country is update twice weekly on Tuesdays and Fridays
+    GEOIPUPDATE_FREQUENCY: 96 # number of hours between geoipupdate runs, 96 is four days, GeoIP2 Country is updated twice weekly on Tuesdays and Fridays
   volumes:
     - ./data/maxmind:/usr/local/share/GeoIP
 ```
