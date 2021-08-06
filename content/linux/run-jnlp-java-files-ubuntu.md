@@ -1,6 +1,7 @@
 ---
-date: 2017-01-23
 title: Run JNLP Files on Ubuntu
+date: 2017-01-23
+lastmod: 2021-08-06
 ---
 
 ```bash
