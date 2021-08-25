@@ -5,7 +5,7 @@ date: 2021-08-22
 
 - Data needs to be modelled differently
 - It's easier to find things in an object with key value pairs than it is in an array
-- You'll see this sort of data modeling in usage of state libraries like Redux where we have data _stores_ and need to get values from those stores after finding them first..
+- You'll see the _object of objects_ sort of data modeling in usage of state libraries like Redux where we have data _stores_ and need to get values from those stores after finding them first..
 
 ### Array containing (anonymous) objects
 
@@ -17,6 +17,13 @@ date: 2021-08-22
     alpha2code: 'IS',
     alpha3code: 'ISL',
     flag: 'ISL.svg',
+  },
+  {
+    name: 'Brazil',
+    dialCode: '+55',
+    alpha2code: 'BR',
+    alpha3code: 'BRA',
+    flag: 'BRA.svg',
   },
   // {...}
 ]
@@ -45,6 +52,13 @@ countriesDataObject
     alpha2code: 'IS',
     alpha3code: 'ISL',
     flag: 'ISL.svg',
+  },
+  BRA: {
+    name: "Brazil",
+    dialCode: "+55",
+    alpha2code: "BR",
+    alpha3code: "BRA",
+    flag: "BRA.svg",
   },
   // {...}
 }
