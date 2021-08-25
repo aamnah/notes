@@ -1,6 +1,7 @@
 ---
 title: Three ways of determining the user's country inside the browser (Geolocation API, IP address, Timezone)
 date: 2021-08-20
+lastmod: 2021-08-25
 slug: three-ways-determine-country-inside-browser-ip-geolocation-timezone
 ---
 
@@ -11,6 +12,8 @@ slug: three-ways-determine-country-inside-browser-ip-geolocation-timezone
 For Node based apps you can use [countries-and-timezones](https://www.npmjs.com/package/countries-and-timezones) which is ~9kb and can give you a country based on the timezone
 
 ### Geolocation API
+
+This i didn't pay much attention to because i did not want to prompt the user to get their permission for using their location. Overtly creepy.
 
 ### IP Address
 
@@ -51,6 +54,24 @@ fetch('https://extreme-ip-lookup.com/json/')
 
 ```js
 console.log(Intl.DateTimeFormat().resolvedOptions().timeZone) // 'Asia/Karachi'
+```
+
+I ended up using [countries-and-timezones](https://www.npmjs.com/package/countries-and-timezones) which is a lightweight JS lib for matching a timezone with a country. Got what i wanted in less than 20kb and no external API calls.
+
+Keep in mind that this relies on the user setting their timezone correctly. While one timezone can be in multiple countries (for example: `Europe/Zurich` is in Germany, Switzerland and Liechtenstein..), there are actually separate timezone definitions for each country (for example `Europe/Berlin` and `Europe/Vaduz`), that the user has probably set correctly. But there's definitely no guarantee.
+
+(Since my use case was pre-selecting a country in a country selection dropdown, i have provided them with a simple way of correcting any mismatches. The detection and pre-selection is just to make the user's life easy)
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/manuelmhtr/countries-and-timezones@latest/dist/index.min.js"></script>
+```
+
+```js
+// Load the file if you have saved it locally and not sourcing a script in HTML
+// import "../lib/countries-and-timezones.min.js"
+
+let browserTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+let browserCountry = ct.getCountryForTimezone(browserTimezone) // {id: "PK", name: "Pakistan", timezones: Array(1)}
 ```
 
 ## Links
