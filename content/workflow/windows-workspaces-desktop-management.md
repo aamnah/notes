@@ -20,6 +20,8 @@ slug: windows-workspaces-desktop-management
 
 There don't seem to be any keyboard shortcuts for moving applications between Windows desktops. You have to drag and drop applications to the desktop you want from Task View. Projects like [Windows 10 Virtual Desktop Enhancer](https://github.com/sdias/win-10-virtual-desktop-enhancer) exist, but have been abandoned due to lack of interest/time. I tried installing them but the shortcuts to move applications didn't work. Same for the multiple forks of it from various people. Apparently it gets broken every time Windows updates.
 
+You also can NOT rearrange desktops. If you wanted the one with all the open applications in the middle, you'll have to manually move all the open applications to the middle because it won't move the entire desktop.
+
 ## Links
 
 - [How to use multiple desktops in Windows 10](https://www.cnet.com/how-to/how-to-use-multiple-desktops-in-windows-10/)
