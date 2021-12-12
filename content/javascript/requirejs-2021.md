@@ -29,7 +29,17 @@ import module = require('module')
 export = foo
 ```
 
+**What does RequireJS do?**
+
+- code splitting into files (aka _scripts_ or _modules_)
+- dependency management (which script needs what other scripts to work, load them in order)
+- path mapping (you can have _clean_ absolute imports)
+
 ## Links
 
 - [JavaScript Modules: From IIFEs to CommonJS to ES6 Modules](https://www.youtube.com/watch?v=qJWALEoGge4&t=1713s)
 - [JavaScript Modules in 100 Seconds](https://www.youtube.com/watch?v=qgRUr-YUk1Q)
+- [Module Bundlers Explained... Webpack, Rollup, Parcel, and Snowpack](https://www.youtube.com/watch?v=5IG4UmULyoA)
+- [Module Cheatsheet](https://www.samanthaming.com/tidbits/79-module-cheatsheet/)
+- [WTF is RequireJS?](https://egghead.io/lessons/javascript-wtf-is-requirejs)
+- [Introduction to RequireJS](https://egghead.io/lessons/requirejs-introduction-to-requirejs)
