@@ -43,6 +43,14 @@ You can `put`, `delete` and `list` your secrets. passing a `--env` value is opti
 wrangler secret delete <name> --env ENVIRONMENT_NAME
 ```
 
+Using secrets in your project is simple, just reference it by name
+
+```ts
+headers: {
+    Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`,
+},
+```
+
 ## Secrets vs. KV
 
 Secrets are environment variables for your worker function while KV is for application data in the Cloudflare network that can be accessed from Workers
