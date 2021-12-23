@@ -35,19 +35,40 @@ wrangler tail
 
 will show you live logs
 
+## Secrets
+
+You can `put`, `delete` and `list` your secrets. passing a `--env` value is optional
+
+```bash
+wrangler secret delete <name> --env ENVIRONMENT_NAME
+```
+
+## Secrets vs. KV
+
+Secrets are environment variables for your worker function while KV is for application data in the Cloudflare network that can be accessed from Workers
+
 ## Using KV with TypeScript
 
-add your KV namespace to `wrangler.toml`
+List all KV namespaces associated with an account ID.
+
+```bash
+wrangler kv:namespace list
+```
+
+Create a KV namespace with the following command. This will also give you the snippet to add to your `wrangler.toml`
 
 ```bash
 wrangler kv:namespace create "MY_KV"
 ```
 
 ```toml
-kv_namespaces = [
+kv-namespaces = [
   { binding = "MY_KV", id = "1e239640775c428fb68239640775cac6" }
 ]
 ```
+
+- it has to be [`kv-namespaces` with a hyphen](https://github.com/cloudflare/wrangler/issues/1156#issuecomment-1000389175) and not `kv_namespaces` with an underscore
+- the `binding` value does not need to match the name of the KV namespace, the link is based on `id`
 
 create a `bindings.d.ts` in your `src` directory and define your namespace as a `KVNamespace`
 
@@ -72,4 +93,10 @@ and make sure you have [`workers-types` added to the project](https://github.com
     "types": ["@cloudflare/workers-types"]
   }
 }
+```
+
+Using the KV values in your project:
+
+```ts
+const UNSPLASH_ACCESS_KEY = await MY_KV.get('UNSPLASH_ACCESS_KEY')
 ```
