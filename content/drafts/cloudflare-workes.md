@@ -108,3 +108,11 @@ Using the KV values in your project:
 ```ts
 const UNSPLASH_ACCESS_KEY = await MY_KV.get('UNSPLASH_ACCESS_KEY')
 ```
+
+## Resources
+
+Following are free courses on egghead.io that were created by Cloudflare staff
+
+- [egghead.io: Introduction to Cloudflare Workers](https://egghead.io/courses/introduction-to-cloudflare-workers-5aa3)
+- [egghead.io: Build a Serverless API with Cloudflare Workers](https://egghead.io/courses/build-a-serverless-api-with-cloudflare-workers-d67ca551)
+- [egghead.io: Build Data-Driven Applications on the Edge with Workers and Workers KV](https://egghead.io/courses/build-data-driven-applications-on-the-edge-with-workers-and-workers-kv-4932f3ea)
