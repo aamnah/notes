@@ -52,6 +52,35 @@ umount /media/Files
 mount  /media/Files
 ```
 
+### Mount the partitions under user's home
+
+You will also have to mount the partitions inside the user's home directory for them to be allowed access from macOS. This was the last step i had to do in order to get rid of the permission error.
+
+```bash
+# unmount the old Files partition
+sudo umount Files
+
+#create a new directory mount point
+mkdir -p /home/aamnah/Mounts/Files
+
+# update mount point in /etc/fstab
+sudo nano /etc/fstab
+```
+
+`/media/aamnah/Files` would become `/home/aamnah/Mounts/Files`
+
+```bash
+UUID=009AD0155091CC5F /home/aamnah/Mounts/Files ntfs-3g
+defaults,uid=1000,gid=1000,umask=022 0 0
+```
+
+and now run the `mount` command again to mount at the new location
+
+```bash
+# unmount the new Files partition
+sudo mount Files
+```
+
 ## Links
 
 - [Automatically mount a drive using /etc/fstab, and limiting access to all users of a specific group](https://unix.stackexchange.com/questions/204641/automatically-mount-a-drive-using-etc-fstab-and-limiting-access-to-all-users-o)
