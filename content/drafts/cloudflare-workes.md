@@ -2,6 +2,10 @@
 date: 2021-12-12
 lastmod: 2021-12-23
 title: Notes on Cloudflare Workers
+tags:
+  - serverless
+  - cloudflare
+  - edge computing
 ---
 
 Cloudflare
