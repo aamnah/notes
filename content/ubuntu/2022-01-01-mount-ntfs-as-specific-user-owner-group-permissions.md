@@ -58,7 +58,7 @@ You will also have to mount the partitions inside the user's home directory for 
 
 ```bash
 # unmount the old Files partition
-sudo umount Files
+sudo umount /media/aamnah/Files
 
 #create a new directory mount point
 mkdir -p /home/aamnah/Mounts/Files
@@ -71,14 +71,14 @@ sudo nano /etc/fstab
 
 ```bash
 UUID=009AD0155091CC5F /home/aamnah/Mounts/Files ntfs-3g
-defaults,uid=1000,gid=1000,umask=022 0 0
+defaults,uid=1000,gid=1000 0 0
 ```
 
-and now run the `mount` command again to mount at the new location
+(i removed the `umask` bit to resolve unable to write errors, since all computers on the network are my own i'm not too worried) and now run the `mount` command again to mount at the new location
 
 ```bash
 # unmount the new Files partition
-sudo mount Files
+sudo mount /home/aamnah/Mounts/
 ```
 
 ## Links
