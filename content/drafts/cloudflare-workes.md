@@ -113,6 +113,15 @@ Using the KV values in your project:
 const UNSPLASH_ACCESS_KEY = await MY_KV.get('UNSPLASH_ACCESS_KEY')
 ```
 
+### Specifying routes
+
+- Better to omit the `https://` part from the beginning of a URL. If you specify HTTPS, it won't work on any HTTP requests (you should not be using `http` to begin with. this is for _just in case_)
+- For routing to work on `www.` as well, use a pattern like `*.mydomain.com/*` to match all subdomains, or specify two routes with the `routes` key
+
+```toml
+routes = ["www.mydomain.com/*", "mydomain.com/*"]
+```
+
 ## Resources
 
 Following are free courses on egghead.io that were created by Cloudflare staff
