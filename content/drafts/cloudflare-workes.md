@@ -37,7 +37,7 @@ gh repo create my-project --private --source=. --remote=origin
 wrangler tail
 ```
 
-will show you live logs
+will show you live logs. You can also enable a live _log stream_ from Service > Logs > Resume log stream. Anything that you `console.log()` inside your worker shows up in these logs instead of the browser. Logs with multiline template literals do not show multiline, you'll get `/n` in the logs instead
 
 ## Secrets
 
