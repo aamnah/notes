@@ -1,7 +1,8 @@
 ---
+title: Notes on Cloudflare Workers
 date: 2021-12-12
 lastmod: 2021-12-23
-title: Notes on Cloudflare Workers
+draft: true
 tags:
   - serverless
   - cloudflare

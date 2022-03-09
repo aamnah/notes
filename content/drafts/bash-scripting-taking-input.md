@@ -4,9 +4,10 @@ title: 'Bash Scripting: Taking input'
 date: 2017-02-23
 type: post
 published: false
+draft: true
 categories:
-- '*nix'
-- Bash
+  - '*nix'
+  - Bash
 ---
 
 There are multiple ways of taking input via the Shell.
@@ -22,7 +23,7 @@ read user_name
 echo "Hello $user_name!"
 ```
 
-Here's what the script will look like when we run it. 
+Here's what the script will look like when we run it.
 
 ```
 sh nameexample
