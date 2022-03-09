@@ -1,6 +1,7 @@
 ---
 title: Deno basics
 date: 2021-04-18
+draft: true
 ---
 
 ```bash
