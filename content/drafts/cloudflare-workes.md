@@ -2,6 +2,10 @@
 date: 2021-12-12
 lastmod: 2021-12-23
 title: Notes on Cloudflare Workers
+tags:
+  - serverless
+  - cloudflare
+  - edge computing
 ---
 
 Cloudflare
@@ -33,7 +37,7 @@ gh repo create my-project --private --source=. --remote=origin
 wrangler tail
 ```
 
-will show you live logs
+will show you live logs. You can also enable a live _log stream_ from Service > Logs > Resume log stream. Anything that you `console.log()` inside your worker shows up in these logs instead of the browser. Logs with multiline template literals do not show multiline, you'll get `/n` in the logs instead
 
 ## Secrets
 
@@ -107,6 +111,15 @@ Using the KV values in your project:
 
 ```ts
 const UNSPLASH_ACCESS_KEY = await MY_KV.get('UNSPLASH_ACCESS_KEY')
+```
+
+### Specifying routes
+
+- Better to omit the `https://` part from the beginning of a URL. If you specify HTTPS, it won't work on any HTTP requests (you should not be using `http` to begin with. this is for _just in case_)
+- For routing to work on `www.` as well, use a pattern like `*.mydomain.com/*` to match all subdomains, or specify two routes with the `routes` key
+
+```toml
+routes = ["www.mydomain.com/*", "mydomain.com/*"]
 ```
 
 ## Resources

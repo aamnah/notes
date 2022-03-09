@@ -24,12 +24,12 @@ You need:
 ```
 
 ```html
-<svg class="icon"
-  xmlns:xlink="http://www.w3.org/1999/xlink">
-  
-  <use xlink:href="#facebook"></use>
+<svg class="icon" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <use href="#facebook"></use>
 </svg>
 ```
+
+NOTE: `xlink:href` is [deprecated](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/xlink:href) since SVG 2, you should use `href` instead.
 
 ```css
 /* Do whatever makes sense here.
@@ -72,7 +72,7 @@ Let's say you have an svg file that has 5 icons (60x60 each) in a single column,
 ```xml
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" viewBox="0 0 60 300"> <!-- viewBox="x y width height" -->
   <defs>
-    <symbol id="icon-facebook" viewBox="0 0 60 60"> 
+    <symbol id="icon-facebook" viewBox="0 0 60 60">
     	<!-- paths go here -->
     </symbol>
     <symbol id="icon-youtube" viewBox="0 60 60 60"></symbol>
@@ -87,7 +87,6 @@ Since there is only one column and all the icons are right-aligned, the `x` valu
 
 https://css-tricks.com/svg-fragment-identifiers-work/
 https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/viewBox
-
 
 ### Referncing an external SVG sprite
 
@@ -111,8 +110,8 @@ This `xlink:href` [**does not work**](https://stackoverflow.com/a/50153048) in W
 </svg>
 ```
 
-
 ### Fragment identifiers
+
 - You can use the svg's `viewBox` property to crop the svg to the specific area you want. That area is what is called a _fragment_. A _fragment identifier_ looks like this:
 
 ```
@@ -122,5 +121,5 @@ This `xlink:href` [**does not work**](https://stackoverflow.com/a/50153048) in W
 ```
 <img src="uiIcons.svg#svgView(viewBox(64 0 32 32))">
 ```
-- Getting the `viewBox` values is easy if you're using any graphic software. For example, Sketch shows the position and size values right in the top hand corner. 
 
+- Getting the `viewBox` values is easy if you're using any graphic software. For example, Sketch shows the position and size values right in the top hand corner.
