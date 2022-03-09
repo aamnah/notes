@@ -1,5 +1,5 @@
 ---
-title:
+title: Compilations vs. Interpretation
 date: 2021-03-29
 ---
 

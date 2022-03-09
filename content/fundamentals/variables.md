@@ -18,8 +18,17 @@ You may have to explicitly mention the _type_ or you may let the compiler _infer
 
 - JavaScript has `const`, `let` and `var`. `let` is _block scope_, `const` is for values that don't change, and `var` is _function scoped_
 
+|                    | `var`   | `const` | `let`   |
+| ------------------ | ------- | ------- | ------- |
+| global scope       | &check; | -       | -       |
+| function scope     | &check; | &check; | &check; |
+| block scope        | -       | &check; | &check; |
+| can be re-assigned | &check; | -       | &check; |
+
 ```js
-// JavaScript
+/*
+JavaScript
+*/
 
 // declaration
 var name
