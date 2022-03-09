@@ -35,11 +35,13 @@ On linux you can do
 
 ```bash
 ssh-copy-id user@123.456.789.123
+
+# ssh-copy-id -i ~/.ssh/mykey -p 1234 user@host
 ```
 
 ## Permissions
 
-The remote server doesn't like the authorizated*keys file having too many permissions. For better security, change the authorizated_keys file to `600` and the \_ssh* folder to `700`. The permissions on `.ssh` can not be any higher than 755.
+The remote server doesn't like the `authorizated_keys` file having too many permissions. For better security, change the `authorizated_keys` file to `600` and the `~/.ssh/` folder to `700`. The permissions on `.ssh` can not be any higher than 755.
 
 ```bash
 chmod 600 ~/.ssh/authorized_keys
@@ -149,13 +151,13 @@ cat ~/.ssh/id_ed25519.pub | pbcopy
 Simple as that. Though troubleshooting might be needed.
 
 - make sure the .pub key has been copied to the `authorized_keys` file, on remote server, in the `~/.ssh` folder. If it doesn't exist, create one.
-- make sure that the path you copied to is the path specifies in the ssh config file. The ssh config file is at: `sshd_config
+- make sure that the path you copied to is the path specifies in the ssh config file. The ssh config file is at: `sshd_config`
 - if the error doesn't make sense try ssh with verbose mode `-v`.
 - make sure you have no extra white space at the end when you copy the key, because that can throw it in a loop.
 
-![Screenshot 2015-11-15 23.45.12.png](./images/546FF4444B868B75D6ECAE93C373AD92.png)
+![Screenshot 2015-11-15 23.45.12.png](./images/resources/546FF4444B868B75D6ECAE93C373AD92.png)
 
-![Screenshot 2015-11-15 23.46.48.png](./images/E362BDAD8F8B586E6631A7382DB2DBC4.png)
+![Screenshot 2015-11-15 23.46.48.png](./images/resources/E362BDAD8F8B586E6631A7382DB2DBC4.png)
 
 ## Resources
 
