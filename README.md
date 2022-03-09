@@ -10,10 +10,10 @@ TODO:
 
 - [ ] Fix image URLs
   - [ ] update the URLs and references inside posts
-  - [ ] combine the image folders
+  - [x] combine the image folders
 - [x] test adding this repo as a git `submodule` to a Hugo or Gatsby site
 - [x] fix draft status
-- [ ] fix inconsistencies between `path` and `slug`
+- [x] fix inconsistencies between `path` and `slug` (change all to `slug`)
 
 ### Drafts
 
