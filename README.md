@@ -13,6 +13,7 @@ TODO:
   - [ ] combine the image folders
 - [x] test adding this repo as a git `submodule` to a Hugo or Gatsby site
 - [x] fix draft status
+- [ ] fix inconsistencies between `path` and `slug`
 
 ### Drafts
 
