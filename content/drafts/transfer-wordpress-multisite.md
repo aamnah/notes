@@ -2,6 +2,7 @@
 date: 2021-12-10
 slug: transfer-wordpress-multisite
 title: Transfer a WordPress Multisite network to a different server and different domain
+draft: true
 ---
 
 We are going to

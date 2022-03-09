@@ -1,3 +1,9 @@
+---
+title: Some questions that have popped up in my mind and can turn into blog posts
+draft: true
+date: 2021-11-23
+---
+
 Some questions that have popped up in my mind and can turn into blog posts
 
 - How would you write the same bash script in Bash and Go?

@@ -3,6 +3,7 @@ title: script to create a new project
 slug: bash-script-project-boilerplate
 category: Bash Scripting
 date: 2020-07-10
+draft: true
 ---
 
 ## Web dev with Parcel

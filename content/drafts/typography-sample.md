@@ -2,6 +2,7 @@
 title: This is a really very long post title so i could see the legibility over multiple lines. Let's make it even longer to stretch it over multiple lines
 subtitle: this is a subtitle
 date: 2017-02-25
+draft: true
 ---
 
 <p>A lead or excerpt should go here. two or three lines are good. About 320 chars is also fine.</p>
@@ -11,10 +12,15 @@ date: 2017-02-25
 <!--more-->
 
 # This is Heading 1
+
 ## This is Heading 2
+
 ### This is Heading 3
+
 #### This is Heading 4
+
 ##### This is Heading 5
+
 ###### This is Heading 6
 
 <h4>Paragraph</h4>
@@ -24,7 +30,6 @@ date: 2017-02-25
 I have loved the stars too fondly to be fearful of the night.<br>
 <cite>Sarah Williams</cite>
 </blockquote>
-
 
 <p>Laudantium reiciendis nostrum quaerat maxime, maiores voluptatem reprehenderit laborum fuga libero ea blanditiis sed delectus unde esse harum tenetur quidem <em>nam ut perspiciatis aut itaque</em>! Dolores incidunt ullam dolore a, modi, dolorum quis fugit tempore quos voluptates, totam quas nemo accusamus repellendus <strong>dolorum quis fugit tempore quos voluptates</strong> mollitia voluptatum nam animi ad?</p>
 

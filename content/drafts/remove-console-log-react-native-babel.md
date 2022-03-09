@@ -2,6 +2,7 @@
 title: Remove all console logs from a Staging/Production build of React Native
 date: 2021-03-08
 slug: remove-console-log-react-native-babel
+draft: true
 ---
 
 ```js
@@ -24,7 +25,7 @@ slug: remove-console-log-react-native-babel
 
 I need to be able to determine which environment i am in to properly configure the plugin config in `.babel .config.js`. We only want to remove consoles from Production and keep them in Local Development.
 
-The `` docs will tell you to set `process.env.NODE_ENV`. For example `process.env.NODE_ENV==='production'`. But i'm not setting that, i have `.env` files instead for my environment variables. Now how do i know which environment inside i am in in the babel config? That's where `babel-plugin-inline-dotenv` comes in.
+The ``docs will tell you to set`process.env.NODE_ENV`. For example `process.env.NODE_ENV==='production'`. But i'm not setting that, i have `.env`files instead for my environment variables. Now how do i know which environment inside i am in in the babel config? That's where`babel-plugin-inline-dotenv` comes in.
 
 ```js
 {
@@ -91,8 +92,7 @@ module.exports = function (api) {
 }
 ```
 
-Links
----
+## Links
 
 - [Common sources of performance problems](https://reactnative.dev/docs/performance#using-consolelog-statements)
 - [babel-plugin-transform-remove-console](https://babeljs.io/docs/en/babel-plugin-transform-remove-console/)
