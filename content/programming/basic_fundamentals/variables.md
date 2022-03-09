@@ -2,7 +2,6 @@
 title: Variables and Constants
 date: 2021-03-28
 lastmod: 2022-01-12
-status: draft
 draft: true
 ---
 

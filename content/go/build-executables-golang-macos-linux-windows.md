@@ -1,6 +1,6 @@
 ---
 title: Building executables for macOS, Linux and Windows with Go
 date: 2021-03-28
-status: draft
+draft: true
 slug: build-executables-golang-macos-linux-windows
 ---
