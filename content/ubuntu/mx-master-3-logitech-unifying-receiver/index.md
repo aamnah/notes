@@ -9,7 +9,7 @@ tl;dr: install [Solaar](https://pwr-solaar.github.io/Solaar/)
 sudo apt install -y solaar
 ```
 
-![/img/Solaar GUI screenshot](solaar-screenshot.png)
+![Solaar GUI screenshot](solaar-screenshot.png)
 
 I have been using a Logitech MX Master 3 for well over a year now. I had originally connected it to my Ubuntu system via Bluetooth after finding out that the _Unifying Received_ is not officially supported for Linux.
 

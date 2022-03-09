@@ -1,6 +1,7 @@
 ---
 title: Adding Quick Actions to Finder - macOS Big Sur
 date: 2021-02-26
+slug: quick-actions-finder-macos-big-sur
 ---
 
 - Open **Automator**
