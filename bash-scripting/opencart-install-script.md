@@ -1,11 +1,10 @@
 ---
-
 title: Opencart Install Script
 slug: opencart-install-script-bash
 date: 2015-02-17
 lastmod: 2017-03-13
-tags: 
-- opencart
+tags:
+  - opencart
 ---
 
 You can run this script directly using the following command

@@ -1,5 +1,4 @@
 ---
-
 title: '[df] Disk Free'
 slug: df-disk-free
 date: 2015-11-21
@@ -11,9 +10,10 @@ df -h
 
 The `-h` flag is for human readable output, show 30G instead of 30830588.
 
-![Screenshot df -h]({{ site.baseurl }}/assets/img/df-h.png)
+![Screenshot df -h](./images/df-h.png)
 
 ### Summing numbers in the output of `df`
+
 We can do that by pip the output of the df command to something like awk and have awk sum up the numbers, like so:
 
 ```bash
@@ -31,7 +31,7 @@ df -lP | column -t
 
 (To me it just looks like `column -t` right aligned the column data..)
 
-![Screenshot df -lp]({{ site.baseurl }}/assets/img/df-lp.png)
+![Screenshot df -lp](./images/df-lp.png)
 
 So, back to summing..
 
@@ -51,9 +51,8 @@ Get the sum and and at the end of it, print the value of `sum`.
 df -lP | awk '{sum += $3} END { printf "%d GiB\n", sum/2^20}`
 ```
 
-![Screenshot df -lp | awk]({{ site.baseurl }}/assets/img/df-lp-awk.png)
+![Screenshot df -lp | awk](./images/df-lp-awk.png)
 
-Links
----
+## Links
 
 - [YouTube: climagic: Summing numbers in the output of df](https://www.youtube.com/watch?v=oBZ1-E_NcMg)
