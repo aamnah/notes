@@ -1,7 +1,7 @@
 ---
 title: Go findings
 date: 2021-03-28
-status: draft
+draft: true
 ---
 
 - A function can [return any number of results](https://tour.golang.org/basics/6)

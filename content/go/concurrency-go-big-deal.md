@@ -1,7 +1,7 @@
 ---
 title: The big deal about concurrency in Go
 date: 2021-03-28
-status: draft
+draft: true
 ---
 
 ```go
