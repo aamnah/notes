@@ -3,6 +3,7 @@ title: Variables and Constants
 date: 2021-03-28
 lastmod: 2022-01-12
 status: draft
+draft: true
 ---
 
 | Language   | Keyword                   | Syntax                 |
@@ -27,13 +28,18 @@ A variable is any value that can change, or any value that you'll know later. So
 
 They can be _strong, statically_ typed (C++, Java, Rust, Swift), or they can be _dynamically_ typed (Python, JavaScript) or they can be _hybrid_ (Dart, TypeScript)
 
-You may have to explicitly mention the _type_ or you may let the compiler _infer_ it (i.e. you can _imply_ that it's a string..)
-
-Variables can be of different _types_ (Strings, Booleans, Integers)
+Variables can be of different _types_ (Strings, Booleans, Integers). You may have to explicitly mention the _type_ or you may let the compiler _infer_ it (i.e. you can _imply_ that it's a string..)
 
 And variables can have different _scopes_
 
 - JavaScript has `const`, `let` and `var`. `let` is _block scope_, `const` is for values that don't change, and `var` is _function scoped_
+
+|                    | `var`   | `const` | `let`   |
+| ------------------ | ------- | ------- | ------- |
+| global scope       | &check; | -       | -       |
+| function scope     | &check; | &check; | &check; |
+| block scope        | -       | &check; | &check; |
+| can be re-assigned | &check; | -       | &check; |
 
 When a _named_ value can only be assigned once and can not be changed later, we call it a _constant_ value. For example, year Pakistan got its independence is 1947. It will always be 1947, so it is a _constant_ value.
 
