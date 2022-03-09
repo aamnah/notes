@@ -10,6 +10,8 @@ We are going to
   - transfer files `wp-content`
   - transfer database
 - change the URL of the network
+  - run `sql` query on the database to find and replace old URL with new URL
+  - update `wp-config.php`
 
 ### transfer files
 
@@ -18,7 +20,7 @@ rsync -vPhaze "ssh -i /home/username/id_ed25519" /home/username/wordpress/wp-con
 ```
 
 - I'm using `rsync` because it is faster than `scp`
-  - `-P` will show you progress, as well as the ability to resume if you run the same command again
+  - `-P` will show you progress, as well as the ability to resume
   - `-h` will output numbers in a human readable format
   - `-a` will preserver modification times and permissions
   - `-z` will apply compression for faster transfers
@@ -27,3 +29,10 @@ rsync -vPhaze "ssh -i /home/username/id_ed25519" /home/username/wordpress/wp-con
 - I am specifying what SSH key to use in the rsync command so that i don't have to enter any password
 - The first path is the source, the second path is the destination
 - The folder i copied over was `wp-content`
+
+### transfer database
+
+This should be as simple as logging in to phpMyAdmin, exporting the database from one end and importing on the other.
+
+- On the new server, you may have to create a database and user first before importing data to it. I tend to use the _create user_ option and then select the \_\_ option to do everything in one go
+- If your database name, database username, or password has changed on the new server, you'll have to update them in `wp-config.php`
