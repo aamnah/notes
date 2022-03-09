@@ -3,8 +3,8 @@ title: SSH Keys
 slug: ssh-keys
 date: 2015-11-15
 lastmod: 2021-01-25
-tags: 
-- ssh
+tags:
+  - ssh
 ---
 
 - Generate a key pair locally
@@ -16,7 +16,8 @@ tags:
 ```bash
 ssh-keygen -t ed25519
 ```
-Previously, i used to use `rsa` as the type, but i have since moved on to `ed25519`. Ed25519 is a newer public-key algorithm which is faster (and safer) than RSA. Ed25519 public-key is also more compact, containing only 68 characters as compared to RSA 3072 that has 544 characters. Ed25519 is supported by OpenSSH so you should be good in almost all cases. 
+
+Previously, i used to use `rsa` as the type, but i have since moved on to `ed25519`. Ed25519 is a newer public-key algorithm which is faster (and safer) than RSA. Ed25519 public-key is also more compact, containing only 68 characters as compared to RSA 3072 that has 544 characters. Ed25519 is supported by OpenSSH so you should be good in almost all cases.
 
 Github recommends passing it your email with -C which is then uses as a label.
 
@@ -30,14 +31,15 @@ cd ~/.ssh && ssh-keygen -t ed25519 -C "hello@example.com"
 scp id_ed25519.pub user@remoteserver:location
 ```
 
-On linux you can do 
+On linux you can do
 
 ```bash
 ssh-copy-id user@123.456.789.123
 ```
 
 ## Permissions
-The remote server doesn't like the authorizated_keys file having too many permissions. For better security, change the authorizated_keys file to `600` and the _ssh_ folder to `700`. The permissions on `.ssh` can not be any higher than 755. 
+
+The remote server doesn't like the authorizated*keys file having too many permissions. For better security, change the authorizated_keys file to `600` and the \_ssh* folder to `700`. The permissions on `.ssh` can not be any higher than 755.
 
 ```bash
 chmod 600 ~/.ssh/authorized_keys
@@ -51,6 +53,7 @@ chmod go-w ~/
 ```
 
 ## sshd_config
+
 The config file for the ssh daemon is at:
 
 ```
@@ -95,14 +98,14 @@ Host foo
   IdentityFile ~/.ssh/MY_SSH_KEY
 ```
 
-
 ## Start the `ssh-agent` and load your keys
+
 See if ssh-agent is running:
 
 ```bash
 ps -e | grep [s]sh-agent
 ```
- 
+
 Run ssh-agent:
 
 ```bash
@@ -115,7 +118,7 @@ OR
 ssh-agent bash
 ```
 
-OR 
+OR
 
 ```bash
 eval $(ssh-agent)
@@ -124,7 +127,7 @@ eval $(ssh-agent)
 Load ssh key:
 
 ```bash
-ssh-add ~/.ssh/id_ed25519 
+ssh-add ~/.ssh/id_ed25519
 ```
 
 List loaded ssh keys:
@@ -134,13 +137,15 @@ ssh-add -l
 ```
 
 ## Copy key to clipboard
-Copy your key to your clipboard with (Linux only): 
+
+Copy your key to your clipboard with (Linux only):
 
 ```bash
 cat ~/.ssh/id_ed25519.pub | pbcopy
 ```
 
 ## Troubleshhoting
+
 Simple as that. Though troubleshooting might be needed.
 
 - make sure the .pub key has been copied to the `authorized_keys` file, on remote server, in the `~/.ssh` folder. If it doesn't exist, create one.
@@ -148,12 +153,11 @@ Simple as that. Though troubleshooting might be needed.
 - if the error doesn't make sense try ssh with verbose mode `-v`.
 - make sure you have no extra white space at the end when you copy the key, because that can throw it in a loop.
 
-![Screenshot 2015-11-15 23.45.12.png](/assets/img/resources/546FF4444B868B75D6ECAE93C373AD92.png)
+![Screenshot 2015-11-15 23.45.12.png](./images/546FF4444B868B75D6ECAE93C373AD92.png)
 
-![Screenshot 2015-11-15 23.46.48.png](/assets/img/resources/E362BDAD8F8B586E6631A7382DB2DBC4.png)
+![Screenshot 2015-11-15 23.46.48.png](./images/E362BDAD8F8B586E6631A7382DB2DBC4.png)
 
-Resources
----
+## Resources
 
 - [YouTube: Setting Up an SSH Key](https://www.youtube.com/watch?v=-J9wUW5NhOQ)
 - [Generating a new SSH key and adding it to the ssh-agent](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
