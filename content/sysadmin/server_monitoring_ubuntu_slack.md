@@ -1,5 +1,5 @@
 ---
-path: server_monitoring_ubuntu_slack
+slug: server_monitoring_ubuntu_slack
 title: Monitoring Ubuntu system with Monit and sending alerts in Slack
 date: 2020-05-12
 draft: true

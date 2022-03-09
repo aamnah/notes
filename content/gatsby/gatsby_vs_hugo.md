@@ -1,7 +1,7 @@
 ---
 title: Gatsby vs. Hugo
 date: 2020-05-01
-path: gatsby_vs_hugo
+slug: gatsby_vs_hugo
 draft: true
 ---
 

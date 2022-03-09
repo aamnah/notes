@@ -1,6 +1,6 @@
 ---
 title: Change Swap partition in Ubuntu
-path: change-update-swap-partition-ubuntu
+slug: change-update-swap-partition-ubuntu
 date: 2020-04-08
 lastmod: 2022-01-01
 ---

@@ -1,7 +1,7 @@
 ---
 title: The ultimate guide to creating your own Zsh (oh-my-zsh) theme
 date: 2020-05-02
-path: zsh-custom-theme-ultimate-guide
+slug: zsh-custom-theme-ultimate-guide
 ---
 
 Now that Zsh is now the default shell on macOS, i figured it was a good time to install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and give it another go. And obviously, i immediately wanted to customize my prompt. So i ended up going through the process of creating a custom Zsh theme..

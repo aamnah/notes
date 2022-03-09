@@ -1,5 +1,5 @@
 ---
-path: csharp-for-javascript-developers-part-1
+slug: csharp-for-javascript-developers-part-1
 title: C# for JavaScript developers - part 1
 description: Intro to C# and .NET - what the project structure looks like, how to build and run the project etc.
 date: 2020-05-14

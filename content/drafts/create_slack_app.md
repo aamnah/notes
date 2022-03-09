@@ -1,5 +1,5 @@
 ---
-path: create_slack_app
+slug: create_slack_app
 title: Creating a Slack app that uses Webhooks to send messages to a channel
 date: 2020-05-12
 draft: true

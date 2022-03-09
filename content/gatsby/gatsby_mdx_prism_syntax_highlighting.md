@@ -1,7 +1,7 @@
 ---
 title: Syntax highlighting for fenced code blocks in Gatsby MDX
 date: 2020-05-01
-path: gatsby_mdx_prism_syntax_highlighting
+slug: gatsby_mdx_prism_syntax_highlighting
 ---
 
 My Gatsby setup uses MDX. And i need to add syntax highlighting to the fenced code blocks
@@ -70,7 +70,6 @@ And then add the following to `gatsby-browser.js`
 
 ```jsx
 import Prism from 'prism-react-renderer/prism'
-
 ;(typeof global !== 'undefined' ? global : window).Prism = Prism // gotta do this one otherwise it'll say Prism is not defined
 
 require('prismjs/components/prism-csharp')

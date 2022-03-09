@@ -1,7 +1,7 @@
 ---
 title: Adding an SVG component to Gatsby (React)
 date: 2020-04-06
-path: svg-icon-component-gatsby
+slug: svg-icon-component-gatsby
 ---
 
 For React projects created with `create-react-app`, you can not import an SVG as `ReactComponent`, and that adds it as an inline SVG. In Gatsby it doesn't work.

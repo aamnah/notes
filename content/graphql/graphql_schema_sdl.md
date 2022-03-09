@@ -1,7 +1,7 @@
 ---
 title: Schema definition in GraphQL (example)
 date: 2020-05-02
-path: graphql_schema_sql_example
+slug: graphql_schema_sql_example
 ---
 
 - _SDL_ is Schema Definition Language

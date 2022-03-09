@@ -1,6 +1,6 @@
 ---
 title: My first mechanical keyboaard
-path: first-mechanical-keyboard
+slug: first-mechanical-keyboard
 date: 2020-03-20
 ---
 

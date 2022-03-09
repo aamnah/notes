@@ -2,7 +2,7 @@
 title: Passing style props to React Native core components in styled-components
 date: 2020-04-21
 draft: true
-path: touchable_highlight_react_native_styled_components_props
+slug: touchable_highlight_react_native_styled_components_props
 ---
 
 ```jsx

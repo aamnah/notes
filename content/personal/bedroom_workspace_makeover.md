@@ -1,7 +1,7 @@
 ---
 title: Bedroom Workspace Makeover
 date: 2020-03-30
-path: bedroom-workspace-makeover
+slug: bedroom-workspace-makeover
 draft: true
 tags:
   - bedroom-makeover

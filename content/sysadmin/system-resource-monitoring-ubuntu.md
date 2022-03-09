@@ -1,5 +1,5 @@
 ---
-path: system-resource-monitoring-ubuntu
+slug: system-resource-monitoring-ubuntu
 title: Monitoring system resource usage and statistics on Ubuntu
 description: figuring out what caused the server to go down this morning
 date: 2020-05-12

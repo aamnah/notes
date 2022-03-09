@@ -1,6 +1,6 @@
 ---
 title: Docker - Getting started
-path: docker-getting-started
+slug: docker-getting-started
 date: 2020-05-13
 draft: true
 ---

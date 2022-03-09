@@ -1,6 +1,6 @@
 ---
 title: Docker installation - Ubuntu 20.04 LTS
-path: docker-installation-ubuntu
+slug: docker-installation-ubuntu
 date: 2020-05-13
 ---
 

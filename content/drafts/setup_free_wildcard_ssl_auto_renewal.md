@@ -1,6 +1,6 @@
 ---
 title: Setup free Wildcard SSL and automatic renewal
-path: setup_free_wildcard_ssl_auto_renewal
+slug: setup_free_wildcard_ssl_auto_renewal
 date: 2020-01-29
 lastmod: 2020-07-31
 draft: true

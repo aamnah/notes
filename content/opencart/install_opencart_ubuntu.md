@@ -1,7 +1,7 @@
 ---
 title: Installing OpenCart 3.0.3.2 on Ubuntu 18.04 LTS
 date: 2020-04-04
-path: install_opencart_ubuntu
+slug: install_opencart_ubuntu
 ---
 
 This assumes that

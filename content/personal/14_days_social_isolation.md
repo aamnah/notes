@@ -1,6 +1,6 @@
 ---
 title: Working from Home during the COVID-19 Social Isolation
-path: working-from-home-covid19
+slug: working-from-home-covid19
 date: 2020-03-17
 lastmod: 2020-05-02
 description: Getting ready for self-isolation, and how it's going so far..

@@ -1,6 +1,6 @@
 ---
 title: Ukulele Notes
-path: ukulele-size-notes
+slug: ukulele-size-notes
 date: 2020-03-08
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Adding a contact form to Gatsby using Netlify Forms
-path: gatsby-netlify-contact-form
+slug: gatsby-netlify-contact-form
 date: 2020-03-29
 ---
 

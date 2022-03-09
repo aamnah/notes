@@ -1,9 +1,8 @@
 ---
 title: Using Prettier to automatically fix syntax for you
 date: 2018-02-20
-path: prettier
+slug: prettier
 ---
-
 
 ```bash
 npm i -D Prettier
@@ -19,7 +18,6 @@ npm prettier src/Filename.js --write
 touch ~/.prettierrc
 ```
 
-
 ```
 {}
 ```
@@ -31,7 +29,6 @@ touch ~/.prettierrc
 Editor: Format On Save
 Prettier: Require Config
 ```
-
 
 ```json
 "scrpts": {

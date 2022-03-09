@@ -1,5 +1,5 @@
 ---
-path: change_gitflow_master_staging_branch
+slug: change_gitflow_master_staging_branch
 title: Adding a Staging branch to your Git Flow setup
 date: 2020-04-06
 ---

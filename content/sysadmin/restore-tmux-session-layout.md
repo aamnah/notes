@@ -1,5 +1,5 @@
 ---
-path: restore-tmux-session-layout
+slug: restore-tmux-session-layout
 title: Restore tmux session and layout
 description: save and restore tmux session and window layout after systems restarts
 date: 2020-05-13

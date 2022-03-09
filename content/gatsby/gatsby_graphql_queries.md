@@ -1,6 +1,6 @@
 ---
 title: Common GraphQL queries for Gatsby
-path: gatsby_graphql_queries
+slug: gatsby_graphql_queries
 date: 2020-03-29
 ---
 

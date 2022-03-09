@@ -1,6 +1,6 @@
 ---
 title: Dates in Gatsby GraphQL
-path: dates-graphql-gatsby
+slug: dates-graphql-gatsby
 date: 2020-05-03
 ---
 

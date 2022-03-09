@@ -1,6 +1,6 @@
 ---
 title: Notes on building a custom mechanical keyboard
-path: mechanical-keyboard-notes
+slug: mechanical-keyboard-notes
 excerpt: Extensive notes on building a custom mechanical keyboard by sourcing parts
 date: 2020-03-24
 ---
