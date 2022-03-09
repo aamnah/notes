@@ -59,7 +59,7 @@ CSS Grids are two dimensional, you can move things both horizontally and vertica
 
 Flex is one-dimensional - either horizontal or vertical, while Grid is two-dimensional, you can move elements in both horizontal and vertical planes
 
-![grid vs. flexbox](grid-vs-flexbox.svg)
+![grid vs. flexbox](./images/grid-vs-flexbox.svg)
 
 > with grid layout we don’t need to add anything to the grid item to make the layout. Everything is being set on the container. In a flex layout you have to target the flex item to set the properties of `flex-grow`, `flex-shrink` and `flex-basis`
 
@@ -122,14 +122,14 @@ any container that let's you contain a grid inside `display: grid`. you can do t
 - For example:`grid-template-columns: 2fr 1fr 1fr` (takes list of length values: em, px, %, fr etc. denoting the distance between each line)
 - `fr` (fraction) is a newly introduced unit for grids
 
-![grid lines](grid-lines.png)
+![grid lines](./images/grid-lines.png)
 
 #### cell
 
 - A space in the grid between four intersecting grid lines
 - smallest unit in a CSS grid
 
-![grid cell](grid-cell.png)
+![grid cell](./images/grid-cell.png)
 
 #### area
 
@@ -137,7 +137,7 @@ any container that let's you contain a grid inside `display: grid`. you can do t
 - rectangular area between any four specified grid lines
 - Grid areas _must be rectangular_ in nature; it is not possible to create, for example, a T- or L-shaped grid area.
 
-![grid area](grid-area.png)
+![grid area](./images/grid-area.png)
 
 - You define the start and end grid lines for grid items with: `grid-column` and `grid-row` (shorthand properties for `grid-column-start`, `grid-column-end` and `grid-row-start`, `grid-row-end`)
 
@@ -181,8 +181,8 @@ grid-area: [area-name];
 }
 ```
 
-![grid template areas](grid-template-areas.png)
-![grid template areas 2](grid-template-areas2.png)
+![grid template areas](./images/grid-template-areas.png)
+![grid template areas 2](./images/grid-template-areas2.png)
 
 #### track
 
@@ -191,14 +191,14 @@ grid-area: [area-name];
 - Row track is horizontal
 - Column track is vertical
 
-![grid track](grid-track.png)
+![grid track](./images/grid-track.png)
 
 #### gap
 
 - empty space between grid tracks, (aka gutters)
 - `grid-gap` is shorthand for `grid-column-gap` and `grid-row-gap`. e.g. `grid-gap: 1em` will set a gap of 1em after every cell
 
-![grid gap](grid-gap-gutter.png)
+![grid gap](./images/grid-gap-gutter.png)
 
 ### Working with a grid
 
@@ -210,15 +210,15 @@ grid-area: [area-name];
 grid-template-columns: 2fr 1fr 1fr;
 ```
 
-![grid-template-columns](grid-template-columns.png)
+![grid-template-columns](./images/grid-template-columns.png)
 
 ```css
 grid-template-rows: auto 1fr 3fr;
 ```
 
-![grid-template-rows](grid-template-rows.png)
+![grid-template-rows](./images/grid-template-rows.png)
 
-![automatic grid items population](grid-items-population.png)
+![automatic grid items population](./images/grid-items-population.png)
 
 ### Changing the order of elements based on screen size
 
@@ -247,7 +247,7 @@ The simple solution is to change the `grid-template-areas` based on the screen s
 }
 ```
 
-![different grid layouts for different screen sizes](grid-template-areas-media-queries.png)
+![different grid layouts for different screen sizes](./images/grid-template-areas-media-queries.png)
 
 ### BUT Support Backwards compatibility?
 
