@@ -19,4 +19,4 @@ Open `regedit` as Administrator and add a bunch of hexadecmial values here: `Com
 
 You may have to add a value and then double-click it again to set it's data.
 
-![screenshot of set values in registry editor](/img/disable-defender-regedit.png)
+![screenshot of set values in registry editor](disable-defender-regedit.png)

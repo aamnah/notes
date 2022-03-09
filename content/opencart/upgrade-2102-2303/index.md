@@ -5,6 +5,7 @@ category: OpenCart
 ---
 
 ### Pre-Upgrade
+
 - Backup everything
 
   - PhpMyAdmin > Export database
@@ -13,7 +14,7 @@ category: OpenCart
 - Set file and folder permissions for install
 
 ```bash
-chmod 777 config.php	
+chmod 777 config.php
 chmod 777 admin/config.php
 chmod 777 image/
 chmod 777 image/cache/
@@ -34,6 +35,7 @@ rm -rf system/storage/modification/*
 I did delete all the files inside the modification folder and it didn't seem to have affected all the OCMOD files that i had installed on the site. They were still there listed under Extensions > Modifications and i could install them by clicking the + button
 
 ### Upgarde
+
 - Download and unzip OC 2.3.0.2 files
 - Backup `config.php` and `admin/config.php`
 - Upload the extracted `upload/` folder into site's root folder and overwrite existing files
@@ -96,11 +98,12 @@ find . -name '.DS_Store' -exec rm -rf {} \;
 4. Goto Admin and Edit the main System Settings. Update all fields and click save, even if nothing changed.
 5. Load the store front & press Ctrl+F5 twice to force the browser to update the css changes.
 
-![opencart upgrade successful](/img/opencart-upgrade-successful.png)
+![opencart upgrade successful](opencart-upgrade-successful.png)
 
 ### Troubleshooting
 
 #### White screen of death / Blank screen / Page isn't working after copying files
+
 - First things first, add the following code to the top of `index.php` and `install/index.php` (after opening php tag `<?php`)
 
 ```php
@@ -109,13 +112,15 @@ ini_set('display_startup_errors',1);
 ini_set('display_errors',1);
 error_reporting(-1);
 ```
+
 This will make sure that you see errors if there are any instead of a blank screen (white screen of death). Make sure to take it out after you're done with the upgrade.
 
-- Once you've enabled error reporting and still see a blank page, check the site's error log. 
+- Once you've enabled error reporting and still see a blank page, check the site's error log.
 
 - Make sure the database connection details are correct.
 
 #### Error: Could not load model total!
+
 Give up on 2.2.x compatibility and delete the following left-over folders
 
 ```
@@ -131,6 +136,7 @@ admin/controller/total
 ```
 
 #### Admin Login > Failed to load resource: the server responded with a status of 404 (Not Found)
+
 The error traced back to a file in the modifications folder. So i just deleted the modifications
 
 ```bash
@@ -138,6 +144,7 @@ rm -rf system/storage/modifications/*
 ```
 
 #### Extension specific errors
+
 You're bound to get some extension specific errors. Start installing your extensions once by one
 
 e.g. This is for the One POS extension
@@ -153,8 +160,7 @@ Fatal error: Uncaught Error: Call to undefined method Cart\Currency::formatFront
 ```
 Fatal error: Uncaught Error: Call to undefined method Cart\Currency::formatFront() in /var/www/3.dev.cakebox.me/public_html/admin/controller/extension/module/pos.php:2981 Stack trace: #0 /var/www/3.dev.cakebox.me/public_html/admin/controller/extension/module/pos.php(5740): ControllerExtensionModulePos->createEmptyOrder(true, false, 0, 0) #1 /var/www/3.dev.cakebox.me/public_html/admin/controller/extension/module/pos.php(1120): ControllerExtensionModulePos->getEmptyOrder(false) #2 /var/www/3.dev.cakebox.me/public_html/system/storage/modification/system/engine/action.php(51): ControllerExtensionModulePos->main() #3 /var/www/3.dev.cakebox.me/public_html/admin/controller/startup/router.php(26): Action->execute(Object(Registry), Array) #4 /var/www/3.dev.cakebox.me/public_html/system/storage/modification/system/engine/action.php(51): ControllerStartupRouter->index() #5 /var/www/3.dev.cakebox.me/public_html/system/engine/front.php(34): Action->execute(Object(Registry)) #6 /var/www/3.dev.cakebox.me/public_html/system/engine/front. in /var/www/3.dev.cakebox.me/public_html/admin/controller/extension/module/pos.php on line 2981
 ```
-Links
----
+
+## Links
 
 - [Official Bug Reports for 2.3.0.2 (and solutions)](http://forum.opencart.com/viewtopic.php?f=191&t=166012)
-
