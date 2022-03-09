@@ -151,7 +151,8 @@ org.gnome.settings-daemon.plugins.media-keys area-screenshot @as []
 org.gnome.settings-daemon.plugins.media-keys screenshot @as []
 ```
 
-![disable default screenshot shortcuts](./disable_default_screenshot_shortcuts.png)
+![disable default screenshot shortcuts](../images/disable_default_screenshot_shortcuts.png)
+![custom screenshot shortcuts](../images/custom_screenshot_shortcuts.png)
 
 You can restore defaults with
 
