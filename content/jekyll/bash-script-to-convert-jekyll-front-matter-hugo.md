@@ -27,7 +27,7 @@ grep -rl --null slug . | xargs -0 sed -i '' 's/slug/slug/g'
 
 Renaming folders on macOS was a simple double-click and _Rename \*\* items_. Use the _Replace Text_ option from the dropdown, Find `_` and replace with nothing. Click _Rename_ and you're done
 
-![Batch rename folders on macOS](images/rename-jekyll-collection-folders-remove-underscore.png)
+![Batch rename folders on macOS](../images/rename-jekyll-collection-folders-remove-underscore.png)
 
 #### Remove `layout: post` from post
 
