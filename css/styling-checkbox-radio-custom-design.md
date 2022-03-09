@@ -10,7 +10,7 @@ slug: styling-checkbox-radio-custom-design
 
 With `::before` pattern i can't do a this design
 
-![some custom styles for radio](../images/custom-radio-designs.png)
+![some custom styles for radio](./images/custom-radio-designs.png)
 
 By default you can't really style the `checkbox` and `radio` inputs.. What you can do is create your own.
 

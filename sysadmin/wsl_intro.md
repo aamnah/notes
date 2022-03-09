@@ -23,7 +23,7 @@ C:\Windows\System32\bash.exe
 - You can easily `apt install` a lot of stuff and use it on Windows.
 - You can easily `ssh` into your servers, no need for _Putty_ any more.
 
-![Bash in VS Code Terminal](../images/vscode-bash-wsl.jpg)
+![Bash in VS Code Terminal](./images/vscode-bash-wsl.jpg)
 
 ## Links
 

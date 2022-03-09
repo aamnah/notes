@@ -90,7 +90,7 @@ images: ukulele
 - woke up and practiced strumming and chords for an hour
 - designed and updated my [social profile banner]() (YouTube, LinkedIn, Twitter)
 
-![social profile banner](../images/Banner-Aamnah-LinkedIn.png)
+![social profile banner](./images/Banner-Aamnah-LinkedIn.png)
 
 - work: added the Activity screen and bottom tab navigation to MVP app
 - watched: _The Soloist_. was okay, nothing i'd wanna watch again. acting was good.
@@ -209,7 +209,7 @@ Brain Activity/Alertness level: 100
 - More than missing the office, i missed a good steak today.
 - work involved setting up a country/site selection modal that shows up on site load and asks you to pick the site you want to go to by clicking a flag. It then saves that choice in a cookie and doesn't ask you again on next visit
 
-![country-selection-modal.png](../images/country-selection-modal.png)
+![country-selection-modal.png](./images/country-selection-modal.png)
 
 ## Day 11
 
@@ -402,8 +402,8 @@ May 1, 2020
 - Updated styles for code blocks and inline code.
 - Created my custom light and dark syntax highlighting themes for Prism, named `PrismMonaco`
 
-![monacolight](../images/prism-monaco-light.png)
-![monacodark](../images/prism-monaco-dark.png)
+![monacolight](./images/prism-monaco-light.png)
+![monacodark](./images/prism-monaco-dark.png)
 
 - Started a [GraphQL course on edx](https://www.edx.org/course/exploring-graphql-a-query-language-for-apis).. half way through the fundamentals. Am now familiar with a bunch of core concepts like types, queries, mutations, and subscriptions etc.
 
@@ -414,7 +414,7 @@ May 2, 2020 Saturday
 - Finished the first module of fundamentals and core concepts of GraphQL
 - Create my custom _oh-my-zsh_ theme
 
-![screenshot amnastic.zsh-theme.png](../images/amnastic.zsh-theme.png)
+![screenshot amnastic.zsh-theme.png](./images/amnastic.zsh-theme.png)
 
 ## Day 48
 

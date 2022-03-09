@@ -25,7 +25,7 @@ $ mysite.com (master)                                               Sat 2, 15:39
 
 and i ended up with this
 
-![amnastic.zsh-theme.png](../images/amnastic.zsh-theme.png)
+![amnastic.zsh-theme.png](./images/amnastic.zsh-theme.png)
 
 code is [here on Github](https://github.com/aamnah/oh-my-zsh-custom)
 

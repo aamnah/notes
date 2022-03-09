@@ -60,7 +60,7 @@ sudo service sysstat restart
 
 - `htop` and `top`. `htop` is definitely an improvement over `top`
 
-![htop-vs-top-cpu-memory-usage-stats](../images/htop-vs-top-cpu-memory-usage-stats.png)
+![htop-vs-top-cpu-memory-usage-stats](./images/htop-vs-top-cpu-memory-usage-stats.png)
 
 ## Links
 

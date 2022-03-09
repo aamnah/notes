@@ -25,7 +25,7 @@ curl -X POST -H 'Content-type: application/json' --data '{"text":"Hello, World!"
 
 This will post a fairly straight forward `Hello, World!` message to your channel
 
-![monit-slack-message-screenshot](../images/monit-slack-message-screenshot.png)
+![monit-slack-message-screenshot](./images/monit-slack-message-screenshot.png)
 
 ## Customizing message layout
 

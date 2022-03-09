@@ -25,7 +25,7 @@ sudo usermod -aG docker $(whoami)
 
 You don't need to install the long manual way, `docker.io` is already provided as a package in the Ubuntu repos and the version is fairly up to date (`19.03.8-0ubuntu1` as of this writing, which is the latest [version](https://docs.docker.com/engine/release-notes/)). You can check which version comes with the command`apt info docker.io`
 
-![docker-apt-info-version](../images/docker-apt-info-version.png)
+![docker-apt-info-version](./images/docker-apt-info-version.png)
 
 note that in Ubuntu `docker` is a tray plugin, while `docker.io` is the Docker containerization software. the name `docker` wasn't available so they went with `docker.io`
 

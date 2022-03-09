@@ -6,7 +6,7 @@ slug: postman-review
 
 The UI is overwhelming and cluttered at first but you get used to where everything after a few hours and it doesn't feel like the insides of an engine any more (i'm comparing it with the neatness of Insomnia)
 
-![insomnia-ui-vs-postman-ui](../images/)
+![insomnia-ui-vs-postman-ui](./images/)
 
 Postman is awesome. Because:
 

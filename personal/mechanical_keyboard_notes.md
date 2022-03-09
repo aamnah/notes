@@ -66,7 +66,7 @@ will it last 10 years?
 
 ## Switches
 
-![CherryMX-Switch-Guide.svg](../images/CherryMX-Switch-Guide.svg)
+![CherryMX-Switch-Guide.svg](./images/CherryMX-Switch-Guide.svg)
 
 Check out the [Cherry MX website](https://www.cherrymx.de/en/) for a good overview of all switches. Most of the competitors use the same naming convention. You can easily figure out what a switch would be like in any brand if you know the main characteristics of a switch. Gaterons are the most popular MX copy and the plastic they use is apparently really good quality.
 
@@ -108,13 +108,13 @@ Only 2 of the pins are conductors. The rest are plastic feet for stability.
 
 If you use a plate, you are okay with using 3-pins. If you want extra stability, go for a 5-pin.
 
-![Gateron switch - 3pin vs. 5pin](../images/gateron-switch-3pin-5pin.jpg)
+![Gateron switch - 3pin vs. 5pin](./images/gateron-switch-3pin-5pin.jpg)
 
 #### Leaf type?
 
 _Leaf_ means the pin.
 
-![Cherry_Brown_Part_Naming.png](../images/Cherry_Brown_Part_Naming.png)
+![Cherry_Brown_Part_Naming.png](./images/Cherry_Brown_Part_Naming.png)
 
 #### SMD or not?
 

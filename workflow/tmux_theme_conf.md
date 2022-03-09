@@ -9,7 +9,7 @@ tags:
 
 - Finished theme: [tmux Flat Theme](https://github.com/aamnah/tmux-flat-theme)
 
-![tmux Flat Theme](../images/tmux-flat-theme.png)
+![tmux Flat Theme](./images/tmux-flat-theme.png)
 
 There are example templates available in the `/usr/share/doc/tmux/examples` folder which are a really good starting point and help you understand how to configure your own theme
 
