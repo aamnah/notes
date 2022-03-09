@@ -62,11 +62,11 @@ meh.. So, create a custom keyboard shortcut, shall we?
 
 Go to **Settings > Keyboard Shortcuts**, there will be an entire section for **Screenshots**. You can either override these or create new ones with different key bindings.. If you are overriding an existing key combination, make sure you have disabled it first by clicking on it and pressing `Backspace`
 
-![Screenshot related shortcuts](./screenshots_related_shortcuts.png)
+![Screenshot related shortcuts](../images/screenshots_related_shortcuts.png)
 
 Scroll down to the bottom and click the `+` button
 
-![Adding keyboard shortcuts](./add_keyboard_shortcut.png)
+![Adding keyboard shortcuts](../images/add_keyboard_shortcut.png)
 
 | Description                                             | Shortcut                          | gnome-screenshot command |
 | ------------------------------------------------------- | --------------------------------- | ------------------------ |
@@ -76,7 +76,7 @@ Scroll down to the bottom and click the `+` button
 
 I also updated all names to say `~/Pictures/screenshots` instead of `Pictures`. To check what flags are available, seeing `man gnome-screenshot`. `-a` is for selecting area, `-w` is for selecting window, and `-b` is for including borders when saving a window.
 
-![Custom keyboard shortcuts](./custom_shortcuts.png)
+![Custom keyboard shortcuts](../images/custom_shortcuts.png)
 
 Re-login for the change in location to take effect.
 

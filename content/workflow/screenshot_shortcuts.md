@@ -1,11 +1,9 @@
 ---
 title: Screenshot shortcuts on macOS, Linux and Windows
 date: 2019-03-14
-
 ---
 
-macOS
----
+## macOS
 
 ### Screenshots
 
@@ -20,12 +18,11 @@ macOS
 
 - `Cmd` + `Shift` + `5`
 
-Ubuntu
----
+## Ubuntu
 
 ### Screenshots
 
-- `Prt Scrn` to take a screenshot of entire screen (all monitors) 
+- `Prt Scrn` to take a screenshot of entire screen (all monitors)
 - `Alt` + `Prt Scrn` take a screenshot of current application window
 - `Shift` + `Prt Scrn` to take a screenshot of an area you select
 
@@ -37,11 +34,9 @@ The images will be saved in your `~/Pictures` folder. Holding `Ctrl` with above 
 
 The screencasts will be saved in your `~/Videos` folder.
 
-![Ubuntu Keybaord Shortcuts for Screenshots](/img/ubuntu_screenshot_shortcuts.png)
+![Ubuntu Keybaord Shortcuts for Screenshots](../images/ubuntu_screenshot_shortcuts.png)
 
-
-Windows
----
+## Windows
 
 ### Screenshots
 
@@ -58,8 +53,7 @@ Windows
 
 Recordings are saved in _Username > Videos > Captures_ in MP4 format. Screenshots are saved in PNG
 
-Links
----
+## Links
 
 - [macOS: How to take a screenshot on your Mac](https://support.apple.com/en-us/HT201361)
 - [Ubutu Docs: Screenshots and screencasts](https://help.ubuntu.com/stable/ubuntu-help/screen-shot-record.html)

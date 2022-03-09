@@ -27,8 +27,8 @@ For my use case, i settled on [ShellTile](https://github.com/emasab/shelltile) w
 
 ShellTile gives you 4 zones (left/right/upper/lower half) by keyboard shortcuts, and 8 zones (halves + quarters) with edge snapping when dragging windows
 
-![shelltile settings](/img/tiling-window-managers-1.png)
-![tiled windows with shelltile on Ubuntu](/img/tiling-window-managers-2.png)
+![shelltile settings](../images/tiling-window-managers-1.png)
+![tiled windows with shelltile on Ubuntu](../images/tiling-window-managers-2.png)
 
 Others:
 
