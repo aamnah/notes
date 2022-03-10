@@ -1,5 +1,7 @@
 # Aamnah's Notes
 
+Site was originally started with Jekyll in Feb 2015.
+
 This combines all the notes from the various sites and from my local machine.
 
 Previously, i have setup a site with Hugo, and another one with Gatsby. Both had different content. This repo combines the content from both those sites.
@@ -9,10 +11,11 @@ The idea with this repo is that it'll be used as a submodule for my portfolio si
 TODO:
 
 - [ ] Fix image URLs
-  - [ ] update the URLs and references inside posts
+  - [x] update the URLs and references inside posts
   - [x] combine the image folders
+  - [ ] see if you can find the missing 8 images with the path `assets/img/` from the original Jekyll site
 - [x] test adding this repo as a git `submodule` to a Hugo or Gatsby site
-- [x] fix draft status
+- [x] fix draft status (make all of them `draft: true`)
 - [x] fix inconsistencies between `path` and `slug` (change all to `slug`)
 
 ### Drafts
