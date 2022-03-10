@@ -1,3 +1,3 @@
 ---
-title: Node.js
+title: Node
 ---
