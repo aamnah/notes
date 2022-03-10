@@ -3,7 +3,6 @@ layout: post
 title: 'Bash Scripting: Taking input'
 date: 2017-02-23
 type: post
-published: false
 draft: true
 categories:
   - '*nix'

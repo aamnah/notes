@@ -4,7 +4,6 @@ title: Troubleshooting MongoDB on Mac
 permalink: howto-troubleshoot-mongodb-mac
 date: 2014-05-21 16:29:19.000000000 +05:00
 type: post
-published: false
 draft: true
 categories: []
 tags:
