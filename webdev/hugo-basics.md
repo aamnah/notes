@@ -1,8 +1,9 @@
 ---
 date: 2022-03-09
-status: draft
 draft: true
 title: Hugo basics
+tags:
+  - Hugo
 ---
 
 ```bash
