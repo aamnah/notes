@@ -12,7 +12,7 @@ So, brought my system home yesterday, spent some time setting things up, and now
 
 Figured i'd document things as i experience them.
 
-I am going out today though, have to meet the bestie who's leaving, and also need to pickup the eukulele. This eukulele is going to be my hobby while i work from home. Also looking forward toi some watercolor paintings..
+I am going out today though, have to meet the bestie who's leaving, and also need to pickup the ukulele. This ukulele is going to be my hobby while i work from home. Also looking forward toi some watercolor paintings..
 
 ### Cons:
 
@@ -37,7 +37,7 @@ I am going out today though, have to meet the bestie who's leaving, and also nee
 Because i have extra 2 hours in my work day now, no commute and more focus, i plan on making the most out of this self-isolation period.
 
 - watch more entertainment, catch up on TV Shows and Movies
-- do more hobbies, eukulele and watercolors
+- do more hobbies, ukulele and watercolors
 - learn more things, DevOps/Frontend/Backend
 - work on my website, launch the blog and refresh the design
 
