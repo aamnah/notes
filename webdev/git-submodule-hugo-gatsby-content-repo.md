@@ -1,6 +1,7 @@
 ---
 title: Using Git submodules to bring in markdown content from a single git repo
 date: 2021-03-20
+lastmod: 2022-03-10
 draft: true
 slug: git-submodule-hugo-gatsby-content-repo
 ---
@@ -40,6 +41,18 @@ Hugo is written in Go, which i have a curious interest in these days..
 - Would Go instead of JS be an issue for me? Since i am a developer familiar with JS and know fancy little about Go. Do i want to make that commitment of getting familiar with yet another programming language? Do i have the time to make that commitment?
 - How easy is it to work with APIs? Hugo doesn't work with API content by the looks of it, but NextsJS offers it out of the box. Question is, how many APIs am i going to use on my person site? There is definitely going to be one for comments. And then the blog content may need to come from an API as well. Contentful?
 
+To add a new submodule you use the git submodule add command with the absolute or relative URL of the project you would like to start tracking
+
+```bash
+git submodule add REPO_URL DESTINATION_FOLDER
+
+git submodule add git@github.com:aamnah/notes.git notes
+```
+
+Hugo wins:
+
+- No `node_modules`
+
 ## Links
 
-- [](https://git-scm.com/book/en/v2/Git-Tools-Submodules)s
+- [](https://git-scm.com/book/en/v2/Git-Tools-Submodules)

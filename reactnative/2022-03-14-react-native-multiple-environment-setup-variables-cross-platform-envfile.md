@@ -49,13 +49,11 @@ Environment variables are configured using [react-native-config](https://www.npm
 
 For multiple environments, you have to create different `.env` files and load them by configuring `ENVFILE` when running commands
 
-By default `react-native-config` will read from `.env`, but you can change it when building or releasing your app.
-
 ```bash
 ENVFILE=.env.staging && react-native run-ios
 ```
 
-The files that store the variables are `.env`, `.env.staging` and `.env.production`. If you don't specify a file, `.env` will be used by default for development
+The files that store the variables are `.env`, `.env.staging` and `.env.production`. If you don't specify a file, `react-native-config` will read from `.env` by default
 
 ## cross-env
 

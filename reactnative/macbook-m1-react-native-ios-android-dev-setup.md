@@ -29,6 +29,28 @@ clone the project
 `npm ci`
 ```
 
+### Ruby
+
+Install Ruby `3.x`. The one that comes pre-installed with macOS is outdated
+
+```bash
+brew install ruby
+```
+
+### Cocoapods
+
+```bash
+# sudo gem uninstall cocoapods
+
+# if you get error: You don't have write permissions for the /usr/bin directory.
+# sudo gem install cocoapods -n /usr/local/bin
+
+arch -arm64 brew install cocoapods
+
+# if you get error: rbenv: pod: command not found
+brew link --overwrite cocoapods
+```
+
 ### Homebrew
 
 Install [Homebrew](https://docs.brew.sh/Installation) if you don't have it installed already

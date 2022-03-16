@@ -1,7 +1,6 @@
 ---
-title: Environment Variables in React Native
+title: Environment Variables in React Native with react-native-dotenv
 date: 2019-12-18
-
 ---
 
 Install `react-native-dotenv`
@@ -16,10 +15,7 @@ Add the preset in `babel.config.js`
 // babel.config.js
 
 module.exports = {
-  presets: [
-    'babel-preset-expo', 
-    'module:react-native-dotenv'
-  ]
+  presets: ['babel-preset-expo', 'module:react-native-dotenv'],
 }
 ```
 
@@ -31,26 +27,25 @@ API_PASSWORD=XXX
 API_URL_AUTH=XXX
 ```
 
-And now you can import and use them in your code 
+And now you can import and use them in your code
 
 ```js
 // App.js
 
 import { API_USERNAME, API_PASSWORD, API_URL_AUTH } from 'react-native-dotenv'
 
-  useEffect(() => {
-    async function getToken() {
-      try {
-        const response = await axios.post(API_URL_AUTH, {
-          username: API_USERNAME,
-          password: API_PASSWORD
-        })
-        setToken(response.data.token)
-
-      } catch (error) {
-        error => console.error(error)
-      }
+useEffect(() => {
+  async function getToken() {
+    try {
+      const response = await axios.post(API_URL_AUTH, {
+        username: API_USERNAME,
+        password: API_PASSWORD,
+      })
+      setToken(response.data.token)
+    } catch (error) {
+      ;(error) => console.error(error)
     }
-    getToken()
-  }, [])
+  }
+  getToken()
+}, [])
 ```
