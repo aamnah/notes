@@ -1,7 +1,7 @@
 ---
 title: Fastlane (Getting started)
 date: 2021-03-28
-status: draft
+draft: true
 slug: fastlane-getting-started
 ---
 

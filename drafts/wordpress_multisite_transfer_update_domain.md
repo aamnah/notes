@@ -1,7 +1,8 @@
 ---
 title: Changing the domain of a WordPress multisite setup
 date: 2020-04-30
-path: wordpress_multisite_transfer_update_domain
+slug: wordpress_multisite_transfer_update_domain
+draft: true
 ---
 
 import { Gist } from "components/common"

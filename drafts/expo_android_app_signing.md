@@ -1,6 +1,7 @@
 ---
 title: App signing and Expo
-date:
+draft: true
+date: 2021-11-23
 ---
 
 # App Signing

@@ -2,6 +2,7 @@
 title: React Native iOS on MacBook M1
 date: 2021-03-11
 slug: react-native-macbook-m1-troubleshooting
+draft: true
 ---
 
 ```bash

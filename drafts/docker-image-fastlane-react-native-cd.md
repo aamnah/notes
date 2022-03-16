@@ -3,6 +3,7 @@ title: Docker image for React Native, Android and Fastlane
 description: Creating a Docker image to build Android apps based on React Native and built with Fastlane
 date: 2021-03-03
 slug: docker-image-fastlane-react-native-android-cd
+draft: true
 ---
 
 `docker build` needs at least one parameter which is the folder to run from
