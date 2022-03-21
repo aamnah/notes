@@ -1,7 +1,7 @@
 ---
-title: Install multiple Java versions and switch between them
+title: Install multiple Java versions and switch between them on macOS and Ubuntu
 date: 2022-03-17
-slug: install-java-switch-multiple-versions
+slug: install-java-jdk-switch-multiple-versions-macos-ubuntu
 ---
 
 # macOS
@@ -23,6 +23,12 @@ source ~/.zprofile
 
 ```bash
 java -version
+```
+
+```
+openjdk version "16.0.1" 2021-04-20
+OpenJDK Runtime Environment (build 16.0.1+9-24)
+OpenJDK 64-Bit Server VM (build 16.0.1+9-24, mixed mode, sharing)
 ```
 
 `/usr/libexec/java_home -v16` gives you the version specific path. If you wanted to use a different JDK version, say 17, then you'd update `JAVA_HOME` and set it to `/usr/libexec/java_home -v17`
