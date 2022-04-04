@@ -3,6 +3,10 @@ title: Beta testing your React Native app
 description: Making your app available for beta testers and distributing it to play stores
 date: 2020-06-03
 slug: beta-test-distribute-react-native-app
+tags:
+  - fastlane
+  - reactnative
+  - devops
 ---
 
 - [Fastlane](https://fastlane.tools/) (Android, iOS)

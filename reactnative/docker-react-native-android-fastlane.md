@@ -2,6 +2,8 @@
 title: Creating a Docker image for React Native, Android and Fastlane
 date: 2021-03-02
 slug: docker-react-native-android-fastlane
+tags:
+  - fastlane
 ---
 
 Why? So i could use it inside my CD (Bitbucket Pipelines) and save on build minutes.
