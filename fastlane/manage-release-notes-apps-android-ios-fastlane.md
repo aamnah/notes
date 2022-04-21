@@ -2,6 +2,10 @@
 title: Managing release notes for Android and iOS apps using Fastlane
 date: 2021-02-10
 slug: manage-release-notes-apps-android-ios-fastlane
+tags:
+  - fastlane
+  - android
+  - ios
 ---
 
 There are two types of logs that i have been maintaining for my projects

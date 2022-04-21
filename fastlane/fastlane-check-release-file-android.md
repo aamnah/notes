@@ -3,6 +3,8 @@ title: Fastlane - Check if a release notes file exists (for Android)
 description: Check if a release notes file for the current version exists and use it when releasing to Firebase. If one for the version code doesn't exist then check for the `default.txt` file and use that. If that also doesn't exist then use the default release text message.
 date: 2021-03-10
 slug: fastlane-check-release-file-android
+tags:
+  - fastlane
 ---
 
 - You can use `File.exist()` to check if a file exists. `File.exists()` (with an S at the end) is deprecated

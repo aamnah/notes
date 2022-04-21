@@ -8,6 +8,7 @@ tags:
   - CD
   - DevOps
   - Expo
+  - fastlane
 ---
 
 Steps
