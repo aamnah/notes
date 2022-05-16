@@ -106,3 +106,4 @@ fastlane test --env production
 
 - https://docs.fastlane.tools
 - [Getting started with fastlane for React Native](https://docs.fastlane.tools/getting-started/cross-platform/react-native/)
+- [Using Dotenv and environment variables with fastlane](https://gist.github.com/joshdholtz/cd077ccdddb608af00eb2466259e7ac0)
