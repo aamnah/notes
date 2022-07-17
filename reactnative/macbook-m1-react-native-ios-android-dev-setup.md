@@ -95,6 +95,28 @@ arch -x86_64 pod install
 
 The Android Emulator doesn't work out of the box yet. Luckily, there is a Preview build by Google that supports Apple Silicon M1 chip based MacBooks. You'll have to download and install it separately. _Most_ things work.
 
+### OpenJDK 16
+
+```bash
+# download tarball from OpenJDK archive (v16.0.1)
+curl -sL https://download.java.net/java/GA/jdk16.0.1/7147401fd7354114ac51ef3e1328291f/9/GPL/openjdk-16.0.1_osx-x64_bin.tar.gz
+
+# move and extract in /Library/Java/JavaVirtualMachines/
+sudo mv openjdk-16.0.1_osx-x64_bin.tar.gz /Library/Java/JavaVirtualMachines/
+cd /Library/Java/JavaVirtualMachines/
+sudo tar -xzf openjdk-16.0.1_osx-x64_bin.tar.gz
+sudo rm openjdk-16.0.1_osx-x64_bin.tar.gz
+
+# set JAVA_HOME
+echo -n "\nexport JAVA_HOME=`/usr/libexec/java_home -v16`" >> ~/.zprofile
+
+# make the changes take effect
+source ~/.zprofile
+
+# confirm install
+java -version
+```
+
 ### Troubleshooting
 
 - `command not found` for `brew` or `nvm`. Make sure you have a `~/.zshrc` file. On a fresh new M1 MacBook, there is no `~/.zshrc` or `~/.zprofile` created and the `$PATH` doesn't get updated because of it. Create a `~/.zshrc` file and run the commands to install Homebrew and NVM again.
