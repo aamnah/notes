@@ -4,7 +4,10 @@ title: Add Tor project repo to Ubuntu
 slug: install-tor-project-ubuntu
 ---
 
-There is a [bash script](https://github.com/aamnah/bash-scripts/blob/master/install/tor_project_ubuntu.sh) that takes care of everything in this article and more.
+NOTE: There is a [bash script](https://github.com/aamnah/bash-scripts/blob/master/install/tor_project_ubuntu.sh) that takes care of everything in this article and more.
+
+
+While most of you are familiar with Tor Browser, few are aware that it is a bundle that consists of two parts: the _browser_ and the _router_. You can use the _router_ to use commands like `tor`, `torify` and `torsocks`
 
 1. Create a `tor.list` file inside `/etc/apt/sources.list.d/`
 
@@ -60,3 +63,4 @@ Links
 - [Installation](https://tb-manual.torproject.org/installation/)
 - [How To: Using Tor From The Command Line](https://justhackerthings.com/post/using-tor-from-the-command-line/)
 - [Bash script to install Tor project on Ubuntu](https://github.com/aamnah/bash-scripts/blob/master/install/tor_project_ubuntu.sh)
+- [Command Line Tor](https://dzone.com/articles/command-line-tor)
