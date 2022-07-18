@@ -1,6 +1,7 @@
 ---
 date: 2022-07-18
 title: Install latest SML/NJ from source on Ubuntu (20.04)
+slug: install-smlnj-source-ubuntu
 ---
 
 Standard ML of New Jersey isn't used much in modern day development but i needed to install it as part of my [Programming Languages](https://www.coursera.org/learn/programming-languages/) course.
@@ -73,3 +74,4 @@ Links
 ---
 
 - [Installing SML/NJ on Unix](https://smlnj.org//dist/working/110.99.2/install.html)
+- [Gist: Script to install latest SML/NJ from source on Ubuntu (20.04)](https://gist.github.com/aamnah/14482bb2493166d15455e01e4d59855d)
