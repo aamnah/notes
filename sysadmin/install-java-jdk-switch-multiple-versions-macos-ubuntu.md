@@ -1,12 +1,21 @@
 ---
 title: Install multiple Java versions and switch between them on macOS and Ubuntu
 date: 2022-03-17
+lastmod: 2022-07-20
 slug: install-java-jdk-switch-multiple-versions-macos-ubuntu
 ---
 
 # macOS
 
-Download the tarball from here: https://jdk.java.net/16/
+Simplest would be to installed with Homebrew:
+
+```bash
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+📋
+brew install openjdk # installs openjdk@18
+```
+
+Alternatively, you can download the tarball from here: [https://jdk.java.net/16/](https://jdk.java.net/16/) and extract it to `/Library/Java/JavaVirtualMachines/`
 
 ```bash
 sudo mv openjdk-16.0.1_osx-x64_bin.tar.gz /Library/Java/JavaVirtualMachines/
@@ -15,11 +24,15 @@ sudo tar -xzf openjdk-16.0.1_osx-x64_bin.tar.gz
 sudo rm openjdk-16.0.1_osx-x64_bin.tar.gz
 ```
 
+Update $PATH
+
 ```bash
 echo -n "\nexport JAVA_HOME=`/usr/libexec/java_home -v16`" >> ~/.zprofile
 
 source ~/.zprofile
 ```
+
+Confirm install 
 
 ```bash
 java -version
@@ -52,6 +65,7 @@ update-java-alternatives --list
 ```
 java-1.11.0-openjdk-amd64      1111       /usr/lib/jvm/java-1.11.0-openjdk-amd64
 java-1.17.0-openjdk-amd64      1711       /usr/lib/jvm/java-1.17.0-openjdk-amd64
+java-1.18.0-openjdk-amd64      1811       /usr/lib/jvm/java-1.18.0-openjdk-amd64
 java-1.8.0-openjdk-amd64       1081       /usr/lib/jvm/java-1.8.0-openjdk-amd64
 ```
 
@@ -71,5 +85,6 @@ OpenJDK 64-Bit Server VM (build 17.0.2+8-Ubuntu-120.04, mixed mode, sharing)
 Update the `$JAVA_HOME` env var
 
 ```bash
-export JAVA_HOME="$(jrunscript -e 'java.lang.System.out.println(java.lang.System.getProperty("java.home"));')"
+# export JAVA_HOME="$(jrunscript -e 'java.lang.System.out.println(java.lang.System.getProperty("java.home"));')"
+export JAVA_HOME='/usr/lib/jvm/java-1.17.0-openjdk-amd64'
 ```
