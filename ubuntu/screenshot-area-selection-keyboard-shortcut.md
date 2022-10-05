@@ -6,6 +6,20 @@ slug: ubuntu-screenshot-area-selection-keyboard-shortcut
 description: Adding a keyboard shortcut for taking screenshot of an area selection, taking screenshots with gnome-screenshot, and updating the location where screenshots are saved
 ---
 
+
+**tl;dr**
+
+```bash
+# install
+sudo apt install -y gnome-screenshot
+
+# update save location
+gsettings set org.gnome.gnome-screenshot auto-save-directory "/home/aamnah/Pictures/Screenshots"
+```
+Add custom shortcut for `gnome-screenshot -a` command
+
+---
+
 The new interactive screenshot utility in 22.04 lets you capture an area selection, but it makes me do extra unnecessary clicks. The <kbd>Shift</kbd> + <kbd>PrtSc</kbd> shortcut that i am used to is much simpler and straight forward.
 
 Here's what you do
