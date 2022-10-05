@@ -38,7 +38,6 @@ sudo apt install gnome-screenshot
 
 Go to _Settings > Keyboard > View and Customize Shortcuts > Custom Shortcuts_ and click the `+` button to add a custom shortcut.
 
-
 ![screenshot](./images/custom_shortcut_screenshot_area_selection.png)
 
 
@@ -55,7 +54,7 @@ NOTE: Ubuntu 22.04 introduced a screenshot utility that allows you to take a scr
 ![screenshot](./images/screenshot_related_keyboard_shorcuts.png)
 ### Change the location `gnome-screenshot` saves screenshots
 
-By default, all screenshots are saved in `~/Pictures`, which creates a whole lot of mess. I like to keep the screenshots in their own folder at `~/Pictures/Screenshots` (which is also the default location for the interactive screenshot utility). 
+By default, all screenshots are saved in `~/Pictures`, which creates a whole lot of clutter. I like to keep the screenshots in their own folder at `~/Pictures/Screenshots` (which is also the default location for the interactive screenshot utility).
 
 Here's the command to set the `dconf` setting
 
