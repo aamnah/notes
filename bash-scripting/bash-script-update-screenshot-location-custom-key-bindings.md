@@ -1,9 +1,10 @@
 ---
-title: Writing a script to update Screenshots location on Ubuntu
+title: Writing a bash script to update gsetting and dconf values and adding custom keyboard shortcuts
 date: 2020-08-09
 lastmod: 2022-10-05
+draft: true
 description: 'Write a bash script to change the default location for where screenshots are saved on Ubuntu. Involves setting the location path, disabling default keyboard shortcuts for screenshots and adding custom key bindings that use `gnome-screenshot` to take screenshots'
-slug: bash-script-update-screenshot-location-custom-key-bindings
+slug: bash-script-update-gsetting-dconf-settings-custom-keyboard-shortcuts-bindings
 tags:
   - Ubuntu
   - Bash Scripting
@@ -11,11 +12,9 @@ tags:
   - gsettings
 ---
 
----
-NOTE: This is no longer relevant. Ubuntu 22.04 saves screenshots in `~/Pictures/Screenshots` by default. If you're using the old `gnome-screenshot` utility, you can change the location by editing the value for `XDG_PICTURES_DIR` in the `~/.config/user-dirs.dirs` file
+NOTE: This is no longer relevant. Ubuntu 22.04 saves screenshots in `~/Pictures/Screenshots` by default. If you're using the old `gnome-screenshot` utility, you can change the location by running `gsettings set org.gnome.gnome-screenshot auto-save-directory "/home/aamnah/Pictures/Screenshots"` and adding custom keyboard shortcuts to take your screenshots [read more](/change-default-screenshot-save-location)
 
 ---
-
 
 I previously [changed default location](link-to-other-article) for where Screenshots are saved on Ubuntu. Originally, i used the GUI for changing location and setting keyboard shortcuts. Because i'm efficient, i scripted it so i could do it in the Terminal. I'm not doing 30+ GUI clicks again..
 
@@ -23,7 +22,7 @@ Here are the custom keyboard shortcuts we'll be adding
 
 | Shortcut                          | Description                                             | gnome-screenshot command | Key mapping    |
 | --------------------------------- | ------------------------------------------------------- | ------------------------ | -------------- |
-| <kbd>Alt</kbd>+<kbd>Print</kbd>   | Save a screenshot of a window to ~/Pictures/screenshots | `gnome-screenshot -wb`   | `<Alt>Print`   |
+| <kbd>Alt</kbd>+<kbd>Print</kbd>   | Save a screenshot of a window to ~/Pictures/screenshots | `gnome-screenshot -w`    | `<Alt>Print`   |
 | <kbd>Shift</kbd>+<kbd>Print</kbd> | Save a screenshot of an area to ~/Pictures/screenshots  | `gnome-screenshot -a`    | `<Shift>Print` |
 | <kbd>Print</kbd>                  | Save a screenshot to ~/Pictures/screenshots             | `gnome-screenshot`       | `Print`        |
 
@@ -44,13 +43,14 @@ Here's the full script
 update_screenshots_directory() {
   # 1. Set custom path for Screenshots
   #-------------------------------------------------------------------
-  SCREENSHOT_SAVE_LOCATION="/home/${USER}/Pictures/screenshots"
+  SCREENSHOT_SAVE_LOCATION="${HOME}/Pictures/Screenshots"
 
   # make sure the save location exists
   mkdir ${SCREENSHOT_SAVE_LOCATION}
 
   # update location
-  gsettings set org.gnome.gnome-screenshot auto-save-directory "file:///${SCREENSHOT_SAVE_LOCATION}"
+  # gsettings set org.gnome.gnome-screenshot auto-save-directory "file:///${SCREENSHOT_SAVE_LOCATION}"
+  gsettings set org.gnome.gnome-screenshot auto-save-directory "${SCREENSHOT_SAVE_LOCATION}"
 }
 
 disable_default_screenshot_keyboard_shortcuts() {
@@ -87,7 +87,7 @@ configure_custom_shortcuts() {
 
   # custom3
   gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ name 'Save a screenshot of a window to ~/Pictures/screenshots'
-  gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ command 'gnome-screenshot -wb'
+  gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ command 'gnome-screenshot -w'
   gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/ binding '<Alt>Print'
 }
 
