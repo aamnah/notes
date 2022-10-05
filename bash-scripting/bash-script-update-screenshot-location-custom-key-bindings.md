@@ -14,6 +14,8 @@ tags:
 
 NOTE: This is no longer relevant. Ubuntu 22.04 saves screenshots in `~/Pictures/Screenshots` by default. If you're using the old `gnome-screenshot` utility, you can change the location by running `gsettings set org.gnome.gnome-screenshot auto-save-directory "/home/aamnah/Pictures/Screenshots"` and adding custom keyboard shortcuts to take your screenshots [read more](/change-default-screenshot-save-location)
 
+This script has not been extensively tested, use at your own risk
+
 ---
 
 I previously [changed default location](link-to-other-article) for where Screenshots are saved on Ubuntu. Originally, i used the GUI for changing location and setting keyboard shortcuts. Because i'm efficient, i scripted it so i could do it in the Terminal. I'm not doing 30+ GUI clicks again..
