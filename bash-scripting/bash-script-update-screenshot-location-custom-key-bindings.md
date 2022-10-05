@@ -1,7 +1,8 @@
 ---
 title: Writing a script to update Screenshots location on Ubuntu
 date: 2020-08-09
-description: 'Write a bash script to change the defult location for where screenshots are saved on Ubuntu. Involves setting the location path, disabling default keyboard shortcuts for screenshots adn adding custom key bindings that use `gnome-screenshot` to take screenshots'
+lastmod: 2022-10-05
+description: 'Write a bash script to change the default location for where screenshots are saved on Ubuntu. Involves setting the location path, disabling default keyboard shortcuts for screenshots and adding custom key bindings that use `gnome-screenshot` to take screenshots'
 slug: bash-script-update-screenshot-location-custom-key-bindings
 tags:
   - Ubuntu
@@ -9,6 +10,12 @@ tags:
   - dconf
   - gsettings
 ---
+
+---
+NOTE: This is no longer relevant. Ubuntu 22.04 saves screenshots Changing the location for saved screenshots is `~/Pictures/Screenshots` If you're using the old `gnome-screenshot` utility, you can change the location by editing the value for `XDG_PICTURES_DIR` in the `~/.config/user-dirs.dirs` file
+
+---
+
 
 I previously [changed default location](link-to-other-article) for where Screenshots are saved on Ubuntu. Originally, i used the GUI for changing location and setting keyboard shortcuts. Because i'm efficient, i scripted it so i could do it in the Terminal. I'm not doing 30+ GUI clicks again..
 
