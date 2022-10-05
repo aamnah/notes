@@ -14,7 +14,7 @@ Here's what you do
 - add a custom shortcut for <kbd>Shift</kbd> + <kbd>PrtSc</kbd>
 - (optional) change the directory where `gnome-screenshot` saves screenshots 
 
-#### Add keyboard shortcut for screenshot of area selection
+### Add keyboard shortcut for screenshot of area selection
 
 Install `gnome-screenshot`
 
@@ -22,10 +22,11 @@ Install `gnome-screenshot`
 sudo apt install gnome-screenshot
 ```
 
-Go to _Settings > Keyboard > View and Customize Shortcuts > Screenshots_ and add a custom shortcut.
+Go to _Settings > Keyboard > View and Customize Shortcuts > Custom Shortcuts_ and click the `+` button to add a custom shortcut.
 
-![screenshot]()
-![screenshot]()
+
+![screenshot](./images/custom_shortcut_screenshot_area_selection.png)
+
 
 The command to use is `gnome-screenshot -a` (the `-a` or `--area` option lets you grab an area of the screen instead of the entire screen).
 
@@ -37,9 +38,8 @@ Adding the custom shortcut will disable any existing key bindings for the same k
 
 NOTE: Ubuntu 22.04 introduced a screenshot utility that allows you to take a screenshot interactively, i.e. it shows you a prompt screen where you click click to get the job done. It comes with it's own set of shortcuts which you can update under _Settings > Keyboard > View and Customize Shortcuts > Screenshots_. I have the _interactivity_ altogether because i prefer keyboard shortcuts with less clicking involved
 
-![screenshot]()
-
-#### Change the location `gnome-screenshot` saves screenshots
+![screenshot](./images/screenshot_related_keyboard_shorcuts.png)
+### Change the location `gnome-screenshot` saves screenshots
 
 By default, all screenshots are saved in `~/Pictures`, which creates a whole lot of mess. I like to keep the screenshots in their own folder at `~/Pictures/Screenshots` (which is also the default location for the interactive screenshot utility). 
 
@@ -61,13 +61,13 @@ sudo apt install dconf-editor
 
 Open the GUI and change the values in _org > gnome > gnome-screenshot > auto-save-directory_
 
-![screenshot of dconf-editor GUI settings for auto-save-directory]()
+![screenshot of dconf-editor GUI settings for auto-save-directory](./images/gnome_screenshot_auto_save_directory.png)
 
 I came across advice recommending changing the value for `XDG_PICTURES_DIR` in the `~/.config/user-dirs.dirs` file. I do not recommend this. It'd work for screenshot shortcuts, but keep in mind that `XDG_PICTURES_DIR` will change the path for your `Pictures` folder and the screenshot location is a side effect of that. (Imagine changing the path for your `Desktop` folder). It's a dirty workaround.
 
 Changing this value to `$HOME/Pictures/Screenshots` will also mean that any screenshots taken with the interactive screenshot utility will be saved in `$HOME/Pictures/Screenshots/Screenshots` by default.
 
-#### Changing the default filename format?
+### Changing the default filename format?
 
 The `gnome-screenshot` CLI tool lets you specify filename with `-f` or `--filename` option
 
