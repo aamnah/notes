@@ -1,6 +1,7 @@
 ---
 title: Screenshot shortcuts on macOS, Linux and Windows
 date: 2019-03-14
+lastmod: 2022-10-05
 ---
 
 ## macOS
@@ -27,6 +28,10 @@ date: 2019-03-14
 - `Shift` + `Prt Scrn` to take a screenshot of an area you select
 
 The images will be saved in your `~/Pictures` folder. Holding `Ctrl` with above shortcuts will copy to clipboard instead of saving images.
+
+NOTE: Ubuntu 22.04 introduced a screenshot utility that allows you to take a screenshot interactively instead of taking a screenshot directly with the shortcuts. You can change this behaviour under _Settings > Keyboard > View and Customize Shortcuts > Screenshots_
+
+You can also enable the old screenshot utility to save screen selections. You'll have to install `gnome-screenshot` and add a custom shortcut for the command `gnome-screenshot -c -a`. You should also then disable the interactive utility shortcut if needed
 
 ### Screencasts
 
