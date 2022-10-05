@@ -10,7 +10,7 @@ tags:
 
 
 ---
-NOTE: This is no longer relevant. Ubuntu 22.04 saves screenshots Changing the location for saved screenshots is `~/Pictures/Screenshots` If you're using the old `gnome-screenshot` utility, you can change the location by editing the value for `XDG_PICTURES_DIR` in the `~/.config/user-dirs.dirs` file
+NOTE: This is no longer relevant. Ubuntu 22.04 saves screenshots in `~/Pictures/Screenshots` by default. If you're using the old `gnome-screenshot` utility, you can change the location by editing the value for `XDG_PICTURES_DIR` in the `~/.config/user-dirs.dirs` file
 
 ---
 
