@@ -57,6 +57,31 @@ After you have added a `.desktop` file, run the following command to update cach
 update-desktop-database ~/.local/share/applications
 ```
 
+Here's a working copy of my complete `obsidian.desktop` file
+
+```bash
+# ~/.local/share/applications/obsidian.desktop
+[Desktop Entry]
+Type=Application
+Name=Obsidian
+Comment=A second brain, for you, forever.
+Terminal=false
+
+GenericName=Markdown Editor
+# StartupWMClass=obsidian
+# MimeType=x-scheme-handler/obsidian;
+
+# Location for the AppImage file and icon
+# Exec=/home/aamnah/Mounts/Files/Applications/Obsidian-0.13.19.AppImage %u
+Exec=/home/aamnah/Mounts/Files/Applications/Obsidian-0.13.19.AppImage
+Icon=/home/aamnah/Mounts/Files/Applications/obsidian.png
+
+
+# Download icon and place it in the same folder as this one
+# curl -L -o obsidian.png https://cdn.discordapp.com/icons/686053708261228577/1361e62fed2fee55c7885103c864e2a8.png
+```
+
+You may have to make the file executable as well
 ## Links
 
 - [Desktop entries](https://wiki.archlinux.org/title/desktop_entries)
