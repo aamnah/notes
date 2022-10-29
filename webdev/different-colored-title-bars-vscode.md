@@ -27,7 +27,7 @@ Your `settings.json` would look like this
 }
 ```
 
-Make sure you set `window.titleBarStyle` to `custom` on VS Code settings. By default the value is set to `native`.
+Make sure you set `window.titleBarStyle` to `custom` in VS Code settings. By default the value is set to `native`.
 
 ![screenshot for VS code title bar style](./images/vscode-title-bar-style.png)
 
