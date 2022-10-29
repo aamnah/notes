@@ -112,10 +112,10 @@ Code sample
 
 
 ```css
-.green-dark {background-color:hsl(120,100%,25%);} /* dark green */
-.green {background-color:hsl(120,100%,50%);} /* green */
-.green-light {background-color:hsl(120,100%,75%);} /* light green */
-.green-pastel {background-color:hsl(120,60%,70%);} /* pastel green */
+.green { background-color:hsl(120,100%,50%); } 
+.green-dark { background-color:hsl(120,100%,25%); }
+.green-light { background-color:hsl(120,100%,75%); }
+.green-pastel { background-color:hsl(120,60%,70%); }
 ```
 
 Links
