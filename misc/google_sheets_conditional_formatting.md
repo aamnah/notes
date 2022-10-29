@@ -1,6 +1,7 @@
 ---
 title: Conditional formatting in Google Sheets
 date: 2020-01-10
+slug: google_sheets_conditional_formatting
 ---
 
 ### Notes
@@ -39,7 +40,7 @@ date: 2020-01-10
 
 - In the custom formula field, enter `=A1=MIN($A1:$N1)`. Substitute `A1` for the first cell in the first row you are checking, and `N1` with the last cell in the first row you are checking.
 
-![screenshot of conditional formatting rules in action](google_sheets_conditional_formatting.png)
+![screenshot of conditional formatting rules in action](images/google_sheets_conditional_formatting.png)
 
 ## Links
 
