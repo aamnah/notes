@@ -6,7 +6,7 @@ draft: true
 
 Work in Progress script. Basically combining [this one](https://github.com/aamnah/bash-scripts/blob/master/install/amp_debian.sh), [this one](https://github.com/aamnah/bash-scripts/blob/master/setup/virtualhost.sh) and [this one](https://github.com/aamnah/bash-scripts/blob/master/install/opencart.sh) so that i don't have to do them one by one.
 
-Also, setup SFTP so that we someone can FTP theme files if need be.
+Also, setup SFTP so that someone can FTP theme files if need be.
 
 Will get around to it eventually, OpenCart doesn't get much love from me, and i don't have to do this a whole lot..
 

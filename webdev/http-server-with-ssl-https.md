@@ -7,7 +7,7 @@ date: 2020-06-09
 ## ngrok
 
 ```bash
-# install on Ubuntus
+# install on Ubuntu
 sudo snap install ngrok
 
 # connect your account
