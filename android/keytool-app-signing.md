@@ -1,7 +1,7 @@
 ---
 title: Using keytool for keystore management and app signing
 date: 2020-06-29
-description: Generate a new keystore, or extract the certficate for an upload key
+description: Generate a new keystore, or extract the certificate for an upload key
 slug: keytool-app-signing-keystore-management
 tags:
   - keytool

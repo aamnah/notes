@@ -31,11 +31,11 @@ sudo gem install fastlane -NV
 
 ### Automated UI Testing
 
-App Center, Play Connsole, Firebase Test Lab
+App Center, Play Console, Firebase Test Lab
 
 ### App Center
 
-- Continuous integratiion
+- Continuous integration
 - Testing
 - Analytics
 - Push Notifications
