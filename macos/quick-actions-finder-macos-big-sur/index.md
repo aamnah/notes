@@ -14,8 +14,8 @@ slug: quick-actions-finder-macos-big-sur
 
 Quick Actions are saved as workflows in `~/Library/Services`
 
-![open-iterm-finder-action-macos.png](open-iterm-finder-action-macos.png)
-![open-iterm-finder-action-macos-2.png](open-iterm-finder-action-macos-2.png)
+![open-iterm-finder-action-macos.png](./open-iterm-finder-action-macos.png)
+![open-iterm-finder-action-macos-2.png](./open-iterm-finder-action-macos-2.png)
 
 Links
 
