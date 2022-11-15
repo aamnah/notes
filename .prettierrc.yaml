@@ -1,9 +1,0 @@
-printWidth: 120
-semi: false
-singleQuote: true
-tabWidth: 2
-trailingComma: all # Trailing commas where valid in ES5 (objects, arrays, etc.)
-bracketSpacing: true # { foo: bar }
-jsxBracketSameLine: false
-arrowParens: always # (x) => x
-endOfLine: lf # Line Feed only (\n), common on Linux and macOS as well as inside git repos
