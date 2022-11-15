@@ -65,12 +65,12 @@ This can be split into `module.toml` and `menus.toml` like so:
 # module.toml
 [[imports]]
   path = "github.com/theNewDynamic/gohugo-theme-ananke"
-  disabled = false
+  disable = false
 
 [[imports]]
   # import this repo as a Hugo module
   path = "github.com/aamnah/notes"
-  disabled = false
+  disable = false
 
   # mount the imported repo in this location
   [[imports.mounts]]
