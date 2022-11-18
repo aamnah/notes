@@ -56,7 +56,12 @@ h5 { color: purple; }
 h6 { color: purple; }
 ```
 
-`h1`, `h2`, `h3` will be black, and `h4`, `h5`, `h6` will be purple. Whereas the following CSS code with CSS custom properties 
+![Screenshot - Sass variables are imperative](./images/sass-variables-imperative.png)
+
+
+`h1`, `h2`, `h3` will be black, and `h4`, `h5`, `h6` will be purple. 
+
+Whereas the following CSS code with CSS custom properties
 
 ```css
 :root { --color-text: black; }
@@ -83,9 +88,11 @@ h5 { color: purple; }
 h6 { color: purple; }
 ```
 
+![Screenshot - CSS variables are declarative](./images/css-variables-declarative.png)
+
 All links will be purple.
 
-This difference matters when you're building themes and typography systems
+This difference between imperative and declarative matters when you're building themes and typography systems
 
 Links
 ---
