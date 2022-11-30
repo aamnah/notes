@@ -10,4 +10,4 @@ draft: true
 Links
 ---
 
-= [Hugo dateFormat](https://gohugohq.com/howto/hugo-dateformat/)
+- [Hugo dateFormat](https://gohugohq.com/howto/hugo-dateformat/)

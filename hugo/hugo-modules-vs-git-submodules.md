@@ -2,6 +2,7 @@
 title: Hugo modules vs. Git submodules
 date: 2022-11-14
 slug: hugo-modules-vs-git-submodules
+draft: true
 ---
 
 Git submodules are cumbersome because: 
@@ -49,8 +50,8 @@ Hugo modules provide _dependency management for all component types, including c
 I can
 
 - [Going wild with Hugo modules - Jeanne Haskett, Kimberley Brown, Nathalie Laroche // HugoConf 2022](https://www.youtube.com/watch?v=K4lL3NMRmbY)
- -[Hugo modules for “dummies”](https://discourse.gohugo.io/t/hugo-modules-for-dummies/20758)
-- [](https://discourse.gohugo.io/t/how-to-add-a-theme-using-modules-for-beginners/20665)
+- [Hugo modules for “dummies”](https://discourse.gohugo.io/t/hugo-modules-for-dummies/20758)
+- [How to add a theme using modules (for beginners)](https://discourse.gohugo.io/t/how-to-add-a-theme-using-modules-for-beginners/20665)
 You can _mount_ things from a certain remote location to a location inside your project. Imagine _symlinks_, it's kind of like that. It is possible to mount folder from your hard drive.
 
 
