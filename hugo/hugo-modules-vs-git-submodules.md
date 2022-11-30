@@ -56,7 +56,7 @@ You can _mount_ things from a certain remote location to a location inside your 
 
 ### Importing content from another repo
 
-```go
+```toml
 [module]
 
 [[module.imports]]
