@@ -1,4 +1,4 @@
 ---
 title: macOS
-icon: "ri ri-finder-line"
+icon: "ri ri-apple-fill"
 ---
