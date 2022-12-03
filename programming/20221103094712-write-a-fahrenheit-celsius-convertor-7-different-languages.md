@@ -16,6 +16,7 @@ The ℉/℃ converter is a good example which is simple to understand and includ
 - **variables**: storing different values that can be anything and using them
 - **functions**: creating reusable chunks of code that take input, do something with it, and return an output
 - **comments**: messages that are meant for humans reading the code and the compiler/interpreter will ignore them
+- how to include chunks of code written by others, or by yourself but in different files
 
 ## C
 C is the godfather language, it was there before many of the modern languages and has influenced their _syntax_ as well. C++, Objective-C, and C# are all based on C. It's fair to say that these languages were created as a _response_ to C, or _improve_ C. Knowing C helps you understand the _raison d'être_ for a lot of programming languages and programming concepts.
@@ -60,8 +61,6 @@ void main() {
     convertedValue = inputValue * (9.0/5.0) + 32;
     printf("\n%.2f°C is equal to: %.2f°F \n", inputValue, convertedValue);
   } 
-
-  // TODO: [ ] convert the asking for user input into a function
 
 /*
 NOTES: 
@@ -116,3 +115,22 @@ Python code look like a breath of fresh air. No semicolons, no curly braces. Whi
 # run
 python3 fahrenheit_celsius_converter.py
 ```
+
+### Dart
+Dart supports _dynamic_ and _static_ typing both. Meaning it's cool if you type your variables, but if you don't it'll infer them. It also has _null safety_, which means that a variable's value can not be `null` unless you explicitly tell it so.
+
+- `main()` is mandatory
+
+<details>
+<summary>How do i install Dart?</summary>
+
+```dart
+sudo apt-get update && sudo apt install apt-transport-https
+wget -qO- https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo gpg --dearmor -o /usr/share/keyrings/dart.gpg
+echo 'deb [signed-by=/usr/share/keyrings/dart.gpg arch=amd64] https://storage.googleapis.com/download.dartlang.org/linux/debian stable main' | sudo tee /etc/apt/sources.list.d/dart_stable.list
+
+sudo apt-get update && apt-get install dart
+echo 'export PATH="$PATH:/usr/lib/dart/bin"' >> ~/.profile
+```
+</details>
+

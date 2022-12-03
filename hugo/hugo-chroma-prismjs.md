@@ -4,7 +4,7 @@ title: Using PrismJS for Hugo sites
 slug: hugo-chroma-prismjs
 ---
 
-NOTE: I have stopped using Prism for syntax highlighting and use Hugo's built-in Chroma highlighting instead. The hugo advantage Chroma has over Prism is site performance. Chroma renders the highlighted syntax at build time whereas Prism renders client side. Prism is also going to download ~50kb on site load. The file size is actually bigger if you are using many plugins and supporting many languages.
+NOTE: I have stopped using Prism for syntax highlighting and use Hugo's built-in Chroma highlighting instead. The huge advantage Chroma has over Prism is site performance. Chroma renders the highlighted syntax at build time whereas Prism renders client side. Prism is also going to download ~50kb on site load. The file size is actually bigger if you are using many plugins and supporting many languages.
 
 ---
 
