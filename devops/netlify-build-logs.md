@@ -1,6 +1,7 @@
 ---
 title: improving Netlify build logs
 date: 2023-02-06
+draft: true
 tags:
 - netlify
 ---
