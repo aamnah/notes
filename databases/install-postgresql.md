@@ -73,12 +73,23 @@ CREATE TABLE celebs (
  );
 ```
 
+Auto-increment values with `SEQUEL` constraint. `SEQUEL` represents an auto-incrementing unique value. For example: `id SERIAL PRIMARY KEY`.
+
 ```sql
 -- insert data into table
 INSERT INTO celebs (id, name, age) 
 VALUES (1, 'Justin Bieber', 22);
 ```
 
+```sql
+-- insert multiple rows
+INSERT INTO table_name (column_list)
+VALUES
+    (value_list_1),
+    (value_list_2),
+    ...
+    (value_list_n);
+```
 
 ```sql
 -- add a new column
