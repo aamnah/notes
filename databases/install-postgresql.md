@@ -98,6 +98,15 @@ ADD COLUMN twitter_handle TEXT;
 ```
 
 ```sql
+-- add multiple columns
+ALTER TABLE table_name
+ADD COLUMN column_name1 data_type constraint,
+ADD COLUMN column_name2 data_type constraint,
+...
+ADD COLUMN column_namen data_type constraint;
+```
+
+```sql
 -- update data
 UPDATE celebs 
 SET twitter_handle = '@taylorswift13' 
@@ -115,6 +124,12 @@ WHERE twitter_handle IS NULL;
 -- the text needed to be preceded with 'E'
 INSERT INTO films (name, release_year)
 VALUES(E'Ocean\'s Eleven',  2001);
+```
+
+```sql
+-- change data type of a column
+ALTER TABLE films
+ALTER COLUMN rating SET DATA TYPE float(1);
 ```
 
 Links
