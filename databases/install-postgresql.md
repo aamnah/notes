@@ -111,6 +111,13 @@ ADD COLUMN column_namen data_type constraint;
 UPDATE celebs 
 SET twitter_handle = '@taylorswift13' 
 WHERE id = 4; 
+
+UPDATE films
+SET runtime = 92,
+    category = 'animation',
+    rating = 8,
+    box_office = 5774000000   
+WHERE name = 'Monsters, Inc.';
 ```
 
 ```sql
