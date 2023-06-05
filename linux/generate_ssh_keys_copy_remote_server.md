@@ -79,8 +79,10 @@ If you get the following error
 then force copy it with `-f` flag
 
 ```bash
-ssh-copy-id -f -i amnaandfazal vfsbot2
+ssh-copy-id -f -i <key_path> <remote_server>
 ```
+
+Remote server can either be in the `user@host` form or a name of a saved `Host` in `.ssh/config`
 
 Alternatively, you can copy the key output manually over SSH, like this:
 
