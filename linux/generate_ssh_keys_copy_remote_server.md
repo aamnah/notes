@@ -28,7 +28,12 @@ cd ~/.ssh && ssh-keygen -t ed25519
 ```bash
 cd ~/.ssh && ssh-keygen -t ed25519 -C "hello@example.com"
 ```
+ 
+### Add SSH key to macOS Keychain
 
+```bash
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+```
 ### Making Sure the Remote Server Accepts SSH Keys
 view the server's sshd_config file
 
@@ -58,12 +63,33 @@ sudo chmod go-w ~/ && sudo chmod 700 ~/.ssh && sudo chmod 600 ~/.ssh/authorized_
 
 ### Copying SSH Public Key from Local to Remote Server
 
+On macOS you can use the `ssh-copy-id` command to copy the SSH key to remote server
+
+```bash
+ssh-copy-id -i ~/.ssh/mykey user@host
+```
+
+If you get the following error
+
+```
+/usr/bin/ssh-copy-id: WARNING: All keys were skipped because they already exist on the remote system.
+		(if you think this is a mistake, you may want to use -f option)
+```
+
+then force copy it with `-f` flag
+
+```bash
+ssh-copy-id -f -i amnaandfazal vfsbot2
+```
+
+Alternatively, you can copy the key output manually over SSH, like this:
+
+
 ```bash
 cat ~/.ssh/id_ed25519.pub | ssh username@example.com "cat >> ~/.ssh/authorized_keys"
 ```
 
 replace `id_ed25519.pub` with your generated key.
-
 
 Troubleshooting
 ---
