@@ -99,7 +99,8 @@ pipelines: # contains all your pipeline definitions. you can define multiple pip
             - expo publish --non-interactive --clear --release-channel test
 ```
 
-
+![bitbucket pipeline for app center](./images/bitbucket-pipeline-appcenter.png)
+![bitbucket pipeline for firebase](./images/bitbucket-pipeline-firebase.png)
 ### Notes
 
 - Ended up using `latest` instead of `alpine` to get rid of common issues like git not being installed and such

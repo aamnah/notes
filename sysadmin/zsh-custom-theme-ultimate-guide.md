@@ -29,7 +29,7 @@ and i ended up with this
 
 code is [here on Github](https://github.com/aamnah/oh-my-zsh-custom)
 
-### Gameplan
+### Game plan
 
 set the theme to random
 

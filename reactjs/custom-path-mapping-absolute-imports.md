@@ -9,7 +9,7 @@ The benefit of doing so
 - neater imports and organization
 - when i move components around by copy pasting code, the paths in the import statements don't change. I know VS Code can auto-update import paths, and it is wonderful, but when it does the path updates you have to go in and save all files where the path was updated. Not having to update any paths to begin with is cool.
 
-You have to update both `babel.config.js` and `tsconfig.json` if you're using Typescrip.
+You have to update both `babel.config.js` and `tsconfig.json` if you're using TypeScript.
 
 ### Babel setup
 

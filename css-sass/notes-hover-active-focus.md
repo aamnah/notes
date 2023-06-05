@@ -1,5 +1,5 @@
 ---
-title: Notes on styling avtive, hover and focus states
+title: Notes on styling active, hover and focus states
 date: 2020-08-12
 slug: notes-hover-active-focus
 ---

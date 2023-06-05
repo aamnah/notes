@@ -3,6 +3,14 @@ title: Configure a different router (Asus AC68U) to work with PTCL Broadband
 date: 2020-09-04
 slug: PTCL_Router_DSL_Asus_AC68U_settings_configuration
 description: Guide on using a third-party router with your PTCL Boradband connection. Setup a PPoE DSL connection on Asus AC68U to work with your PTCL phone line
+draft: true
+---
+
+
+UPDATE: I'm afraid there was no happy endings in the end. The internet would not work on the AC68 even after me spending 6 hours fiddling with the configuration settings, and reading articles and watching videos in the world wide wilderness. The post is a draft at best.
+
+I have since moved to using Transworld fiber and have my AC68 connected to the Transworld router via ethernet. Works flawlessly. I'm done with using the PTCL router. It still serves as a backup connection, but i have no intentions whatsoever of ever going back to dealing with its configuration.
+
 ---
 
 Here's the truth: PTCL modems/routers are ancient, and they suck. The signal strength is poor, there are no Gigabit ethernet ports, there is no Wifi AC, and it starts hanging up when there are too many devices (i.e. when the family is home on occasions..). So i got a nice ADSL Asus router, it was actually a gift from my brother.
@@ -21,7 +29,7 @@ You need to know your broadband DSL username and password. You can find this und
 - `VPI`: `0`
 - `VCI`: `103`
 
-Now i can transfer files wirelessly and not dread the transfer times. I can get decent signals in my bedroom upstairs (the router is in the lounge downstairs). And lastly, everyone can have 3 devices each (phone, laptop, iPad..) connected at all times and not have any connectivity issues with the router..
+~~Now i can transfer files wirelessly and not dread the transfer times. I can get decent signals in my bedroom upstairs (the router is in the lounge downstairs). And lastly, everyone can have 3 devices each (phone, laptop, iPad..) connected at all times and not have any connectivity issues with the router..~~
 
 
 Links

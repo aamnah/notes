@@ -169,4 +169,4 @@ The T-DAGGER Destroyer comes with detachable OUTEMU blue switches by default (it
 
 The T-DAGGER Bora also comes with detachable OUTEMU switches, and the cable is a micro-USB detachable. No wrist-rest and no numpad.
 
-note: make sure the leaaves match, i.e. the yellow gaterons can fit in place of outemu blues..
+note: make sure the leaves match, i.e. the yellow gaterons can fit in place of outemu blues..

@@ -109,7 +109,7 @@ input[type='checkbox']:checked::before {
 
 We have now something that looks like this image
 
-![Basic checkbox styles](./styling-checkbox-1.png)
+![Basic checkbox styles](./images/styling-checkbox-1.png)
 
 To make this work for both `radio` and `checkbox`, just combine them
 
@@ -179,8 +179,8 @@ And i took out the background color i had given the radio/checbkox. This is wher
 
 It's not replacing the original radio and checkbox, it's adding styles on top of it.. I can still see the original border underneath, and if i hide it or adjust opacity, it applies to my custom styles as well..
 
-![Custom styles showing on top of original styles](./custom_checkbox_radio.png)
-![Custom styles dimmed opacity](./custom_checkbox_radio_opacity.png)
+![Custom styles showing on top of original styles](./images/custom_checkbox_radio.png)
+![Custom styles dimmed opacity](./images/custom_checkbox_radio_opacity.png)
 
 You can do `appearance: none`, but that is [not very cross-browser friendly](https://developer.mozilla.org/en-US/docs/Web/CSS/appearance) and it also messes up all styles (which i don't feel like spending the time on fixing..)
 
@@ -192,7 +192,7 @@ input {
 }
 ```
 
-![appearance: none](./appearance_none.png)
+![appearance: none](./images/appearance_none.png)
 
 The above is fine i guess, as long as you always have a `background-color`. But i wanted to test the other approach too, so now i'm on to styling the `label` instead of the `input`..
 

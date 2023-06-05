@@ -36,9 +36,9 @@ label > input[type='checkbox'] {
 
 Which style block will be applied?
 
-![selector specificity](./selector_specificity.png)
+![selector specificity](./images/selector_specificity.png)
 
-The order of spceificity is this:
+The order of specificity is this:
 
 - `input[type='checkbox']:checked`
 

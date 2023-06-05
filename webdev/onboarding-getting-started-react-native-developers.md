@@ -2,6 +2,7 @@
 title: Getting started and onboarding for React Native developers
 date: 2022-07-20
 draft: true
+slug: onboarding-getting-started-react-native-developers
 ---
 
 ### Setting up the dev environment
