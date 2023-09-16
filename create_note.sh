@@ -21,6 +21,7 @@ date: ${DATE_STRING}
 uuid: ${DATE_UUID}
 slug: ${SLUG}
 description: 
+tags: 
 ---
 " >> ${FILENAME}
 }
