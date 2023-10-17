@@ -10,6 +10,34 @@ I have a separate repo linked to my Hugo site as a Hugo module. That repo contai
 What does not happen right now is that whenever i update the content for the notes section, the site does not get updated as a deployment is not triggered by Netlify.
 
 ## How?
-Build hooks.
+**Build hooks**. Build hooks give you a unique URL you can use to trigger a build.
 
 Netlify allows you to trigger deploys when a webhook is called, and Github allows you to call webhooks after a `push` is made. We link the two and that should take care of triggering deploys for us.
+
+
+You can find Netlify build hooks on [Site configuration > Build & deploy > Continuous deployment > Build hooks](https://app.netlify.com/sites/aamnah/configuration/deploys#build-hooks)
+
+Create a new hook in Netlify
+
+![Netlify build hooks](./images/netlify_build_hooks.png)
+
+Add a webhook in Github repo settings so that it notifies Netlify when changes are pushed to the repo
+
+![Add Github webhook](./images/github_webhook_add.png)
+
+![Github Webhooks](./images/github_webhooks.png)
+
+You can pass URL parameters to the URL too. I added a `trigger_title=triggered+by+Github+Actions+from+Notes+repo`
+
+```bash
+https://api.netlify.com/build_hooks/5c23354f454e1350f8543e78?trigger_title=triggered+by+Github+Actions+from+Notes+repo
+```
+
+![Netlify deployment logs](./images/deploy_log_netlify_webhook)
+
+
+Links
+---
+
+- [Github Webhooks](https://docs.github.com/en/webhooks)
+- [Netlify Build hooks](https://docs.netlify.com/configure-builds/build-hooks/)
