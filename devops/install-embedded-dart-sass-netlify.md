@@ -2,6 +2,7 @@
 title: Install Embedded Dart Sass on Netlify
 slug: install-embedded-dart-sass
 date: 2023-02-06
+lastmod: 2023-10-17
 description: If you want to use Embedded Dart Sass in your Hugo sites on Netlify, this is how you would set it up in your build environment
 ---
 
