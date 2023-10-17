@@ -9,6 +9,16 @@ NOTE: In 2023, the Sass team deprecated Embedded Dart Sass in favor of Dart Sass
 
 Install Dart Sass with `brew install sass/sass/sass`. Note that `npm i -g sass` install the pure JavaScript implementation of Sass which is slower than Dart Sass. If you're installing Dart Sass with Homebrew, you should uninstall the one installed from NPM.
 
+```bash
+# remove the pure JavaScript implementation of Sass, which is slower than Dart Sass
+npm uninstall -g sass
+
+
+# install Dart Sass
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install sass/sass/sass
+```
+
 ---
 
 To install embedded-dart-sass you need to download and extract it to a location that's in the system `$PATH`. 
