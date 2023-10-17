@@ -7,6 +7,8 @@ description: If you want to use Embedded Dart Sass in your Hugo sites on Netlify
 
 NOTE: In 2023, the Sass team deprecated Embedded Dart Sass in favor of Dart Sass. Embedded Dart Sass is no longer a requirement since Hugo version `0.114.0`. If you have been using Embedded Dart Sass1 with Hugo v0.113.0 and earlier, uninstall Embedded Dart Sass, then install Dart Sass. If you have installed both, Hugo will use Dart Sass.
 
+Install Dart Sass with `brew install sass/sass/sass`. Note that `npm i -g sass` install the pure JavaScript implementation of Sass which is slower than Dart Sass. If you're installing Dart Sass with Homebrew, you should uninstall the one installed from NPM.
+
 ---
 
 To install embedded-dart-sass you need to download and extract it to a location that's in the system `$PATH`. 
