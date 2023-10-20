@@ -32,7 +32,7 @@ Extract the file and you'll get a folder called `firefox`.
 
 ### 2. Create an `/opt` directory
 
-`/opt` is for system-wdie installation of add-on software,  while `/usr/local` is for single user and local installations. Since `/opt` is optional, Ubuntu doesn't have one by default. You can create one, no big deal.
+`/opt` is for system-wide installation of add-on software,  while `/usr/local` is for single user and local installations. Since `/opt` is optional, Ubuntu doesn't have one by default. You can create one, no big deal.
 
 ```bash
 sudo mkdir --mode=755 /opt
