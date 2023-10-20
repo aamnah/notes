@@ -18,11 +18,11 @@ draft: true
 ## Download Windows 11 ISO
 Get the [w11arm_esd2iso utility by VMware](https://communities.vmware.com/t5/VMware-Fusion-Documents/w11arm-esd2iso-a-utility-to-create-Windows-11-ARM-ISOs-from/ta-p/2957381) to download the Windows 11 ISO. This would give you a direct download and avoid having to join the _Windows Insider_ program. 
 
-Using the ISO from [UUP Dump]() or from a Windows Insider converted VHDX file is not recommended.
+Using the ISO from [UUP Dump](https://www.uupdump.cn/?lang=en-us) or from a Windows Insider converted `VHDX` file is not recommended.
 
 > You should be using an retail channel installation ISO built using the procedures in the guide. Other installation methods tend to have a few warts and sometimes flaky behavior.
 
-For example: the ISO downloaded with CrystalFetch installed Windows 11 for me, but then i was not able to change Display Resolution because the option was grayed out (possibly because of missing drivers)
+For example: the ISO downloaded with CrystalFetch installed Windows 11 but i got stuck at the WiFi Network selection screen.
 
 ```bash
 # Install command line tools
@@ -76,6 +76,11 @@ Set-ExecutionPolicy RemoteSigned
 .\setup.ps1
 ```
 
+## UTM and CrystalFetch
+I was able to install Windows 11 with [UTM][utm] and [CrystalFetch][crystalfetch] as well. UTM is an open source alterative to Parallels and VMware Fusion. CrystalFetch is the alternative to the `w11arm_esd2iso` tool that let's you download Windows 11 ISOs using a nice GUI.
+
+The install was straightforward, but i could not change Display Resolution because the option was grayed out (possibly because of missing drivers).
+
 Links
 ---
 - [Install Windows 11 ARM on a Apple Silicon Mac - VMWARE Community Guide][video]
@@ -86,3 +91,6 @@ Links
 [video]: https://www.youtube.com/watch?v=FUSLJnxKa_4
 [guide]: https://communities.vmware.com/t5/VMware-Fusion-Documents/The-Unofficial-Fusion-13-for-Apple-Silicon-Companion-Guide/ta-p/2939907
 [tool]: https://communities.vmware.com/t5/VMware-Fusion-Documents/w11arm-esd2iso-a-utility-to-create-Windows-11-ARM-ISOs-from/ta-p/2957381
+
+[utm]: https://mac.getutm.app/
+[crystalfetch]: https://apps.apple.com/us/app/crystalfetch-iso-downloader/id6454431289?mt=12
