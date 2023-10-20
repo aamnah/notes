@@ -22,6 +22,8 @@ Using the ISO from [UUP Dump]() or from a Windows Insider converted VHDX file is
 
 > You should be using an retail channel installation ISO built using the procedures in the guide. Other installation methods tend to have a few warts and sometimes flaky behavior.
 
+For example: the ISO downloaded with CrystalFetch installed Windows 11 for me, but then i was not able to change Display Resolution because the option was grayed out (possibly because of missing drivers)
+
 ```bash
 # Install command line tools
 xcode-select –install
