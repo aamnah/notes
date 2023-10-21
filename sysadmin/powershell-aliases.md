@@ -10,7 +10,7 @@ code $PROFILE
 
 ```powershell
 # Aliases for directories
-Function goToProjects {Set-Location -Path G:\Projects}
+Function goToProjects { Set-Location -Path G:\Projects }
 
 Set-Alias -Name proj -Value goToProjects
 ```
