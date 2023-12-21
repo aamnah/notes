@@ -17,8 +17,8 @@ usage
 
 DATE_UUID=$(date '+%Y%m%d%H%M%S') # 20231119115517
 DATE_STRING=$(date '+%Y-%m-%dT%H:%M:%S%:z') # 2023-11-19T11:55:40+02:00
-TITLE="$1"
-SLUG=$(echo "${1}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' | tr " " "-" | tr "[:upper:]" "[:lower:]")
+TITLE="$@"
+SLUG=$(echo "$@" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' | tr " " "-" | tr "[:upper:]" "[:lower:]")
 EXTENSION=".md"
 FILENAME="${DATE_UUID}-${SLUG}${EXTENSION}"
 
@@ -28,7 +28,7 @@ create_slug() {
   # use sed to trim space from beginning and end
   # use tr to replace spaces with -
   # TODO: make the slug lowercase
-  SLUG=$(echo "${1}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' | tr " " "-" | tr "[:upper:]" "[:lower:]")
+  SLUG=$(echo "$@" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' | tr " " "-" | tr "[:upper:]" "[:lower:]")
   return $SLUG
 }
 
