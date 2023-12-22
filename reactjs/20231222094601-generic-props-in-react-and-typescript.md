@@ -32,6 +32,15 @@ export default function CardList<T>({ children, ...rest }: Props<T>) {
 }
 ```
 
+Notes:
+
+- The usage of `React.FC` is discouraged and is officially removed from the CRA Typescript template.
+- With React 18, `FC` no longer provides `children`, so you have to type it yourself, and you can drop `FC`
 
 
 
+Links
+---
+- [React Components with GENERICS? - Advanced TypeScript](https://www.youtube.com/watch?v=vCq9QsDinvo&ab_channel=MattPocock)
+- [Remove React.FC from Typescript template #8177](https://github.com/facebook/create-react-app/pull/8177)
+- [How to fix Binding element 'children' implicitly has an 'any' type.ts(7031)?](https://stackoverflow.com/questions/55370851/how-to-fix-binding-element-children-implicitly-has-an-any-type-ts7031)
