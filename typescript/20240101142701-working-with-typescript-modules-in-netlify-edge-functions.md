@@ -30,7 +30,7 @@ Otherwise you will get similar to the following error:
 ◈ Failed to load Edge Function constants. The file does not seem to have a function as the default export.
 ```
 
-- If you want to import normal TS files, they need to be outside the edge functions directory. Anything inside the edge functions directory is expected to be a _module_ that has a _default_ export and returns a _function_.
+- If you want to import normal TS files, they need to be outside the edge functions directory. Anything inside the edge functions directory is expected to be a _module_ that has a _default_ export and returns a _function_; i.e. be an edge function itself.
 
 If you're trying to import another file in the edge functions directory, that file needs to be an edge function module, i.e. it should return a function. If you just want to have a basic TS file, for example for saving constant strings, move it outside the edge functions directory
 
