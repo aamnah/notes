@@ -43,5 +43,6 @@ Notes:
 Links
 ---
 - [React Components with GENERICS? - Advanced TypeScript](https://www.youtube.com/watch?v=vCq9QsDinvo&ab_channel=MattPocock)
+- [Generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
 - [Remove React.FC from Typescript template #8177](https://github.com/facebook/create-react-app/pull/8177)
 - [How to fix Binding element 'children' implicitly has an 'any' type.ts(7031)?](https://stackoverflow.com/questions/55370851/how-to-fix-binding-element-children-implicitly-has-an-any-type-ts7031)
