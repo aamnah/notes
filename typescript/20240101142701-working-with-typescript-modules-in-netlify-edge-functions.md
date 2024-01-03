@@ -8,26 +8,28 @@ description:
 tags: 
 ---
 
+## Importing TS Files
 Netlify Edge Functions use Deno as the runtime, so you'll follow Deno standards for importing/exporting files
 
-- In your import statements, you need to add the `.ts` file extension at the end of your filename. For example `./person.ts`. File extensions are required when importing modules.
+- In your import statements, you need to add the `.ts` file extension at the end of your filename. For example `./person.ts`. File extensions are required when importing modules. All your imported files should have file extensions for their own imports too.
 
 ```ts
-import Person, { sayHello } from "./person.ts";
+// Netlify Function
+import Person, { sayHello } from "../someDir/person.ts";
+```
+
+```ts
+// ../someDir/person.ts
+import { randomFoo } from "./foo.ts"; // nested imports need to have file extensions too
+
+export const sayHello
+export default Person
 ```
 
 Otherwise you will get similar to the following error:
 
 ```
 TypeError: Module not found "file:///media/Files/foo/netlify/edge-functions/constants".
-```
-
-- In your exported modules, you need a _default_ export
-
-Otherwise you will get similar to the following error:
-
-```
-◈ Failed to load Edge Function constants. The file does not seem to have a function as the default export.
 ```
 
 - If you want to import normal TS files, they need to be outside the edge functions directory. Anything inside the edge functions directory is expected to be a _module_ that has a _default_ export and returns a _function_; i.e. be an edge function itself.
@@ -45,6 +47,15 @@ export const OWM_API_KEY = Netlify.env.get("OPENWEATHER_API_KEY")
 export const OWM_BASE_URL = `https://api.openweathermap.org/data/2.5/weather`
 ```
 
+
+## Exporting Netlify Function modules
+- In your exported modules, you need a _default_ export, and that default export must be a _function_.
+
+Otherwise you will get similar to the following error:
+
+```
+◈ Failed to load Edge Function constants. The file does not seem to have a function as the default export.
+```
 
 ### Links
 - [Deno: Importing JavaScript modules](https://docs.deno.com/runtime/manual/getting_started/first_steps#importing-javascript-modules)
