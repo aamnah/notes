@@ -97,4 +97,4 @@ Categories=AudioVideo;Audio;
 ### Connecting with the Client
 SoundWire server shows an IP address that you need to connect by entering it on the Android app. Both devices (the server and the client) need to be connected to the same WiFi network.
 
-![SoundWire Client on Android](./images/soundwire_client.png)
+![SoundWire Client on Android](./images/soundwire_client.jpg)
