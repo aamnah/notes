@@ -11,11 +11,16 @@ tags:
 Why?
 Because i have more Android phones lying around than speakers.. I am using an Android phone as a wireless speaker for my PC
 
+SoundWire by GeorgieLabs is an audio streaming system that lets you stream audio between devices be it Windows/macOS/Linux PCs or Android phones. You need to install the _server_ on your PC from which you want to stream the audio, and the _client_ in my case was the android app.
 
-Download the appropriate Linux version of [SoundWire Audio server](https://georgielabs.net/) from GeorgieLabs.
+- [SoundWire Audio server](https://georgielabs.net/) 
+- [Android app](https://play.google.com/store/apps/details?id=com.georgie.SoundWireFree)
 
 
-Install Location: `/opt/SoundWireServer/`
+Download the appropriate Linux version of SoundWire Audio server for your machine (32 or 64 bit).
+
+Download location: `~/Downloads`
+Install location: `/opt/SoundWireServer/`
 
 ```bash
 # Download and extract SwoundWire Server
@@ -40,6 +45,8 @@ You can run the software directly from the command line by specifying the full p
 # run
 /opt/SoundWireServer 
 ```
+
+![SoundWire Server on Ubuntu](./images/soundwireserver.png)
 
 ### Create Desktop shortcut / Menu entry
 A desktop shortcut file comes with the download. You need to update it to change the paths to the location of the executable and the icon for it. And move the file to the right location (Desktop entry files go in `/usr/share/applications`).
@@ -86,3 +93,6 @@ Terminal=false
 Type=Application
 Categories=AudioVideo;Audio;
 ```
+
+### Connecting with the Client
+SoundWire server shows an IP address that you need to connect by entering it on the Android app. Both devices (the server and the client) need to be connected to the same WiFi network.
