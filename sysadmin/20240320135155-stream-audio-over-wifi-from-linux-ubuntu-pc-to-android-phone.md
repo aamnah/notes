@@ -46,7 +46,7 @@ You can run the software directly from the command line by specifying the full p
 /opt/SoundWireServer 
 ```
 
-![SoundWire Server on Ubuntu](./images/soundwireserver.png)
+![SoundWire Server on Ubuntu](./images/soundwire_server.png)
 
 ### Create Desktop shortcut / Menu entry
 A desktop shortcut file comes with the download. You need to update it to change the paths to the location of the executable and the icon for it. And move the file to the right location (Desktop entry files go in `/usr/share/applications`).
@@ -96,3 +96,5 @@ Categories=AudioVideo;Audio;
 
 ### Connecting with the Client
 SoundWire server shows an IP address that you need to connect by entering it on the Android app. Both devices (the server and the client) need to be connected to the same WiFi network.
+
+![SoundWire Client on Android](./images/soundwire_client.png)
