@@ -68,6 +68,8 @@ sudo usb_modeswitch -KW -v 0bda -p 1a2b
 
 - `-v` is for Vendor ID
 - `-p` is for Product ID
+- `-K` is for eject
+- `-W` is for verbose
 
 Use `lsusb` to check if the mode has changed. You may have to remove the dongle and insert it again for it to change mode.
 
