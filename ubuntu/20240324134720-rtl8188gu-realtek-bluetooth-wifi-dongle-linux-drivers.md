@@ -60,7 +60,7 @@ After installing the driver and rebooting, i had two issues:
 
 #### Fixing USB device mode
 
-Changing the mode was relatively easy, you can use `usb_modeswitch`for that
+Changing the mode was relatively easy, you can use `usb_modeswitch` for that. `usb_modeswitch` controls the mode of 'multi-state' USB devices.
 
 ```bash
 sudo usb_modeswitch -KW -v 0bda -p 1a2b
@@ -85,8 +85,35 @@ Bus 001 Device 002: ID 0bda:1a2b Realtek Semiconductor Corp. RTL8188GU 802.11n W
 Bus 001 Device 004: ID 0bda:c820 Realtek Semiconductor Corp. 802.11ac NIC
 ```
 
-sudo nano /lib/udev/rules.d/40-usb_modeswitch.rules
+To automate this, so that it is also run on startup, you can create a `systemd` service to run the command on startup
 
+```bash
+sudo nano /etc/systemd/system/modeswitch_bluetooth_dongle.service
+```
+
+```conf
+[Unit]
+Description=Script to make sure usb mode is switched automatically every time we restart
+After=network.target
+[Service]
+ExecStart=/sr/bin/sh -c 'usb_modeswitch -KW -v 0bda -p 1a2b'
+[Install]
+WantedBy=default.target
+```
+
+```bash
+sudo systemctl daemon-reload
+sudo systemctl enable modeswitch_bluetooth_dongle.service
+sudo systemctl start modeswitch_bluetooth_dongle.service
+```
+
+
+ALTERNATIVELY, you can edit `usb_modeswitch.rules`. Did not work for me when i inserted the dongle again.
+
+
+```bash
+sudo nano /lib/udev/rules.d/40-usb_modeswitch.rules
+```
 
 Add the follolwing at the end of the file, before the line `LABEL="modeswitch_rules_end"`
 
