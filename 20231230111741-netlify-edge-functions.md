@@ -8,6 +8,13 @@ description:
 tags: 
 ---
 
+## Environment Variables
+Note that environment variables declared in a Netlify configuration file (`netlify.toml`) are not available to functions. `process.env` vars are also not available. You would use `Netlify.env.get()` instead
+
+```ts
+export const OWM_API_KEY = Netlify.env.get("OPENWEATHER_API_KEY")
+```
+
 ## URLs and Paths
 
 The default URLs for Netlify Functions are:
