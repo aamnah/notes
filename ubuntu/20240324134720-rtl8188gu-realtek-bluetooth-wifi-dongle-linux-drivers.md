@@ -157,7 +157,8 @@ Links
 
 - [kablosuz-wireless][kablosuz]
 - [Help installing driver of RTL8188GU USB wifi adapter](https://www.reddit.com/r/linuxmint/comments/14h2jqo/help_installing_driver_of_rtl8188gu_usb_wifi/)
+- [RTL8188 adapter upgrade hell](https://play.datalude.com/blog/2022/08/rtl8188-adapter-upgrade-hell/)
+- [Executing a Bash script at startup using systemd](https://www.squash.io/executing-bash-script-at-startup-in-ubuntu-linux/)
 
 [kablosuz]: https://launchpad.net/~kelebek333/+archive/ubuntu/kablosuz
 
-- [](https://play.datalude.com/blog/2022/08/rtl8188-adapter-upgrade-hell/)
