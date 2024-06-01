@@ -54,8 +54,8 @@ Defined the color pigment as a degree on the color wheel (from 0 to 3359)
   - 120 is green 
   - 240 is blue
 
-![image explaining HSL Hue with examples](images/HSL_Hue.png)
-![image explaining HSL Complimentary with examples](images/HSL_Complimentary.png)
+![image explaining HSL Hue with examples](./images/HSL_Hue.png)
+![image explaining HSL Complimentary with examples](./images/HSL_Complimentary.png)
 
 
 ##### saturation	
@@ -63,7 +63,7 @@ Defines the saturation percentage on Y-axis, deciding how vibrant the color shou
   - `0%` is completely unsaturated (gray)  
   - `100%` is the full color (full saturation)
 
-![image explaining HSL Saturation with examples](images/HSL_Saturation.png)
+![image explaining HSL Saturation with examples](./images/HSL_Saturation.png)
 
 ##### lightness	
 Defines the lightness percentage on X-axis, deciding how light or dark the color should be
@@ -71,7 +71,7 @@ Defines the lightness percentage on X-axis, deciding how light or dark the color
   - `50%` is normal
   - `100%` is pure white
 
-![image explaining HSL Lightness with examples](images/HSL_Lightness.png)
+![image explaining HSL Lightness with examples](./images/HSL_Lightness.png)
 
 ##### opacity 
 Defined the alpha value (transparency)
@@ -79,7 +79,7 @@ Defined the alpha value (transparency)
   - `0` or `0%` is fully transparent
   - `0.5` or `50%` is translucent
 
-![image explaining HSL Alpha with examples](images/HSL_Alpha.png)
+![image explaining HSL Alpha with examples](./images/HSL_Alpha.png)
 
 Code sample
 
