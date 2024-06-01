@@ -1,6 +1,6 @@
 ---
 title: Transforming API response with Axios `transformResponse()` function
-date: 2023-09-16T15:39:19:z
+date: 2023-09-16T15:39:19
 uuid: 20230916153919
 slug: axios-transform-response
 description: 

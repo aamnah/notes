@@ -1,6 +1,6 @@
 ---
 title: Copy one partition to another in Ubuntu Linux
-date: 2024-02-23T17:31:43:z
+date: 2024-02-23T17:31:43
 uuid: 20240223173143
 slug: copy-one-partition-to-another-ubuntu-linux
 description: Copy one partition to another using rsync, dd, or GParted
