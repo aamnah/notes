@@ -3,6 +3,7 @@
 title: CSS Transitions
 subtitle: Transitions allows property changes in CSS values to occur smoothly over a specified duration.
 date: 2017-04-02
+draft: true
 ---
 
 Transitions allows property changes in CSS values to occur smoothly over a specified duration.
