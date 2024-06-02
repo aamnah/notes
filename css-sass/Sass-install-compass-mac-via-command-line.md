@@ -3,7 +3,7 @@
 title: How to install Compass on a Mac via Command Line
 slug: howto-sass-install-compass-on-a-mac-via-command-line
 date: 2014-05-21 15:34:28.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

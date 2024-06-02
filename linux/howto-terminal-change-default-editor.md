@@ -3,7 +3,7 @@
 title: How to change the default editor in Terminal
 slug: /howto-change-default-editor-terminal
 date: 2014-05-21 16:34:20.000000000 +05:00
-type: post
+
 published: true
 status: publish
 tags: ['terminal', 'editor']

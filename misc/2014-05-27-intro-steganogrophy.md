@@ -2,7 +2,7 @@
 
 title: Steganogrophy
 date: 2014-05-27 16:41:56.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories: []

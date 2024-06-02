@@ -2,7 +2,7 @@
 layout: post
 title: 'Bash Scripting: Taking input'
 date: 2017-02-23
-type: post
+
 draft: true
 categories:
   - '*nix'

@@ -3,7 +3,7 @@
 title: Crontab Basics
 slug: basics-crontab
 date: 2014-05-21 16:32:55.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

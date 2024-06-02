@@ -2,7 +2,7 @@
 
 title: Stopping, Quitting, Suspending and Killing Processes in Linux
 date: 2014-06-21 06:12:50.000000000 +05:00
-type: post
+
 categories:
 tags:
 - linux

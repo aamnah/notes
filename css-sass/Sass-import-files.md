@@ -3,7 +3,7 @@
 title: Import Files in Sass with `@import`
 slug: /howto-sass-import-files
 date: 2014-05-21 19:51:45.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

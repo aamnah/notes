@@ -3,7 +3,7 @@
 title: Get Current Year in JavaScript
 slug: /howto-get-current-year-in-javascript
 date: 2014-06-03 13:48:57.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

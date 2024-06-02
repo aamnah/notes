@@ -2,7 +2,7 @@
 
 title: How to check if a user is root
 date: 2014-06-05 04:02:25.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

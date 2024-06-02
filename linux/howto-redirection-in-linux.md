@@ -1,7 +1,7 @@
 ---
 title: Redirection in Linux
 date: 2014-07-17 22:34:46.000000000 +05:00
-type: post
+
 categories:
 tags:
 - Bash

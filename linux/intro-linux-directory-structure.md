@@ -2,7 +2,7 @@
 
 title: Linux Directory Structure
 date: 2014-07-17 23:04:19.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

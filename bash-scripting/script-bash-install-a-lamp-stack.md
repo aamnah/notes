@@ -3,7 +3,7 @@
 title: Bash script to install a LAMP stack
 slug: /script-bash-install-a-lamp-stack
 date: 2014-06-05 03:31:41.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

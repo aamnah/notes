@@ -3,7 +3,7 @@
 title: Custom Raspberry Pi MOTD (Message Of The Day)
 slug: howto-raspberry-pi-motd-message-of-the-day
 date: 2014-05-21 16:25:33.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

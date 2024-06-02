@@ -3,7 +3,7 @@
 title: 'Sass: Working with Libraries'
 slug: /howto-sass-work-with-libraries
 date: 2014-05-21 20:13:51.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

@@ -3,7 +3,7 @@
 title: The Zen of Python
 slug: /zen-of-python
 date: 2014-06-15 04:25:40.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

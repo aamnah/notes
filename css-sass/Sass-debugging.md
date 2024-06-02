@@ -3,7 +3,7 @@
 title: Debugging Sass
 slug: /debug-troubleshoot-sass-issues
 date: 2014-05-22 06:08:52.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

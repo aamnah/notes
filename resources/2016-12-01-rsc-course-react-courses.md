@@ -2,7 +2,7 @@
 
 title: React, React Router and Redux Courses
 date: 2016-12-01 15:50:29.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

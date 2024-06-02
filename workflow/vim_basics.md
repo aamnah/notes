@@ -4,7 +4,7 @@ title: Vim Basics
 slug: vim-basics
 date: 2014-05-21 16:27:11.000000000 +05:00
 lastmod: 2019-03-29
-type: post
+
 categories:
 - cheatsheet
 tags:

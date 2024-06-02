@@ -2,7 +2,7 @@
 
 title: iOS, Bluetooth Low Energy (BLE), CoreBluetooth and Swift - for noobs
 date: 2016-08-28 15:35:22.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories: []

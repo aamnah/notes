@@ -2,7 +2,7 @@
 title: Create a Color Palette in Sass
 slug: howto-sass-create-a-color-palette
 date: 2014-05-21 19:26:53.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:

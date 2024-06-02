@@ -2,7 +2,7 @@
 
 title: Making a MySQL database connection with PHP
 date: 2014-06-07 04:54:08.000000000 +05:00
-type: post
+
 published: true
 status: publish
 categories:
