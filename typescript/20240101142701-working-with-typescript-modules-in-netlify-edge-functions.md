@@ -6,6 +6,8 @@ slug: working-with-typescript-modules-in-netlify-edge-functions
 draft: false
 description: 
 tags: 
+- netlify
+- typescript
 ---
 
 ## Importing TS Files

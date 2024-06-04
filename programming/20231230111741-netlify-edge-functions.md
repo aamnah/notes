@@ -6,6 +6,8 @@ slug: netlify-edge-functions
 draft: true
 description: 
 tags: 
+- netlify
+- edge
 ---
 
 ## Environment Variables

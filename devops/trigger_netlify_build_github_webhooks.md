@@ -1,7 +1,11 @@
 ---
 title: Trigger a Netlify build when a Github repo is updated
 date: 2023-10-17
-draft: true
+lastmod: 2024-06-04
+draft: false
+tags:
+- netlify
+- devops
 ---
 
 ## Why?
@@ -19,21 +23,21 @@ You can find Netlify build hooks on [Site configuration > Build & deploy > Conti
 
 Create a new hook in Netlify
 
-![Netlify build hooks](../images/netlify_build_hooks.png)
+![Netlify build hooks](./images/netlify_build_hooks.png)
 
 Add a webhook in Github repo settings so that it notifies Netlify when changes are pushed to the repo
 
-![Add Github webhook](../images/github_webhook_add.png)
+![Add Github webhook](./images/github_webhook_add.png)
 
-![Github Webhooks](../images/github_webhooks.png)
+![Github Webhooks](./images/github_webhooks.png)
 
 You can pass URL parameters to the URL too. I added a `trigger_title=triggered+by+Github+Actions+from+Notes+repo`
 
 ```bash
-https://api.netlify.com/build_hooks/5c23354f454e1350f8543e78?trigger_title=triggered+by+Github+Actions+from+Notes+repo
+https://api.netlify.com/build_hooks/5c23354f454e2580f8543e24?trigger_title=triggered+by+Github+Actions+from+Notes+repo
 ```
 
-![Netlify deployment logs](../images/deploy_log_netlify_webhook)
+![Netlify deployment logs](./images/deploy_log_netlify_webhook)
 
 
 Links
