@@ -1,9 +1,7 @@
 ---
-
 title: Basic Unix/Linux System Monitoring Commands
 slug: unix-linux-commands-for-system-monitoring
 date: 2014-05-21 16:36:02.000000000 +05:00
-
 categories:
 - SysAdmin
 tags:
