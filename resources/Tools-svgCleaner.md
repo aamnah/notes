@@ -5,6 +5,8 @@ date: 2017-01-17
 
 # SVG Cleaner
 
+An online GUI is available here: [https://jakearchibald.github.io/svgomg/](https://jakearchibald.github.io/svgomg/)
+
 Here are the install instructions for Linux Ubuntu 16.04 LTS
 
 For _SVG Cleaner_ you need to install Rust compiler and Cargo. Cargo is the package manager for Rust. The packages are called _crates_..
