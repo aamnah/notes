@@ -19,7 +19,7 @@ Here's an example directory structure for your layouts:
 
 ```
 themes/amnastic/layouts/notes/     
-├── baseof.html                  
+├── baseof.html
 ├── landing.html                
 ├── section.html               
 └── single.html                  
@@ -47,6 +47,45 @@ type: notes
 ```yaml
 type: notes # look under layouts/notes/
 layout: landing # for a layout called landing, i.e. layouts/notes/landing.html
+```
+
+### Defining layouts for subsections
+
+I have one _notes_ (usually called _posts_) with folders serving as post _categories_. From Hugo's perspective, `notes/` is a section and all the individual directories inside `notes/`, for example `notes/algorithms/`, `notes/android` etc. are all sub-sections. In my site, i have about 50+ of these subsections.
+
+```
+/notes/
+├── algorithms/
+├── android/
+├── api/
+├── armbian/
+├── aws/
+├── bash-scripting/
+├── cheatsheets/
+├── commands/
+├── _index.md/
+├── ios/
+├── javascript/
+```
+
+The issue i have with these _sub_ sections is that they do not always pick up the right layout, which is `/layouts/notes/`. In other words, how do i specify the layout for all these subsections in one go without having to edit 50+ `_index.md` files for each sub-section? I looked into doing this in the config file but couldn't find anything.
+
+FYI, the long way of doing it would be editing the `_index.md` file of each sub-section and adding `type:notes` to the front matter.
+
+[https://gohugo.io/content-management/front-matter/#cascade](cascade) is the answer. `cascade` set in the front matter of parent will set a value for all its descendants, unless the descendant has its own value set.
+
+```yaml
+---
+title: Notes
+
+cascade:
+- _target:
+    kind: page
+    path: /notes/**
+  params:
+    type: notes
+
+---
 ```
 
 Links
