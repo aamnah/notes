@@ -1,9 +1,7 @@
 ---
-
 title: System Monitor for Raspberry Pi
 slug: /howto-system-monitor-for-raspberry-pi
 date: 2014-05-21 16:30:36.000000000 +05:00
-
 published: true
 status: publish
 categories:

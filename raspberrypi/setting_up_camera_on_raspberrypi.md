@@ -2,12 +2,13 @@
 title: Setting up cam on Raspberry Pi
 date: 2015-08-25
 ---
+
 You have two options:
 
 	- [motion](http://www.lavrsen.dk/foswiki/bin/view/Motion/WebHome)
 	- [kerberos](https://kerberos.io/)
 
-Motion install is pretty much all commmand line based. 
+Motion install is pretty much all command line based. 
 
 Kerberos is more user friendly, easier to install and has a modern interface
 
@@ -26,7 +27,7 @@ The following settings should do. Frame settings (width, height, framerate) and 
 	height 480
 	framerate 100
 	webcam_localhost off
-	webcam_port 8081 #deafult:8081
+	webcam_port 8081 #default:8081
 	control_port 8080 #default:8080
 
 `webcam_localhost` if on will restrict webcam connections to localhost only. Same for `control_localhost`.
