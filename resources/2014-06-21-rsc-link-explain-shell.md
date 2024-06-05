@@ -1,12 +1,12 @@
 ---
-layout: resource
 title: Tool - Explain Shell
 link: http://explainshell.com/
 icon: wrench
 date: 2014-06-21 05:45:48.000000000 +05:00
-type: link
 published: true
 status: publish
+type: resource
+resource_type: link
 categories:
 - Resources
 - Tools

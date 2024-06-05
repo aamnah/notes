@@ -1,6 +1,7 @@
 ---
 title: Book - Python for You and Me
-layout: resource
+type: resource
+resource_type: book
 link: http://pymbook.readthedocs.org/en/latest/
 icon: book
 categories:

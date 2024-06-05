@@ -1,10 +1,11 @@
 ---
-layout: resource
+
 title: Book - Linux From Scratch (LFS)
 date: 2014-06-20 13:06:09.000000000 +05:00
-type: resource
 published: true
 status: publish
+type: resource
+resource_type: book
 link: http://www.linuxfromscratch.org/lfs/view/stable/
 icon: book
 categories:

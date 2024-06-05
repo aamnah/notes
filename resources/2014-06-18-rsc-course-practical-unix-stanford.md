@@ -1,11 +1,11 @@
 ---
-layout: resource
 title: Course - Practical Unix - Stanford
 link: http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=PracticalUnix
 icon: youtube-play
 slug: practical-unix-stanford-course
 date: 2014-06-18 15:07:34.000000000 +05:00
-type: link
+type: resource
+resource_type: course
 published: true
 status: publish
 categories:

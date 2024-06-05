@@ -1,8 +1,8 @@
 ---
-layout: resource
 title: Book - Beyond Linux From Scratch (BLFS)
 date: 2014-06-20 13:08:27.000000000 +05:00
-type: link
+type: resource
+resource_type: book
 published: true
 status: publish
 categories:

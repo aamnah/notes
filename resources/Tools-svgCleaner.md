@@ -2,6 +2,7 @@
 title: Tool - SVG Cleaner
 date: 2017-01-17 
 ---
+
 # SVG Cleaner
 
 Here are the install instructions for Linux Ubuntu 16.04 LTS
