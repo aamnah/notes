@@ -10,7 +10,11 @@ tags:
 - sass
 ---
 
-NOTE: In 2023, the Sass team deprecated Embedded Dart Sass in favor of Dart Sass. Embedded Dart Sass is no longer a requirement since Hugo version `0.114.0`. If you have been using Embedded Dart Sass with Hugo v0.113.0 and earlier, uninstall Embedded Dart Sass, then install Dart Sass. If you have installed both, Hugo will use Dart Sass.
+NOTE: In 2023, the Sass team deprecated Embedded Dart Sass in favor of Dart Sass. Embedded Dart Sass is no longer a requirement since Hugo version `0.114.0`. 
+
+> If you have been using Embedded Dart Sass with Hugo v0.113.0 and earlier, uninstall Embedded Dart Sass, then install Dart Sass. If you have installed both, Hugo will use Dart Sass.
+
+The [old build/install script for Netlify setups](https://gist.github.com/aamnah/87b1aad1bfbd08d2267c26e099c25024) is saved as a Github gist.
 
 Install Dart Sass with `brew install sass/sass/sass`. Note that `npm i -g sass` install the pure JavaScript implementation of Sass which is slower than Dart Sass. If you're installing Dart Sass with Homebrew, you should uninstall the one installed from NPM.
 
@@ -19,14 +23,22 @@ Install Dart Sass with `brew install sass/sass/sass`. Note that `npm i -g sass` 
 npm uninstall -g sass
 
 
-# install Dart Sass
+# install Dart Sass (Linux)
+sudo snap install dart-sass
+
+# install Dart Sass (macOS / Homebrew)
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install sass/sass/sass
 ```
 
+```bash
+# List the active transpilers.
+hugo env
+```
+
 ---
 
-To install embedded-dart-sass you need to download and extract it to a location that's in the system `$PATH`. 
+To install embedded-dart-sass on Netlify you need to download and extract it to a location that's in the system `$PATH`. 
 
 - Create a bash script called `build.sh` and add the steps for installing `dart-sass-embedded` and building your site in there. 
 - In your `netlify.toml` you'd specify the script as the value for the build command for your context `command = "./build.sh"`. The value is a path to the script file relative to your base. If you had an existing `command` there, move it to the end of the `build.sh` file
@@ -96,3 +108,5 @@ Links
 - [dart-sass-embedded Releases](https://github.com/sass/dart-sass-embedded/releases)
 - [Hugo: installing dart-sass-embedded](https://discourse.gohugo.io/t/installing-dart-sass-embedded/32468/2)
 - [sample build.sh](https://github.com/bep/hugo-dartsass-testrepo/blob/main/build.sh)
+- [Dart Sass](https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass)
+- [build/install script for Netlify setups](https://gist.github.com/aamnah/87b1aad1bfbd08d2267c26e099c25024)
