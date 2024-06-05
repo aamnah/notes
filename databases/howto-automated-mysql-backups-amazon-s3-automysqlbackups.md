@@ -4,7 +4,6 @@ title: Automated MySQL Backups to Amazon S3 with AutoMySQLBackups
 slug: automated-mysql-backups-with-automysqlbackups
 date: 2014-08-19 12:59:41.000000000 +05:00
 last_updated: 2014-08-19 09:53:41.000000000 +05:00
-
 published: true
 status: publish
 excerpt: This how to will teach you how to take automated backups of all your MySQL databases and send them to Amazon S3
@@ -17,8 +16,6 @@ tags:
 - crontab
 - database
 ---
-
-This how-to will teach you how to take automated backups of all your MySQL databases and send them to Amazon S3.
 
 Access (Logins) required
 ----
