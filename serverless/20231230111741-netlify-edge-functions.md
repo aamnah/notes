@@ -1,18 +1,15 @@
 ---
 title: Netlify Functions and Netlify Edge Functions
 date: 2023-12-30T11:17:41+02:00
-lastmod: 2024-06-04
+lastmod: 2024-06-05
 uuid: 20231230111741
 slug: netlify-edge-functions
-draft: true
+draft: false
 description: 
 tags: 
 - netlify
 - edge
 - serverless
----
-
-
 ---
 
 Summary
