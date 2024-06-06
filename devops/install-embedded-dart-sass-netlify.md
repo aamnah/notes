@@ -67,7 +67,7 @@ echo "==== building site"
 hugo --gc --minify
 ```
 
-![improved netlify build logs](../images/netlify-build-logs.png)
+![improved netlify build logs](./images/netlify-build-logs.png)
 
 The only thing you may need to change in the script above is the value for `DARTSASS_VERSION`
 
