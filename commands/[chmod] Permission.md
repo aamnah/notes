@@ -1,5 +1,4 @@
 ---
-
 title: '[chmod] Permissions'
 slug: chmod
 command: chmod
@@ -43,7 +42,7 @@ chmod --reference=otherfile thisfile
 
 ## Example from Magento 
 
-Enter the following commands to set permissions:
+Enter the following commands to set sensible permission defaults:
 
 ```bash
 find . -type f -exec chmod 400 {} \;
