@@ -1,3 +1,9 @@
+---
+title: Twitch chat for a live install of Arch Linux
+date: 2023-03-19
+draft: true
+---
+
  I used nmap to track packets and log them into a db. then i made a little program to visualize it with colors
  
 
