@@ -2,6 +2,7 @@
 title: '[df] Disk Free'
 slug: df-disk-free
 date: 2015-11-21
+lastmod: 2024-06-06
 ---
 
 ```bash
@@ -14,7 +15,7 @@ The `-h` flag is for human readable output, show 30G instead of 30830588.
 
 ### Summing numbers in the output of `df`
 
-We can do that by pip the output of the df command to something like awk and have awk sum up the numbers, like so:
+We can do that by pip the output of the df command to something like `awk` and have `awk` sum up the numbers, like so:
 
 ```bash
 df -lP | awk '{}'
@@ -42,13 +43,15 @@ df -lP | awk '{sum += $3}'
 the `sum` variable is equal to the sum of values in the third column `$3` (take the value of sum and add the third column to it).
 
 ```bash
-df -lP | awk '{sum += $3} END { printf sum }`
+df -lP | awk '{sum += $3} END { printf sum }'
+# 314098258
 ```
 
 Get the sum and and at the end of it, print the value of `sum`.
 
 ```bash
-df -lP | awk '{sum += $3} END { printf "%d GiB\n", sum/2^20}`
+df -lP | awk '{sum += $3} END { printf "%d GiB\n", sum/2^20}'
+# 299 GiB
 ```
 
 ![Screenshot df -lp | awk](./images/df-lp-awk.png)
