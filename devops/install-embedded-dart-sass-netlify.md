@@ -8,6 +8,7 @@ description: If you want to use Embedded Dart Sass in your Hugo sites on Netlify
 tags: 
 - netlify
 - sass
+- hugo
 ---
 
 NOTE: In 2023, the Sass team deprecated Embedded Dart Sass in favor of Dart Sass. Embedded Dart Sass is no longer a requirement since Hugo version `0.114.0`. 
