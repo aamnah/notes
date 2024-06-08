@@ -50,14 +50,17 @@ After the resources are processed, Hugo publishes them to the `publishDir`, whic
 ```
 
 ## assetDir vs staticDir
-- If a file needs to be loaded as a _resource_ and processed by [Hugo Pipes][hugo pipes], it needs to be in `assetDir` location(s)
+If a file needs to be loaded as a _resource_ and processed by [Hugo Pipes][hugo pipes], it needs to be in `assetDir` location(s)
   - Example files: `styles.scss`, `main.ts`, images etc.
   - Example processes: Minification, compilation, concatenation, fingerprinting and so on..
   - Default location: `assets/` in project base
-- If i file needs to be in the `publishDir` when the site is built, and does not need any processing or compiling, it needs to be in the `staticDir`
-  - Example files: `favicon.ico`, `robots.txt`, `manifest.json`etc.
+  - URLs: Since _resources_ are published to the `publishDir` after they have been processed, you can reference them with their relative URL which would be just the file name. For example: `/styles.css` instead of `assets/styles.css`
+
+If i file needs to be in the `publishDir` when the site is built, and does not need any processing or compiling, it needs to be in the `staticDir`
+  - Example files: `favicon.ico`, `robots.txt`, `manifest.json` etc.
   - Default location: `static/` in project base
-  
+  - URLs: All files in the `static/` directory can be directly referenced by their relative URL. For example, the file at location `static/manifest.json` can be referenced anywhere in the site with the relative URL `/manifest.json`. Same as `assetDir`, no need to mention `staticDir` in the final URL
+
 
 Links
 ---
