@@ -11,6 +11,7 @@ tags:
 ---
 
 - If you want any file to be processed by [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/), for example compiling Sass stylesheets or converting TypeScript files to JavaScript, it needs to be in the _assets_ directory, which by default is `assets/`, but can be configured in `config.toml`
+- Only the files in assetDir **that are processed** will be included in the final build
 - Unlike `staticDir` which can take an array of values for multiple static directories, there can only be one `assetDir`
 
 ```toml
