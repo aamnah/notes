@@ -2,7 +2,7 @@
 title: Using Typescript to generate RequireJS (AMD) modules and export behaviour
 date: 2021-05-06
 tags:
-  - TypeScripts
+  - TypeScript
   - DurandalJS
   - KnockoutJS
   - Bindings
