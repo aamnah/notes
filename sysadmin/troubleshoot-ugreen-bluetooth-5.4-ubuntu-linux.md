@@ -4,16 +4,16 @@ date: 2024-02-27T19:28:56+02:00
 uuid: 20240227192856
 slug: troubleshoot-ugreen-bluetooth-5.4-ubuntu-linux
 draft: false
-description: 
+description: All in vain in the end. The dongle could not be used because of missing drivers and I was not able to install drivers for Linux. 
 tags: 
 ---
 
 NOTE: The dongle could not be used because of missing drivers and I was not able to install drivers for Linux.
 
-Model No.: `CM748` without antenna / `CM749` with antenna
-Chipset: `Barrot BR8554`
-FCC ID: `2AQI5-CM748`
-Manufacturer ID: `33fa:0010`
+Model No.: `CM748` without antenna / `CM749` with antenna  
+Chipset: `Barrot BR8554`  
+FCC ID: `2AQI5-CM748`  
+Manufacturer ID: `33fa:0010`  
 
 Status: no official drivers for Linux or macOS are available
 

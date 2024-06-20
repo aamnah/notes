@@ -4,7 +4,7 @@ date: 2024-06-08T13:43:17+03:00
 uuid: 20240608134317
 slug: hugo-assets-directory
 draft: false
-description: 
+description: If you want any file to be processed by Hugo Pipes, for example compiling Sass stylesheets or converting TypeScript files to JavaScript, it needs to be in the assets/ directory.
 tags: 
 - hugo pipes
 - asset management

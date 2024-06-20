@@ -4,7 +4,7 @@ date: 2024-06-05T17:34:45+03:00
 uuid: 20240605173445
 slug: targeting-a-template-for-hugo-website-content-pages
 draft: false
-description: 
+description: Specify which template to use and override defaults with the `layout` and `type` fields in frontmatter. 
 tags: 
 ---
 
