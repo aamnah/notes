@@ -2,13 +2,13 @@
 title: Typescript
 cascade:
 - params:
-    featured_img: "/notes/typescript/_placeholder.svg"
+    featured_img: "./_placeholder.svg"
 - _target:
     kind: page
     params:
-      featured_img: "/notes/typescript/_placeholder.svg"
+      featured_img: "./_placeholder.svg"
 - _target:
     kind: section
     params:
-      featured_img: "/notes/typescript/_placeholder.svg"
+      featured_img: "./_placeholder.svg"
 ---

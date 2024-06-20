@@ -4,7 +4,7 @@ date: 2024-03-20T13:51:55+02:00
 uuid: 20240320135155
 slug: stream-audio-over-wifi-from-linux-ubuntu-pc-to-android-phone
 draft: false
-description: 
+description: Stream audio over WiFi using SoundWire by GeorgieLabs. It comes with a server that you install on your Linux machine and an Android app for your phone
 tags: 
 ---
 

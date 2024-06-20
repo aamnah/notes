@@ -4,10 +4,11 @@ date: 2024-01-01T14:27:01+02:00
 uuid: 20240101142701
 slug: working-with-typescript-modules-in-netlify-edge-functions
 draft: false
-description: 
+description: Imports for TypeScript modules for Edge Functions are different because of the Deno runtime environment
 tags: 
 - netlify
 - typescript
+- deno
 ---
 
 ## Importing TS Files

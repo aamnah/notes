@@ -5,7 +5,9 @@ lastmod: 2024-06-05
 uuid: 20231230111741
 slug: netlify-edge-functions
 draft: false
-description: 
+featured_img: ./images/netlify-edge-functions-featured.png
+banner_img: ./images/netlify-edge-functions-banner.png
+description: Create Netlify functions, use environment variables, install third party packages, pass data to functions and test locally and on live remote
 tags: 
 - netlify
 - edge computing
