@@ -1,13 +1,14 @@
 ---
 
-title: Amazon RDS + MySQL
+title: Amazon RDS + MySQL Commands
 slug: cheatsheet-amazon-rds-commands-mysql
 date: 2014-05-21 16:16:36.000000000 +05:00
-
+lastmod: 2024-06-20
 published: true
 status: publish
 tags:
-- amazon rds
+- aws
+- Amazon RDS
 - cheatsheet
 - mysql
 - commands
