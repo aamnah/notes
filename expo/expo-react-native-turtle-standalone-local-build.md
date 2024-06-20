@@ -1,5 +1,5 @@
 ---
-title: Building Standalone Expo React Native apps locally
+title: Building Standalone Expo React Native apps locally with Turtle CLI
 description: Use turtle to build standalone apps on local machine and for Continuous Integration (CI) setups
 date: 2020-06-04
 lastmod: 2020-07-02
@@ -135,7 +135,7 @@ The build is saved inside a folder called `expo-apps` inside the user's `Home` d
 
 You need to install Java 8 SDK as `turtle-cli` [only works with JDK 8](https://github.com/expo/turtle/issues/45#issuecomment-484444687). I had 11.0.7 (openjdk) installed on my Ubuntu machine..
 
-![screenshot - Turtle JDK 8 Error](./turtle-jdk-8-error.png)
+![screenshot - Turtle JDK 8 Error](./images/turtle-jdk-8-error.png)
 
 The easy way is to install `openjdk` and change your Java version
 
@@ -147,7 +147,7 @@ sudo apt install -y openjdk-8-jdk-headless openjdk-8-jre
 sudo update-alternatives --config java
 ```
 
-![screenshot - terminal change java sdk version](./change-jdk-version-ubuntu.png)
+![screenshot - terminal change java sdk version](./images/change-jdk-version-ubuntu.png)
 
 The more complicated way is to download it from the Oracle website. See [this gist] for instructions on how to download without having to create and login to an Oracle account. Basically, you go to the downloads page, click the download you want, accept the checkbox for license, and instead of clicking the green download button you copy link location, and then you change the `otn` part to `otn-pub` and open that link in order to download.. (blekh)
 
