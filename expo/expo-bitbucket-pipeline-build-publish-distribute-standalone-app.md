@@ -5,7 +5,7 @@ lastmod: 2020-07-01
 slug: expo-bitbucket-pipeline-build-publish-distribute-standalone-app
 description: Automatically build your app and send it to the app store using Bitbucket Pipelines or Github Actions
 tags:
-  - CD
+  - Continuous Deployment
   - DevOps
   - Expo
   - fastlane

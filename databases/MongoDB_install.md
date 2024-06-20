@@ -6,7 +6,7 @@ date: 2017-03-05
 status: publish
 tags:
 - how-to
-- databases
+- database
 ---
 
 ## tl;dr

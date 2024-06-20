@@ -8,7 +8,7 @@ draft: false
 description: 
 tags: 
 - netlify
-- edge
+- edge computing
 - serverless
 ---
 
