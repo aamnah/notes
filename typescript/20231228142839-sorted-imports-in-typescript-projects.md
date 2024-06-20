@@ -4,8 +4,9 @@ date: 2023-12-28T14:28:39+02:00
 uuid: 20231228142839
 slug: sorted-imports-in-typescript-projects
 draft: false
-description: 
+description: Sort your import statements in React and TypeScript projects for consistency and lesser cognitive load 
 tags: 
+- ReactJS
 ---
 
 ```bash
