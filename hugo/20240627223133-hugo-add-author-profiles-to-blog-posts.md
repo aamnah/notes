@@ -4,11 +4,13 @@ date: 2024-06-27T22:31:33+03:00
 uuid: 20240627223133
 slug: hugo-add-author-profiles-to-blog-posts
 draft: false
-description: 
+description: How to show Author details with every Hugo blog post
+summary: How to show Author details with every Hugo blog post
 tags: 
+- hugo
 ---
 
-There are multiple ways you can add authors. The following is a single author per post scenario where the author details are saved in `hugo.toml`. Alternate way of doing that would be with [taxonomies]()
+There are multiple ways you can add authors. The following is a single author per post scenario where the author details are saved in `hugo.toml`. (Alternate way of doing that would be with [taxonomies](). The benefit of setting it up with taxonomies is that you would be able to show a page that lists all posts by that author.)
 
 Here is how the config would look like in `hugo.toml`
 ```toml
