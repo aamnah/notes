@@ -6,12 +6,13 @@ draft: false
 tags:
 - netlify
 - devops
+- go modules
 ---
 
 ## Why?
 I have a separate repo linked to my Hugo site as a Hugo module. That repo contains all the content for my notes section and is separate from the repo for my main website. The main website gets automatically deployed by Netlify.
 
-What does not happen right now is that whenever i update the content for the notes section, the site does not get updated as a deployment is not triggered by Netlify.
+What does not happen right now is that whenever i update the content for the notes section, the main site does not get updated as a deployment is not triggered by Netlify.
 
 ## How?
 **Build hooks**. Build hooks give you a unique URL you can use to trigger a build.
