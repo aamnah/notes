@@ -11,6 +11,7 @@ grep -rl 'http://' ./ | xargs sed -i 's|http://|https://|g'
 ```
 
 ```bash
+# if filenames have spaces, blanks or new lines
 grep -rl --null mangoes/ . | xargs -0 sed -i '' 's/mangoes/oranges/g'
 ```
 
