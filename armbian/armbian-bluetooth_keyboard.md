@@ -1,5 +1,5 @@
 ---
-title: Pairing Bluetooth devices in Armbian, Orange Pi Plus2 
+title: Pairing Bluetooth devices in Armbian, Orange Pi Plus2
 description: How to pair bluettoth devices in general and the Logitech K480 bluetooth multi-device keyboard in particular on Armbian (Orange Pi Plus2)
 date: 2018-08-06
 lastmod: 2018-11-14
@@ -14,7 +14,7 @@ Run the following commands:
 
 ```
 [bluetooth]# agent off
-[bluetooth]# agent KeyboardOnly 
+[bluetooth]# agent KeyboardOnly
 [bluetooth]# scan on
 [bluetooth]# pair 34:XX:XX:XX:D8:F3
 [bluetooth]# trust 34:XX:XX:XX:D8:F3
@@ -28,7 +28,7 @@ Here are the commands with their outputs:
 ```
 [bluetooth]# agent off
 Agent unregistered
-[bluetooth]# agent KeyboardOnly 
+[bluetooth]# agent KeyboardOnly
 Agent registered
 [bluetooth]# scan on
 Discovery started
@@ -49,14 +49,14 @@ Pairing successful
 Attempting to connect to 34:XX:XX:XX:D8:F3
 [CHG] Device 34:XX:XX:XX:D8:F3 Connected: yes
 Connection successful
-[Keyboard K480]# 
+[Keyboard K480]#
 
 ```
 
 You can now see `info` about your connected device like so:
 
 ```
-[bluetooth]# info 34:88:5D:97:D8:F3 
+[bluetooth]# info 34:88:5D:97:D8:F3
 Device 34:88:5D:97:D8:F3
 	Name: Keyboard K480
 	Alias: Keyboard K480
@@ -85,18 +85,24 @@ Copy this code to the file, replacing the `MAC` address value with the MAC addre
 ```bash
 #!/bin/bash
 
-MAC='34:88:5D:97:D8:F3' # MAC address of Bluetooth device
+# MAC addresses of Bluetooth devices
+MAC_KEYBOARD_K480='34:88:5D:97:D8:F3'
+MAC_KEYBOARD_LOGITECH_DENOVO='00:07:61:4B:ED:C6'
 
-# Proceeding with the assumption that the device is already paired & trusted
+# Proceeding with the assumption that the device is already paired
 
 bluetoothctl << EOF
-connect ${MAC}
+connect ${MAC_KEYBOARD_K480}
+connect ${MAC_KEYBOARD_LOGITECH_DENOVO}
 EOF
 
 # chmod a+x script.sh    # Make it executable
-# chmod 777 script.sh    # Give it universal rights (saves you to write sudo every time)
-# Make script run automatically at startup
+# chmod 777 script.sh    # Give it root rights (saves you to write sudo every time)
+# Make scripts run automatically at startup
 # https://github.com/OpenLabTools/OpenLabTools/wiki/Launching-bash-scripts-at-startup
+
+# TODO: Make sure a bluetooth adapter is connected before running the script,
+# Otherwise, it runs the `bluetoothcl` command anyway every time a Terminal is opened
 ```
 
 Make the script executable and accessible
@@ -159,10 +165,10 @@ Available commands:
   version                    Display version
   quit                       Quit program
 ```
-  
+
 Links
 ---
-  
+
 - [StackOverflow - Bluetoothctl set passkey](https://stackoverflow.com/a/41520644)
 - [Armbian Forum - How to manually (using command line) configure Bluetooth keyboard/mouse?](https://forum.armbian.com/topic/2992-how-to-manually-using-command-line-configure-bluetooth-keyboardmouse/)
 - [StackExchange - Automatically connect trusted Bluetooth speaker](https://raspberrypi.stackexchange.com/questions/53408/automatically-connect-trusted-bluetooth-speaker)
