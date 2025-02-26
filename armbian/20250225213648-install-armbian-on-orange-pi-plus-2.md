@@ -3,10 +3,12 @@ title: Install Armbian on Orange Pi+ 2
 date: 2025-02-25T21:36:48:z
 uuid: 20250225213648
 slug: install-armbian-on-orange-pi-plus-2
-draft: true
+draft: false
 description:
 tags:
 ---
+
+STATUS: DRAFT
 
 ## Install Raspbian on a microSD card
 
