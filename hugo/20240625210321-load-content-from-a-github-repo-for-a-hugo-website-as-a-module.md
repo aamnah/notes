@@ -1,5 +1,5 @@
 ---
-title: load content from a github repo for a hugo website as a module
+title: Load content from a github repo for a hugo website as a module
 date: 2024-06-25T21:03:21+03:00
 uuid: 20240625210321
 slug: load-content-from-a-github-repo-for-a-hugo-website-as-a-module

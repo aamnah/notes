@@ -69,7 +69,7 @@ match groups:
 
 - `([A-Z])`matches all uppercase word characters, group 1 
 - `(\s+)` matches all whitespace characters, group 2
-- `(\.[^.]+$)` matches file extensions, group 3
+- `(\.[^.]+$)` matches file extension, group 3
 
 substitution groups:
 
