@@ -17,7 +17,7 @@ I needed this to remotely make changes to an Orange Pi which was connected to a 
 sudo apt install x11vnc
 
 # Set a password
-x11vnc -setpasswd
+x11vnc -storepasswd
 
 # run
 x11vnc
