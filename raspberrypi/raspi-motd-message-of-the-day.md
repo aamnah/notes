@@ -1,56 +1,61 @@
 ---
 title: Custom Raspberry Pi MOTD (Message Of The Day)
 slug: howto-raspberry-pi-motd-message-of-the-day
+description: Remove the default GNU/Linux free software text and add your own custom message with system information. Tested with Raspbian GNU/Linux 13 (trixie).
 date: 2014-05-21T16:25:33+05:00
+lastmod: 2025-10-11
 published: true
 status: publish
 categories:
 tags:
-- raspberry pi
-- linux
+  - raspberry pi
+  - linux
 ---
 
 ```bash
+# Disable existing scripts
+sudo chmod -x /etc/update-motd.d/10-uname
+
+# Remove GNU free software text
+echo "" | sudo tee /etc/motd > /dev/null
+
+# Create new MOTD script and make it executable
+sudo touch /etc/update-motd.d/20-sysinfo
+sudo chmod +x /etc/update-motd.d/20-sysinfo
+```
+
+```bash
+#!/bin/bash
+# file: /etc/update-motd.d/20-sysinfo
+
 let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
 let secs=$((${upSeconds}%60))
 let mins=$((${upSeconds}/60%60))
 let hours=$((${upSeconds}/3600%24))
 let days=$((${upSeconds}/86400))
-UPTIME=`printf "%d days, %02dh%02dm%02ds" "$days" "$hours" "$mins" "$secs"`
+UPTIME=`printf "%d days, %02dh %02dm %02ds" "$days" "$hours" "$mins" "$secs"`
+DISK=$(df -h / | awk 'NR==2{print $3 "/" $2 " (" $5 " used)"}')
+MEMORY_USED=$(free -h | awk '/Mem/{print $3}')
+MEMORY_TOTAL=$(free -h | awk '/Mem/{print $2}')
+IP_LOCAL=$(hostname -I | awk '{print $1}')
+IP_PUBLIC=$(wget -q -O - http://icanhazip.com/ | tail)
+PROCESSES_RUNNING=$(ps ax | wc -l | tr -d " ")
 
 # get the load averages
 read one five fifteen rest < /proc/loadavg
 
 echo "$(tput setaf 2)
-    .~~.   .~~.    `date +"%A, %e %B %Y, %r"`
+     .~~.   .~~.    `date +"%A, %e %B %Y, %r"`
     '. \ ' ' / .'   `uname -srmo`$(tput setaf 1)
-    .~ .~~~..~.   
+     .~ .~~~..~.
     : .~.'~'.~. :   Uptime.............: ${UPTIME}
-    ~ (   ) (   ) ~  Memory.............: `cat /proc/meminfo | grep MemFree | awk {'print $2'}`kB (Free) / `cat /proc/meminfo | grep MemTotal | awk {'print $2'}`kB (Total)
-( : '~'.~.'~' : ) Load Averages......: ${one}, ${five}, ${fifteen} (1, 5, 15 min)
-    ~ .~ (   ) ~. ~  Running Processes..: `ps ax | wc -l | tr -d " "`
-    (  : '~' :  )   IP Addresses.......: `/sbin/ifconfig eth0 | /bin/grep "inet addr" | /usr/bin/cut -d ":" -f 2 | /usr/bin/cut -d " " -f 1` and `wget -q -O - http://icanhazip.com/ | tail`
-    '~ .~~~. ~'    Weather............: `curl -s "http://rss.accuweather.com/rss/liveweather_rss.asp?metric=1&locCode=EUR|UK|UK001|NAILSEA|" | sed -n '/Currently:/ s/.*: \(.*\): \([0-9]*\)\([CF]\).*/\2°\3, \1/p'`
-        '~'
+   ~ (   ) (   ) ~  Memory.............: ${MEMORY_USED} (Used) / ${MEMORY_TOTAL} (Total)
+  ( : '~'.~.'~' : ) Load Averages......: ${one}, ${five}, ${fifteen} (1, 5, 15 min)
+   ~ .~ (   ) ~. ~  Running Processes..: ${PROCESSES_RUNNING}
+    (  : '~' :  )   IP Addresses.......: ${IP_LOCAL} / ${IP_PUBLIC}
+     '~ .~~~. ~'    Disk space.........: ${DISK}
+         '~'
 $(tput sgr0)"
-
-Free Disk Space....: `df -Pk | grep -E '^/dev/sda1' | awk '{ print $4 }' | awk -F '.' '{ print $1 }'`k on /dev/sda1
-```
-    
-I had to change eth0 to wlan0 in order to show the local IP of Raspberry Pi. This depends on the way you are connected to the network, change this accrodingly. eth0 is for ethernet and wlan0 is for wifi.
-    
-### Changing Location
-
-```bash
-    For Lahore: 
-    
-    	ASI|PK|PK007|LAHORE 
-```
-    	
-### Remove existing stuff
-
-```bash
-sudo nano motd
 ```
 
-Press Ctrl+K for a few seconds. Then Ctrl+O, Enter and Ctrl+X
+![Custom MOTD with Raspberry Pi logo](./images/raspi-motd-a.png)
