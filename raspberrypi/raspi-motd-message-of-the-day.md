@@ -6,12 +6,14 @@ date: 2014-05-21T16:25:33+05:00
 lastmod: 2025-10-11
 published: true
 status: publish
-categories:
+categories: ["Raspberry Pi"]
 tags:
   - raspberry pi
   - linux
   - bash
 ---
+
+MOTD = **M**essage **O**f **T**he **D**ay, is the message that shows when you login to the raspberry pi.
 
 See the [Bash scripts repo](https://github.com/aamnah/bash-scripts/tree/master/misc/motd) for up to date scripts
 
@@ -29,7 +31,7 @@ sudo touch /etc/update-motd.d/20-sysinfo
 sudo chmod +x /etc/update-motd.d/20-sysinfo
 ```
 
-You can use any of the scripts below. You can either save them in `/etc/profile.d/` or in `/etc/update-motd.d/`.
+You can use any of the scripts below. You can either save them in `/etc/profile.d/` or in `/etc/update-motd.d/`. If placing in `/etc/profile.d/`, the file should have a `.sh` extension. The contents of the script can also be placed in `~/.bashrc`. Recommended place is `/etc/update-motd.d/`.
 
 If you are using `tput` in a script in `/etc/update-motd.d/`, the colors will not show.
 
@@ -240,4 +242,37 @@ echo "${PKG_UPDATES} package updates available"
 
 ![](./images/30-sysinfo-with-logo.png)
 
-The _last login_ is coming from the SSH daemon
+### Remove GNU/Linux text
+
+The GNU/Linux text is coming from the `/etc/motd` file. You can clear the Debian free software text by emptying the file
+
+```bash
+echo "" | sudo tee /etc/motd > /dev/null
+```
+
+### Remove uname
+
+either delete the `/etc/update-motd.d/10-uname` file
+
+```bash
+sudo rm -rf /etc/update-motd.d/10-uname
+```
+
+or make it not executable
+
+```bash
+sudo chmod -x /etc/update-motd.d/10-uname
+```
+
+### Remove last login text
+
+The _last login_ is coming from the SSH daemon. You can remove last login text if you want by changing `PrintLastLog yes` in `/etc/ssh/sshd_config` to `PrintLastLog no`
+
+```
+PrintLastLog no
+```
+
+## Sources:
+
+- [Custom MOTD - Message of the Day](http://www.raspberrypi.org/forums/viewtopic.php?f=91&t=23440)
+- [Customize your MOTD - Linux](http://www.mewbies.com/how_to_customize_your_console_login_message_tutorial.htm)
