@@ -10,6 +10,7 @@ categories:
 tags:
   - raspberry pi
   - linux
+  - bash
 ---
 
 See the [Bash scripts repo](https://github.com/aamnah/bash-scripts/tree/master/misc/motd) for up to date scripts
