@@ -51,7 +51,7 @@ If `TERM` is missing or invalid, `tput` quietly fails to output anything — so 
 # Save the script: sudo nano /etc/profile.d/pi-motd.sh
 # Paste the script and save.
 # Make it executable: sudo chmod +x /etc/profile.d/pi-motd.sh
-# Log out and log back in — you should see the MOTD automatically 🎉
+# Log out and log back in — you should see the MOTD automatically
 
 let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
 let secs=$((${upSeconds}%60))
@@ -94,7 +94,7 @@ $(tput sgr0)"
 # Installation
 # Save the script: sudo nano /etc/update-motd.d/20-sysinfo
 # Make it executable: sudo chmod +x /etc/update-motd.d/20-sysinfo
-# Log out and log back in — you should see the MOTD automatically 🎉
+# Log out and log back in — you should see the MOTD automatically
 
 # Clear the Debian free software text: echo "" | sudo tee /etc/motd > /dev/null
 # Clear uname: sudo rm -rf /etc/update-motd.d/10-uname
@@ -166,7 +166,7 @@ And here is one that combines the two above. This one will work in both `/etc/pr
 # Installation
 # Save the script: sudo nano /etc/update-motd.d/30-sysinfo-with-logo
 # Make it executable: sudo chmod +x /etc/update-motd.d/30-sysinfo-with-logo
-# Log out and log back in — you should see the MOTD automatically 🎉
+# Log out and log back in — you should see the MOTD automatically
 
 # Clear the Debian free software text: echo "" | sudo tee /etc/motd > /dev/null
 # Clear uname: sudo rm -rf /etc/update-motd.d/10-uname
@@ -251,6 +251,14 @@ echo "" | sudo tee /etc/motd > /dev/null
 ```
 
 ### Remove uname
+
+`uname` text is:
+
+```
+Linux raspi 6.12.47+rpt-rpi-2712 #1 SMP PREEMPT Debian 1:6.12.47-1+rpt1 (2025-09-16) aarch64
+```
+
+which is not needed because the `uname` command can be run any time if we need to see that info
 
 either delete the `/etc/update-motd.d/10-uname` file
 
