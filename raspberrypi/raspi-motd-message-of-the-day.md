@@ -12,21 +12,43 @@ tags:
   - linux
 ---
 
+See the [Bash scripts repo](https://github.com/aamnah/bash-scripts/tree/master/misc/motd) for up to date scripts
+
 ```bash
 # Disable existing scripts
 sudo chmod -x /etc/update-motd.d/10-uname
 
 # Remove GNU free software text
 echo "" | sudo tee /etc/motd > /dev/null
+```
 
+```bash
 # Create new MOTD script and make it executable
 sudo touch /etc/update-motd.d/20-sysinfo
 sudo chmod +x /etc/update-motd.d/20-sysinfo
 ```
 
+You can use any of the scripts below. You can either save them in `/etc/profile.d/` or in `/etc/update-motd.d/`.
+
+If you are using `tput` in a script in `/etc/update-motd.d/`, the colors will not show.
+
+`tput` uses the **terminfo database** to output control codes (escape sequences) that tell your terminal to do things like: change text color, move the cursor, clear the screen, bold or underline text, reset formatting, etc. It’s terminal-independent — meaning it works correctly across xterm, Linux console, SSH, macOS Terminal, etc.
+
+When PAM (Pluggable Authentication Modules) runs the MOTD scripts (those in `/etc/update-motd.d/`), it runs them non-interactively — there’s no real terminal (tty) attached yet. `tput` needs the `TERM` environment variable (e.g. `xterm`, `vt100`, `linux`) to know which escape sequences to use.
+
+If `TERM` is missing or invalid, `tput` quietly fails to output anything — so you get no colors.
+
 ```bash
 #!/bin/bash
-# file: /etc/update-motd.d/20-sysinfo
+# desc: Custom MOTD for Raspberry Pi
+# link: https://github.com/aamnah/bash-scripts/tree/master/misc/motd
+# file: /etc/profile.d/pi-motd.sh
+
+# Installation
+# Save the script: sudo nano /etc/profile.d/pi-motd.sh
+# Paste the script and save.
+# Make it executable: sudo chmod +x /etc/profile.d/pi-motd.sh
+# Log out and log back in — you should see the MOTD automatically 🎉
 
 let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
 let secs=$((${upSeconds}%60))
@@ -58,12 +80,13 @@ echo "$(tput setaf 2)
 $(tput sgr0)"
 ```
 
-![Custom MOTD with Raspberry Pi logo](./images/raspi-motd-a.png)
+![Custom MOTD with Raspberry Pi logo](./images/20-sysinfo.png)
 
 ```bash
 #!/bin/bash
+# desc: Custom MOTD for Raspberry Pi
+# link: https://github.com/aamnah/bash-scripts/tree/master/misc/motd
 # file: /etc/update-motd.d/20-sysinfo
-# pi-motd.sh — Custom Raspberry Pi MOTD Script
 
 # Installation
 # Save the script: sudo nano /etc/update-motd.d/20-sysinfo
@@ -127,4 +150,93 @@ echo -e "${YELLOW}$PKG_UPDATES${RESET} packages need updating."
 echo -e "${CYAN}──────────────────────────────────────────────${RESET}"
 ```
 
-![Custom MOTD](./images/raspi-motd-b.png)
+![Custom MOTD](./images/40-pi-motd.png)
+
+And here is one that combines the two above. This one will work in both `/etc/profile.d/` and `/etc/update-motd.d/` directories because a fallback for `tput` has been added. If placing in `/etc/profile.d`, save the sript with a `.sh` extension
+
+```bash
+#!/bin/bash
+# desc: Custom MOTD for Raspberry Pi
+# link: https://github.com/aamnah/bash-scripts/tree/master/misc/motd
+# file: /etc/update-motd.d/30-sysinfo-with-logo
+
+# Installation
+# Save the script: sudo nano /etc/update-motd.d/30-sysinfo-with-logo
+# Make it executable: sudo chmod +x /etc/update-motd.d/30-sysinfo-with-logo
+# Log out and log back in — you should see the MOTD automatically 🎉
+
+# Clear the Debian free software text: echo "" | sudo tee /etc/motd > /dev/null
+# Clear uname: sudo rm -rf /etc/update-motd.d/10-uname
+
+# COLOR SETUP
+# ------------------------------------------------------------
+# Fallback for TERM if undefined
+export TERM=${TERM:-xterm}
+
+# Safe color setup
+if [ -t 1 ]; then
+  GREEN=$(tput setaf 2)
+  RED=$(tput setaf 1)
+  YELLOW=$(tput setaf 3)
+  CYAN=$(tput setaf 6)
+  RESET_COLOR=$(tput sgr0)
+else
+  GREEN="\e[32m"
+  RED="\e[31m"
+  YELLOW="\e[33m"
+  CYAN="\e[36m"
+  RESET_COLOR="\033[0m"
+fi
+
+# GATHER SYSTEM INFORMATION
+# ------------------------------------------------------------
+MODEL=$(tr -d '\0' < /proc/device-tree/model)
+
+# Calculate CPU usage by comparing /proc/stat over a short interval
+CPU=$(awk -v RS="" '{print $2+$4, $2+$4+$5}' /proc/stat | awk 'NR==1{u1=$1; t1=$2} NR==2{u2=$1; t2=$2} END{print (u2-u1)/(t2-t1)*100 "%"}' <(cat /proc/stat; sleep 0.5; cat /proc/stat))
+PROCESSES_RUNNING=$(ps ax | wc -l | tr -d " ")
+
+MEMORY_USED=$(free -h | awk '/Mem/{print $3}')
+MEMORY_TOTAL=$(free -h | awk '/Mem/{print $2}')
+
+# Uses apt to count available updates
+PKG_UPDATES=$(apt list --upgradable 2>/dev/null | grep -v Listing | wc -l)
+
+IP_LOCAL=$(hostname -I | awk '{print $1}')
+IP_PUBLIC=$(wget -q -O - http://icanhazip.com/ | tail)
+HOSTNAME=$(hostname)
+
+OS=$(grep PRETTY_NAME /etc/os-release | cut -d= -f2 | tr -d '"')
+ARCH=$(uname -m)
+
+DISK=$(df -h / | awk 'NR==2{print $3 "/" $2 " (" $5 " used)"}')
+TEMP=$(vcgencmd measure_temp | cut -d= -f2)
+
+# UPTIME=$(uptime -p | sed 's/^up //')
+let upSeconds="$(/usr/bin/cut -d. -f1 /proc/uptime)"
+let secs=$((${upSeconds}%60))
+let mins=$((${upSeconds}/60%60))
+let hours=$((${upSeconds}/3600%24))
+let days=$((${upSeconds}/86400))
+UPTIME=`printf "%d days, %02dh %02dm %02ds" "$days" "$hours" "$mins" "$secs"`
+
+
+echo -e "${GREEN}
+     .~~.   .~~.    ${MODEL}
+    '. \ ' ' / .'   ${OS} - ${ARCH} ${RESET_COLOR}${RED}
+     .~ .~~~..~.
+    : .~.'~'.~. :   IP Addresses.......: ${IP_LOCAL} / ${IP_PUBLIC}
+   ~ (   ) (   ) ~  Memory.............: ${MEMORY_USED} (Used) / ${MEMORY_TOTAL} (Total)
+  ( : '~'.~.'~' : ) Temperature........: ${TEMP}
+   ~ .~ (   ) ~. ~  CPU Usage..........: ${CPU} - ${PROCESSES_RUNNING} processes running
+    (  : '~' :  )   Uptime.............: ${UPTIME}
+     '~ .~~~. ~'    Disk space.........: ${DISK}
+         '~'
+${RESET_COLOR}"
+
+echo "${PKG_UPDATES} package updates available"
+```
+
+![](./images/30-sysinfo-with-logo.png)
+
+The _last login_ is coming from the SSH daemon
