@@ -6,6 +6,14 @@ date: 2015-02-22
 lastmod: 2026-04-14
 ---
 
+Overview:
+
+- The distinction between _options_ (flags) and _positional args_
+- `getopts` for short options, with `:` meaning "takes a value" and `$OPTARG` holding it
+- Manual while/case loop for long options (GNU `getopt` mentioned but not walked through)
+
+---
+
 Options are the flags you pass to a script, like `-v` or `--verbose`. Different from positional arguments (`$1`, `$2`, etc.) — options can come in any order, can be optional, and usually toggle behavior or carry a value.
 
 ## Using `getopts`
