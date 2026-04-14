@@ -1,85 +1,72 @@
 #!/bin/bash
 
-<<usage
-# Commands
-> notes - open the notes repo/dir in VS code
-> notes new - create a new note in the notes dir with a UUID based on date as the filename
-> notes new "this is a post title" - create a new note in the notes dir with the filename being the title converted to a slug, prefixed with UUID based on date
+# Usage:
+#   create_note.sh                      create a new note named by DATE_UUID in uncategorized/
+#   create_note.sh "a post title"       create a new note with a slugified, date-prefixed filename in uncategorized/
+#   create_note.sh -h | --help          show this help
 
-# TODO
-- 'if' filename is provided, use that prefixed with date
-- 'if' no filename provided, use the UUID as the filename
-- prefix filename with date
-- 'if' slug has spaces ' ', replace them with hypens '-'
-- add template
-usage
+set -euo pipefail
+# set strict mode
+# -e means exit when error, do not proceed
+# -u means referring to unset (undefined) variables will error out
+# -o pipefail means use the exit code of the failure inside the pipeline instead of the last command
 
+# Figure out script directory
+# going through the trouble so that directory path is not hardcoded
+# because the location of this repo changes on different devices
+NOTES_DIR="$(cd "$(dirname "$(realpath "$0")")" && pwd)"
+# "$0" - the path the script was invoked as
+# realpath "$0" - resolves $0 o a canonical absolute path (follows symlinks)
+# dirname "$(realpath "$0")" - strips the filename, leaving just the directory
+# cd "$(dirname ...)" && pwd — cd into that directory, then pwd prints the current working directory
 
-DATE_UUID=$(date '+%Y%m%d%H%M%S') # 20231119115517
+# Show usage
+if [ "${1:-}" = "-h" ] || [ "${1:-}" = "--help" ]; then
+  sed -n '3,6p' "$0" | sed 's/^# \{0,1\}//'
+  exit 0
+fi
+
+# Default target for new notes
+TARGET_DIR="${NOTES_DIR}/uncategorized"
+mkdir -p "$TARGET_DIR"
+
+DATE_UUID=$(date '+%Y-%m-%d-%H%M%S') # 2026-04-14-171053
 DATE_STRING=$(date '+%Y-%m-%dT%H:%M:%S%:z') # 2023-11-19T11:55:40+02:00
-TITLE="$@"
-SLUG=$(echo "$@" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' | tr " " "-" | tr "[:upper:]" "[:lower:]")
-EXTENSION=".md"
-FILENAME="${DATE_UUID}-${SLUG}${EXTENSION}"
-
-create_slug() { 
+TITLE="$*" # $* treats all args as one string "$1 $2 $3"
+SLUG=$(echo "$TITLE" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' | tr ' ' '-' | tr '[:upper:]' '[:lower:]')
+# Slug explained:
   # echo '      this is a post   ' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' | tr " " "-" # this-is-a-post
-  
+
   # use sed to trim space from beginning and end
   # use tr to replace spaces with -
-  # TODO: make the slug lowercase
-  SLUG=$(echo "$@" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' | tr " " "-" | tr "[:upper:]" "[:lower:]")
-  return $SLUG
-}
+  # use tr to make the slug lowercase
 
-create_file() {
+if [ -n "$SLUG" ]; then
   # if filename is provided, use that prefixed with date
+  FILENAME="${DATE_UUID}-${SLUG}.md"
+else
   # if no filename provided, use the UUID as the filename
-  touch "${FILENAME}"
-}
+  FILENAME="${DATE_UUID}.md"
+fi
 
-add_template() {
-  echo -e "---
+FILEPATH="${TARGET_DIR}/${FILENAME}"
+
+if [ -e "$FILEPATH" ]; then
+  echo "File already exists: $FILEPATH" >&2
+  exit 1
+fi
+
+cat > "$FILEPATH" <<EOF
+---
 title: ${TITLE}
 date: ${DATE_STRING}
 uuid: ${DATE_UUID}
 slug: ${SLUG}
 draft: true
-description: 
-tags: 
+description:
+tags:
 ---
-" >> ${FILENAME}
-}
+EOF
 
-open_in_vscode() {
-  DIR='/media/amna/Files/Sites/notes'
-  code $DIR
-}
-
-
-
-create_file
-add_template
-
-if [ "$#" == 0 ]; then
-open_in_vscode
-fi
-
-
-
-notes() {
-
-  DIR='/media/amna/Files/Sites/notes'
-
-  if [ "$#" == 0 ]; then
-    code $DIR
-  fi
-
-  if [ "$1" == 'new' ]; then
-    EXT='.md'
-    PREFIX=$(date '+')
-    touch 
-
-  fi
-}
-
+# echo "$FILEPATH"
+code "$FILEPATH"
