@@ -25,9 +25,12 @@
 
   Do not add new keys, rename, or drop any — downstream Hugo or Gatsby consumers may break silently. `draft: true` is the Hugo-style convention, chosen deliberately over Gatsby's `status: draft` so both generators work.
 
+  The `uuid` field is a plain 14-digit `YYYYMMDDHHMMSS` string — **no hyphens** (e.g. `20140521153218`). This is distinct from the *filename* prefix format, which uses hyphens (`YYYY-MM-DD-HHMMSS`). Do not copy the filename prefix verbatim into the `uuid` field.
+
 - Filenames use a date-prefix convention:
   - New notes: `YYYY-MM-DD-HHMMSS-slug.md` (or `YYYY-MM-DD-HHMMSS.md` when there's no title)
   - Legacy notes: `YYYYMMDDHHMMSS-slug.md` — **do not rename these retroactively**; the UUID in the filename is a stable identifier.
+  - If a legacy note is explicitly being migrated and the original filename carries no time component, use `YYYY-MM-DD-slug.md` — do not pad with `-000000-` just to fill the HHMMSS slot. The `uuid` frontmatter field is separate and still gets the full 14-digit `YYYYMMDDHHMMSS` form (padded zeros are correct there).
 
 ## Organization
 
