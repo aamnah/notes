@@ -26,9 +26,10 @@ ssh user@<machine-name>            # or use the 100.x.y.z IP
 ```
 
 ### UFW
-Tailscale creates a new interface called `tailscale0`. It is better to allow the `tailscale0` interface instead of using a custom SSH port. Any tailscale connection is encrypted by default
 
-Set up `ufw` as firewall, block all incoming so that no-one can connect, allow all outgoing so that you are still able to use internet, allow incoming connections only on `tailscale0` (safer than opening 22 to the world)
+Tailscale creates a new interface called `tailscale0`. It is better to allow incoming only on the `tailscale0` interface instead of using a custom SSH port and opening it to the world. Any tailscale connection is encrypted by default
+
+Set up `ufw` as firewall, block all incoming so that no-one can connect, allow all outgoing so that you are still able to use internet, and allow incoming connections only on `tailscale0`
 
 ```bash
 sudo ufw default deny incoming    # deny all incoming
