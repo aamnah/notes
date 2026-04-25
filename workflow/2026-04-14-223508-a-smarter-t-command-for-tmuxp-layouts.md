@@ -3,7 +3,7 @@ title: Save project specific tmux layouts with tmuxp
 date: 2026-04-14T22:35:08+03:00
 uuid: 20260414223508
 slug: tmuxp-saved-custom-tmux-layouts
-draft: true
+draft: false
 description:
 tags:
 ---
